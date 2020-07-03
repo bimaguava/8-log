@@ -1,0 +1,3 @@
+[submodule "3-hexo"]
+	path = 3-hexo
+	url = https://github.com/yelog/hexo-theme-3-hexo
