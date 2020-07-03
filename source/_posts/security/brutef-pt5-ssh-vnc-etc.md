@@ -11,10 +11,8 @@ Karena hardware atau perangkat IOT seperti router sering dibiarkan dengan kata s
 
 ## Instalasi
 
-```
-sudo apt install nmap hydra medusa ncrack
-git clone https://github.com/GitHackTools/BruteDum
-```
+    sudo apt install nmap hydra medusa ncrack
+    git clone https://github.com/GitHackTools/BruteDum
 
 ## Attack protokol
 

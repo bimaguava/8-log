@@ -234,8 +234,3 @@ Direset atau **Waste ink pad counter**. Tentunya dengan menggunakan Adjustment P
 # Case 6. Intermitten power
 
 tripping ditandai dengan berkedipnya kedua led dengan cepat. Solusinya lakukan initial setting atau repair part yang rusak pada mainboard.
-
-
-## 参考资料
-> - []()
-> - []()

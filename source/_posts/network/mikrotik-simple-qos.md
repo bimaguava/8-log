@@ -38,7 +38,3 @@ Maka itulah yang ia dapatkan. Bukan dari sudut pandang routernya.
 Untuk HTB Kurang optimal, lebih bagus menggunakan queue tree atau bisa juga dengan menambahkan opsi parent dan child di simple queue.  
 
 Walaupun begitu, simple queue sangat powerfull juga, apalagi kalau menggunakan router yang multicore, CCR misalnya. Transmisi pendistribusian bandwith untuk core yang banyak akan sangat cepat, tapi kalau akhirnya memakai parent perhitungannya tentu akan berbeda karena akan mempengaruhi kecepatan dari pembagian bandwith yang dilakukan simple queue. 
-
-## 参考资料
-> - []()
-> - []()

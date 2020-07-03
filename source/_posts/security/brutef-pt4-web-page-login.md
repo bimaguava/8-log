@@ -17,25 +17,19 @@ ChromeDriver - WebDriver for Chrome
 
 http://chromedriver.chromium.org/downloads
 
-```
-wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
-chmod+x chromedriver
-```
+    wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+    unzip chromedriver_linux64.zip
+    chmod+x chromedriver
 
 instalasi Hatch
 
-```
-pip2 install selenium
-pip2 install requests
-git clone https://github.com/nsgodshall/Hatch.git
-```
+    pip2 install selenium
+    pip2 install requests
+    git clone https://github.com/nsgodshall/Hatch.git
 
 pada `**main.py** setel direktori atau path chromedriver
 
-```
-CHROME_DVR_DIR = '/home/bima/downloads/app/chromedriver'
-```
+    CHROME_DVR_DIR = '/home/bima/downloads/app/chromedriver'
 
 ## Referensi
 * https://github.com/nsgodshall/Hatch

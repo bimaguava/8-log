@@ -10,8 +10,8 @@ category:
 tags:
 - ssh
 keywords: []
-
 ---
+
 Contohnya sekarang ada dua akun github yang ingin kita urus dan saya akan menghapus `global config` supaya saya tidak bingung
 
     $ git config --global --unset user.name

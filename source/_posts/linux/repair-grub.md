@@ -11,7 +11,7 @@ tags : repair
 Kesalahan kali ini berada di sisi user atau istilahnya *human error*. Karena komputer itu sifatnya diperintah, masalah yang banyak terjadi (sebagai user Linux) sebetulnya manusianya :v bukan sistemnya.
 
 Uraian ini sebetulnya gak penting sih, semua akan tahu setelah mencoba sendiri :v
-<!--more-->
+
 1. **Windows dan Linux**: install windows dulu jika tidak ada sistem operasi di komputer. Jangan Linux dulu. Karena Boot record Windows tidak bisa membuat menu dualboot seperti yang di lakukan Linux. Setelah itu baru buat usb bootable dan pilih opsi *Install Linux alongside Windows*
 
 2. **Windows dan Windows yang lain**: buat partisi baru dengan resize partisi yang digunakan dalam Windows dan buat partisi baru untuk digunakan sebagai Windows yang lain. Boot ke installer Windows dan pilih partisi yang tadi dibuat
@@ -38,27 +38,25 @@ Kita harus masuk kedalam live cd sesuai distribusi masing2.
 
 kalau sudah mount partisi **root** ke **/mnt** untuk bisa melakukan "change root". Maka /mnt dan subdirektorinya nanti digunakan sebagai tempat mount point sementara untuk file sistem kita. Kira-kira seperti itu fungsinya yang saya tahu
 
-```
-$ sudo mount /dev/sdaX /mnt
-$ sudo mount --bind /dev /mnt/dev
-$ sudo mount --bind /proc /mnt/proc
-$ sudo mount --bind /sys /mnt/sys
-```
+    $ sudo mount /dev/sdaX /mnt
+    $ sudo mount --bind /dev /mnt/dev
+    $ sudo mount --bind /proc /mnt/proc
+    $ sudo mount --bind /sys /mnt/sys
+
 sekarang status root kita pindahkan ke /mnt. Setelah itu dilanjut install & update grubnya
-```
-$ sudo chroot /mnt
-# grub-install /dev/sda && Update GRUB
-```
+
+    $ sudo chroot /mnt
+    # grub-install /dev/sda && Update GRUB
 
 sudah selesai tinggal exit dari 'change root' bisa dengan Ctrl-D.
 
 Jangan lupa, sebelum rampung lepaskan semua pernak-pernik yang dijadikan tempat mounting sementara tadi
-```
-$ sudo umount /mnt/dev
-$ sudo umount /mnt/proc
-$ sudo umount /mnt/sys
-$ sudo umount /mnt
-```
+
+    $ sudo umount /mnt/dev
+    $ sudo umount /mnt/proc
+    $ sudo umount /mnt/sys
+    $ sudo umount /mnt
+
 huh beress.
 
 ## Sumber

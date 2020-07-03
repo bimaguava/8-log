@@ -48,15 +48,13 @@ Untuk menemukan lokasi partisi berada, bisa dengan **fdisk -l** seperti gambar d
 ![fdisk -l](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hzFKIQgcXlBcyUzkS%2Femergency-mode-escape-04.png?alt=media&token=dd5e0de0-0f47-4b2b-b248-792fe9b7b7c8)
 
 Setelah itu jalankan perintah fsck. Yang dibetulkan biasanya partisi root dan home. 
-```
-# fsck.ext4 /dev/sda5
-# fsck.ext4 /dev/sda6
-```
+
+    # fsck.ext4 /dev/sda5
+    # fsck.ext4 /dev/sda6
 
 Terakhir jalankan
-```
-# systemctl reboot
-```
+
+    # systemctl reboot
 
 ## Sumber
 * [https://askubuntu.com...](https://askubuntu.com/questions/646414/welcome-to-emergency-mode-think-it-is-a-fsck-problem)

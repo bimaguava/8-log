@@ -34,28 +34,23 @@ Dilihat dari sudut pandang offensive
 
 ### Instalasi
 
-```
-git clone https://github.com/digininja/pipal.git
-```
+	git clone https://github.com/digininja/pipal.git
 
 ### Menu
 
-```
-ruby pipal.rb --h
-pipal 3.1 Robin Wood (robin@digi.ninja) (http://digi.ninja)
+	ruby pipal.rb --h
+	pipal 3.1 Robin Wood (robin@digi.ninja) (http://digi.ninja)
 
-Usage: pipal [OPTION] ... FILENAME
-	--help, -h, -?: show help
-	--top, -t X: show the top X results (default 10)
-	--output, -o <filename>: output to file
-	--gkey <Google Maps API key>: to allow zip code lookups (optional)
-	--list-checkers: Show the available checkers and which are enabled
-	--verbose, -v: Verbose
+	Usage: pipal [OPTION] ... FILENAME
+		--help, -h, -?: show help
+		--top, -t X: show the top X results (default 10)
+		--output, -o <filename>: output to file
+		--gkey <Google Maps API key>: to allow zip code lookups (optional)
+		--list-checkers: Show the available checkers and which are enabled
+		--verbose, -v: Verbose
 
+		FILENAME: The file to count
 
-	FILENAME: The file to count
-
-```
 ### Argumen
 
 * list-checkers = modul yang digunakan untuk menyebutkan istilah keagamaan yang populer, eksplisit, warna kendaraan, dan banyak lagi. Semakin banyak modul yang digunakan maka akan semakin lama proses selesai
@@ -68,15 +63,11 @@ secara basic Pipal akan menganalisis daftar kata sandi dan menampilkan banyak in
 
 Coba untuk menghubungkan modul berawalan "EN_" (Bahasa indonesia tidak tersedia)
 
-```
 ln -s /checkers_available/EN_* checkers_enabled
-```
 
 Cara penggunaanya simpel
 
-```
 ruby pipal.rb --top 500 --output output-file/yahoo.pipal data-file/password.list
-```
 
 Contoh hasil:
 

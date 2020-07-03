@@ -9,38 +9,38 @@ categories:
 
 Tidak semua skrip Bash memerlukan argumen. mereka ditafsirkan oleh Bash dan bagaimana menggunakannya. Contoh ketika kita menjalankan perintah **ls -l /var/log**, baik -l dan /var/log adalah argumen untuk perintah ls.
 
-```
-$ vim subshell.sh
 
-var1=value1 
-echo $var1
+    $ vim subshell.sh
 
-var2=value2 
-echo $var2
+    var1=value1 
+    echo $var1
 
-$(var1=newvar1) 
-echo $var1
+    var2=value2 
+    echo $var2
 
-`var2=newvar2` 
-echo $var2
+    $(var1=newvar1) 
+    echo $var1
 
-$ cat ./subshell.sh #!/bin/bash -x
-$ chmod +x subshell.sh
-$ ./subshell.sh
+    `var2=newvar2` 
+    echo $var2
 
-+ var1=value1
-+ echo value1
-value1
-+ var2=value2
-+ echo value2
-value2
-++ var1=newvar1
-+ echo value1
-value1
-++ var2=newvar2
-+ echo value2
-value2
-```
+    $ cat ./subshell.sh #!/bin/bash -x
+    $ chmod +x subshell.sh
+    $ ./subshell.sh
+
+    + var1=value1
+    + echo value1
+    value1
+    + var2=value2
+    + echo value2
+    value2
+    ++ var1=newvar1
+    + echo value1
+    value1
+    ++ var2=newvar2
+    + echo value2
+    value2
+
 
 Dalam contoh ini, kita mengubah shebang, menambahkan opsi -x flag. Ini menginstruksikan Bash untuk mencetak tambahan output debug. 
 
@@ -48,11 +48,10 @@ Jadi kita bisa lebih mudah melihat perintah yang dieksekusi dan hasilnya. Saat k
 
 Contoh penerapan argumen
 
-```
-$ cat ./arg.sh #!/bin/bash
-echo "The first two arguments are $1 and $2"
 
-$ chmod +x ./arg.sh
-$ ./arg.sh hello there
-The first two arguments are hello and there
-```
+    $ cat ./arg.sh #!/bin/bash
+    echo "The first two arguments are $1 and $2"
+
+    $ chmod +x ./arg.sh
+    $ ./arg.sh hello there
+    The first two arguments are hello and there

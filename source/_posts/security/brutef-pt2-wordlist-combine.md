@@ -17,9 +17,7 @@ Hal itu dapat mengurangi lama proses bruteforce. Salah satu solusinya ialah **wo
 
 ## Instalasi
 
-```
-wget https://raw.githubusercontent.com/4n4nk3/Wordlister/master/wordlister.py
-```
+    wget https://raw.githubusercontent.com/4n4nk3/Wordlister/master/wordlister.py
 
 ## Penggunaan
 
@@ -32,9 +30,7 @@ Untuk menggunakan Wordlister, pertama-tama kita perlu file input yang berisi daf
 * min = panjang minimum kata sandi yang dihasilkan
 * maks = panjang maksimum kata sandi yang dihasilkan
 
-```
-python3 wordlister.py --input list.txt --perm 2 --min 6 --max 32
-```
+    python3 wordlister.py --input list.txt --perm 2 --min 6 --max 32
 
 ### Argumen opsional
 
@@ -46,28 +42,23 @@ python3 wordlister.py --input list.txt --perm 2 --min 6 --max 32
 
 contoh:
 
-```
-python3 wordlister.py --input list.txt --perm 2 --min 6 --max 32 --leet --cap --append 1969
-Iloveyou
-Iloveyou1969
-1l0v3y0u
-1l0v3y0u1969
-iloveyou
-Password
-Password1969
-iloveyou1969
-P455w0rd
-P455w0rd1969
-password
-
-...
-```
+    python3 wordlister.py --input list.txt --perm 2 --min 6 --max 32 --leet --cap --append 1969
+    Iloveyou
+    Iloveyou1969
+    1l0v3y0u
+    1l0v3y0u1969
+    iloveyou
+    Password
+    Password1969
+    iloveyou1969
+    P455w0rd
+    P455w0rd1969
+    password
 
 Atau mengarahkannya ke file text agar lebih efektif
 
-```
-python3 wordlister.py --input list.txt --perm 2 --min 6 --max 32 --leet --cap --append 1969 > mywordlist.txt
-```
+
+    python3 wordlister.py --input list.txt --perm 2 --min 6 --max 32 --leet --cap --append 1969 > mywordlist.txt
 
 ## Pesan
 

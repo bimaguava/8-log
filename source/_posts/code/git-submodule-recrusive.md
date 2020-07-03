@@ -13,9 +13,7 @@ keywords: []
 ---
 Jadi sekarang alur kerjanya terlihat seperti ini:‌
 
-1. klon project
-2. saat perubahan baru telah dibuat kita bisa mengupdate commit baru tersebut ke struktur folder project kita
-3. git pull
+klon project, saat perubahan baru telah dibuat kita bisa mengupdate commit baru tersebut ke struktur folder project kita, lalu ```git pull```
 
     $ git clone --recursive git@github.com:bimagv/gitbook.app-r.git
     Cloning into 'gitbook.app-r'...

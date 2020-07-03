@@ -14,14 +14,13 @@ Identifikasi), mulai dengan **#!/bin/bash** dan harus memiliki izin yang dapat d
 
 Contoh:
 
-```
-$ cat ./hello-world.sh #!/bin/bash
-# Hello World Bash Script
-echo "Hello World!"
 
-$ chmod +x bash.sh
-$ ./hello.sh
-```
+    $ cat ./hello-world.sh #!/bin/bash
+    # Hello World Bash Script
+    echo "Hello World!"
+
+    $ chmod +x bash.sh
+    $ ./hello.sh
 
 * tanda "#" digunakan sebagai comment
 * echo "Hello World!" digunakan untuk print string yang diberikan ke terminal
@@ -37,23 +36,19 @@ nilai untuk itu, atau membaca variabel, yang akan "memperluas" atau "menyelesaik
 Mendeklarasikan variabel bisa melalui beberapa cara, seperti mengatur nilai secara langsung
 
 name=value
-```
-$ first_name=Good
-$ last_name=People
-```
+
+    $ first_name=Good
+    $ last_name=People
 
 Untuk melakukannya, kita mendahului variabel dengan
 "$" Karakter. Setiap kali Bash menemukan sintaks ini dalam suatu perintah, itu menggantikan nama variabel dengan nilai ("perluas" variabel) sebelum eksekusi:
 
-```
-$ echo $first_name $last_name
-Good People
-```
+
+    $ echo $first_name $last_name
+    Good People
+
 atau menggunakan command
 
-```
-bima@x220:~$ user=$(whoami)
-bima@x220:~$ echo $user
-bima
-```
-
+    bima@x220:~$ user=$(whoami)
+    bima@x220:~$ echo $user
+    bima

@@ -10,12 +10,6 @@ Kadang kita ingin membatasi penggunaan ip misal untuk 10.10.10.2 s/d 10.10.10.5 
 
 Caranya hanya dengan mengaktifkan 'Add ARP for leases'  
 
-```
-IP>DHCP Server>Nama DHCP Server 
-```
+    IP>DHCP Server>Nama DHCP Server 
 
-Dan pada interface yang bersangkutan ```Interfaces>Ethernet>ether berapa>``` Menu ARP dijadikan reply-only 
-
-## 参考资料
-> - []()
-> - []()
+Dan pada interface yang bersangkutan ```Interfaces>Ethernet>ether berapa>``` Menu ARP dijadikan reply-only

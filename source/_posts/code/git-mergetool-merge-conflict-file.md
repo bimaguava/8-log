@@ -95,7 +95,7 @@ and solution is just merge it manually
 
 If you're on Vscode after merge you can see lot of .orig file then the line current change and incoming change
 
-![Screenshot_2020-04-15_10-00-46_dqjzih](https://res-console.cloudinary.com/bimagv/thumbnails/v1/image/upload/v1587002470/U2NyZWVuc2hvdF8yMDIwLTA0LTE1XzEwLTAwLTQ2X2RxanppaA==/preview)
+![Images001a](https://res.cloudinary.com/bimagv/image/upload/v1593780594/2020-04/images001a_mrjs0f.png)
 
 On terminal
 

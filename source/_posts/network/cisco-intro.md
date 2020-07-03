@@ -42,53 +42,44 @@ tags : cisco
 
 ## Basic config
 masuk dari **user exec mode** ke **priviliged mode**
-```
-Router> enable
-```
+
+    Router> enable
 
 masuk dari **priviliged mode** ke **global config mode**
-```
-Router# conf terminal
-```
+
+    Router# conf terminal
 
 memberi nama pada router atau perangkat
-```
-Router(config)# hostname R1
-```
+
+    Router(config)# hostname R1
 
 membuat banner yang ditampilkan di awal login ke router
-```
-Router(config)# banner motd #Admin Perpustakaan#
-```
+
+    Router(config)# banner motd #Admin Perpustakaan#
 
 membuat password untuk priviliged mode (tidak terenkripsi, clear text based)
-```
-R1(config)# security passwords min-length 6
-R1(config)# enable password 12345apaan 
-```
+
+    R1(config)# security passwords min-length 6
+    R1(config)# enable password 12345apaan 
 
 membuat password untuk priviliged mode (terenkripsi, md5 hash)
-```
-R1(config)# enable secret 12345apaan
-```
+
+    R1(config)# enable secret 12345apaan
 
 atau kita bisa menghide passwd on **show run**. Dalam kata lain mengenkripsi clear text password
-```
-R1(config)# service password-encryption
-```
+
+    R1(config)# service password-encryption
 
 ## IP address
 
-```
-R1(config)# interface fa0/1
-R1(config-line)# description Connection to R2
-R1(config-line)# ip address 192.168.1.1 255.255.255.0
+
+    R1(config)# interface fa0/1
+    R1(config-line)# description Connection to R2
+    R1(config-line)# ip address 192.168.1.1 255.255.255.0
 
 ### mengaktifkan interfacenya
-R1(config-line)# no shutdown 
-
-R1(config-line)# exit
-```
+    R1(config-line)# no shutdown 
+    R1(config-line)# exit
 
 ## Remote Access
 
@@ -111,49 +102,42 @@ R1(config-line)# exit
 
 ## Line console
 
-```
-R1(config)# line console 0
-R1(config-line)# password 12345lupa
+    R1(config)# line console 0
+    R1(config-line)# password 12345lupa
 
 ### automatic logout in 5 minute if no activity
-R1(config-line)# exectimeout 5 0
+    R1(config-line)# exectimeout 5 0
 
 ### activate password line console
-R1(config-line)# login
-
-R1(config-line)# exit
-```
- 
+    R1(config-line)# login
+    R1(config-line)# exit
 
 ## Telnet
-```
-R1(config)# username bima password 0 12345lupa 
-R1(config)# enable secret 12345engkripsi 
 
-router access only 1 machine. e.g: 5 machine (line vty 0 4)
-R1(config)# line vty 0
+    R1(config)# username bima password 0 12345lupa 
+    R1(config)# enable secret 12345engkripsi 
 
-R1(config-line)# login local
-R1(config-line)# transport input telnet
-R1(config-line)# exit
-root@localhost# telnet 192.168.1.1
-```
+    router access only 1 machine. e.g: 5 machine (line vty 0 4)
+    R1(config)# line vty 0
+
+    R1(config-line)# login local
+    R1(config-line)# transport input telnet
+    R1(config-line)# exit
+    root@localhost# telnet 192.168.1.1
  
-
 ## SSH
-```
-R1(config)# ip domain-name cisco.com
-R1(config)# crypto key generate rsa
 
-R1(config)# line vty 0
-R1(config-line)# login local
-R1(config-line)# transport input ssh
-R1(config-line)# exit
+    R1(config)# ip domain-name cisco.com
+    R1(config)# crypto key generate rsa
 
-R1(config)# username bima password 0 12345lupa
+    R1(config)# line vty 0
+    R1(config-line)# login local
+    R1(config-line)# transport input ssh
+    R1(config-line)# exit
 
-root@localhost# ssh -l bima 192.168.1.1
-```
+    R1(config)# username bima password 0 12345lupa
+
+    root@localhost# ssh -l bima 192.168.1.1
 
 ## Backup Config R1
 Untuk proses backup, service yang digunakan menggunakan protokol  TFTP.
@@ -164,43 +148,38 @@ Untuk mengeceknya gunakan tes Ping.
 
 Setelah koneksi dari R1 ke TFTP-Srv1 sukses, langkah selanjutnya yaitu eksekusi command di R1. 
 
-```
-R1# copy running-config tftp
+    R1# copy running-config tftp
 
-Address or name of remote host []? 192.168.1.11
-Destination filename [R1-confg]?
-Writing running-config....!!
-[OK - 828 bytes]
+    Address or name of remote host []? 192.168.1.11
+    Destination filename [R1-confg]?
+    Writing running-config....!!
+    [OK - 828 bytes]
 
-828 bytes copied in 3.005 secs (275 bytes/sec)
-```
+    828 bytes copied in 3.005 secs (275 bytes/sec)
  
-
 ## Backup IOS R1
 Menampilkan lokasi penyimpanan Cisco IOS yang akan di backup
-```
-R1# show flash
 
-System flash directory:
-File Length Name/status
-3 5571584 pt1000-i-mz.122-28.bin
-2 28282 sigdef-category.xml
-1 227537 sigdef-default.xml
-[5827403 bytes used, 58188981 available, 64016384 total]
-63488K bytes of processor board System flash (Read/Write)
-```
+    R1# show flash
+
+    System flash directory:
+    File Length Name/status
+    3 5571584 pt1000-i-mz.122-28.bin
+    2 28282 sigdef-category.xml
+    1 227537 sigdef-default.xml
+    [5827403 bytes used, 58188981 available, 64016384 total]
+    63488K bytes of processor board System flash (Read/Write)
 
 Proses backup Cisco IOS R1 yang akan menyimpan konfigurasi router ke TFTP server
-```
-R1# copy flash tftp
 
-Source filename []? pt1000-i-mz.122-28.bin
-Address or name of remote host []? 192.168.1.11
-Destination filename [pt1000-i-mz.122-28.bin]?
-Writing pt1000-i-mz.122-28.bin...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-[OK - 5571584 bytes]
-5571584 bytes copied in 0.29 secs (4402126 bytes/sec)
-```
+    R1# copy flash tftp
+
+    Source filename []? pt1000-i-mz.122-28.bin
+    Address or name of remote host []? 192.168.1.11
+    Destination filename [pt1000-i-mz.122-28.bin]?
+    Writing pt1000-i-mz.122-28.bin...!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    [OK - 5571584 bytes]
+    5571584 bytes copied in 0.29 secs (4402126 bytes/sec)
 
 ## Restore Config R1
 kita bisa memakai file konfig yang ada di TFTP server
@@ -215,17 +194,16 @@ Yang perlu diingat dari backup dan restore ini adalah source dan destination.
 
 Kalau backup berarti sourcenya router dan destinationnya TFTP, sedangkan restore yang berfungsi sebagai sourcenya TFTP dan destinationnya router. 
 
-```
-R1# copy tftp running-config
+    R1# copy tftp running-config
 
-Address or name of remote host []? 192.168.1.11
-Source filename []? R1-confg
-Destination filename [running-config]?
-Accessing tftp://192.168.1.11/R1-confg...
-Loading R1-confg from 192.168.1.11: !
-[OK - 828 bytes]
-828 bytes copied in 0.001 secs (828000 bytes/sec)
-```
+    Address or name of remote host []? 192.168.1.11
+    Source filename []? R1-confg
+    Destination filename [running-config]?
+    Accessing tftp://192.168.1.11/R1-confg...
+    Loading R1-confg from 192.168.1.11: !
+    [OK - 828 bytes]
+    828 bytes copied in 0.001 secs (828000 bytes/sec)
+    
 Untuk melihat hasil backup Cisco IOS dan R1 config bisa diakses melalui TFTP-Srv1 
 
 ## Etc..

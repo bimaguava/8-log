@@ -19,10 +19,3 @@ categories: hardware
 # Info Wifi
 
 ![Info wifi.jpg](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4i-5uqSIVugOgPd6Lg%2Flseries-keybind-03.jpeg?alt=media&token=b99f9027-7b7b-4e8d-a255-746a6f4a2e12)
-
-
-
-
-## 参考资料
-> - []()
-> - []()

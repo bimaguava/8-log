@@ -58,10 +58,3 @@ Prosesnya:
     ![posisi 2 tuas(kanan kiri)](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hxCJfJHzuBxl13X0t%2Fdot-matrix-pq-04.jpeg?alt=media&token=3911f712-dccf-43dc-a03c-693ca69c6230)
     
     semakin tuas ditarik ke atas, akan semakin dekat dengan print head. Begitupun sebaliknya. Hati-hati, jangan juga menyetetelnya terlalu dekat sampai memberikan gesekan yang besar terhadap medium.
-
-
-
-
-## 参考资料
-> - []()
-> - []()
