@@ -1,0 +1,35 @@
+---
+new_page_extension: md
+auto_deploy: true
+admin_path: admin
+webhook_url: 
+sections:
+- type: document
+  path: source/404/index.md
+  label: '404'
+- type: directory
+  path: source/_posts
+  label: all
+  create: documents
+  match: "*.md"
+  templates:
+  - blog-post
+- type: directory
+  path: source/_drafts
+  label: Draft
+  create: documents
+  match: "*.md"
+  templates:
+  - blog-post
+upload_dir: images
+public_path: https://res.cloudinary.com/bimagv/image/upload
+front_matter_path: https://res.cloudinary.com/bimagv/image/images
+use_front_matter_path: true
+file_template: ":filename:"
+build:
+  preview_output_directory: public
+  install_dependencies_command: npm install
+  preview_docker_image: node:10
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run preview
