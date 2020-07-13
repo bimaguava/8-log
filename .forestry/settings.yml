@@ -8,8 +8,29 @@ sections:
   path: source/404/index.md
   label: '404'
 - type: directory
-  path: source/_posts
-  label: all
+  path: source/_posts/code
+  label: code
+  create: documents
+  match: "*.md"
+  templates:
+  - blog-post
+- type: directory
+  path: source/_posts/hardware
+  label: hardware
+  create: documents
+  match: "*.md"
+  templates:
+  - blog-post
+- type: directory
+  path: source/_posts/linux
+  label: linux
+  create: documents
+  match: "*.md"
+  templates:
+  - blog-post
+- type: directory
+  path: source/_posts/network
+  label: network
   create: documents
   match: "*.md"
   templates:
