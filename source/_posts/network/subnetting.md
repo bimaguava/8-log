@@ -7,15 +7,11 @@ categories: network
 ---
 ## Menghafal jumlah ip dari prefix
 
-![](/images/yellow.jpg)
-
 Dalam kelas-kelasnya prefix ada batasan sesuai kelas IPnya
 
 * Kelas A = /18-/30
 * Kelas B = /17-/30
 * Kelas C = /19-/30
-
-![](/images/2020-01-20img5.png)
 
 Untuk menghafal dari /24 - /32 caranya seperti ini
 patokannya adalah 24 (256), 28 (16), 32 (1)
