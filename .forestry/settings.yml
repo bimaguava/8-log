@@ -36,6 +36,13 @@ sections:
   templates:
   - blog-post
 - type: directory
+  path: source/_posts/security
+  label: security
+  create: documents
+  match: "*.md"
+  templates:
+  - blog-post
+- type: directory
   path: source/_drafts
   label: Draft
   create: documents
