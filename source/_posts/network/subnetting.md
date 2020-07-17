@@ -7,8 +7,6 @@ categories: network
 ---
 ## Menghafal jumlah ip dari prefix
 
-![](/images/yellow.jpg)
-
 Dalam kelas-kelasnya prefix ada batasan sesuai kelas IPnya
 
 * Kelas A = /18-/30
