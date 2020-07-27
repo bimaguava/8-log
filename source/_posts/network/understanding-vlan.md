@@ -42,6 +42,8 @@ VLAN pada switch itu ialah sebuah port virtual yang mana penggabungan/pengelompo
 
 ![](/images/screenshot-from-2020-07-27-16-22-02.png)
 
-Apabila suatu VLAN ditambahkan maka hal-hal ini berlaku
+Efeknya VLAN ini
 
-* Apai
+* Faktor keamanan terjaga daripada orang-orang yang suka colok kabel sembarangan, karena tidak langsung konek.
+* perkerjaan lebih terorganisir
+* resiko broadcast storm, jika memang VLAN yang dibuat sangat2 besar.
