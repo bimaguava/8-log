@@ -1,5 +1,5 @@
 ---
-title : "Emergency Mode Escape"
+title : "Linux problem: Stuck in emergency mode"
 date : "2018-10-03"
 showDate: true
 draft : false

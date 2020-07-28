@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: 'git mergetool: merge conflict file'
+title: 'merge conflict file with git mergetool'
 date: 2020-04-16T09:05:00+07:00
 updated: 2020-04-16T09:05:00+07:00
 category:
@@ -10,9 +10,11 @@ category:
 tags:
 - repair
 keywords: []
-
 ---
-I was forked and make changes to this theme
+
+The problem is..
+
+when forked and make changes to the project
 
 and I will push...
 

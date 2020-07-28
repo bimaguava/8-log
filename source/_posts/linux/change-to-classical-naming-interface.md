@@ -1,6 +1,6 @@
 ---
 author: "Bima"
-title: Change to Classical Naming Interface
+title: "Ubuntu 16.04: Change to Classical Naming Interface"
 date: 2018-10-01
 showDate: true
 toc: true

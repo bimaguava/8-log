@@ -1,5 +1,5 @@
 ---
-title: "Brute f Pt.3 Wordlist Tool Reference"
+title: "Brutef Wordlist Tool Reference"
 date: 2020-03-04
 categories : security
 tags : bruteforce

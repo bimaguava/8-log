@@ -1,5 +1,5 @@
 ---
-title: "Brute f Pt.5 ssh, vnc, etc"
+title: "Brutef ssh, vnc, etc"
 date: 2020-03-05
 categories : security
 tags : bruteforce

@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: Understanding VLAN
+title: "Cisco: VLAN"
 date: 2020-07-26T17:00:00Z
 updated: 2020-07-26T17:00:00Z
 category:
@@ -47,3 +47,15 @@ Efeknya VLAN ini
 * Faktor keamanan terjaga daripada orang-orang yang suka colok kabel sembarangan, karena tidak langsung konek.
 * perkerjaan lebih terorganisir
 * resiko broadcast storm, jika memang VLAN yang dibuat sangat2 besar.
+
+## Gambaran konfig
+| Fungsi                                             | Command                       |
+|----------------------------------------------------|-------------------------------|
+| port nomor satu dikasi buat VLAN 10                     | interface fa0/1               |
+|                                                         | switchport access vlan10      |
+| untuk mengasosiasikan port nomor 1 sampai 5 ke VLAN 10  | interface range f0/2-5        |
+|                                                         | switchport access vlan 10     |
+| untuk mengasosiasikan port yang tidak berurutan ke VLAN 10    | interface fa0/1, fa0/3, fa0/5 |
+|                                                         | switchport access vlan 10     |
+| menampilkan interface vlan                              | show vlan brief               |
+

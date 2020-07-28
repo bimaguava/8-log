@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: MikroTik basic command line
+title: "MikroTik: basic CLI"
 date: 2020-07-13T17:00:00Z
 updated: 2020-07-13T17:00:00Z
 category: []

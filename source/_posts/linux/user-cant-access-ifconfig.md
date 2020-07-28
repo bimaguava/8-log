@@ -1,5 +1,5 @@
 ---
-title : "User Can't Access ifconfig"
+title : "Elementary Loki: User Can't Access ifconfig"
 date : "2018-10-17"
 showDate: true
 toc : true

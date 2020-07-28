@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: MikroTik membridgekan beberapa port
+title: "MikroTik: Membridgekan beberapa port"
 date: 2020-07-13T17:00:00Z
 updated: 2020-07-13T17:00:00Z
 category:

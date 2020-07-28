@@ -1,5 +1,5 @@
 ---
-title: Review kembali Subnetting
+title: Subnetting
 date: 2020-07-05
 draft: false
 categories: network

@@ -1,5 +1,5 @@
 ---
-title: "Brute f Pt.1 Weak Password"
+title: "Brutef Weak Password"
 date: 2020-03-04
 categories : security
 tags : bruteforce

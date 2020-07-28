@@ -1,5 +1,5 @@
 ---
-title : "OwnCloud Server install"
+title : "OwnCloud Server installation"
 date : "2019-03-01"
 showDate: true
 draft : false

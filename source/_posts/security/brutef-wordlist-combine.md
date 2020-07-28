@@ -1,5 +1,5 @@
 ---
-title: "Brute f Pt.2 Wordlist Combine"
+title: "Brutef Wordlist Combine"
 date: 2020-03-04
 categories : security
 tags : bruteforce

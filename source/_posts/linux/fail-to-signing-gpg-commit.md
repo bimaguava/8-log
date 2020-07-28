@@ -1,5 +1,5 @@
 ---
-title: "Fail to signing commit"
+title: "Linux: Fail to signing GPG commit"
 date: 2019-09-24T00:15:39+07:00
 showDate: true
 draft: false

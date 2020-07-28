@@ -1,5 +1,5 @@
 ---
-title: "Cisco OSPF Single Area + DR BDR"
+title: "Cisco: OSPF Single Area + DR BDR"
 draft: true
 date : "2019-04-14"
 categories : network

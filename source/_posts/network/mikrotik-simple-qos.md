@@ -1,5 +1,5 @@
 ---
-title: MikroTik Simple QOS
+title: "MikroTik: Simple QOS"
 toc: true
 date: 2019-08-30 22:13:32
 tags: mikrotik

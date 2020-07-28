@@ -1,5 +1,5 @@
 ---
-title : "Repair GRUB"
+title : "Linux problem: Repair GRUB"
 date : "2018-10-04"
 showDate: true
 toc: true

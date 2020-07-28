@@ -1,5 +1,5 @@
 ---
-title: MikroTik Memaksa Client Untuk Memakai DHCP
+title: "MikroTik: Memaksa Client Untuk Memakai DHCP"
 toc: true
 date: 2019-08-30 21:51:19
 tags: mikrotik

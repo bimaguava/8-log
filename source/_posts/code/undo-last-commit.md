@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: Undo last commit
+title: "Git: Undo last commit"
 date: 2020-04-15T11:59:00+07:00
 updated: 2020-04-15T11:59:00+07:00
 category:
