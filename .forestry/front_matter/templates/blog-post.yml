@@ -34,6 +34,6 @@ fields:
   label: Table of Contents
   default: true
 pages:
-- source/_posts/network/cisco-configure-router-on-a-stick-inter-vlan-routing.md
+- source/_posts/network/configure-etherchannel.md
 - source/_posts/network/mikrotik-basic-command-line.md
 - source/_posts/network/mikrotik-membridgekan-beberapa-port.md
