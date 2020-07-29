@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: "Cisco: VLAN"
+title: "Cisco: VLAN Configuration"
 date: 2020-07-26T17:00:00Z
 updated: 2020-07-26T17:00:00Z
 category:
