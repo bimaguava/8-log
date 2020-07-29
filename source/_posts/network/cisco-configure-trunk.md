@@ -22,7 +22,7 @@ Fungsi Trunk itu tidak lain dan tidak bukan adalah menghubungkan 2 switch agar k
 
 ### switch mode trunk
 
-Untuk mengaktifkan trunk pada suatu interface yang terhubung ke switch lain
+Untuk mengaktifkan atau meng **on**-kan mode trunk pada suatu interface yang terhubung ke switch lain
 
 ### switchport native vlan \[nomor\]
 
@@ -112,6 +112,19 @@ Maka, ping dari PC1 ke PC4 sukses karena
 
 ![](/images/screenshot_2020-07-29_13-26-23.png)
 
+Oke, jadi kita sudah belajar bahwa koneksi yang berhasil tadi yaitu karena S2 dan S3 terhubung dengan S1 menggunakan DTP (Dynamic Trunk Protocol) secara otomatis walaupun Native VLAN berada di VLAN 1 tetep bisa nyambung ke S1.
+
+Atau kita bisa saja mengeset Native VLAN
+
+    S2(config)#int g0/1
+    S2(config-if)#switchport trunk native vlan 99
+    
+    S3(config)#int g0/2
+    S3(config-if)#switchport trunk native vlan 99
+
+seperti itu 
+
 ## Referensi
 
-[https://www.webiptek.com/2019/10/native-vlan-cisco.html](https://www.webiptek.com/2019/10/native-vlan-cisco.html "https://www.webiptek.com/2019/10/native-vlan-cisco.html")
+* [https://www.webiptek.com/2019/10/native-vlan-cisco.html](https://www.webiptek.com/2019/10/native-vlan-cisco.html "https://www.webiptek.com/2019/10/native-vlan-cisco.html")
+* [https://belajarcomputernetwork.com/tag/vlan/](https://belajarcomputernetwork.com/tag/vlan/ "https://belajarcomputernetwork.com/tag/vlan/")
