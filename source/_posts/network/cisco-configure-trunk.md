@@ -117,12 +117,20 @@ Oke, jadi kita sudah belajar bahwa koneksi yang berhasil tadi yaitu karena S2 da
 Atau kita bisa saja mengeset Native VLAN
 
     S2(config)#int g0/1
+    S2(config-if)#switchport mode access
     S2(config-if)#switchport trunk native vlan 99
     
     S3(config)#int g0/2
+    S3(config-if)#switchport mode access
     S3(config-if)#switchport trunk native vlan 99
 
-seperti itu 
+seperti itu, maka tabel interface sekarang
+
+![](/images/screenshot_2020-07-29_13-53-45.png)
+
+![](/images/screenshot_2020-07-29_14-02-10.png)
+
+Kira-kira seperti itulah dasar-dasar Trunk
 
 ## Referensi
 
