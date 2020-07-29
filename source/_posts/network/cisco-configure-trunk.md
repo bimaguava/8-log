@@ -85,6 +85,8 @@ untuk bisa nyambung kita setel trunknya dulu
 Setelah itu kita perlu merubah Native VLAN ke VLAN 99 sesuai tabel
 
     S1(config-if-range)#switchport trunk native vlan 99
+    %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (99), with S2 GigabitEthernet0/1 (1).
+    %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/2 (99), with S3 GigabitEthernet0/2 (1).
 
 dah. coba di ping PC1 ke PC 4
 
@@ -97,3 +99,9 @@ dah. coba di ping PC1 ke PC 4
     Reply from 172.17.10.24: bytes=32 time<1ms TTL=128
 
 nah udah bisa.
+
+Sedangkan pesan "Native VLAN mismatch ..." itu muncul karena
+
+## Referensi
+
+[https://www.webiptek.com/2019/10/native-vlan-cisco.html](https://www.webiptek.com/2019/10/native-vlan-cisco.html "https://www.webiptek.com/2019/10/native-vlan-cisco.html")
