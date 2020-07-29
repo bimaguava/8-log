@@ -42,8 +42,6 @@ download: [https://drive.google.com/file/d/1FRAww1bpBoFtxtQ0XSzHbdVwToVZHvEU/vie
 
 ![](/images/screenshot_2020-07-29_10-55-12.png)
 
-## Instruksi (sekaligus pembahasan wkwkwk)
-
 ## 1. Mengecek status VLAN
 
 Lihat tabel address, PC1 dan PC 4 terhubung dengan VLAN 10, coba kita cek ping apakah nyambung?
@@ -57,7 +55,7 @@ Lihat tabel address, PC1 dan PC 4 terhubung dengan VLAN 10, coba kita cek ping a
     Request timed out.
     Request timed out.
 
-Nah, belum bisa. karena...
+Nah, jawabannya **belum bisa**. karena...
 
 teorinya ialah VLAN defaultnya hanya di nomor 1 (VLAN 1), jika ingin menghubungkan dengan ke switch lain dengan **selain VLAN 1** maka kita butuh Trunk
 
@@ -73,9 +71,11 @@ dan status keduanya betul (sudah sama)
     88   Management                       active    
     99   Native                           active    
 
-coba kita lihat di S1, Nah **G0/1** dan **G0/2** sebagai penghubung di tengah-tengah berada pada native VLAN atau di VLAN 1 (by default). 
+coba kita lihat di S1, Nah **G0/1** dan **G0/2** sebagai penghubung di tengah-tengah berada pada native VLAN atau di VLAN 1 (by default).
 
 ![](/images/screenshot_2020-07-29_12-05-40.png)
+
+## 2. Configure trunks
 
 untuk bisa nyambung kita setel trunknya dulu
 
@@ -102,11 +102,15 @@ nah udah bisa.
 
 Sedangkan pesan syslog "Native VLAN mismatch ..." itu muncul karena kita tadi menyetel Native VLAN di S1 jadi VLAN 99, padahal di S2 dan S3 masih menggunakan VLAN 1 sebagai default Native VLANnya sesuai pesan dari syslog.
 
-Maka, ping dari PC1 ke PC4 sukses karena 
+Maka, ping dari PC1 ke PC4 sukses karena
 
 * trunk sudah di enable pada S1
-* Dynamic trunking protocol otomatis menegosiasikan trunk link pada sebelahnya
-* S2 dan S3 otomatis menjadikan S1 sebagai trunking port
+* Dynamic trunking protocol (DTP) aktif yang mana otomatis menegosiasikan trunk link pada port yg terhubung ke S1 dan S2. Bisa dilihat **mode**nya di interface yaitu **auto**
+* Maka, S2 dan S3 otomatis menjadikan port di S1 sebagai trunking. Lihat **status**nya yaitu trunking
+
+![](/images/screenshot_2020-07-29_13-26-36.png)
+
+![](/images/screenshot_2020-07-29_13-26-23.png)
 
 ## Referensi
 
