@@ -32,6 +32,14 @@ Native VLAN ini suatu aturan data frame yang memungkinkan switch yang tidak mend
 
 kita bisa mem-filter vlan mana saja yang bisa lewat di jalur trunk itu
 
+## Gambaran cek
+
+### show interface \[port\] switchport
+
+### show interface trunk
+
+### show vlan brief
+
 ## Lab
 
 download: [https://drive.google.com/file/d/1FRAww1bpBoFtxtQ0XSzHbdVwToVZHvEU/view](https://drive.google.com/file/d/1FRAww1bpBoFtxtQ0XSzHbdVwToVZHvEU/view "https://drive.google.com/file/d/1FRAww1bpBoFtxtQ0XSzHbdVwToVZHvEU/view")
