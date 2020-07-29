@@ -100,7 +100,13 @@ dah. coba di ping PC1 ke PC 4
 
 nah udah bisa.
 
-Sedangkan pesan "Native VLAN mismatch ..." itu muncul karena
+Sedangkan pesan syslog "Native VLAN mismatch ..." itu muncul karena kita tadi menyetel Native VLAN di S1 jadi VLAN 99, padahal di S2 dan S3 masih menggunakan VLAN 1 sebagai default Native VLANnya sesuai pesan dari syslog.
+
+Maka, ping dari PC1 ke PC4 sukses karena 
+
+* trunk sudah di enable pada S1
+* Dynamic trunking protocol otomatis menegosiasikan trunk link pada sebelahnya
+* S2 dan S3 otomatis menjadikan S1 sebagai trunking port
 
 ## Referensi
 
