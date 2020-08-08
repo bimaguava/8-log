@@ -3,8 +3,8 @@ draft: true
 comments: true
 toc: true
 title: 'Cisco: Configure EtherChannel'
-date: 2020-07-28T17:00:00Z
-updated: 2020-07-28T17:00:00Z
+date: 2020-07-28T17:00:00.000+00:00
+updated: 2020-07-28T17:00:00.000+00:00
 category:
 - network
 tags:
@@ -16,13 +16,13 @@ Waduh EtherChannel :)
 
 ![](/images/ccnaccnplinx-com-etherchannel-port-options00001.jpg)
 
-menggabungkan beberapa interface/link menjadi satu interface sehingga tidak adanya port yang di block.
+Ether Channel ialah menggabungkan beberapa interface/link menjadi satu interface sehingga tidak adanya port yang di block, s
 
 kenapa ada gabung2an seperti itu?
 
 Karena dalam penggunaan FastEthernet maksimal kapasitas datanya 100Mbps, maka yang sering digunakan adalah menambah kabel untuk mengimbangi beban data.
 
-Yang mana hal ini memungkinkan adanya pembagian beban trafik serta redundansi jika satu atau lebih link di dalam satu channel gagal. 
+Yang mana hal ini memungkinkan adanya pembagian beban trafik serta redundansi jika satu atau lebih link di dalam satu channel gagal.
 
 dan juga load balancing..
 
@@ -35,6 +35,8 @@ nanti dah Kalok gak male..
 ### port-channel
 
 Gabungan beberapa interface atau bisa dikatakan channel group tadi akan menjadi interface baru
+
+## Tipe Ether channel
 
 ### PAGP (Port Aggregation Control Protocol)
 
