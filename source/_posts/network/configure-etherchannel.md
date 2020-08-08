@@ -56,3 +56,4 @@ Silahkan baca: [Spanning tree](https://8log.netlify.app/2020/08/08/network/cisco
 
 * [https://www.cisco.com/c/en/us/support/docs/lan-switching/etherchannel/12023-4.html](https://www.cisco.com/c/en/us/support/docs/lan-switching/etherchannel/12023-4.html "https://www.cisco.com/c/en/us/support/docs/lan-switching/etherchannel/12023-4.html")
 * [https://belajarcomputernetwork.com/2012/12/13/etherchannel-2/](https://belajarcomputernetwork.com/2012/12/13/etherchannel-2/ "https://belajarcomputernetwork.com/2012/12/13/etherchannel-2/")
+* [https://www.youtube.com/watch?v=H9wFWP6KPCY](https://www.youtube.com/watch?v=H9wFWP6KPCY "https://www.youtube.com/watch?v=H9wFWP6KPCY")
