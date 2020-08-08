@@ -12,23 +12,20 @@ tags:
 keywords: []
 
 ---
-Waduh EtherChannel :)
+
+## Ether Channel 
 
 ![](/images/ccnaccnplinx-com-etherchannel-port-options00001.jpg)
 
-Ether Channel ialah menggabungkan beberapa interface/link menjadi satu interface sehingga tidak adanya port yang di block, s
+Ialah menggabungkan beberapa interface/link menjadi satu interface.
 
-kenapa ada gabung2an seperti itu?
-
-Karena dalam penggunaan FastEthernet maksimal kapasitas datanya 100Mbps, maka yang sering digunakan adalah menambah kabel untuk mengimbangi beban data.
+**Karena** dalam penggunaan FastEthernet maksimal kapasitas datanya 100Mbps, maka yang sering digunakan adalah menambah kabel untuk mengimbangi beban data.
 
 Yang mana hal ini memungkinkan adanya pembagian beban trafik serta redundansi jika satu atau lebih link di dalam satu channel gagal.
 
-dan juga load balancing..
+> Etherchannel diaplikasikan dengan goals yang hampir sama dengan _Spanning Tree_, yaitu mencegah looping
 
-> eh bukan... ternyata, itu berlaku untuk router, lupa. Mungkin nanti akan belajar lagi tentang bagaimana  ketika router mimiliki lebih dari satu link dengan nu berlaku untuk router, lupa. Mungkin nanti akan belajar lagi tentang bagaimailai AD yang sama maka router akan bisa menggunakan semua link itu dengan tujuan distribusi beban trafik pada dua atau lebih jalur/link itu yaitu trafik bisa lebih optimal.
-
-nanti dah Kalok gak male..
+s
 
 ## Istilah2
 
