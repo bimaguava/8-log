@@ -12,18 +12,17 @@ tags:
 keywords: []
 
 ---
-
 ## Ether Channel itu...
 
 ![](/images/ccnaccnplinx-com-etherchannel-port-options00001.jpg)
 
-Ialah menggabungkan beberapa interface/link menjadi satu interface. Maka di EtherChannel kita buat ada 2 kabel tapi seakan2 jadi satu kabel. 
+Ialah menggabungkan beberapa interface/link menjadi satu interface. Maka di EtherChannel kita buat ada 2 kabel tapi seakan2 jadi satu kabel.
 
 Dan gabungan beberapa interface itu atau channel group tadi akan melahirkan sebuah ~~keturunan~~ interface baru yang dinamakan `port-channel`
 
 _Dalam menghubungkan sebuah switch satu dengan yang lain kita mengenal `trunk,`_
 
-Trunk-trunk pada EtherChannel berada pada status forwarding semua atau blocking semua, karena STP memperlakukan semua trunk pada EtherChannel sebagai 1 trunk. 
+Trunk-trunk pada EtherChannel berada pada status forwarding semua atau blocking semua, karena STP memperlakukan semua trunk pada EtherChannel sebagai 1 trunk.
 
 Saat EtherChannel berada pada status forwarding, maka switch akan melakukan load-balance/membagi rata trafik pada semua trunk, sehingga bandwidth yang tersedia jadi lebih banyak.
 
@@ -41,15 +40,17 @@ Atau mungkin sebaiknya bisa juga menggunakan GigabitEthernet (1000Mbps/1Gbps)
 
 Kalau tadi adalah tentang bagaimana kita bisa mengupgrade resource trafik,
 
-di dunia **_"Perbandwith-an"_** ini memungkinkan adanya pembagian beban trafik serta redundansi jika satu atau lebih link di dalam satu channel gagal. 
+di dunia **_"Perbandwith-an"_** ini memungkinkan adanya pembagian beban trafik serta redundansi jika satu atau lebih link di dalam satu channel gagal.
 
 Silahkan baca: [Spanning tree](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "Spanning tree"), BPDUGuard
 
 > Secara sederhana Etherchannel itu seperti load balancing, tapi dilakukan di switch yang seharusnya dilakukan di router
 
-## Tipe Ether channel
+## Cara Channel
 
-### PAGP (Port Aggregation Control Protocol)
+* **Manual (Tanpa protokol dan negoisasi)**
+* **PAGP (Port Aggregation Control Protocol)**, merupakan Cisco propietary yang memiliki fitur `auto-negotiate`
+* **LACP (Link Aggregation Control Protocol)**, yakni merupakan protokol standard IEEE dan digunakan untuk bertemu dengan switch merk lain
 
 ## Referensi
 
