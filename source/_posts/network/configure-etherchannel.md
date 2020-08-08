@@ -49,8 +49,16 @@ Silahkan baca: [Spanning tree](https://8log.netlify.app/2020/08/08/network/cisco
 ## Cara men-Channel
 
 * **Manual (Tanpa protokol dan negoisasi)**
-* **PAGP (Port Aggregation Control Protocol)**, merupakan Cisco propietary yang memiliki fitur `auto-negotiate` yang membuat EtherChannel secara otomatis ketika PAGP diset. 
-* **LACP (Link Aggregation Control Protocol)**, yakni merupakan protokol open standard yaitu IEEE dan digunakan untuk bertemu dengan switch merk lain
+* **PAGP (Port Aggregation Control Protocol)**, merupakan Cisco propietary yang memiliki fitur `auto-negotiate` yang membuat EtherChannel secara otomatis ketika PAGP diset.
+
+  Berikut mode PAGP:
+
+  ![](/images/pagp.png)
+* **LACP (Link Aggregation Control Protocol)**, yakni merupakan protokol open standard yaitu IEEE dan digunakan untuk bertemu dengan switch merk lain.
+
+  Berikut mode LACP:
+
+  ![](/images/lacp.png)
 
 ## Referensi
 
