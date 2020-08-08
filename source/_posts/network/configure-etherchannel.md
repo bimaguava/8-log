@@ -29,7 +29,7 @@ Yang mana di dunia **_"Perbandwith-an"_** ini memungkinkan adanya pembagian beba
 
 Silahkan baca: [Spanning tree](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "Spanning tree")
 
-> Jika disederhanakan maksud dari Etherchannel itu seperti load balancing, tapi dilakukan di switch yang seharusnya dilakukan di router
+> Secara sederhana Etherchannel itu seperti load balancing, tapi dilakukan di switch yang seharusnya dilakukan di router
 
 ## Jumlah
 
