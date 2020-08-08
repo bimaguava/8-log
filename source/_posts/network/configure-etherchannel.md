@@ -13,7 +13,7 @@ keywords: []
 
 ---
 
-## Ether Channel 
+## Ether Channel itu...
 
 ![](/images/ccnaccnplinx-com-etherchannel-port-options00001.jpg)
 
