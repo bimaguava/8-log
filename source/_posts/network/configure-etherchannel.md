@@ -17,9 +17,15 @@ keywords: []
 
 ![](/images/ccnaccnplinx-com-etherchannel-port-options00001.jpg)
 
-Ialah menggabungkan beberapa interface/link menjadi satu interface. Maka di EtherChannel kita buat ada 2 kabel tapi seakan2 jadi satu kabel.
+Ialah menggabungkan beberapa interface/link menjadi satu interface. Maka di EtherChannel kita buat ada 2 kabel tapi seakan2 jadi satu kabel. 
 
 Dan gabungan beberapa interface itu atau channel group tadi akan melahirkan sebuah ~~keturunan~~ interface baru yang dinamakan `port-channel`
+
+_Dalam menghubungkan sebuah switch satu dengan yang lain kita mengenal `trunk,`_
+
+Trunk-trunk pada EtherChannel berada pada status forwarding semua atau blocking semua, karena STP memperlakukan semua trunk pada EtherChannel sebagai 1 trunk. 
+
+Saat EtherChannel berada pada status forwarding, maka switch akan melakukan load-balance/membagi rata trafik pada semua trunk, sehingga bandwidth yang tersedia jadi lebih banyak.
 
 ### _"Apa cuma bisa 2 kabel?"_
 
