@@ -27,7 +27,7 @@ Atau mungkin sebaiknya bisa juga menggunakan GigabitEthernet (1000Mbps/1Gbps)
 
 Yang mana di dunia **_"Perbandwith-an"_** ini memungkinkan adanya pembagian beban trafik serta redundansi jika satu atau lebih link di dalam satu channel gagal. 
 
-Silahkan baca: [Spanning tree](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "Spanning tree"), BPDUGUARD
+Silahkan baca: [Spanning tree](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "Spanning tree"), BPDUGuard
 
 > Secara sederhana Etherchannel itu seperti load balancing, tapi dilakukan di switch yang seharusnya dilakukan di router
 
