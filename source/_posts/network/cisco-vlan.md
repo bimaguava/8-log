@@ -2,9 +2,9 @@
 draft: true
 comments: true
 toc: true
-title: "Cisco: VLAN Configuration"
-date: 2020-07-26T17:00:00Z
-updated: 2020-07-26T17:00:00Z
+title: 'Cisco: VLAN'
+date: 2020-07-26T17:00:00.000+00:00
+updated: 2020-07-26T17:00:00.000+00:00
 category:
 - network
 tags:
@@ -58,4 +58,3 @@ Efeknya VLAN ini
 | untuk mengasosiasikan port yang tidak berurutan ke VLAN 10    | interface fa0/1, fa0/3, fa0/5 |
 |                                                         | switchport access vlan 10     |
 | menampilkan interface vlan                              | show vlan brief               |
-
