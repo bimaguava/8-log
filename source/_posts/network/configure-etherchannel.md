@@ -17,7 +17,7 @@ keywords: []
 
 ![](/images/ccnaccnplinx-com-etherchannel-port-options00001.jpg)
 
-Ialah menggabungkan beberapa interface/link menjadi satu interface.
+Ialah menggabungkan beberapa interface/link menjadi satu interface. Maka di EtherChannel kita buat ada 2 kabel tapi seakan2 jadi satu kabel.
 
 **Karena** dalam penggunaan FastEthernet maksimal kapasitas datanya 100Mbps, maka yang sering digunakan adalah menambah kabel untuk mengimbangi beban data.
 
@@ -25,7 +25,7 @@ Yang mana hal ini memungkinkan adanya pembagian beban trafik serta redundansi ji
 
 > Jika disederhanakan maksud dari Etherchannel itu seperti load balancing, tapi dilakukan di switch yang seharusnya dilakukan di router
 
-s
+## Jumlah
 
 ## Istilah2
 
