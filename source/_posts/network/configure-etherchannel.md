@@ -29,7 +29,9 @@ Jadi, 2 kabel tersebut digunakan apabila data trafik yang keluar melebihi dari k
 
 Atau mungkin sebaiknya bisa juga menggunakan GigabitEthernet (1000Mbps/1Gbps)
 
-Yang mana di dunia **_"Perbandwith-an"_** ini memungkinkan adanya pembagian beban trafik serta redundansi jika satu atau lebih link di dalam satu channel gagal. 
+## Manfaat lain
+
+di dunia **_"Perbandwith-an"_** ini memungkinkan adanya pembagian beban trafik serta redundansi jika satu atau lebih link di dalam satu channel gagal. 
 
 Silahkan baca: [Spanning tree](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "Spanning tree"), BPDUGuard
 
