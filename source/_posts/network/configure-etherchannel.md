@@ -23,7 +23,7 @@ Ialah menggabungkan beberapa interface/link menjadi satu interface.
 
 Yang mana hal ini memungkinkan adanya pembagian beban trafik serta redundansi jika satu atau lebih link di dalam satu channel gagal.
 
-> Etherchannel diaplikasikan dengan goals yang hampir sama dengan _Spanning Tree_, yaitu mencegah looping
+> Jika disederhanakan maksud dari Etherchannel itu seperti load balancing, tapi dilakukan di switch yang seharusnya dilakukan di router
 
 s
 
