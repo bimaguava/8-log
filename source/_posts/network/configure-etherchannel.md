@@ -19,13 +19,15 @@ keywords: []
 
 Ialah menggabungkan beberapa interface/link menjadi satu interface. Maka di EtherChannel kita buat ada 2 kabel tapi seakan2 jadi satu kabel.
 
+Dan gabungan beberapa interface itu atau channel group tadi akan melahirkan sebuah ~~keturunan~~ interface baru yang dinamakan `port-channel`
+
 ### _"Apa cuma bisa 2 kabel?"_
 
-EtherChannel bisa dibuat 2, 4 sampai 8 kabel tergantung kebutuhan.
+Penggabungan kabel bisa dibuat 2, 4 sampai 8 kabel tergantung kebutuhan.
 
 Jadi, 2 kabel tersebut digunakan apabila data trafik yang keluar melebihi dari kapasitas maksimal dari sebuah kabel.
 
-    Karena dalam penggunaan FastEthernet maksimal kapasitas datanya 100Mbps, maka yang sering digunakan adalah menambah kabel untuk mengimbangi beban data.
+**Karena** dalam penggunaan FastEthernet maksimal kapasitas datanya 100Mbps, maka yang sering digunakan adalah menambah kabel untuk mengimbangi beban data.
 
 Atau mungkin sebaiknya bisa juga menggunakan GigabitEthernet (1000Mbps/1Gbps)
 
@@ -39,9 +41,7 @@ Silahkan baca: [Spanning tree](https://8log.netlify.app/2020/08/08/network/cisco
 
 ## Istilah2
 
-### port-channel
-
-Gabungan beberapa interface atau bisa dikatakan channel group tadi akan menjadi interface baru
+### 
 
 ## Tipe Ether channel
 
