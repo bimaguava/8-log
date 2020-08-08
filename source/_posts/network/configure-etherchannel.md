@@ -19,9 +19,11 @@ keywords: []
 
 Ialah menggabungkan beberapa interface/link menjadi satu interface. Maka di EtherChannel kita buat ada 2 kabel tapi seakan2 jadi satu kabel.
 
-_"Apa cuma bisa 2 kabel?"_ EtherChannel bisa dibuat 2, 4 sampai 8 kabel tergantung kebutuhan.
+### _"Apa cuma bisa 2 kabel?"_
 
-2 kabel tersebut digunakan apabila data trafik yang keluar melebihi dari kapasitas maksimal dari sebuah kabel.
+EtherChannel bisa dibuat 2, 4 sampai 8 kabel tergantung kebutuhan.
+
+Jadi, 2 kabel tersebut digunakan apabila data trafik yang keluar melebihi dari kapasitas maksimal dari sebuah kabel.
 
 **Karena** dalam penggunaan FastEthernet maksimal kapasitas datanya 100Mbps, maka yang sering digunakan adalah menambah kabel untuk mengimbangi beban data.
 
