@@ -78,7 +78,11 @@ Nah, sebelum menyetel EtherChannel, sesuai guidelinenya yaitu _Port yang digunak
 
 kalau dengan DTP akibatnya kita tidak bisa menyetel ke mode trunk, dan link nya tidak bisa membentuk trunk yang mana tetap menjadi `access ports` **alias** port yang biasa terhubung dengan host di suatu vlan.
 
-Kita ke S3 dulu, menyeting `static trunk port` yang terhubung di S3 ke switch lain
+Kita akan menyeting `static trunk port` yang terhubung switch satu dengan switch lain
+
+ke S3 dulu
+
+![](/images/screenshot-from-2020-08-09-16-27-04.png)
 
     S3(config)#int range fastEthernet 0/21-24
 
@@ -100,6 +104,18 @@ kalau sudah coba kita lihat di tabel interface trunk
     Fa0/23      on           802.1q         trunking      1
     Fa0/24      on           802.1q         trunking      1
     ...
+
+pada S2
+
+    S2(config)#int range fastEthernet 0/23-24, gigabitethernet 0/1-2
+    S2(config-if-range)#switchport mode trunk
+    S2(config-if-range)#switchport nonegotiate
+
+lalu, pada S3
+
+    S1(config)#int range fastEthernet 0/21-22, gigabitEthernet 0/1-2
+    S1(config-if-range)#switchport mode trunk
+    S1(config-if-range)#switchport nonegotiate
 
 s
 
