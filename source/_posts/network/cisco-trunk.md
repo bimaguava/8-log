@@ -16,6 +16,12 @@ keywords: []
 
 Fungsi Trunk itu tidak lain dan tidak bukan adalah menghubungkan 2 switch agar kedua VLAN di masing masing SWITCH dapat terhubung.
 
+Port pada `trunk ports` dan port pada `access ports`
+
+![](/images/access_and_trunk_ports_explained-1024x461.jpg)
+
+[https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
+
 `ini bukan di switch manageble doang sih, di routerboard kalo diterapkan vlan juga nanti akan memerlukan setelan trunk untuk bisa terhubung antar VLANnya`
 
 ## Gambaran konfig
