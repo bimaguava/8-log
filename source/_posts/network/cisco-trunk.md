@@ -20,7 +20,9 @@ Port pada `trunk ports` dan port pada `access ports`
 
 ![](/images/access_and_trunk_ports_explained-1024x461.jpg)
 
-[https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
+sebuah port yang terhubung dengan host pada suatu vlan disebut `access ports`
+
+dan port yang terhubung dengan switch lain untuk meneruskan informasi vlan disebut `trunk ports`
 
 ini bukan di switch manageble saja.
 
