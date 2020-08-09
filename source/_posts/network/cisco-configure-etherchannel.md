@@ -72,9 +72,11 @@ dan ternyata belum ada (di semua switch)
 
 ### Semua port untuk EtherChannels ubah ke static trunk ports
 
-> _Bagaimana jika port dikonfigurasi dengan **DTP (Dynamic Trunking Protocol)** ?_
+Nah, sebelum menyetel EtherChannel, sesuai guidelinenya yaitu _Port yang digunakan untuk EtherChannel harus di VLAN yang sama, **atau** dijadikan Trunk._
 
-Akibatnya kita tidak bisa menyetel ke mode trunk, dan link nya tidak bisa membentuk trunk yang mana tetap menjadi `access ports` **alias** port yang biasa terhubung dengan host di suatu vlan.
+> _Bagaimana jika port dikonfigurasi bukan dengan static, tapi dengan **DTP (Dynamic Trunking Protocol)** ?_
+
+kalau dengan DTP akibatnya kita tidak bisa menyetel ke mode trunk, dan link nya tidak bisa membentuk trunk yang mana tetap menjadi `access ports` **alias** port yang biasa terhubung dengan host di suatu vlan.
 
 Kita ke S3 dulu, menyeting `static trunk port` yang terhubung di S3 ke switch lain
 
