@@ -70,4 +70,10 @@ dan ternyata belum ada (di semua switch)
 
 ## Konfigurasikan semua port yang diperlukan untuk EtherChannels sebagai static trunk ports
 
-_Bagaimana jika port dikonfigurasi dengan **DTP (Dynamic Trunking Protocol)**_ 
+_Bagaimana jika port dikonfigurasi dengan **DTP (Dynamic Trunking Protocol)** ?_
+
+Akibatnya kita tidak bisa menyetel ke mode trunk, dan link nya tidak bisa membentuk trunk (tetap menjadi access ports)
+
+## Referensi
+
+* [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
