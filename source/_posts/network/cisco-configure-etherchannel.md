@@ -26,7 +26,8 @@ Pada lab ini kita akan mengkonfigurasi EtherChannel dengan
 
 ## Istilah
 
-* **Port Channel**, yaitu 
+* **Port Channel**, yaitu gabungan beberapa interface itu atau channel group tadi akan melahirkan sebuah ~~keturunan~~ interface baru
+* PG
 
 ## Tabel Address
 
