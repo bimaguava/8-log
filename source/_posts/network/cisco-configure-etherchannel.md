@@ -60,10 +60,12 @@ dan atau dengan `interface status` yang juga menampilkan `speed` dan `duplex` ya
     Gig0/1                       connected    1          auto    auto  10/100BaseTX
     Gig0/2                       connected    1          auto    auto  10/100BaseTX
 
-Sekarang kita coba menampilkan `interfaces trunk` dan ternyata belum terbuat (di semua switch)
+Sekarang kita coba menampilkan `interfaces trunk` 
 
     S2# show interfaces trunk
     
     
 
-s
+dan ternyata belum ada (di semua switch)
+
+## Konfigurasikan semua port yang diperlukan untuk EtherChannels sebagai static trunk ports
