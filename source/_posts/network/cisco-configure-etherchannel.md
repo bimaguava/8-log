@@ -70,7 +70,7 @@ Sekarang kita coba menampilkan `interfaces trunk`
 
 dan ternyata belum ada (di semua switch)
 
-## 2. Semua port untuk EtherChannels ubah ke static trunk ports
+### Semua port untuk EtherChannels ubah ke static trunk ports
 
 _Bagaimana jika port dikonfigurasi dengan **DTP (Dynamic Trunking Protocol)** ?_
 
