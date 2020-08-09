@@ -14,7 +14,10 @@ keywords: []
 ---
 ## Petunjuk mengkonfig EtherChannel
 
-blabla
+* EtherChannel tidak akan kebentuk kalau ada SPAN (Switched Port Analyzer) di salah satu port, SPAN ini fitur yang bisa diaktifin di Cisco switch untuk melihat frame yang keluar masuk di port itu (berguna untuk network monitoring juga)
+* Speed dan Duplex harus sama
+* Port yang digunakan untuk EtherChannel harus di VLAN yang sama, **atau** dijadikan Trunk
+* EtherChannel bisa di Switch Layer 3 atau di Layer 2
 
 ## Lab
 
@@ -36,10 +39,10 @@ Pada lab ini kita akan mengonfigurasi Port Aggregation Protocol (PAgP), protokol
 
 ### Verification Command
 
-Pastikan semua port terhubung **(connected)** dengan benar, cek dengan 
+Pastikan semua port terhubung **(connected)** dengan benar, cek dengan
 
     S2# show interfaces | include Ethernet
-
+    
     ...
     FastEthernet0/23 is up, line protocol is up (connected)
     FastEthernet0/24 is up, line protocol is up (connected)
@@ -49,12 +52,12 @@ Pastikan semua port terhubung **(connected)** dengan benar, cek dengan
 dan atau dengan `interface status` yang juga menampilkan `speed` dan `duplex` yang mana keduanya harus sama.
 
     S2# show interface status
-
+    
     Port      Name               Status       Vlan       Duplex  Speed Type
     ...
     Fa0/23                       connected    1          auto    auto  10/100BaseTX
     Fa0/24                       connected    1          auto    auto  10/100BaseTX
     Gig0/1                       connected    1          auto    auto  10/100BaseTX
     Gig0/2                       connected    1          auto    auto  10/100BaseTX
-    
+
 s
