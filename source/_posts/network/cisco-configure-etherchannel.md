@@ -26,10 +26,35 @@ Pada lab ini kita akan mengonfigurasi Port Aggregation Protocol (PAgP), protokol
 
 ## Istilah
 
-* **Port Channel**, yaitu gabungan beberapa interface itu atau channel group tadi akan melahirkan sebuah ~~keturunan~~ interface baru
+* **Port Channel**, yaitu gabungan beberapa interface itu atau **channel group** tadi akan melahirkan sebuah ~~keturunan~~ interface baru
 
 ## Tabel Address
 
 ![](/images/screenshot-from-2020-08-09-13-49-38.png)
 
 ## 1. Configure Basic Switch Settings
+
+### Verification Command
+
+Pastikan semua port terhubung **(connected)** dengan benar, cek dengan 
+
+    S2# show interfaces | include Ethernet
+
+    ...
+    FastEthernet0/23 is up, line protocol is up (connected)
+    FastEthernet0/24 is up, line protocol is up (connected)
+    GigabitEthernet0/1 is up, line protocol is up (connected)
+    GigabitEthernet0/2 is up, line protocol is up (connected)
+
+dan atau dengan `interface status` yang juga menampilkan `speed` dan `duplex` yang mana keduanya harus sama.
+
+    S2# show interface status
+
+    Port      Name               Status       Vlan       Duplex  Speed Type
+    ...
+    Fa0/23                       connected    1          auto    auto  10/100BaseTX
+    Fa0/24                       connected    1          auto    auto  10/100BaseTX
+    Gig0/1                       connected    1          auto    auto  10/100BaseTX
+    Gig0/2                       connected    1          auto    auto  10/100BaseTX
+    
+s
