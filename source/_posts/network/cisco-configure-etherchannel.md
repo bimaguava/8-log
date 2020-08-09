@@ -107,17 +107,21 @@ kalau sudah coba kita lihat di tabel interface trunk
 
 pada S2
 
+![](/images/screenshot-from-2020-08-09-16-36-57.png)
+
     S2(config)#int range fastEthernet 0/23-24, gigabitethernet 0/1-2
     S2(config-if-range)#switchport mode trunk
     S2(config-if-range)#switchport nonegotiate
 
-lalu, pada S3
+lalu, pada S1
+
+![](/images/screenshot-from-2020-08-09-16-37-21.png)
 
     S1(config)#int range fastEthernet 0/21-22, gigabitEthernet 0/1-2
     S1(config-if-range)#switchport mode trunk
     S1(config-if-range)#switchport nonegotiate
 
-s
+## 2. Configure EtherChannel with Cisco PAgP
 
 ## Referensi
 
