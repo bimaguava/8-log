@@ -22,7 +22,9 @@ Port pada `trunk ports` dan port pada `access ports`
 
 [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
 
-`ini bukan di switch manageble doang sih, di routerboard kalo diterapkan vlan juga nanti akan memerlukan setelan trunk untuk bisa terhubung antar VLANnya`
+ini bukan di switch manageble saja.
+
+ di routerboard **kalo** diterapkan vlan juga nanti akan memerlukan setelan trunk untuk bisa terhubung antar VLANnya
 
 ## Gambaran konfig
 
