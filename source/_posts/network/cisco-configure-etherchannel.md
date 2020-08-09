@@ -76,6 +76,16 @@ dan ternyata belum ada (di semua switch)
 
 Akibatnya kita tidak bisa menyetel ke mode trunk, dan link nya tidak bisa membentuk trunk yang mana tetap menjadi `access ports` **alias** port yang biasa terhubung dengan host di suatu vlan.
 
+Kita ke S3 dulu, menyeting `static trunk port` yang terhubung di S3 ke switch lain
+
+    S3(config)#int range fastEthernet 0/21-24
+
+s
+
+    S3(config-if-range)#switchport mode trunk
+
+s
+
 ## Referensi
 
 * [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
