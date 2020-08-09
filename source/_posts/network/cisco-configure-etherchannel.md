@@ -72,7 +72,7 @@ dan ternyata belum ada (di semua switch)
 
 ### Semua port untuk EtherChannels ubah ke static trunk ports
 
-_Bagaimana jika port dikonfigurasi dengan **DTP (Dynamic Trunking Protocol)** ?_
+> _Bagaimana jika port dikonfigurasi dengan **DTP (Dynamic Trunking Protocol)** ?_
 
 Akibatnya kita tidak bisa menyetel ke mode trunk, dan link nya tidak bisa membentuk trunk yang mana tetap menjadi `access ports` **alias** port yang biasa terhubung dengan host di suatu vlan.
 
