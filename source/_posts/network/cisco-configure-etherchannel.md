@@ -21,6 +21,8 @@ keywords: []
 
 ## Lab
 
+Download: [https://drive.google.com/file/d/1Jvzgnsv6lhFTVRGyQU2X0zNKREKpg6xn/view](https://drive.google.com/file/d/1Jvzgnsv6lhFTVRGyQU2X0zNKREKpg6xn/view "https://drive.google.com/file/d/1Jvzgnsv6lhFTVRGyQU2X0zNKREKpg6xn/view")
+
 ![](/images/screenshot-from-2020-08-09-13-48-41.png)
 
 Sebuah topologi dengan 3 switch telah berhubungan, dan disini kita punya sebuah case yaitu ada redundant uplink. Dan pada yang oren2 itu ialah [STP](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "STP"), yang mana itu tidak digunakan karena untuk mencegah looping terjadi karena broadcast yang terjadi sangat banyak.
@@ -60,11 +62,9 @@ dan atau dengan `interface status` yang juga menampilkan `speed` dan `duplex` ya
     Gig0/1                       connected    1          auto    auto  10/100BaseTX
     Gig0/2                       connected    1          auto    auto  10/100BaseTX
 
-Sekarang kita coba menampilkan `interfaces trunk` 
+Sekarang kita coba menampilkan `interfaces trunk`
 
     S2# show interfaces trunk
-    
-    
 
 dan ternyata belum ada (di semua switch)
 
