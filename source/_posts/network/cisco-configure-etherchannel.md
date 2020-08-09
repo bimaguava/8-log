@@ -27,7 +27,7 @@ Download: [https://drive.google.com/file/d/1Jvzgnsv6lhFTVRGyQU2X0zNKREKpg6xn/vie
 
 Sebuah topologi dengan 3 switch telah berhubungan, dan disini kita punya sebuah case yaitu ada redundant uplink. Dan pada yang oren2 itu ialah [STP](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "STP"), yang mana itu tidak digunakan karena untuk mencegah looping terjadi karena broadcast yang terjadi sangat banyak.
 
-Pada lab ini kita akan mengonfigurasi Port Aggregation Protocol (PAgP), protokol Cisco EtherChannel, dan Link Aggregation Control Protocol (LACP), versi standar terbuka IEEE 802.3ad dari EtherChannel.
+Pada lab ini kita akan mengonfigurasi **Port Aggregation Protocol (PAgP)**, **Link Aggregation Control Protocol (LACP)**, **versi standar terbuka IEEE 802.3ad** dari EtherChannel.
 
 ## Istilah
 
