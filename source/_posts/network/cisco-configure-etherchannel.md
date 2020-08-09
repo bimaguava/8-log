@@ -80,9 +80,24 @@ Kita ke S3 dulu, menyeting `static trunk port` yang terhubung di S3 ke switch la
 
     S3(config)#int range fastEthernet 0/21-24
 
-s
+meng _on_-kan mode trunk
 
     S3(config-if-range)#switchport mode trunk
+
+dan menyetop switch dari mengirim DTP message dengan switchport nonegotiate
+
+    S3(config-if-range)#switchport nonegotiate
+
+kalau sudah coba kita lihat di tabel interface trunk
+
+    S3(config-if-range)# do show int trunk
+    
+    Port        Mode         Encapsulation  Status        Native vlan
+    Fa0/21      on           802.1q         trunking      1
+    Fa0/22      on           802.1q         trunking      1
+    Fa0/23      on           802.1q         trunking      1
+    Fa0/24      on           802.1q         trunking      1
+    ...
 
 s
 
