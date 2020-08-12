@@ -178,6 +178,22 @@ Konfigurasikan `logical interfaces` untuk menjadi trunk dengan terlebih dahulu m
 
 ### Verify status Port Channel 1
 
+Keluarkan perintah `show etherchannel summary` pada S1 dan S3 untuk memverifikasi bahwa EtherChannel berjalan pada kedua switch. 
+
+Perintah ini menampilkan jenis EtherChannel, port yang digunakan, dan status port.
+
+    S3#show etherchannel summary 
+    ...
+    Number of channel-groups in use: 1
+    Number of aggregators:           1
+    
+    Group  Port-channel  Protocol    Ports
+    ------+-------------+-----------+----------------------------------------------
+    
+    1      Po1(SU)           PAgP   Fa0/21(P) Fa0/22(P) Fa0/23(I) Fa0/24(I) 
+
+atau alternative dengan `show interface trunk`
+
 ## Referensi
 
 * [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
