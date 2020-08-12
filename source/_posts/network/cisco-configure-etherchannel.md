@@ -196,6 +196,18 @@ port yang menggunakan PAgP yaitu port yang berhubungan dengan S1 dan S3 atau **p
     
     1      Po1(SU)           PAgP   Fa0/21(P) Fa0/22(P
 
+Output S1 juga sama
+
+    S1#show etherchannel summ
+    ...
+    Number of channel-groups in use: 1
+    Number of aggregators:           1
+    
+    Group  Port-channel  Protocol    Ports
+    ------+-------------+-----------+----------------------------------------------
+    
+    1      Po1(SU)           PAgP   Fa0/21(P) Fa0/22(P) 
+
 atau alternative dengan `show interface trunk`
 
 ## Referensi
