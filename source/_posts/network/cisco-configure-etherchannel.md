@@ -243,7 +243,16 @@ Untuk mengkonfigurasi `port channel 2` sebagai LACP, gunakan perintah `channel-g
 
 > mode active menunjukkan bahwa switch melakukan negotiate link itu sebagai LACP, bukan PAgP
 
-Berikut
+Berikut konfig S1
+
+    S1(config)#int range gigabitEthernet 0/1-2
+    S1(config-if-range)#shutdown
+    
+    S1(config-if-range)#channel-group 2 mode active
+    S1(config-if-range)#no shutdown
+    
+    S1(config-if-range)#int port-channel 2
+    S1(config-if)#switchport mode trunk 
 
 ## Referensi
 
