@@ -125,12 +125,7 @@ lalu, pada S1
 
 **NOTE:** Saat mengonfigurasi EtherChannels, disarankan untuk mematikan `physical port` tadi
 
-Jika tidak, E`therChannel Misconfig Guard` dapat menempatkan port ini ke dalam `error disabled state`. Kalau seperti itu maka `physical port` dan `port channel` dapat diaktifkan kembali setelah EtherChannel dikonfigurasi.
-
-kita ke S1
-
-    S1(config)#int range fastEthernet 0/21-24
-    S1(config-if-range)#no shutdown
+Jika tidak, `EtherChannel Misconfig Guard` dapat menempatkan port ini ke dalam `error disabled state`. Kalau seperti itu maka `physical port` dan `port channel` dapat diaktifkan kembali setelah EtherChannel dikonfigurasi.
 
 ### Configure Port Channel 1
 
@@ -150,11 +145,26 @@ Gunakan perintah `show interfaces trunk` untuk memastikan bahwa Anda memiliki li
 
 **Pada S1 dan S3**, tambahkan port F0/21 dan F0/22 ke Port Channel 1 dengan perintah `channel-group 1 mode desirable` 
 
-Opsi mode `desirable` memungkinkan sakelar untuk secara aktif bernegosiasi untuk membentuk tautan PAgP. 
+Opsi mode `desirable` memungkinkan switch untuk secara aktif negotiate untuk membentuk link PAgP. 
 
-**NOTE**: interface harus **dimatikan** sebelum ditambahkan ke `channel group`
+**NOTE**: _jangan lupa_, interface harus **dimatikan** sebelum ditambahkan ke `channel group`
 
-s
+    S1(config)#int range fastEthernet 0/21-22
+    S1(config-if-range)#shutdown
+    S1(config-if-range)#channel-group 1 mode desirable
+
+dan nyalahkan kembali interfacenya
+
+    S1(config-if-range)#no shutdown
+
+![](/images/screenshot_2020-08-12_17-02-20.png)
+
+Nah, sekarang lakukan ke S3
+
+    S3(config)#int range fastEthernet 0/21-24
+    S3(config-if-range)#shutdown
+    S3(config-if-range)#channel-group 1 mode desirable 
+    S3(config-if-range)#no shutdown
 
 ## Referensi
 
