@@ -25,7 +25,7 @@ Download: [https://drive.google.com/file/d/1Jvzgnsv6lhFTVRGyQU2X0zNKREKpg6xn/vie
 
 ![](/images/screenshot-from-2020-08-09-13-48-41.png)
 
-Sebuah topologi dengan 3 switch telah berhubungan, dan disini kita punya sebuah case yaitu ada redundant uplink. 
+Sebuah topologi dengan 3 switch telah berhubungan, dan disini kita punya sebuah case yaitu ada redundant uplink.
 
 Dan pada yang oren2 itu ialah [STP](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "STP"), yang mana STP itu tidak menggunakan salah satu port karena untuk mencegah looping yang terjadi karena broadcast yang terjadi sangat banyak.
 
@@ -122,6 +122,39 @@ lalu, pada S1
     S1(config-if-range)#switchport nonegotiate
 
 ## 2. Configure EtherChannel with Cisco PAgP
+
+**NOTE:** Saat mengonfigurasi EtherChannels, disarankan untuk mematikan `physical port` tadi
+
+Jika tidak, E`therChannel Misconfig Guard` dapat menempatkan port ini ke dalam `error disabled state`. Kalau seperti itu maka `physical port` dan `port channel` dapat diaktifkan kembali setelah EtherChannel dikonfigurasi.
+
+kita ke S1
+
+    S1(config)#int range fastEthernet 0/21-24
+    S1(config-if-range)#no shutdown
+
+### Configure Port Channel 1
+
+EtherChannel yang sudah dibuat untuk lab ini menggabungkan port F0/21 dan F0/22 **antara S1 dan S3** yang dikonfig dengan static trunk ports.
+
+Gunakan perintah `show interfaces trunk` untuk memastikan bahwa Anda memiliki link trunk aktif untuk kedua link tersebut, dan native VLAN pada kedua link tersebut sama.
+
+    S1# show interfaces trunk
+    
+    Port Mode Encapsulation Status Native vlan
+    F0/21 on 802.1q trunking 1
+    F0/22 on 802.1q trunking 1
+    G0/1 on 802.1q trunking 1
+    G0/2 on 802.1q trunking 1
+    
+    <output omitted>
+
+**Pada S1 dan S3**, tambahkan port F0/21 dan F0/22 ke Port Channel 1 dengan perintah `channel-group 1 mode desirable` 
+
+Opsi mode `desirable` memungkinkan sakelar untuk secara aktif bernegosiasi untuk membentuk tautan PAgP. 
+
+**NOTE**: interface harus **dimatikan** sebelum ditambahkan ke `channel group`
+
+s
 
 ## Referensi
 
