@@ -231,7 +231,7 @@ Dan selesai lah dengan Port Channel 1 dengan PGaP, berikutnya kita akan mengkonf
 
 ## 3. Configure 802.3ad LACP Etherchannel
 
-## 3.A. Configure Port Channel 2
+### 3.A. Configure Port Channel 2
 
 > 802.3ad adalah versi open source dari EtherChannel yang dilirlis IEEE tahun 2000
 
@@ -253,6 +253,10 @@ Berikut konfig S1
     
     S1(config-if-range)#int port-channel 2
     S1(config-if)#switchport mode trunk 
+
+3\.s
+
+### 3.B. Verify Port Channel 2 Status
 
 ## Referensi
 
