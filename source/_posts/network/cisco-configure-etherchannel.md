@@ -84,15 +84,15 @@ ke S3 dulu
 
 ![](/images/screenshot-from-2020-08-09-16-27-04.png)
 
-    S3(config)#int range fastEthernet 0/21-24
+    S3(config)# int range fastEthernet 0/21-24
 
 meng _on_-kan mode trunk
 
-    S3(config-if-range)#switchport mode trunk
+    S3(config-if-range)# switchport mode trunk
 
 dan menyetop switch dari mengirim DTP message dengan switchport nonegotiate
 
-    S3(config-if-range)#switchport nonegotiate
+    S3(config-if-range)# switchport nonegotiate
 
 kalau sudah coba kita lihat di tabel interface trunk
 
@@ -109,17 +109,17 @@ pada S2
 
 ![](/images/screenshot-from-2020-08-09-16-36-57.png)
 
-    S2(config)#int range fastEthernet 0/23-24, gigabitethernet 0/1-2
-    S2(config-if-range)#switchport mode trunk
-    S2(config-if-range)#switchport nonegotiate
+    S2(config)# int range fastEthernet 0/23-24, gigabitethernet 0/1-2
+    S2(config-if-range)# switchport mode trunk
+    S2(config-if-range)# switchport nonegotiate
 
 lalu, pada S1
 
 ![](/images/screenshot-from-2020-08-09-16-37-21.png)
 
-    S1(config)#int range fastEthernet 0/21-22, gigabitEthernet 0/1-2
-    S1(config-if-range)#switchport mode trunk
-    S1(config-if-range)#switchport nonegotiate
+    S1(config)# int range fastEthernet 0/21-22, gigabitEthernet 0/1-2
+    S1(config-if-range)# switchport mode trunk
+    S1(config-if-range)# switchport nonegotiate
 
 ## 2. Configure EtherChannel with Cisco PAgP
 
@@ -133,25 +133,24 @@ EtherChannel yang sudah dibuat untuk lab ini menggabungkan port F0/21 dan F0/22 
 
 Gunakan perintah `show interfaces trunk` untuk memastikan bahwa Anda memiliki link trunk aktif untuk kedua link tersebut, dan native VLAN pada kedua link tersebut sama.
 
-    S1# show interfaces trunk
-    
-    Port Mode Encapsulation Status Native vlan
-    F0/21 on 802.1q trunking 1
-    F0/22 on 802.1q trunking 1
-    G0/1 on 802.1q trunking 1
-    G0/2 on 802.1q trunking 1
+    Switch(config-if-range)# do show int tr
+    Port        Mode         Encapsulation  Status        Native vlan
+    Fa0/21      on           802.1q         trunking      1
+    Fa0/22      on           802.1q         trunking      1
+    Fa0/23      on           802.1q         trunking      1
+    Fa0/24      on           802.1q         trunking      1
     
     <output omitted>
 
-**Pada S1 dan S3**, tambahkan port **F0/21 dan F0/22** ke Port Channel 1 dengan perintah `channel-group 1 mode desirable` 
+**Pada S1 dan S3**, tambahkan port **F0/21 dan F0/22** ke Port Channel 1 dengan perintah `channel-group 1 mode desirable`
 
-Opsi mode `desirable` memungkinkan switch untuk secara aktif negotiate untuk membentuk link PAgP. 
+Opsi mode `desirable` memungkinkan switch untuk secara aktif negotiate untuk membentuk link PAgP.
 
 **NOTE**: _jangan lupa_, interface harus **dimatikan** sebelum ditambahkan ke `channel group`
 
-    S1(config)#int range fastEthernet 0/21-22
-    S1(config-if-range)#shutdown
-    S1(config-if-range)#channel-group 1 mode desirable
+    S1(config)# int range fastEthernet 0/21-22
+    S1(config-if-range)# shutdown
+    S1(config-if-range)# channel-group 1 mode desirable
 
 dan nyalahkan kembali interfacenya
 
@@ -161,32 +160,32 @@ dan nyalahkan kembali interfacenya
 
 Nah, sekarang lakukan ke S3
 
-    S3(config)#int range fastEthernet 0/21-22
-    S3(config-if-range)#shutdown
-    S3(config-if-range)#channel-group 1 mode desirable 
-    S3(config-if-range)#no shutdown
+    S3(config)# int range fastEthernet 0/21-22
+    S3(config-if-range)# shutdown
+    S3(config-if-range)# channel-group 1 mode desirable 
+    S3(config-if-range)# no shutdown
 
 Konfigurasikan `logical interfaces` untuk menjadi trunk dengan terlebih dahulu memasukkan perintah `interface port-channel [number]` dan kemudian perintah `switch mode trunk`
 
 **Tambahkan konfigurasi ini ke kedua switch (S1 dan S3)**
 
-    S1(config)#int port-channel 1
-    S1(config-if)#switchport mode trunk 
-
-    S3(config)#int port-channel 1
-    S3(config-if)#switchport mode trunk 
+    S1(config)# int port-channel 1
+    S1(config-if)# switchport mode trunk 
+    
+    S3(config)# int port-channel 1
+    S3(config-if)# switchport mode trunk 
 
 ### 2.B. Verify status Port Channel 1
 
-Keluarkan perintah `show etherchannel summary` pada S1 dan S3 untuk memverifikasi bahwa EtherChannel berjalan pada kedua switch. 
+Keluarkan perintah `show etherchannel summary` pada S1 dan S3 untuk memverifikasi bahwa EtherChannel berjalan pada kedua switch.
 
-Perintah ini menampilkan jenis EtherChannel, port yang digunakan, dan status port. 
+Perintah ini menampilkan jenis EtherChannel, port yang digunakan, dan status port.
 
-Outputnya harus sama seperti ini: 
+Outputnya harus sama seperti ini:
 
 port yang menggunakan PAgP yaitu port yang berhubungan dengan S1 dan S3 atau **port F0/21 dan F0/22.**
 
-    S3#show etherchannel summary 
+    S3# show etherchannel summary 
     ...
     Number of channel-groups in use: 1
     Number of aggregators:           1
@@ -198,7 +197,7 @@ port yang menggunakan PAgP yaitu port yang berhubungan dengan S1 dan S3 atau **p
 
 Output S1 juga sama
 
-    S1#show etherchannel summ
+    S1# show etherchannel summ
     ...
     Number of channel-groups in use: 1
     Number of aggregators:           1
@@ -209,6 +208,14 @@ Output S1 juga sama
     1      Po1(SU)           PAgP   Fa0/21(P) Fa0/22(P) 
 
 atau alternatifnya dengan `show interface trunk`
+
+dan S1
+
+    S1# show interface trunk
+    Port        Mode         Encapsulation  Status        Native vlan
+    Po1         on           802.1q         trunking      1
+    Gig0/1      on           802.1q         trunking      1
+    Gig0/2      on           802.1q         trunking      1
 
 ## Referensi
 
