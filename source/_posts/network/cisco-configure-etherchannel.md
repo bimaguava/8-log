@@ -176,7 +176,7 @@ Konfigurasikan `logical interfaces` untuk menjadi trunk dengan terlebih dahulu m
     S3(config)#int port-channel 1
     S3(config-if)#switchport mode trunk 
 
-### Verify status Port Channel 1
+### 2.B. Verify status Port Channel 1
 
 Keluarkan perintah `show etherchannel summary` pada S1 dan S3 untuk memverifikasi bahwa EtherChannel berjalan pada kedua switch. 
 
