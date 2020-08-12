@@ -227,6 +227,10 @@ dan S1
     Gig0/2      on           802.1q         trunking      1
     ...
 
+Dan selesai lah dengan Port Channel 1 dengan PGaP, berikutnya kita akan mengkonfig Port Channel 2 dan 3 dengan LACP
+
+## Configure 802.3ad LACP Etherchannel
+
 ## Referensi
 
 * [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
