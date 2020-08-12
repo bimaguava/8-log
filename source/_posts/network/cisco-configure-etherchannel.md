@@ -312,7 +312,7 @@ Lalu, coba kita cek `etherchannel summary`
 
 Status Po2-nya SU, yaitu S=`layer 2` dan U=`in use` yang menggunakan protocol LACP dan Ports Gig0/1 dan Gig0/2 dengan keterangan P atau `in port-channel` yang mana logical interface bukan physical interface.
 
-Lalu, Lakukan juga pengecekan pada S2.
+Lalu, Lakukan juga pengecekan pada S2 dan pastikan menampilkan data dari Port Channel 2 yang telah dibuat tadi.
 
 ## 4. Configure a Redundant EtherChannel link
 
