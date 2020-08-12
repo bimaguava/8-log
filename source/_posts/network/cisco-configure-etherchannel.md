@@ -208,7 +208,7 @@ Output S1 juga sama
     
     1      Po1(SU)           PAgP   Fa0/21(P) Fa0/22(P) 
 
-atau alternative dengan `show interface trunk`
+atau alternatifnya dengan `show interface trunk`
 
 ## Referensi
 
