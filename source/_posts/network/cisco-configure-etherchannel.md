@@ -267,9 +267,9 @@ dan S2
 
 ### 3.B. Verify Port Channel 2 Status
 
-Pada S1
+Pada S1 kita cek `interface trunk` 
 
-    S1#show int tr
+    S1# show int tr
     Port        Mode         Encapsulation  Status        Native vlan
     Po1         on           802.1q         trunking      1
     Po2         on           802.1q         trunking      1
@@ -286,27 +286,31 @@ Pada S1
     Po1         1
     Po2         1
 
-Pada S2.
+Maka `port channel` yang telah dibuat akan muncul, Po2
 
-    S2#show int tr
-    Port        Mode         Encapsulation  Status        Native vlan
-    Fa0/23      on           802.1q         trunking      1
-    Fa0/24      on           802.1q         trunking      1
-    
-    Port        Vlans allowed on trunk
-    Fa0/23      1-1005
-    Fa0/24      1-1005
-    
-    Port        Vlans allowed and active in management domain
-    Fa0/23      1
-    Fa0/24      1
-    
-    Port        Vlans in spanning tree forwarding state and not pruned
-    Fa0/23      1
-    Fa0/24      none
-    
+Lalu, coba kita cek `etherchannel summary`
 
-pa
+    S1# show etherchannel summary 
+    Flags:  D - down        P - in port-channel
+            I - stand-alone s - suspended
+            H - Hot-standby (LACP only)
+            R - Layer3      S - Layer2
+            U - in use      f - failed to allocate aggregator
+            u - unsuitable for bundling
+            w - waiting to be aggregated
+            d - default port
+    
+    
+    Number of channel-groups in use: 2
+    Number of aggregators:           2
+    
+    Group  Port-channel  Protocol    Ports
+    ------+-------------+-----------+----------------------------------------------
+    
+    1      Po1(SU)           PAgP   Fa0/21(P) Fa0/22(P) 
+    2      Po2(SU)           LACP   Gig0/1(P) Gig0/2(P) 
+
+Status Po2-nya SU, yaitu S=`layer 2` dan U=`in use` yang menggunakan protocol LACP dan Ports Gig0/1 dan Gig0/2 dengan keterangan P atau `in port-channel`
 
 ## Referensi
 
