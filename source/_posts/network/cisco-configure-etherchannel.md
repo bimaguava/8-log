@@ -245,16 +245,25 @@ Untuk mengkonfigurasi `port channel 2` sebagai LACP, gunakan perintah `channel-g
 
 Berikut konfig S1
 
-    S1(config)#int range gigabitEthernet 0/1-2
-    S1(config-if-range)#shutdown
+    S1(config)# int range gigabitEthernet 0/1-2
+    S1(config-if-range)# shutdown
     
-    S1(config-if-range)#channel-group 2 mode active
-    S1(config-if-range)#no shutdown
+    S1(config-if-range)# channel-group 2 mode active
+    S1(config-if-range)# no shutdown
     
-    S1(config-if-range)#int port-channel 2
-    S1(config-if)#switchport mode trunk 
+    S1(config-if-range)# int port-channel 2
+    S1(config-if)# switchport mode trunk 
 
-3\.s
+dan S2
+
+    S2(config)# int range gigabitEthernet 0/1-2
+    S2(config-if-range)# shutdown
+    
+    S2(config-if-range)# channel-group 2 mode active
+    S2(config-if-range)# no shutdown
+    
+    S2(config-if-range)# int port-channel 2
+    S2(config-if)# switchport mode trunk 
 
 ### 3.B. Verify Port Channel 2 Status
 
