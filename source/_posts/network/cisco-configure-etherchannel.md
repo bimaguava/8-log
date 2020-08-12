@@ -267,6 +267,47 @@ dan S2
 
 ### 3.B. Verify Port Channel 2 Status
 
+Pada S1
+
+    S1#show int tr
+    Port        Mode         Encapsulation  Status        Native vlan
+    Po1         on           802.1q         trunking      1
+    Po2         on           802.1q         trunking      1
+    
+    Port        Vlans allowed on trunk
+    Po1         1-1005
+    Po2         1-1005
+    
+    Port        Vlans allowed and active in management domain
+    Po1         1
+    Po2         1
+    
+    Port        Vlans in spanning tree forwarding state and not pruned
+    Po1         1
+    Po2         1
+
+Pada S2.
+
+    S2#show int tr
+    Port        Mode         Encapsulation  Status        Native vlan
+    Fa0/23      on           802.1q         trunking      1
+    Fa0/24      on           802.1q         trunking      1
+    
+    Port        Vlans allowed on trunk
+    Fa0/23      1-1005
+    Fa0/24      1-1005
+    
+    Port        Vlans allowed and active in management domain
+    Fa0/23      1
+    Fa0/24      1
+    
+    Port        Vlans in spanning tree forwarding state and not pruned
+    Fa0/23      1
+    Fa0/24      none
+    
+
+pa
+
 ## Referensi
 
 * [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
