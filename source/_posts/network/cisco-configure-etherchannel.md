@@ -318,6 +318,28 @@ Lalu, Lakukan juga pengecekan pada S2 dan pastikan menampilkan data dari Port Ch
 
 ### 4.A. Configure Port Channel 3
 
+konfig S2
+
+    S2(config)# interface range f0/23 - 24
+    S2(config-if-range)# shutdown
+    
+    S2(config-if-range)# channel-group 3 mode passive
+    S2(config-if-range)# no shutdown
+    
+    S2(config-if-range)# interface port-channel 3
+    S2(config-if)# switchport mode trunk
+
+konfig S3
+
+    S3(config)# interface range f0/23 - 24
+    S3(config-if-range)# shutdown
+    
+    S3(config-if-range)# channel-group 3 mode active
+    S3(config-if-range)# no shutdown
+    
+    S3(config-if-range)# interface port-channel 3
+    S3(config-if)# switchport mode trunk
+
 ## Referensi
 
 * [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
