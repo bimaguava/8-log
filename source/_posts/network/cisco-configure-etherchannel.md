@@ -143,7 +143,7 @@ Gunakan perintah `show interfaces trunk` untuk memastikan bahwa Anda memiliki li
     
     <output omitted>
 
-**Pada S1 dan S3**, tambahkan port F0/21 dan F0/22 ke Port Channel 1 dengan perintah `channel-group 1 mode desirable` 
+**Pada S1 dan S3**, tambahkan port **F0/21 dan F0/22** ke Port Channel 1 dengan perintah `channel-group 1 mode desirable` 
 
 Opsi mode `desirable` memungkinkan switch untuk secara aktif negotiate untuk membentuk link PAgP. 
 
@@ -161,7 +161,7 @@ dan nyalahkan kembali interfacenya
 
 Nah, sekarang lakukan ke S3
 
-    S3(config)#int range fastEthernet 0/21-24
+    S3(config)#int range fastEthernet 0/21-22
     S3(config-if-range)#shutdown
     S3(config-if-range)#channel-group 1 mode desirable 
     S3(config-if-range)#no shutdown
@@ -180,7 +180,11 @@ Konfigurasikan `logical interfaces` untuk menjadi trunk dengan terlebih dahulu m
 
 Keluarkan perintah `show etherchannel summary` pada S1 dan S3 untuk memverifikasi bahwa EtherChannel berjalan pada kedua switch. 
 
-Perintah ini menampilkan jenis EtherChannel, port yang digunakan, dan status port.
+Perintah ini menampilkan jenis EtherChannel, port yang digunakan, dan status port. 
+
+Outputnya harus sama seperti ini: 
+
+port yang menggunakan PAgP yaitu port yang berhubungan dengan S1 dan S3 atau **port F0/21 dan F0/22.**
 
     S3#show etherchannel summary 
     ...
@@ -190,7 +194,7 @@ Perintah ini menampilkan jenis EtherChannel, port yang digunakan, dan status por
     Group  Port-channel  Protocol    Ports
     ------+-------------+-----------+----------------------------------------------
     
-    1      Po1(SU)           PAgP   Fa0/21(P) Fa0/22(P) Fa0/23(I) Fa0/24(I) 
+    1      Po1(SU)           PAgP   Fa0/21(P) Fa0/22(P
 
 atau alternative dengan `show interface trunk`
 
