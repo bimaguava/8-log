@@ -312,6 +312,8 @@ Lalu, coba kita cek `etherchannel summary`
 
 Status Po2-nya SU, yaitu S=`layer 2` dan U=`in use` yang menggunakan protocol LACP dan Ports Gig0/1 dan Gig0/2 dengan keterangan P atau `in port-channel`
 
+Lalu, Lakukan juga pengecekan pada S2.
+
 ## Referensi
 
 * [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
