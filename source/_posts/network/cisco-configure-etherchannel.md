@@ -41,7 +41,7 @@ Pada lab ini kita akan mengonfigurasi **Port Aggregation Protocol (PAgP)**, **Li
 
 ## 1. Configure Basic Switch Settings
 
-### Verification Command
+### 1.A. Verification Command
 
 Pastikan semua port terhubung **(connected)** dengan benar, cek dengan
 
@@ -70,7 +70,7 @@ Sekarang kita coba menampilkan `interfaces trunk`
 
 dan ternyata belum ada (di semua switch)
 
-### Semua port untuk EtherChannels ubah ke static trunk ports
+### 1.B. Semua port untuk EtherChannels ubah ke static trunk ports
 
 Nah, sebelum menyetel EtherChannel, sesuai guidelinenya yaitu _Port yang digunakan untuk EtherChannel harus di VLAN yang sama, **atau** dijadikan Trunk._
 
@@ -127,7 +127,7 @@ lalu, pada S1
 
 Jika tidak, `EtherChannel Misconfig Guard` dapat menempatkan port ini ke dalam `error disabled state`. Kalau seperti itu maka `physical port` dan `port channel` dapat diaktifkan kembali setelah EtherChannel dikonfigurasi.
 
-### Configure Port Channel 1
+### 2.A. Configure Port Channel 1
 
 EtherChannel yang sudah dibuat untuk lab ini menggabungkan port F0/21 dan F0/22 **antara S1 dan S3** yang dikonfig dengan static trunk ports.
 
@@ -165,6 +165,18 @@ Nah, sekarang lakukan ke S3
     S3(config-if-range)#shutdown
     S3(config-if-range)#channel-group 1 mode desirable 
     S3(config-if-range)#no shutdown
+
+Konfigurasikan `logical interfaces` untuk menjadi trunk dengan terlebih dahulu memasukkan perintah `interface port-channel [number]` dan kemudian perintah `switch mode trunk`
+
+**Tambahkan konfigurasi ini ke kedua switch (S1 dan S3)**
+
+    S1(config)#int port-channel 1
+    S1(config-if)#switchport mode trunk 
+
+    S3(config)#int port-channel 1
+    S3(config-if)#switchport mode trunk 
+
+### Verify status Port Channel 1
 
 ## Referensi
 
