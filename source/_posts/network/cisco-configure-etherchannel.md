@@ -229,7 +229,21 @@ dan S1
 
 Dan selesai lah dengan Port Channel 1 dengan PGaP, berikutnya kita akan mengkonfig Port Channel 2 dan 3 dengan LACP
 
-## Configure 802.3ad LACP Etherchannel
+## 3. Configure 802.3ad LACP Etherchannel
+
+## 3.A. Configure Port Channel 2
+
+> 802.3ad adalah versi open source dari EtherChannel yang dilirlis IEEE tahun 2000
+
+Seperti command sebelumnya, kita akan **konfigurasikan link antara S1 dan S2**, menggunakan **port G0/1 dan G0/2**, sebagai LACP EtherChannel. 
+
+Kita harus menggunakan nomor `port channel` yang berbeda yang ada pada S1, karena kita sudah menggunakannya pada langkah sebelumnya. 
+
+Untuk mengkonfigurasi `port channel 2` sebagai LACP, gunakan perintah `channel-group 2 mode active` 
+
+> mode active menunjukkan bahwa switch melakukan negotiate link itu sebagai LACP, bukan PAgP
+
+Berikut
 
 ## Referensi
 
