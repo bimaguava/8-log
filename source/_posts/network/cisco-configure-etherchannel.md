@@ -209,6 +209,15 @@ Output S1 juga sama
 
 atau alternatifnya dengan `show interface trunk`
 
+Output pada S3
+
+    S3#show interfaces trunk
+    Port        Mode         Encapsulation  Status        Native vlan
+    Po1         on           802.1q         trunking      1
+    Fa0/23      on           802.1q         trunking      1
+    Fa0/24      on           802.1q         trunking      1
+    ...
+
 dan S1
 
     S1# show interface trunk
@@ -216,6 +225,7 @@ dan S1
     Po1         on           802.1q         trunking      1
     Gig0/1      on           802.1q         trunking      1
     Gig0/2      on           802.1q         trunking      1
+    ...
 
 ## Referensi
 
