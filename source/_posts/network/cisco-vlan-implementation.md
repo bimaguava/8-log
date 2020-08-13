@@ -49,4 +49,5 @@ Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan ter
 
 [vokoscreenng-2020-08-14_00-30-22.mkv](/images/vokoscreenng-2020-08-14_00-30-22.mkv "vokoscreenng-2020-08-14_00-30-22.mkv")
 
+
 dan hasilnya paket/pesan ICMP yang dikirim gagal.
