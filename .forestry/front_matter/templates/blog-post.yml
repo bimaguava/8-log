@@ -36,6 +36,7 @@ fields:
 pages:
 - source/_posts/network/cisco-configure-etherchannel.md
 - source/_posts/network/cisco-spanning-tree-protocol-stp.md
+- source/_posts/network/cisco-vlan-implementation.md
 - source/_posts/network/etherchannel-di-mikrotik-interface-bonding.md
 - source/_posts/network/etherchannel.md
 - source/_posts/network/mikrotik-basic-command-line.md
