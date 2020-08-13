@@ -50,3 +50,5 @@ Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan ter
 ![img](https://i.imgur.com/mJDvWxV.gif)
 
 dan hasilnya paket/pesan ICMP yang dikirim gagal yang artinya terjadi suatu masalah karena PC 1 berada pada VLAN yang berbeda dengan PC6 yang mana VLAN tidak mengizinkan device-nya berkomunikasi dengan VLAN yang berbeda/terpisah (secara logically)
+
+Selain itu juga PC 1 berada pada sub network dan memiliki gateway yang berbeda yaitu **PC1: 172.17.10.21** ke **PC2: 172.17.30.26**
