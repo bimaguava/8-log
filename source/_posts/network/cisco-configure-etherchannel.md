@@ -462,7 +462,7 @@ Coba kita lihat S1 setelah diset root primary nya berpindah dari S3 ke S1, denga
     Po1              Desg FWD 9         128.27   Shr
     Po2              Desg LSN 3         128.28   Shr
 
-Itu akan menjadikan S1 sebagai sebuah root bagi S3
+Itu akan menjadikan S1 sebagai sebuah root bagi S3, dan status BLOK oleh STP akan pindah ke Fa0/23 dan 24 (Port Channel 3)
 
 ![](/images/screenshot_2020-08-13_21-27-00.png)
 
@@ -487,7 +487,7 @@ Maka berikut tampilan dari output S3
     Po3              Altn BLK 9         128.28   Shr
     Po1              Root FWD 9         128.27   Shr
 
-Sehingga kita akan mendapatkan pada Port Channel 3 yang statusnya di BLOK (oleh STP)
+Dari output itu kita akan mendapatkan pada Port Channel 3 yang statusnya di BLOK (oleh STP)
 
 ## Referensi
 
