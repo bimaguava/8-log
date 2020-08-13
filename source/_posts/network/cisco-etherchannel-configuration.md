@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: 'Cisco: Configure EtherChannel'
+title: 'Cisco: EtherChannel Configuration'
 date: 2020-08-08T15:52:00Z
 updated: 
 category:
