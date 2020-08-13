@@ -22,7 +22,9 @@ Download: [https://drive.google.com/file/d/1F78eUuw6BMl43hsats0RJw3C8HiwHRe1/vie
 
 ![](/images/screenshot_2020-08-13_23-40-48.png)
 
-jadi, disini kita punya topologi yang memuat beberapa sub network (Lihat IP) yang mana ada 3 VLAN, VLAN 10, 20, dan 30. Untuk lebih jelasnya silahkan merujuk ke tabel address. 
+jadi, disini kita punya topologi yang memuat beberapa sub network (Lihat IP) yang mana ada 3 VLAN, VLAN 10, 20, dan 30. 
+
+Supaya mudah untuk pahami, tinggal melihat bagian host id dari IP misal 172.17.`10`.21 berarti nanti akan berada pada VLAN 10 seperti itu. Untuk lebih jelasnya silahkan merujuk ke tabel address.
 
 ## Tabel Address
 
