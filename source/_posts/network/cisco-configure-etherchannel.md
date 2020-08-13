@@ -426,13 +426,13 @@ Nah jika kita lihat topologi S3 ini adalah root maka **yang berwarna oren (Port 
 
 Role Po2 **Alternative dan statusnya di BLOK (BLK)**
 
-Hal ini karena Port Channel 2 tidak bertindak operative karena STP menempatkan beberapa port untuk di blok yang mana hal ini berkaitan dengan switching loop yang mana terjadi switch saling reply broadcast sampai terjadi looping.
+Hal ini karena Port Channel 2 tidak bertindak operative karena STP menempatkan beberapa port untuk di blok dan yang diblok oleh STP ini ialah Gigabit 0/1 dan 0/2 nya S1. 
+
+Yang mana STP ini berkaitan dengan pencegahan terjadinya switching loop yang diakibatkan oleh switch yang saling reply broadcast sampai terjadi looping.
 
 Untuk penjelasan tentang STP silahkan ke [sini](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "sini")
 
-> Dan yang diblok oleh STP ini ialah Gigabit 0/1 dan 0/2 nya S1.
-
-_Apakah bisa misal kita ingin menjadikan Po2 ini sebagai root?_
+> _Lalu, apakah bisa misal kita ingin menjadikan Po2 ini sebagai root?_
 
 Ya, menggantinya dengan dengan mengkonfigurasi S1 menjadi primary root untuk VLAN 1 atau default VLAN.
 
