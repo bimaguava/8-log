@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: 'Cisco: Trunk'
+title: 'Cisco: Configure Trunk'
 date: 2020-07-29T17:00:00.000+00:00
 updated: 2020-07-29T17:00:00.000+00:00
 category:
