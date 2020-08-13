@@ -29,3 +29,14 @@ Supaya mudah untuk pahami, tinggal melihat bagian host id dari IP misal 172.17.`
 ## Tabel Address
 
 ![](/images/screenshot_2020-08-13_23-44-33.png)
+
+## What we do?
+
+* Pada bagian 1 kita akan mempelajari broadcast trafik pada topologi VLAN Implementation ini
+* Pada bagian 2 kita akan mencoba mempelajari broadcast trafik yang dilakukan tanpa menggunakan VLAN
+
+Intinya kita nanti akan memahami bagaimana suatu paket broadcast yang diforward switch saat pakai VLAN dan tidak memakai VLAN
+
+## 1. Observe Broadcast Traffic in a VLAN Implementation
+
+### 1.A. Ping dari PC1 ke PC6
