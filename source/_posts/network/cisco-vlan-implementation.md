@@ -40,3 +40,5 @@ Intinya kita nanti akan memahami bagaimana suatu paket broadcast yang diforward 
 ## 1. Observe Broadcast Traffic in a VLAN Implementation
 
 ### 1.A. Ping dari PC1 ke PC6
+
+Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan
