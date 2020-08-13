@@ -434,7 +434,7 @@ Untuk penjelasan tentang STP silahkan ke [sini](https://8log.netlify.app/2020/08
 
 > _Lalu, apakah bisa misal kita ingin menjadikan Po2 ini sebagai root?_
 
-Ya, menggantinya dengan dengan mengkonfigurasi S1 menjadi primary root untuk VLAN 1 atau default VLAN.
+Ya, menggantinya dengan dengan mengkonfigurasi S1 menjadi primary root untuk VLAN 1 atau default VLAN. Sebagai berikut
 
     S1(config)# spanning-tree vlan 1 root primary
 
