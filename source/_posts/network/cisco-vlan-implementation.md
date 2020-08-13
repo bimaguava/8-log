@@ -14,7 +14,9 @@ keywords: []
 ---
 ## Petunjuk Awal VLAN
 
-tidak ada, lanjut.
+Untuk teori silahkan baca di [sini]() karena sebelum membuat VLAN ada baiknya mengetahui kapan kita membutuhkan VLAN, dll.
+
+Pada materi ini kita akan belajar bagaimana suatu VLAN bekerja, untuk yang ingin belajar konfigurasi VLAN silahkan ke [sini](8log.netlify.app/2020/07/26/network/cisco-vlan-configuration "sini")
 
 ## Lab
 
