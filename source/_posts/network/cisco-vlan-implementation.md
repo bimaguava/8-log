@@ -47,7 +47,6 @@ Ping yang dilakukan ke network yang berbeda, yaitu **PC1: 172.17.10.21** ke **PC
 
 Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan tersebut.
 
-[vokoscreenng-2020-08-14_00-30-22.mkv](/images/vokoscreenng-2020-08-14_00-30-22.mkv "vokoscreenng-2020-08-14_00-30-22.mkv")
+!(image)[http://i.imgur.com/CfwKC5s.mp4]
 
-
-dan hasilnya paket/pesan ICMP yang dikirim gagal.
+dan hasilnya paket/pesan ICMP yang dikirim gagal yang artinya terjadi suatu masalah
