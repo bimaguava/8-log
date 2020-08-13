@@ -235,11 +235,11 @@ Dan selesai lah dengan Port Channel 1 dengan PGaP, berikutnya kita akan mengkonf
 
 > 802.3ad adalah versi open source dari EtherChannel yang dilirlis IEEE tahun 2000
 
-Seperti command sebelumnya, kita akan **konfigurasikan link antara S1 dan S2**, menggunakan **port G0/1 dan G0/2**, sebagai LACP EtherChannel. 
+Seperti command sebelumnya, kita akan **konfigurasikan link antara S1 dan S2**, menggunakan **port G0/1 dan G0/2**, sebagai LACP EtherChannel.
 
-Kita harus menggunakan nomor `port channel` yang berbeda yang ada pada S1, karena kita sudah menggunakannya pada langkah sebelumnya. 
+Kita harus menggunakan nomor `port channel` yang berbeda yang ada pada S1, karena kita sudah menggunakannya pada langkah sebelumnya.
 
-Untuk mengkonfigurasi `port channel 2` sebagai LACP, gunakan perintah `channel-group 2 mode active` 
+Untuk mengkonfigurasi `port channel 2` sebagai LACP, gunakan perintah `channel-group 2 mode active`
 
 > mode active menunjukkan bahwa switch melakukan negotiate link itu sebagai LACP, bukan PAgP
 
@@ -267,7 +267,7 @@ dan S2
 
 ### 3.B. Verify Port Channel 2 Status
 
-Pada S1 kita cek `interface trunk` 
+Pada S1 kita cek `interface trunk`
 
     S1# show int tr
     Port        Mode         Encapsulation  Status        Native vlan
@@ -318,7 +318,11 @@ Lalu, Lakukan juga pengecekan pada S2 dan pastikan menampilkan data dari Port Ch
 
 ### 4.A. Configure Port Channel 3
 
-konfig S2
+Pada S2 kita tambahkan ke Port Channel 3 dengan mode passive.
+
+Opsi passive ini menunjukkan kita ingin menggunakan LACP jika perangkat LACP lain terdeteksi atau perangkat lain memakai mode active.
+
+Dan jangan lupa juga port channel 3 ini static trunk seperti semua port channel sebelumnya
 
     S2(config)# interface range f0/23 - 24
     S2(config-if-range)# shutdown
@@ -329,7 +333,7 @@ konfig S2
     S2(config-if-range)# interface port-channel 3
     S2(config-if)# switchport mode trunk
 
-konfig S3
+dan di sisi S3 kita akan menggunakan mode active, sehingga konfigurasi pada port channel ini passive/active yang menunjukkan bahwa salah satu perangkat bisa dijadikan passive dimana dia akan mengaktifkan LACP jika mendeteksi perangkat LACP active.
 
     S3(config)# interface range f0/23 - 24
     S3(config-if-range)# shutdown
