@@ -14,7 +14,7 @@ keywords: []
 ---
 ## Petunjuk Awal VLAN
 
-gak ada, lanjut.
+tidak ada, lanjut.
 
 ## Lab
 
