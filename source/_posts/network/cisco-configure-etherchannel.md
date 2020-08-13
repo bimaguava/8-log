@@ -344,6 +344,151 @@ dan di sisi S3 kita akan menggunakan mode active, sehingga konfigurasi pada port
     S3(config-if-range)# interface port-channel 3
     S3(config-if)# switchport mode trunk
 
+### 4.B. Verify Port Channel 3 status
+
+Sekarang adalah saatnya pembuktian bahwa konfigurasi EtherChannel yang dilakukan telah betul
+
+    S2# show etherchannel sum
+    
+    Number of channel-groups in use: 3
+    Number of aggregators:           3
+    
+    Group  Port-channel  Protocol    Ports
+    ------+-------------+-----------+----------------------------------------------
+    
+    1      Po1(SD)           -      
+    2      Po2(SU)           LACP   Gig0/1(P) Gig0/2(P) 
+    3      Po3(SU)           LACP   Fa0/23(P) Fa0/24(P) 
+
+Nah, pastikan Port Channel yang digunakan S2 seperti ini
+
+Dan di sisi S3 akan seperti ini
+
+    S3# show etherchannel sum
+    
+    Number of channel-groups in use: 2
+    Number of aggregators:           2
+    
+    Group  Port-channel  Protocol    Ports
+    ------+-------------+-----------+----------------------------------------------
+    
+    1      Po1(SU)           PAgP   Fa0/21(P) Fa0/22(P) 
+    3      Po3(SU)           LACP   Fa0/23(P) Fa0/24(P) 
+
+Dan lakukan pembuktian untuk konfigurasi pada static trunk juga dengan command `show interface trunk`
+
+Jika sudah, kita akan mengecek spanning tree. Karena membuat EtherChannel tidak akan mencegah Spanning Tree (STP) untuk mendeteksi switching loops.
+
+Dilihat pada S3
+
+    S3#show spanning-tree active
+    VLAN0001
+      Spanning tree enabled protocol ieee
+      Root ID    Priority    32769
+                 Address     0001.436E.8494
+                 This bridge is the root
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+    
+      Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)
+                 Address     0001.436E.8494
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+                 Aging Time  20
+    
+    Interface        Role Sts Cost      Prio.Nbr Type
+    ---------------- ---- --- --------- -------- --------------------------------
+    Po3              Desg FWD 9         128.28   Shr
+    Po1              Desg FWD 9         128.27   Shr
+
+Po3 dan Po1 merupakan logical interface pada spanning tree yang mana ada keterangan **the bridge is the root berarti bahwa switch ini merupakan sebuah root**.
+
+Nah jika kita lihat topologi S3 ini adalah root maka **yang berwarna oren (Port Channel 2) merupakan Alternative**
+
+![](/images/screenshot_2020-08-13_21-14-14.png)
+
+    S1#show spanning-tree active 
+    VLAN0001
+      Spanning tree enabled protocol ieee
+      Root ID    Priority    32769
+                 Address     0001.436E.8494
+                 Cost        9
+                 Port        27(Port-channel1)
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+    
+      Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)
+                 Address     000A.F313.2395
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+                 Aging Time  20
+    
+    Interface        Role Sts Cost      Prio.Nbr Type
+    ---------------- ---- --- --------- -------- --------------------------------
+    Po1              Root FWD 9         128.27   Shr
+    Po2              Altn BLK 3         128.28   Shr
+
+Role Po2 **Alternative dan statusnya di BLOK (BLK)**
+
+Hal ini karena Port Channel 2 tidak bertindak operative karena STP menempatkan beberapa port untuk di blok yang mana hal ini berkaitan dengan switching loop yang mana terjadi switch saling reply broadcast sampai terjadi looping.
+
+Untuk penjelasan tentang STP silahkan ke [sini](https://8log.netlify.app/2020/08/08/network/cisco-spanning-tree-protocol-stp/ "sini")
+
+> Dan yang diblok oleh STP ini ialah Gigabit 0/1 dan 0/2 nya S1.
+
+_Apakah bisa misal kita ingin menjadikan Po2 ini sebagai root?_
+
+Ya, menggantinya dengan dengan mengkonfigurasi S1 menjadi primary root untuk VLAN 1 atau default VLAN.
+
+    S1(config)# spanning-tree vlan 1 root primary
+
+atau bisa dengan cara mengeset prioirity ID nya, seperti ini
+
+    S1(config)# spanning-tree vlan 1 root priority 24576
+
+Coba kita lihat S1 setelah diset root primary nya berpindah dari S3 ke S1, dengan output pada S1 **This bridge is the root**
+
+    S1(config)#do show spanning-tree
+    VLAN0001
+      Spanning tree enabled protocol ieee
+      Root ID    Priority    24577
+                 Address     000A.F313.2395
+                 This bridge is the root
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+    
+      Bridge ID  Priority    24577  (priority 24576 sys-id-ext 1)
+                 Address     000A.F313.2395
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+                 Aging Time  20
+    
+    Interface        Role Sts Cost      Prio.Nbr Type
+    ---------------- ---- --- --------- -------- --------------------------------
+    Po1              Desg FWD 9         128.27   Shr
+    Po2              Desg LSN 3         128.28   Shr
+
+Itu akan menjadikan S1 sebagai sebuah root bagi S3
+
+![](/images/screenshot_2020-08-13_21-27-00.png)
+
+Maka berikut tampilan dari output S3
+
+    S3# show spanning-tree active
+    VLAN0001
+      Spanning tree enabled protocol ieee
+      Root ID    Priority    24577
+                 Address     000A.F313.2395
+                 Cost        9
+                 Port        27(Port-channel1)
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+    
+      Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)
+                 Address     0001.436E.8494
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+                 Aging Time  20
+    
+    Interface        Role Sts Cost      Prio.Nbr Type
+    ---------------- ---- --- --------- -------- --------------------------------
+    Po3              Altn BLK 9         128.28   Shr
+    Po1              Root FWD 9         128.27   Shr
+
+Sehingga kita akan mendapatkan pada Port Channel 3 yang statusnya di BLOK (oleh STP)
+
 ## Referensi
 
 * [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
