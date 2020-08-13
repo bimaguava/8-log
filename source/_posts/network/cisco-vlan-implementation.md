@@ -49,6 +49,4 @@ Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan ter
 
 ![img](https://i.imgur.com/mJDvWxV.gif)
 
-!(image)[http://i.imgur.com/CfwKC5s.mp4]
-
 dan hasilnya paket/pesan ICMP yang dikirim gagal yang artinya terjadi suatu masalah
