@@ -43,6 +43,10 @@ Intinya kita nanti akan memahami bagaimana suatu paket broadcast yang diforward 
 
 ### 1.A. Ping dari PC1 ke PC6
 
-Ping yang dilakukan ke network yang berbeda, yaitu **PC1: 172.17.10.21** dan **PC2: 172.17.30.26**
+Ping yang dilakukan ke network yang berbeda, yaitu **PC1: 172.17.10.21** ke **PC2: 172.17.30.26**
 
-Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan.
+Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan tersebut.
+
+[vokoscreenng-2020-08-14_00-30-22.mkv](/images/vokoscreenng-2020-08-14_00-30-22.mkv "vokoscreenng-2020-08-14_00-30-22.mkv")
+
+dan hasilnya ICMP fail.
