@@ -44,3 +44,5 @@ Intinya kita nanti akan memahami bagaimana suatu paket broadcast yang diforward 
 ### 1.A. Ping dari PC1 ke PC6
 
 Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan.
+
+Paket yang berlajan dari Network yang berbeda, yaitu **PC1: 172.17.10.21** dan **PC2: 172.17.30.26**
