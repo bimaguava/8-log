@@ -47,7 +47,7 @@ Ping yang dilakukan ke network yang berbeda, yaitu **PC1: 172.17.10.21** ke **PC
 
 Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan tersebut.
 
-!(img)[https://i.imgur.com/mJDvWxV.gif]
+![img](https://i.imgur.com/mJDvWxV.gif)
 
 !(image)[http://i.imgur.com/CfwKC5s.mp4]
 
