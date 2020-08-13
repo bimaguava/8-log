@@ -1,5 +1,5 @@
 ---
-title: Subnetting
+title: Menghitung subnetting tanpa kalkulator
 date: 2020-07-05
 draft: false
 categories: network
