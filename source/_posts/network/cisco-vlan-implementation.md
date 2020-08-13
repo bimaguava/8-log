@@ -45,4 +45,19 @@ Intinya kita nanti akan memahami bagaimana suatu paket broadcast yang diforward 
 
 Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan.
 
+| --- | --- | --- | --- | --- |
+| Device | Interface | IP Address | Subnet Mask | Default Gateway |
+| S1 | VLAN 99 | 172.17.99.31 | 255.255.255.0 | N/A |
+| S2 | VLAN 99 | 172.17.99.32 | 255.255.255.0 | N/A |
+| S3 | VLAN 99 | 172.17.99.33 | 255.255.255.0 | N/A |
+| PC1 | NIC | 172.17.10.21 | 255.255.255.0 | 172.17.10.1 |
+| PC2 | NIC | 172.17.20.22 | 255.255.255.0 | 172.17.20.1 |
+| PC3 | NIC | 172.17.30.23 | 255.255.255.0 | 172.17.30.1 |
+| PC4 | NIC | 172.17.10.24 | 255.255.255.0 | 172.17.10.1 |
+| PC5 | NIC | 172.17.20.25 | 255.255.255.0 | 172.17.20.1 |
+| PC6 | NIC | 172.17.30.26 | 255.255.255.0 | 172.17.30.1 |
+| PC7 | NIC | 172.17.10.27 | 255.255.255.0 | 172.17.10.1 |
+| PC8 | NIC | 172.17.20.28 | 255.255.255.0 | 172.17.20.1 |
+| PC9 | NIC | 172.17.30.29 | 255.255.255.0 | 172.17.30.1 |
+
 Paket yang berlajan dari Network yang berbeda, yaitu **PC1: 172.17.10.21** dan **PC2: 172.17.30.26**
