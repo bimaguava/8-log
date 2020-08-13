@@ -492,3 +492,4 @@ Sehingga kita akan mendapatkan pada Port Channel 3 yang statusnya di BLOK (oleh 
 ## Referensi
 
 * [https://geek-university.com/ccna/access-and-trunk-ports-explained/](https://geek-university.com/ccna/access-and-trunk-ports-explained/ "https://geek-university.com/ccna/access-and-trunk-ports-explained/")
+* CCNA SRWE
