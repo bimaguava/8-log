@@ -12,7 +12,7 @@ tags:
 keywords: []
 
 ---
-## Petunjuk
+## Petunjuk Awal VLAN
 
 gak ada
 
