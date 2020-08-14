@@ -73,4 +73,4 @@ Jika sudah tampil seperti itu kita coba isikan ke tabel berikut
 
 Untuk keperluan tabel, hanya gunakan informasi Gigabit trunk ports.
 
-Port Fast Ethernet adalah port akses yang memiliki perangkat akhir yang terhubung dan bukan bagian dari pohon rentang berbasis trunk antar-sakelar.
+Dan Port FastEthernet ialah `access port` yang konek dengan end devices alias hosts dan bukan bagian dari inter-switch trunk-based spanning tree.
