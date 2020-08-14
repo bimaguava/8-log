@@ -57,7 +57,7 @@ Untuk lebih paham dengan cuplikan tersebut, coba dianalisa
 
 > _Kemana S1,S2,S3 mengirim paket setelah menerimanya?_
 
-Tentunya ARP request yang dikirim dari switch merupakan sebuah pesan broadcast yang dikirim hanya ke sebuah host yang diizinkan saja, yakni adalah yang bersumber dari PC1 alias VLAN 10 saja. 
+Tentunya ARP request yang dikirim dari switch merupakan sebuah pesan broadcast yang dikirim hanya ke sebuah host yang diizinkan saja, yakni adalah yang bersumber dari PC1 alias VLAN 10 saja.
 
 Maka host2 yang berada pada VLAN 20, 30 tidak akan menerima broadcast tadi. Silahkan lihat kembali cuplikannya.
 
@@ -66,3 +66,9 @@ Karena pada dasarnya adalah switch akan **membawa paket kepada subnetwork yang s
 **Tidak mungkin switch meneruskan paket yang dikirim dari 172.17.10.21 ke 172.17.30.26** Karena bukan tujuannya alias berbeda network dan yang bertugas untuk hal itu ialah dinamakan router atau sebuah proses yang dinamakan routing dan tidak ada pembahasannya disini, melenceng.
 
 ### 1.B. Ping dari PC1 to PC4
+
+Sekarang kita akan mengecek dari **PC1: 172.17.10.21** ke **PC4: 172.17.10.24**
+
+Ia berada pada network yang sama yang mana berada pada VLAN 10, gateway yang sama yaitu 172.17.`10.1` 
+
+Simulasi saat pesan broadcast dikirim akan seperti ini
