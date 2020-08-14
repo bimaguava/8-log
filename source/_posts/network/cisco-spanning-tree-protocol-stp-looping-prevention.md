@@ -71,6 +71,12 @@ Gunakan perintah `show spanning-tree vlan 1` untuk mendapatkan informasi status 
 
 Jika sudah tampil seperti itu kita coba isikan ke tabel berikut
 
+| Switch | Port      | Status (FWD, BLK...) | Root Bridge? |
+|--------|-----------|----------------------|--------------|
+| S1     | G0/1 G0/2 |                      |              |
+| S2     | G0/1 G0/2 |                      |              |
+|   S3   | G0/1 G0/2 |                      |              |
+
 Untuk keperluan tabel, hanya gunakan informasi Gigabit trunk ports.
 
 Dan Port FastEthernet ialah `access port` yang konek dengan end devices alias hosts dan bukan bagian dari inter-switch trunk-based spanning tree.
