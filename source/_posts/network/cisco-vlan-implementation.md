@@ -149,6 +149,8 @@ Sekarang coba lakukan pada S2 dan S3
 * hapus file vlan database
 * reset switch
 
-Kalau sudah nanti setelah di reload kita tunggu switchnya sedang proses booting atau biasanya dengan warna oren
+Kalau sudah nanti setelah di reload kita tunggu switchnya sedang proses booting atau biasanya dengan warna oren di packet tracer.
+
+![](/images/screenshot_2020-08-14_09-01-28.png)
 
 kalau mau cepat tinggal klik` Fast Forward Time` di toolbar bawah atau dengan keybind **\[Alt + D\]**
