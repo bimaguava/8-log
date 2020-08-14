@@ -63,4 +63,6 @@ Maka host2 yang berada pada VLAN 20, 30 tidak akan menerima broadcast tadi. Sila
 
 Karena pada dasarnya adalah switch akan **membawa paket kepada subnetwork yang sama.**
 
-**Tidak mungkin switch meneruskan paket yang dikirim dari 172.17.10.21 ke 172.17.30.26** Karena berbeda network dan yang bertugas untuk hal itu ialah dinamakan router atau sebuah proses yang dinamakan routing dan tidak ada pembahasannya disini, melenceng.
+**Tidak mungkin switch meneruskan paket yang dikirim dari 172.17.10.21 ke 172.17.30.26** Karena bukan tujuannya alias berbeda network dan yang bertugas untuk hal itu ialah dinamakan router atau sebuah proses yang dinamakan routing dan tidak ada pembahasannya disini, melenceng.
+
+### 1.B. Ping dari PC1 to PC4
