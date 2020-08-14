@@ -153,4 +153,10 @@ Kalau sudah nanti setelah di reload kita tunggu switchnya sedang proses booting 
 
 ![](/images/screenshot_2020-08-14_09-01-28.png)
 
-kalau mau cepat tinggal klik` Fast Forward Time` di toolbar bawah atau dengan keybind **\[Alt + D\]**
+kalau mau cepat nyala hijau tinggal klik` Fast Forward Time` di toolbar bawah atau dengan keybind **\[Alt + D\]**
+
+### 2.C. Klik Capture/Forward untuk mengirim ARP requests atau ping
+
+Perhatikan bahwa sekarang switch meneruskan ARP request keluar dari semua port, kecuali port tempat ARP request diterima. 
+
+Tindakan dari switch ini adalah mengapa VLAN dapat meningkatkan kinerja jaringan. Broadcast trafik yang ada dalam setiap VLAN. Ketika jendela Buffer Full muncul, klik tombol View Previous Events.
