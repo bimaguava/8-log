@@ -69,14 +69,16 @@ Gunakan perintah `show spanning-tree vlan 1` untuk mendapatkan informasi status 
     Gi0/2            Root FWD 4         128.26   P2p
     Gi0/1            Desg FWD 4         128.25   P2p
 
-Dan lakukan pada S2 dan S3.
+Dan lakukan pada S2
 
-Jika sudah tampil seperti itu kita coba isikan ke tabel berikut
+dan S3
+
+Jika sudah tampil seperti itu kita coba pindahkan informasinya ke tabel. Sebagai berikut
 
 | Switch | Port | Status (FWD, BLK...) | Root Bridge? |
 | --- | --- | --- | --- |
 | S1 | G0/1 | Forwarding | No |
-|	 | G0/2 | Forwarding | No |
+|	 | G0/2 | Forwarding | Yes |
 | S2 | G0/1 | Forwarding | Yes |
 |    | G0/2 | Forwarding | Yes |
 | S3 | G0/1 | Forwarding | No |
@@ -85,3 +87,4 @@ Jika sudah tampil seperti itu kita coba isikan ke tabel berikut
 Pada tabel kita hanya mencatat informasi dari trunk ports saja (Gigabit) 
 
 karena FastEthernet ialah sebuah `access port` yang konek dengan end devices alias hosts dan bukan bagian dari inter-switch trunk-based spanning tree.
+
