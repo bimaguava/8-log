@@ -94,7 +94,9 @@ Sekarang kita akan menghapus startup-config terlabih dahulu
     Erase of nvram: complete
     %SYS-7-NV_BLOCK_INIT: Initialized the geometry of nvram
 
-Dan kita bisa menemukan file VLAN database biasanya dengan nama **vlan.dat** dengan command `show flash`
+Setelah menghapus startup-config kita masih akan bisa menemukan file dari VLAN database biasanya dengan nama **vlan.dat** yang berada pada `flash:/` 
+
+Coba lihat dengan command `show flash`
 
     S1#show flash: 
     Directory of flash:/
@@ -103,3 +105,50 @@ Dan kita bisa menemukan file VLAN database biasanya dengan nama **vlan.dat** den
         2  -rw-         796          <no date>  vlan.dat
     
     32514048 bytes total (28098331 bytes free)
+
+Nah, sekarang kita akan menghapus file tersebut
+
+    S1#delete vlan.dat
+    Delete filename [vlan.dat]?
+    Delete flash:/vlan.dat? [confirm]
+
+Oke ... 
+
+et belum selesai.
+
+### 2.B. Reload the switch
+
+Sekarang kita perlu mereset pada `privileged exec mode` juga seperti tadi, dengan command `reload`
+
+    S1#reload
+    Proceed with reload? [confirm]
+    C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(25r)FX, RELEASE SOFTWARE (fc4)
+    Cisco WS-C2960-24TT (RC32300) processor (revision C0) with 21039K bytes of memory.
+    2960-24TT starting...
+    Base ethernet MAC Address: 0030.A3C0.74BA
+    Xmodem file system is available.
+    Initializing Flash...
+    flashfs[0]: 1 files, 0 directories
+    flashfs[0]: 0 orphaned files, 0 orphaned directories
+    flashfs[0]: Total bytes: 32514048
+    flashfs[0]: Bytes used: 4414921
+    flashfs[0]: Bytes available: 28099127
+    flashfs[0]: flashfs fsck took 1 seconds.
+    ...done Initializing Flash.
+    
+    Boot Sector Filesystem (bs:) installed, fsid: 3
+    Parameter Block Filesystem (pb:) installed, fsid: 4
+    
+    
+    Loading "flash:/c2960-lanbase-mz.122-25.FX.bin"...
+    ########################################################################## [OK]
+
+Sekarang coba lakukan pada S2 dan S3
+
+* hapus konfigurasi switch
+* hapus file vlan database
+* reset switch
+
+Kalau sudah nanti setelah di reload kita tunggu switchnya sedang proses booting atau biasanya dengan warna oren
+
+kalau mau cepat tinggal klik` Fast Forward Time` di toolbar bawah atau dengan keybind **\[Alt + D\]**
