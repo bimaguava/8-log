@@ -84,3 +84,22 @@ Karena jalur ARP request sama dengan sumbernya maka paket akan berhasil diterima
 ## 2. Observe Broadcast Traffic without VLANs
 
 ### 2.A. Menghapus konfig pada semua switch dan juga VLAN database
+
+Sekarang kita akan menghapus startup-config terlabih dahulu
+
+    S1>enable
+    S1#erase startup-config 
+    Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]
+    [OK]
+    Erase of nvram: complete
+    %SYS-7-NV_BLOCK_INIT: Initialized the geometry of nvram
+
+Dan kita bisa menemukan file VLAN database biasanya dengan nama **vlan.dat** dengan command `show flash`
+
+    S1#show flash: 
+    Directory of flash:/
+    
+        1  -rw-     4414921          <no date>  c2960-lanbase-mz.122-25.FX.bin
+        2  -rw-         796          <no date>  vlan.dat
+    
+    32514048 bytes total (28098331 bytes free)
