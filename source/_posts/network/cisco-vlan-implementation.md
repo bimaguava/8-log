@@ -52,3 +52,11 @@ Mula-mula kita akan melihat dahulu suatu ARP request saat melintasi jaringan ter
 dan hasilnya paket/pesan ICMP yang dikirim gagal yang artinya terjadi suatu masalah karena PC 1 berada pada VLAN yang berbeda dengan PC6 yang mana VLAN tidak mengizinkan device-nya berkomunikasi dengan VLAN yang berbeda/terpisah (secara logically)
 
 Selain itu juga PC 1 berada pada sub network dan gateway yang berbeda yaitu **PC1: 172.17.10.21** ke **PC2: 172.17.30.26**
+
+Untuk lebih paham dengan cuplikan tersebut, coba dianalisa
+
+> _Kemana S1,S2,S3 mengirim paket setelah menerimanya?_
+
+Tentunya ARP request yang dikirim dari switch merupakan sebuah pesan broadcast yang dikirim hanya ke sebuah host yang diizinkan saja, yakni adalah yang bersumber dari PC1 alias VLAN 10 saja. 
+
+Maka host2 yang berada pada VLAN 20, 30 tidak akan menerima broadcast tadi.
