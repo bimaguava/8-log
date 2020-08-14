@@ -139,3 +139,7 @@ Kan kita tahu bahwa Spanning tree bekerja untuk mencegah loop dia akan menggunak
 * memilih 1 designated port pada setiap segmen
 
 ![](/images/screenshot_2020-08-14_15-45-42.png)
+
+## Referensi
+
+* [Cisco CCNA Spanning-tree](https://www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-switching/cisco-ccna-spanning-tree-protocolroot-bridge-rootdesignatedblocked-ports/#:\~:text=A%20Root%20Bridge%20is%20a,elected%20as%20the%20Root%20Bridge. "Cisco CCNA Spannning-tree")
