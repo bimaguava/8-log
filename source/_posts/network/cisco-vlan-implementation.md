@@ -72,3 +72,9 @@ Sekarang kita akan mengecek dari **PC1: 172.17.10.21** ke **PC4: 172.17.10.24**
 Ia berada pada network yang sama yang mana berada pada VLAN 10, gateway yang sama yaitu 172.17.`10.1` 
 
 Simulasi saat pesan broadcast dikirim akan seperti ini
+
+Karena jalur ARP request sama dengan sumbernya maka paket akan berhasil diterima dari ujung ke ujung dan akan dikirim lagi ke PC1 yang ditandai dengan output packet reply from blablabla..
+
+## 2. Observe Broadcast Traffic without VLANs
+
+### 2.A. Menghapus konfig pada semua switch dan juga VLAN database
