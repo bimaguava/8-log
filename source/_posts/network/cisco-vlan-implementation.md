@@ -59,4 +59,4 @@ Untuk lebih paham dengan cuplikan tersebut, coba dianalisa
 
 Tentunya ARP request yang dikirim dari switch merupakan sebuah pesan broadcast yang dikirim hanya ke sebuah host yang diizinkan saja, yakni adalah yang bersumber dari PC1 alias VLAN 10 saja. 
 
-Maka host2 yang berada pada VLAN 20, 30 tidak akan menerima broadcast tadi.
+Maka host2 yang berada pada VLAN 20, 30 tidak akan menerima broadcast tadi. Silahkan lihat kembali cuplikannya.
