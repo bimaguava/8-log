@@ -73,7 +73,7 @@ Ia berada pada network yang sama yang mana berada pada VLAN 10, gateway yang sam
 
 Simulasi saat pesan broadcast dikirim akan seperti ini
 
-[img 2](https://i.imgur.com/GVbtL1g.gif)
+![img2](https://i.imgur.com/fdB5AWI.gif)
 
 Kita lihat dicuplikan saat paket terkirim ke S1, dia mengirim kedua arah. Satu kearah PC7 satu kearah S3. Penjelasannya:
 
@@ -159,7 +159,7 @@ kalau mau cepat nyala hijau tinggal klik`Fast Forward Time` di toolbar bawah ata
 
 ### 2.C. Klik Capture/Forward untuk mengirim ARP requests atau ping
 
-[img3](https://i.imgur.com/fdB5AWI.gif)
+![img3](https://i.imgur.com/GVbtL1g.gif)
 
 Perhatikan bahwa sekarang switch meneruskan ARP request keluar dari semua port, kecuali port tempat ARP request diterima.
 
