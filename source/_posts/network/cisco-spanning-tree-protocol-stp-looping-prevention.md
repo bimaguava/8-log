@@ -69,13 +69,15 @@ Gunakan perintah `show spanning-tree vlan 1` untuk mendapatkan informasi status 
     Gi0/2            Root FWD 4         128.26   P2p
     Gi0/1            Desg FWD 4         128.25   P2p
 
+Dan lakukan pada S2 dan S3.
+
 Jika sudah tampil seperti itu kita coba isikan ke tabel berikut
 
-| Switch | Port      | Status (FWD, BLK...) | Root Bridge? |
-|--------|-----------|----------------------|--------------|
-| S1     | G0/1 G0/2 |                      |              |
-| S2     | G0/1 G0/2 |                      |              |
-|   S3   | G0/1 G0/2 |                      |              |
+| Switch | Port | Status (FWD, BLK...) | Root Bridge? |
+| --- | --- | --- | --- |
+| S1 | G0/1 G0/2 |  |  |
+| S2 | G0/1 G0/2 |  |  |
+| S3 | G0/1 G0/2 |  |  |
 
 Untuk keperluan tabel, hanya gunakan informasi Gigabit trunk ports.
 
