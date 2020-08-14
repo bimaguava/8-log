@@ -73,7 +73,13 @@ Ia berada pada network yang sama yang mana berada pada VLAN 10, gateway yang sam
 
 Simulasi saat pesan broadcast dikirim akan seperti ini
 
-Karena jalur ARP request sama dengan sumbernya maka paket akan berhasil diterima dari ujung ke ujung dan akan dikirim lagi ke PC1 yang ditandai dengan output packet reply from blablabla.. sebagai pesan paket sukses diterima.
+Kita lihat dicuplikan saat paket terkirim ke S1, dia mengirim kedua arah. Satu kearah PC7 satu kearah S3. Penjelasannya:
+
+Saat S1 mengirim ke PC7 itu merupakan ARP request yang termasuk di dalam VLAN 10. Jadi jawabannya **switch akan memforward ke device mana saja yang berada pada VLAN 10**
+
+Dan saat dimana S1 mengirim ke S3 itu merupakan sebuah kodratnya switch yang menerima paket dan meneruskannya kembali, jadi kita tahu bahwa penggunaan switch adalah meneruskan sebuah ARP request dari source ke destination dengan network yang sama.
+
+Karena jalur ARP request sama dengan sumbernya maka paket akan berhasil diterima dari ujung ke ujung dan akan dikirim lagi ke PC1 yang ditandai dengan output packet reply from blablabla.. sehingga paket sukses diterima ~~dari JNE~~.
 
 ## 2. Observe Broadcast Traffic without VLANs
 
