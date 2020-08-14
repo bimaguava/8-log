@@ -43,6 +43,6 @@ Kita cek dari PC 1 ke destination PC 2 atau 192.168.1.101, dan ping seharusnya b
     Reply from 192.168.1.101: bytes=32 time=2ms TTL=128
     Reply from 192.168.1.101: bytes=32 time<1ms TTL=128
 
-statusnya reply.. oke, lanjut.
+dan statusnya pun reply.. oke, lanjut.
 
 ## 1.B. Cek status spanning-tree pada setiap switch
