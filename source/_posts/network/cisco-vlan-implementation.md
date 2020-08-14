@@ -60,3 +60,7 @@ Untuk lebih paham dengan cuplikan tersebut, coba dianalisa
 Tentunya ARP request yang dikirim dari switch merupakan sebuah pesan broadcast yang dikirim hanya ke sebuah host yang diizinkan saja, yakni adalah yang bersumber dari PC1 alias VLAN 10 saja. 
 
 Maka host2 yang berada pada VLAN 20, 30 tidak akan menerima broadcast tadi. Silahkan lihat kembali cuplikannya.
+
+Karena pada dasarnya adalah switch akan **membawa paket kepada subnetwork yang sama.**
+
+**Tidak mungkin switch meneruskan paket yang dikirim dari 172.17.10.21 ke 172.17.30.26** Karena berbeda network dan yang bertugas untuk hal itu ialah dinamakan router atau sebuah proses yang dinamakan routing dan tidak ada pembahasannya disini, melenceng.
