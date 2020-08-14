@@ -163,4 +163,4 @@ kalau mau cepat nyala hijau tinggal klik`Fast Forward Time` di toolbar bawah ata
 
 Perhatikan bahwa sekarang switch meneruskan ARP request keluar dari semua port, kecuali port tempat ARP request diterima.
 
-Tindakan dari switch ini adalah mengapa VLAN dapat meningkatkan kinerja jaringan. Broadcast trafik yang ada dalam setiap VLAN. Ketika jendela Buffer Full muncul, klik tombol View Previous Events.
+Tindakan dari switch ini adalah mengapa VLAN dapat meningkatkan kinerja jaringan.
