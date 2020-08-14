@@ -28,7 +28,7 @@ Pada materi ini akan fokus pada
 * penamaan VLAN
 * dan menetapkan `access ports` ke suatu VLAN
 
-kalau belum tahu `access ports` saya akan kasih gambaran berikut (yang garis biru2)
+kalau belum tahu `access ports` saya akan kasih gambaran berikut, garis biru2 yang menuju ke pada hostsnya
 
 ![](/images/access_and_trunk_ports_explained-1024x461.jpg)
 
