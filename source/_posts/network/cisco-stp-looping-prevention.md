@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: 'Cisco: Spanning Tree Protocol (STP) Looping prevention'
+title: 'Cisco: STP Looping prevention'
 date: 2020-08-14T06:37:00Z
 updated: 
 category:
