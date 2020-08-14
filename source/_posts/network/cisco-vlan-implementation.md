@@ -73,7 +73,7 @@ Ia berada pada network yang sama yang mana berada pada VLAN 10, gateway yang sam
 
 Simulasi saat pesan broadcast dikirim akan seperti ini
 
-Karena jalur ARP request sama dengan sumbernya maka paket akan berhasil diterima dari ujung ke ujung dan akan dikirim lagi ke PC1 yang ditandai dengan output packet reply from blablabla..
+Karena jalur ARP request sama dengan sumbernya maka paket akan berhasil diterima dari ujung ke ujung dan akan dikirim lagi ke PC1 yang ditandai dengan output packet reply from blablabla.. sebagai pesan paket sukses diterima.
 
 ## 2. Observe Broadcast Traffic without VLANs
 
