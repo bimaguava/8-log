@@ -157,7 +157,7 @@ kalau mau cepat nyala hijau tinggal klik`Fast Forward Time` di toolbar bawah ata
 
 ### 2.C. Klik Capture/Forward untuk mengirim ARP requests atau ping
 
-[img](ssddddxxxxwdhttps://i.imgur.com/fdB5AWI.gif)
+[img3](https://i.imgur.com/fdB5AWI.gif)
 
 Perhatikan bahwa sekarang switch meneruskan ARP request keluar dari semua port, kecuali port tempat ARP request diterima.
 
