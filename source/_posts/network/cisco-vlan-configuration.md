@@ -66,3 +66,5 @@ ingat kalau ingin memasukkan perintah verification kita musti berada dulu di pri
 Disitu semua interface dari Fa0/1-24, Gig0/1-2 by default berada pada VLAN 1.
 
 Dan juga kita menemukan VLAN yang lain yaitu VLAN 1002, 1003, 1004, dan 1005 yang mana kita tidak usah pikirkan dulu untuk saat ini. 
+
+## 1.B. Cek konektivitas PC di jaringan yang sama
