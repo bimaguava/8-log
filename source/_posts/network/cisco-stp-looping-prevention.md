@@ -126,4 +126,10 @@ Pada tabel kita hanya mencatat informasi dari trunk ports saja (Gigabit)
 
 karena FastEthernet ialah sebuah `access port` yang konek dengan end devices alias hosts dan bukan bagian dari inter-switch trunk-based spanning tree.
 
-Dan kita jabarkan satu persatu, Pada S1 interface G0/2 jalur tersebut merupakan root bridge
+Dan kita jabarkan satu persatu, 
+
+**Pada S1 interface G0/2** jalur tersebut merupakan root bridge
+
+**Pada S2 G0/1 dan G0/2** keduanya mempunyai Role **Designated** dan dilihat pada informasi Root ID bahwa router tersebut adalah root
+
+**Pada S3**
