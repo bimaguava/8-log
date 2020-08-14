@@ -35,6 +35,7 @@ fields:
   default: true
 pages:
 - source/_posts/network/cisco-etherchannel-configuration.md
+- source/_posts/network/cisco-spanning-tree-protocol-stp-looping-prevention.md
 - source/_posts/network/cisco-spanning-tree-protocol-stp.md
 - source/_posts/network/cisco-vlan-configuration.md
 - source/_posts/network/cisco-vlan-implementation.md
