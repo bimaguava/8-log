@@ -69,4 +69,8 @@ Gunakan perintah `show spanning-tree vlan 1` untuk mendapatkan informasi status 
     Gi0/2            Root FWD 4         128.26   P2p
     Gi0/1            Desg FWD 4         128.25   P2p
 
-Jika sudah tampil seperti itu
+Jika sudah tampil seperti itu kita coba isikan ke tabel berikut
+
+Untuk keperluan tabel, hanya gunakan informasi Gigabit trunk ports.
+
+Port Fast Ethernet adalah port akses yang memiliki perangkat akhir yang terhubung dan bukan bagian dari pohon rentang berbasis trunk antar-sakelar.
