@@ -75,9 +75,12 @@ Jika sudah tampil seperti itu kita coba isikan ke tabel berikut
 
 | Switch | Port | Status (FWD, BLK...) | Root Bridge? |
 | --- | --- | --- | --- |
-| S1 | G0/1 G0/2 |  |  |
-| S2 | G0/1 G0/2 |  |  |
-| S3 | G0/1 G0/2 |  |  |
+| S1 | G0/1 | Forwarding | No |
+|	 | G0/2 | Forwarding | No |
+| S2 | G0/1 | Forwarding | Yes |
+|    | G0/2 | Forwarding | Yes |
+| S3 | G0/1 | Forwarding | No |
+|    | G0/2 | Blok | No |
 
 Untuk keperluan tabel, hanya gunakan informasi Gigabit trunk ports.
 
