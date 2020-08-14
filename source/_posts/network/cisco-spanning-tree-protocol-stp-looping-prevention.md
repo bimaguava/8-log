@@ -28,6 +28,8 @@ Download: [https://drive.google.com/file/d/1TjIpCSiWapGEXwTiTN83AT5VrOFPBsKT/vie
 
 ![](/images/screenshot_2020-08-14_13-50-18.png)
 
+Lab ini cukup singkat, karena kita hanya akan mencapai tujuan diatas yaitu untuk memahami pemanfaatan spanning-tree saja juga sebagai pelengkap dari materi sebelumnya yang hanya membahas teori.
+
 ## 1. Observe a Converged Spanning-Tree Instance
 
 ## 1.A. Mengecek konektivitas
