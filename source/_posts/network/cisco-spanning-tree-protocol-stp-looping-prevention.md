@@ -34,4 +34,17 @@ Lab ini cukup singkat, karena kita hanya akan mencapai tujuan diatas yaitu untuk
 
 ## 1.A. Mengecek konektivitas
 
-Kita cek 
+Kita cek dari PC 1 ke destination PC 2 atau 192.168.1.101, dan ping seharusnya berhasil
+
+    C:\>ping 192.168.1.101
+    
+    Pinging 192.168.1.101 with 32 bytes of data:
+    
+    Reply from 192.168.1.101: bytes=32 time=2ms TTL=128
+    Reply from 192.168.1.101: bytes=32 time<1ms TTL=128
+
+oke...
+
+lanjut
+
+## 1.B. Cek status spanning-tree pada setiap switch
