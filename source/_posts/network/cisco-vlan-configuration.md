@@ -23,3 +23,7 @@ Download: [https://drive.google.com/file/d/1RAV7lIylasbCADRXCa_gJw-CmdIR9nio/vie
 ## Tabel Address
 
 ![](/images/screenshot_2020-08-14_09-58-42.png)
+
+## 1. View the Default VLAN Configuration
+
+### 1.A. Menampilkan default konfig Vlan 
