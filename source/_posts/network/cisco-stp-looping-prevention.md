@@ -116,10 +116,10 @@ Jika sudah tampil seperti itu kita coba pindahkan informasinya ke tabel. Sebagai
 | Switch | Port | Status (FWD, BLK...) | Root Bridge? |
 | --- | --- | --- | --- |
 | S1 | G0/1 | Forwarding | No |
-|  | G0/2 | Forwarding | Yes |
+|  | G0/2 | Forwarding | Yes, root ports! |
 | S2 | G0/1 | Forwarding | No |
 |  | G0/2 | Forwarding | No |
-| S3 | G0/1 | Forwarding | No |
+| S3 | G0/1 | Forwarding | Yes, root ports! |
 |  | G0/2 | Blok | No |
 
 Pada tabel kita hanya mencatat informasi dari trunk ports saja (Gigabit)
@@ -132,4 +132,4 @@ Dan kita jabarkan satu persatu,
 
 **Pada S2 G0/1 dan G0/2** keduanya mempunyai Role **Designated** dan dilihat pada informasi Root ID bahwa router tersebut adalah root
 
-**Pada S3**
+**Pada S3 G0/2** statusnya adalah bloking mode ditandai dengan warna oren
