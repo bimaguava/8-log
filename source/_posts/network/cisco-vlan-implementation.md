@@ -161,6 +161,6 @@ kalau mau cepat nyala hijau tinggal klik`Fast Forward Time` di toolbar bawah ata
 
 ![img3](https://i.imgur.com/GVbtL1g.gif)
 
-Perhatikan bahwa sekarang switch meneruskan ARP request keluar dari semua port, kecuali port tempat ARP request diterima.
+Perhatikan bahwa sekarang switch meneruskan ARP request keluar dari semua port switch, kecuali port tempat ARP request diterima.
 
-Tindakan dari switch ini adalah mengapa VLAN dapat meningkatkan kinerja jaringan.
+Dari sini kita dapat suatu alasan bahwa salah satu VLAN digunakan adalah karena bermanfaat meningkatkan kinerja jaringan dan memperkecil resiko broadcast strom seperti yang dijelaskan di materi [lalu](https://8log.netlify.app/2020/07/26/network/cisco-vlan/ "lalu").
