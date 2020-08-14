@@ -32,7 +32,9 @@ kalau belum tahu `access ports` saya akan kasih gambaran berikut, garis biru2 ya
 
 ![](/images/access_and_trunk_ports_explained-1024x461.jpg)
 
-jadi disebut `access ports` karena merupakan sebuah port yang terhubung dengan host pada suatu vlan.
+jadi disebut `access ports` karena merupakan sebuah port yang terhubung dengan host pada suatu vlan. 
+
+Lanjut.
 
 ## Tabel Address
 
