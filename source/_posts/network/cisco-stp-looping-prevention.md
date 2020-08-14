@@ -82,6 +82,6 @@ Jika sudah tampil seperti itu kita coba isikan ke tabel berikut
 | S3 | G0/1 | Forwarding | No |
 |    | G0/2 | Blok | No |
 
-Untuk keperluan tabel, hanya gunakan informasi Gigabit trunk ports.
+Pada tabel kita hanya mencatat informasi dari trunk ports saja (Gigabit) 
 
-Dan Port FastEthernet ialah `access port` yang konek dengan end devices alias hosts dan bukan bagian dari inter-switch trunk-based spanning tree.
+karena FastEthernet ialah sebuah `access port` yang konek dengan end devices alias hosts dan bukan bagian dari inter-switch trunk-based spanning tree.
