@@ -140,10 +140,20 @@ Kan kita tahu bahwa Spanning tree bekerja untuk mencegah loop dia akan menggunak
 * memilih 1 root port pada non-root bridges
 * memilih 1 designated port pada setiap segmen
 
-Setelah memahami susunan tabel diatas, ada beberapa kesimpulan:
+Setelah memahami susunan tabel diatas, ada beberapa kesimpulan tambahan:
 
 1. Packet Tracer menggunakan `link oren` yang berbeda di S3 int G0/2. Link oren mengindikasikan bahwa port tersebut bukan merupakan `forwarding frames` karena jalur spanning tree dalam hal ini memblok itu.
-2. 
+2. Kita kembali pada jalur dari PC1 ke PC2, dengan status G0/2 di blok, maka jalur yang diambil adalah mulai dari S1>S2>PC1
+3. Dan alasannya mengapa tidak mengapa frame yang berjalan tidak mengambil jalur lewat S3 ialah karena tidak ada frame yang dikirim dan diterima pada G0/2 
+4. Dan juga alasannya mengapa spanning-tree menempatkan satu port untuk di blokir ialah karena jika semua port dapat memforward frames network akan mengalami switching loop, yang mana akibatnya dapat menurunkan network performance yang dari sana akan menuju pada downnya jaringan, singkatnya seperti itu
+
+## 2. Observe spanning-tree convergence
+
+> _Apa maksud dari istilah **spanning-tree convergence**?_
+
+s
+
+### 2.A. Menghapus koneksi antara S1 dan S2
 
 ## Referensi
 
