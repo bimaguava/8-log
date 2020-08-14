@@ -47,7 +47,7 @@ dan statusnya pun reply.. oke, lanjut.
 
 ## 1.B. Cek status spanning-tree pada setiap switch
 
-sd
+Gunakan perintah `show spanning-tree vlan 1` untuk mendapatkan informasi status spanning tree dari setiap switch
 
     S1#show spanning-tree vlan 1
     VLAN0001
@@ -68,3 +68,5 @@ sd
     Fa0/1            Desg FWD 19        128.1    P2p
     Gi0/2            Root FWD 4         128.26   P2p
     Gi0/1            Desg FWD 4         128.25   P2p
+
+Jika sudah tampil seperti itu
