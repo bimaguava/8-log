@@ -140,11 +140,10 @@ Kan kita tahu bahwa Spanning tree bekerja untuk mencegah loop dia akan menggunak
 * memilih 1 root port pada non-root bridges
 * memilih 1 designated port pada setiap segmen
 
-Setelah memahami susunan tabel diatas, timbul sebuah pertanyaan2.
+Setelah memahami susunan tabel diatas, ada beberapa kesimpulan:
 
-Packet Tracer menggunakan` link lights` yang berbeda di salah satu koneksi antar switch.
-
-Maksud dari link lights yaitu
+1. Packet Tracer menggunakan `link oren` yang berbeda di S3 int G0/2. Link oren mengindikasikan bahwa port tersebut bukan merupakan `forwarding frames` karena jalur spanning tree dalam hal ini memblok itu.
+2. 
 
 ## Referensi
 
