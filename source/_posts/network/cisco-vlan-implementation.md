@@ -69,7 +69,7 @@ Karena pada dasarnya adalah switch akan **membawa paket kepada subnetwork yang s
 
 Sekarang kita akan mengecek dari **PC1: 172.17.10.21** ke **PC4: 172.17.10.24**
 
-Ia berada pada network yang sama yang mana berada pada VLAN 10, gateway yang sama yaitu 172.17.`10.1` 
+Ia berada pada network yang sama yang mana berada pada VLAN 10, gateway yang sama yaitu 172.17.`10.1`
 
 Simulasi saat pesan broadcast dikirim akan seperti ini
 
@@ -94,7 +94,7 @@ Sekarang kita akan menghapus startup-config terlabih dahulu
     Erase of nvram: complete
     %SYS-7-NV_BLOCK_INIT: Initialized the geometry of nvram
 
-Setelah menghapus startup-config kita masih akan bisa menemukan file dari VLAN database biasanya dengan nama **vlan.dat** yang berada pada `flash:/` 
+Setelah menghapus startup-config kita masih akan bisa menemukan file dari VLAN database biasanya dengan nama **vlan.dat** yang berada pada `flash:/`
 
 Coba lihat dengan command `show flash`
 
@@ -112,7 +112,7 @@ Nah, sekarang kita akan menghapus file tersebut
     Delete filename [vlan.dat]?
     Delete flash:/vlan.dat? [confirm]
 
-Oke ... 
+Oke ...
 
 et belum selesai.
 
@@ -153,10 +153,12 @@ Kalau sudah nanti setelah di reload kita tunggu switchnya sedang proses booting 
 
 ![](/images/screenshot_2020-08-14_09-01-28.png)
 
-kalau mau cepat nyala hijau tinggal klik` Fast Forward Time` di toolbar bawah atau dengan keybind **\[Alt + D\]**
+kalau mau cepat nyala hijau tinggal klik`Fast Forward Time` di toolbar bawah atau dengan keybind **\[Alt + D\]**
 
 ### 2.C. Klik Capture/Forward untuk mengirim ARP requests atau ping
 
-Perhatikan bahwa sekarang switch meneruskan ARP request keluar dari semua port, kecuali port tempat ARP request diterima. 
+[img](ssddddxxxxwdhttps://i.imgur.com/fdB5AWI.gif)
+
+Perhatikan bahwa sekarang switch meneruskan ARP request keluar dari semua port, kecuali port tempat ARP request diterima.
 
 Tindakan dari switch ini adalah mengapa VLAN dapat meningkatkan kinerja jaringan. Broadcast trafik yang ada dalam setiap VLAN. Ketika jendela Buffer Full muncul, klik tombol View Previous Events.
