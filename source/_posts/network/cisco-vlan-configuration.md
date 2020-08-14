@@ -12,4 +12,14 @@ tags:
 keywords: []
 
 ---
-s
+## Petunjunk
+
+## Lab
+
+Download: [https://drive.google.com/file/d/1RAV7lIylasbCADRXCa_gJw-CmdIR9nio/view](https://drive.google.com/file/d/1RAV7lIylasbCADRXCa_gJw-CmdIR9nio/view "https://drive.google.com/file/d/1RAV7lIylasbCADRXCa_gJw-CmdIR9nio/view")
+
+![](/images/screenshot_2020-08-14_09-57-50.png)
+
+## Tabel Address
+
+![](/images/screenshot_2020-08-14_09-58-42.png)
