@@ -46,3 +46,25 @@ Kita cek dari PC 1 ke destination PC 2 atau 192.168.1.101, dan ping seharusnya b
 dan statusnya pun reply.. oke, lanjut.
 
 ## 1.B. Cek status spanning-tree pada setiap switch
+
+sd
+
+    S1#show spanning-tree vlan 1
+    VLAN0001
+      Spanning tree enabled protocol ieee
+      Root ID    Priority    32769
+                 Address     0001.6448.C6E7
+                 Cost        4
+                 Port        26(GigabitEthernet0/2)
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+    
+      Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)
+                 Address     000B.BE31.D3DA
+                 Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+                 Aging Time  20
+    
+    Interface        Role Sts Cost      Prio.Nbr Type
+    ---------------- ---- --- --------- -------- --------------------------------
+    Fa0/1            Desg FWD 19        128.1    P2p
+    Gi0/2            Root FWD 4         128.26   P2p
+    Gi0/1            Desg FWD 4         128.25   P2p
