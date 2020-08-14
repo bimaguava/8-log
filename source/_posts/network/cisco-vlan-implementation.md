@@ -73,7 +73,7 @@ Ia berada pada network yang sama yang mana berada pada VLAN 10, gateway yang sam
 
 Simulasi saat pesan broadcast dikirim akan seperti ini
 
-[img2](https://i.imgur.com/GVbtL1g.gif)
+[img 2](https://i.imgur.com/GVbtL1g.gif)
 
 Kita lihat dicuplikan saat paket terkirim ke S1, dia mengirim kedua arah. Satu kearah PC7 satu kearah S3. Penjelasannya:
 
