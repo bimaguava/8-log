@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Eight Log
+title: 8-log
 subtitle: ''
 description: ''
 keywords:
-author: "Bimscwit (Bima Pratama)"
+author: "log archive by bimscwit"
 language: en
 timezone: ''
 
@@ -105,7 +105,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-3-hexo
+theme: 3-hexo-forked
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
