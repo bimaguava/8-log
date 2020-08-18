@@ -2,12 +2,13 @@
 draft: true
 comments: true
 toc: true
-title: fetch a repo with submodules with git submodule recrusive
+title: "git submodule recrusive: fetch a repo with submodules"
 date: 2020-04-19T11:00:00+07:00
 updated: 2020-04-19T11:00:00+07:00
 category:
+- dev
+tags:
 - git
-tags: []
 keywords: []
 
 ---

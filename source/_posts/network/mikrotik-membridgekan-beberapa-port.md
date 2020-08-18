@@ -7,7 +7,8 @@ date: 2020-07-13T17:00:00Z
 updated: 2020-07-13T17:00:00Z
 category:
 - network
-tags: []
+tags: 
+- mikrotik
 keywords: []
 
 ---

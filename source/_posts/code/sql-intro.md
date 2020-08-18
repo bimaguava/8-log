@@ -1,10 +1,11 @@
 ---
-title: SQL
+title: SQL intro
 toc: true
 date: 2020-04-12 11:11:57
-tags: sql
 categories: 
-- database
+- caffeine
+tags: 
+- sql
 ---
 
 Salah satu bahasa Query yang umum digunakan oleh data Scientist adalah SQL yang merupakan singkatan dari **Structure Query Language**.

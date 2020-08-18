@@ -5,8 +5,10 @@ toc: true
 title: "MikroTik: basic CLI"
 date: 2020-07-13T17:00:00Z
 updated: 2020-07-13T17:00:00Z
-category: []
-tags: []
+category: 
+- network
+tags:
+- mikrotik
 keywords: []
 
 ---

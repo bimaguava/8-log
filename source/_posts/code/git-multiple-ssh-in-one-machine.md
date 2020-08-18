@@ -2,12 +2,13 @@
 draft: true
 comments: true
 toc: true
-title: "Git: Multiple SSH in one machine"
+title: "git: Multiple SSH in one machine"
 date: 2020-04-18T12:06:00+07:00
 updated: 2020-04-18T01:00:00+07:00
 category:
-- git
+- dev
 tags:
+- git
 - ssh
 keywords: []
 ---
