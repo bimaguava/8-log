@@ -53,7 +53,7 @@ Selain menjangkau area yang cukup luas kita juga butuh mengcover banyaknya clien
 
 ![](/images/screenshot-from-2020-08-20-17-15-46.png)
 
-#### Menyetel Router RP sebagai repeater
+#### Menyetel Station: Router RP sebagai repeater 
 
 * Masuk ke menu **Wireless Tables>interface** 
 
@@ -97,6 +97,10 @@ dan buka menu **IP>DNS**
 **Dynamic Servers**: isi IP gateway
 
 **Centang Allow Remote Requests** untuk mengarahkan DNSnya ke IP gateway 
+
+Sampai sini kita mendapatkan hasil, yaitu router mikrotik sudah bisa terhubung ke internet.
+
+#### Menyetel AP Bridge: 
 
 ## Referensi
 
