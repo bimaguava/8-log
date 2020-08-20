@@ -2,7 +2,8 @@
 draft: true
 comments: true
 toc: true
-title: MikroTik sebagai Access Point WDS (Wireless Distributed System)
+title: MikroTik sebagai Access Point WDS (Wireless Distributed System) dengan setelan
+  roaming
 date: 2020-08-19T20:18:00Z
 updated: 
 category:
@@ -14,9 +15,9 @@ keywords: []
 ---
 # Contoh kasus
 
-![](/images/screenshot-from-2020-08-20-15-19-52.png)
+![](/images/untitled-document-copy.jpg)
 
-Seperti gambar diatas ada lebih dari satu AP yang nantinya akan memancarkan wireless dengan SSID yang sama.
+Seperti gambar diatas 2 router mikrotik yang nantinya akan melakukan point to point, kalau [sebelumnya](https://8log.js.org/2020/08/19/network/mikrotik-sebagai-repeater/ "sebelumnya") menggunakan Access Point selain mikrotik pada contoh kali ini akan menggunakan mikrotik, sehingga nanti akan menggunakan mode yang bernama `station-bridge`.
 
 **Akibatnya** Client bisa terkoneksi ke AP melalui AP manapun disana, tergantung jangkauan sinyal dari salah satu AP mana yang menjangkau client alias yang terdekat disisi client.
 
