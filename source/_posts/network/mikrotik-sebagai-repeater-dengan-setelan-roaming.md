@@ -20,7 +20,7 @@ Seperti gambar diatas 2 router mikrotik yang nantinya akan melakukan point to po
 
 # Petunjuk awal
 
-kalau pada materi [sebelumnya](https://8log.js.org/2020/08/19/network/mikrotik-sebagai-repeater/ "sebelumnya") menggunakan Access Point selain mikrotik pada contoh kali ini akan menggunakan mikrotik. 
+kalau pada materi [sebelumnya](https://8log.js.org/2020/08/19/network/mikrotik-sebagai-repeater/ "sebelumnya") menggunakan Access Point selain mikrotik pada contoh kali ini akan menggunakan mikrotik.
 
 Sehingga nanti kita bisa menggunakan mode yang bernama `station-bridge` yang memang khusus untuk access pointnya yang juga mikrotik.
 
@@ -29,6 +29,15 @@ Setelan pada contoh kali ini akan **menggunakan setelah SSID yang sama** pada si
 Dan ketika client berpindah lokasi dan terputus dengan salah satu access point, client akan secara otomastis berpindah ke access point lain yang menjangkau client tersebut (tanpa terputus).
 
 # Contoh 2
+
+Dalam contoh ini saya mengasosiasikan bahwa anda telah membaca materi sebelumnya tentang ["MikroTik sebagai Repeater"](https://8log.js.org/2020/08/19/network/mikrotik-sebagai-repeater/) karena saya akan memberikan poin-poin singkat untuk menunjukkan perbedaannya saja.
+
+Pada contoh ini diasosiasikan saya sudah memiliki sebuah SSID dari Access point.
+
+Langkah dimulai dengan 
+
+* Menyalahkan interface wireless pada router
+* 
 
 # Referensi
 
