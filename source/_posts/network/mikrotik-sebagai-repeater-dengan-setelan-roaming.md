@@ -34,7 +34,7 @@ Dalam contoh ini saya mengasosiasikan bahwa anda telah membaca materi sebelumnya
 
 Pada contoh ini diasosiasikan saya sudah memiliki sebuah SSID dari Access point.
 
-Langkah dimulai dengan 
+Langkah dimulai dengan
 
 * Menyalahkan interface wireless defaultnya **wlan1** pada router. Setelah itu ubah modenya menjadi `station bridge` dan pilih SSID milik access point
 * Membuat virtual interface wireless dengan nama **wlan2** dengan mode `ap bridge` dan pilih SSID milik access point
@@ -42,7 +42,7 @@ Langkah dimulai dengan
 * Memberi IP address untuk **bridge1**
 * Memberi gateway
 
-Selesai...
+jika adonan sudah selesai, tinggal goreng sebentar, angkat, lalu tiriskan.
 
 kaboooor :)
 
