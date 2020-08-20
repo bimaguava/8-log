@@ -2,8 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: MikroTik sebagai Access Point WDS (Wireless Distributed System) dengan setelan
-  roaming
+title: MikroTik sebagai Repeater dengan setelan roaming (SSID yang sama)
 date: 2020-08-19T20:18:00Z
 updated: 
 category:
@@ -17,25 +16,19 @@ keywords: []
 
 ![](/images/untitled-document-copy.jpg)
 
-Seperti gambar diatas 2 router mikrotik yang nantinya akan melakukan point to point, kalau [sebelumnya](https://8log.js.org/2020/08/19/network/mikrotik-sebagai-repeater/ "sebelumnya") menggunakan Access Point selain mikrotik pada contoh kali ini akan menggunakan mikrotik, sehingga nanti akan menggunakan mode yang bernama `station-bridge`.
+Seperti gambar diatas 2 router mikrotik yang nantinya akan melakukan point to point.
 
-**Akibatnya** Client bisa terkoneksi ke AP melalui AP manapun disana, tergantung jangkauan sinyal dari salah satu AP mana yang menjangkau client alias yang terdekat disisi client.
+# Petunjuk awal
 
-Ketika client berpindah lokasi dan terputus dengan salah satu access point, client akan secara otomastis berpindah ke access point lain yang menjangkau client tersebut.
+kalau pada materi [sebelumnya](https://8log.js.org/2020/08/19/network/mikrotik-sebagai-repeater/ "sebelumnya") menggunakan Access Point selain mikrotik pada contoh kali ini akan menggunakan mikrotik. 
 
-# WDS VS Repeater
+Sehingga nanti kita bisa menggunakan mode yang bernama `station-bridge` yang memang khusus untuk access pointnya yang juga mikrotik.
 
-### AP Wireless Distributed System
+Setelan pada contoh kali ini akan **menggunakan setelah SSID yang sama** pada sisi repeaternya, hasilnya nanti client bisa terkoneksi ke AP manapun disana yang jangkauan sinyal dari salah satu AP terdekat disisi client.
 
-Memiliki tujuan yang sama, yaitu untuk memperluas jangkauan jaringan
+Dan ketika client berpindah lokasi dan terputus dengan salah satu access point, client akan secara otomastis berpindah ke access point lain yang menjangkau client tersebut (tanpa terputus).
 
-### AP Repeater
-
-## Fitur MikroTik
-
-**Wireless Repeater**
-
-**WDS Slave**
+# Contoh 2
 
 # Referensi
 
