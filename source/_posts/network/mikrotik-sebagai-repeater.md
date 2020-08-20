@@ -14,7 +14,7 @@ keywords: []
 ---
 # Contoh kasus
 
-![](/images/screenshot-from-2020-08-20-15-09-51.png)
+![](/images/untitled-document-copy-copy.jpg)
 
 Pada contoh ini kita akan melihat bagaimana mikrotik disetel sebagai repeater. Atau dikenal juga dengan istilah **range extender** yang berfungsi untuk memperluas area sinyal.
 
