@@ -16,8 +16,10 @@ keywords: []
 
 ![](/images/screenshot-from-2020-08-20-15-09-51.png)
 
-Pada contoh ini kita akan melihat bagaimana mikrotik disetel sebagai repeater.
+Pada contoh ini kita akan melihat bagaimana mikrotik disetel sebagai repeater. Atau dikenal juga dengan istilah **range extender** yang berfungsi untuk memperluas area sinyal.
 
 ## Requirement Software
 
 Untuk dapat menggunakan fitur `wireless repeater` di mikrotik ini musti ada package wireless atau setidaknya router dengan versi 6.35.
+
+## 
