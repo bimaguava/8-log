@@ -24,8 +24,6 @@ Untuk dapat menggunakan fitur `wireless repeater` di mikrotik ini musti ada pack
 
 ## Guidelines
 
-Dalam hal ini 
-
 ## Menghubungkan AP dan Repeater
 
 Dalam contoh ini misal kita mempunyai 2 router mikrotik yang ingin dihubungkan secara wireless guna untuk memperluas area sinyal WiFi.
@@ -35,6 +33,21 @@ Maka kita butuh:
 * router AP dengan mode **AP-Bridge** alias berfungsi sebagai access point
 * router RP dengan mode **Station** alias berfungsi sebagai wireless client
 
+## Mode AP-Bridge
+
+Mode AP-bridge digunakan sebagai Access point atau pemancar yang bisa melayani banyak client atau disebut juga dengan PTMP (Point To Multi Point), mode ini bisa kita gunakan untuk network yang sifatnya Routing ataupun Bridging. Untuk menggunakan mode AP-Bridge ini perangkat Routerboard minimal harus memiliki lisensi level 4.
+
+## Mode Station
+
+Wireless dengan Mode station ini digunakan sebagai wireless client/ penerima pada topologi PTP (Point To Point) atau PTMP (Point To Multi Point), wireless Mode station hanya bisa digunakan untuk membentuk network yang sifatnya routing, sehingga mode ini merupakan salah satu mode yang efektif dan efisian jika pada sisi wireless client/station tidak dibutuhkan bridging
+
+## Contoh Implementasi
+
+1. Jika saya mempunyai 
+
 ## Referensi
 
-[https://www.monitorteknologi.com/menghubungkan-2-router-mikrotik-dengan-wireless/](https://www.monitorteknologi.com/menghubungkan-2-router-mikrotik-dengan-wireless/ "https://www.monitorteknologi.com/menghubungkan-2-router-mikrotik-dengan-wireless/")
+* [https://www.monitorteknologi.com/menghubungkan-2-router-mikrotik-dengan-wireless/](https://www.monitorteknologi.com/menghubungkan-2-router-mikrotik-dengan-wireless/ "https://www.monitorteknologi.com/menghubungkan-2-router-mikrotik-dengan-wireless/")
+
+
+* [MikroTIk ID](http://www.mikrotik.co.id/artikel_lihat.php?id=47#:\~:text=Mode%20WDS-Slave,menggunakan%201%20card%20wireless%20card. "MikroTik ID")
