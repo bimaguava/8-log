@@ -106,7 +106,11 @@ Sampai sini kita mendapatkan router mikrotik sudah bisa terhubung ke internet.
 
 ![](/images/screenshot-from-2020-08-20-20-18-46.png)
 
-#### Menyetel AP Bridge:
+### 4. Membuat Virtual Address pada interface mikrotik
+
+**Kita sekarang akan membuat sebuah hotspot yang akan digunakan client**
+
+Kita bisa menggunakan SSID pada hotspot
 
 ## Referensi
 
