@@ -53,7 +53,7 @@ Selain menjangkau area yang cukup luas kita juga butuh mengcover banyaknya clien
 
 ![](/images/screenshot-from-2020-08-20-17-15-46.png)
 
-#### Menyetel Router sebagai repeater
+#### Menyetel Router RP sebagai repeater
 
 * Masuk ke menu **Wireless Tables>interface** 
 
@@ -72,9 +72,31 @@ Selain menjangkau area yang cukup luas kita juga butuh mengcover banyaknya clien
 
   ![](/images/screenshot-from-2020-08-20-17-06-20.png)
 
-#### Menyetel Router DHCP client
+#### Menyetel Router RP DHCP client
 
-Setelah menjadikan router menjadi sebuah repeater dari hotspot TP Link, sekarang tinggal menjadikannya sebagai DHCP client.
+Setelah menjadikan Router RP ini menjadi sebuah repeater dari hotspot TP Link, sekarang tinggal menjadikannya sebagai DHCP client supaya bisa membroadcast DHCP dari si AP TP Link
+
+Masuk ke menu **IP**>**DHCP Client>Tambah**
+
+![](/images/screenshot-from-2020-08-20-17-32-13.png)
+
+interfacenya dipilih wlan 1, karena kita ingin meneruskan DHCP service ke client.
+
+#### Menyetel DNS untuk terhubung ke internet
+
+Kita bisa mengarahkan DNS ke gateway, buka menu **IP>Routes** untuk melihat gateway
+
+![](/images/screenshot-from-2020-08-20-17-40-33.png)
+
+Dan gatewaynya dalam contoh ini `192.168.43.1`
+
+dan buka menu **IP>DNS** 
+
+![](/images/screenshot-from-2020-08-20-17-38-16.png)
+
+**Dynamic Servers**: isi IP gateway
+
+**Centang Allow Remote Requests** untuk mengarahkan DNSnya ke IP gateway 
 
 ## Referensi
 
