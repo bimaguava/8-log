@@ -20,7 +20,7 @@ Pada contoh ini kita akan melihat bagaimana mikrotik disetel sebagai repeater. A
 
 ## Requirement Software MikroTik 
 
-Untuk dapat menggunakan fitur `wireless repeater` di mikrotik ini musti ada package wireless atau setidaknya router dengan versi 6.35.
+Untuk dapat menggunakan fitur `wireless repeater` di mikrotik ini musti ada package wireless atau setidaknya router dengan versi 6.37.
 
 ## Guidelines
 
@@ -43,7 +43,38 @@ Wireless dengan Mode station ini digunakan sebagai wireless client/ penerima pad
 
 ## Contoh Implementasi
 
-1. Jika saya mempunyai 
+### Memperluas signal publik pada area hotspot
+
+Untuk area-area publik atau disebut outdoor tentunya dibutuhkan jangkauan wireless yang dapat menjangkau area yang cukup luas. 
+
+Selain menjangkau area yang cukup luas kita juga butuh mengcover banyaknya client yang terhubung kedalam hotspot itu. Solusi untuk ini sebetulnya bisa dengan menyetel hanya ada satu hotspot server dalam jaringan tersebut.
+
+#### Skema
+
+![](/images/screenshot-from-2020-08-20-17-15-46.png)
+
+#### Menyetel Router sebagai repeater
+
+* Masuk ke menu **Wireless Tables>interface** 
+
+  ![](/images/screenshot-from-2020-08-20-17-03-13.png)
+* Klik interface **wlan1>tab Wireless**
+
+  ![](/images/screenshot-from-2020-08-20-17-23-16.png)
+
+  Sekarang kita ingin router bisa terhubung dengan AP TP Link maka kita dapat menyetek 
+
+  **Mode**: station
+
+  **SSID**: (scan dan pilih hotspot punya TP Link)
+
+  caranya tinggal klik scan dan nanti akan muncul SSID dari hotspot TP Link, setelah itu tinggal pilih
+
+  ![](/images/screenshot-from-2020-08-20-17-06-20.png)
+
+#### Menyetel Router DHCP client
+
+Setelah menjadikan router menjadi sebuah repeater dari hotspot TP Link, sekarang tinggal menjadikannya sebagai DHCP client.
 
 ## Referensi
 
