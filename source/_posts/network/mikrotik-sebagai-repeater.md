@@ -20,7 +20,7 @@ Pada contoh ini kita akan melihat bagaimana mikrotik disetel sebagai repeater. A
 
 # Requirement Software MikroTik
 
-Untuk dapat menggunakan fitur `wireless repeater` di mikrotik ini musti ada package wireless atau setidaknya router dengan versi 6.37.
+Untuk dapat menggunakan fitur `wireless-rep` di mikrotik ini musti ada package wireless atau setidaknya router dengan versi 6.37.
 
 ## Guidelines
 
@@ -123,7 +123,7 @@ Tinggal tambah interface pada menu Wireless Table, pilih **interface virtual**, 
 
 ![](/images/screenshot-from-2020-08-20-20-45-10.png)
 
-Kalau sudah, buka tab **Wireless**nya, Setel mode `ap bridge` dan kita akan memberi nama SSID nya dengan nama `Hotspot_Gratisan` 
+Kalau sudah, buka tab **Wireless**nya, Setel mode `ap bridge` dan kita akan memberi nama SSID nya dengan nama `Hotspot_Gratisan`
 
 ![](/images/screenshot-from-2020-08-20-20-46-16.png)
 
@@ -135,7 +135,7 @@ Jangan lupa untuk setel IP addressnya :) pada menu **IP>Addresses**
 
 Sip..
 
-**Sekarang kita sudah punya 2 interface,** 
+**Sekarang kita sudah punya 2 interface,**
 
 **wlan1**: sebuah physical interface milik router yang terhubung ke access point dengan mode station
 
