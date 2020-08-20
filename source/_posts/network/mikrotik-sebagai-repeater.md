@@ -20,7 +20,7 @@ Pada contoh ini kita akan melihat bagaimana mikrotik disetel sebagai repeater. A
 
 # Requirement Software MikroTik
 
-Untuk dapat menggunakan fitur `wireless-rep` di mikrotik ini musti ada package wireless atau setidaknya router dengan versi 6.37.
+Untuk dapat menggunakan fitur `wireless-rep` di mikrotik ini musti ada package wireless atau setidaknya router dengan versi 6.37. kalau
 
 ## Guidelines
 
