@@ -41,7 +41,7 @@ Selain menjangkau area yang cukup luas kita juga butuh mengcover banyaknya clien
 
 ![](/images/untitled-document.jpg)
 
-Perhatikan pada Koneksi dari **Access Point ke MikroTik**, disana untuk terhubung mereka menggunakan koneksi wireless. 
+Perhatikan pada Koneksi dari **Access Point ke MikroTik**, disana untuk terhubung mereka menggunakan koneksi wireless.
 
 Lalu nanti mikrotik akan membroadcast DHCP ke client supaya client bisa internetan dengan hotspot dari Access Point.
 
@@ -49,7 +49,7 @@ Dalam hal ini yang bertindak menjadi hotspot server yakni si Access Point. Mikro
 
 ### 1. Menghubungkan mikrotik ke Hotspot AP
 
-Kita akan menghubungkannya ke AP melalui interface wlan1 tersebut dengan mode station. 
+Kita akan menghubungkannya ke AP melalui interface wlan1 tersebut dengan mode station.
 
 **Pada bagian ini kita ingin menghubungkan mikrotik ke AP melalui interface wlan1**
 
@@ -57,7 +57,7 @@ Langkah-langkahnya seperti berikiut.
 
 * Masuk ke menu **Wireless Tables,** lalu pilih **tab interface**
 
-  Dalam contoh ini mikrotiknya yang digunakan hanya mempunyai 1 interface wireless. 
+  Dalam contoh ini mikrotiknya yang digunakan hanya mempunyai 1 interface wireless.
 
   ![](/images/screenshot-from-2020-08-20-17-03-13.png)
 * Sekarang masuk ke **interface wlan1**, lalu kita akan memulai setting pada interface ini
@@ -80,7 +80,7 @@ Setelah menjadikan mikrotik ini menjadi sebuah repeater dari hotspot TP Link, se
 
 Masuk ke menu **IP**>**DHCP Client**, lalu tambah baru "New DHCP Client"
 
-![](/images/screenshot-from-2020-08-20-17-32-13.png)interfacenya dipilih interface` wlan 1`, interface yang terhubung langsung ke access point secara wireless
+![](/images/screenshot-from-2020-08-20-17-32-13.png)interfacenya dipilih interface`wlan 1`, interface yang terhubung langsung ke access point secara wireless
 
 ### 3. Menyetel Gateway, DNS untuk terhubung ke internet
 
@@ -110,7 +110,68 @@ Sampai sini kita mendapatkan router mikrotik sudah bisa terhubung ke internet.
 
 **Kita sekarang akan membuat sebuah hotspot yang akan digunakan client**
 
-Kita bisa menggunakan SSID pada hotspot
+Opsinya ialah:
+
+* tetap menggunakan SSID milik Access Point
+* membuat SSID baru
+
+> _Karena kita hanya mempunyai 1 interface wireless kita akan membuat interface wireless kedua dengan **virtual interfaces**_
+
+Virtual interfaces ini dalam contoh ini kita namai dengan wlan2 akan diberi mode AP-Bridge.
+
+Tinggal tambah interface pada menu Wireless Table, pilih **interface virtual**, yang selanjutnya kita beri nama wlan2
+
+![](/images/screenshot-from-2020-08-20-20-45-10.png)
+
+Kalau sudah, buka tab **Wireless**nya, Setel mode `ap bridge` dan kita akan memberi nama SSID nya dengan nama `Hotspot_Gratisan` 
+
+![](/images/screenshot-from-2020-08-20-20-46-16.png)
+
+Lalu, OK.
+
+Jangan lupa untuk setel IP addressnya :) pada menu **IP>Addresses**
+
+![](/images/screenshot-from-2020-08-20-20-47-42.png)
+
+Sip..
+
+**Sekarang kita sudah punya 2 interface,** 
+
+**wlan1**: sebuah physical interface milik router yang terhubung ke access point dengan mode station
+
+**wlan2**: sebuah virtual interface milik router yang digunakan untuk menyebar internet ke client melalui SSID `hotspot_gratisan`
+
+![](/images/screenshot-from-2020-08-20-20-52-34.png)
+
+Hasilnya sudah tampil `hotspot_gratisan` pada sisi client, tapi belum bisa terhubung untuk bisa mendapatkan IP secara dynamic :(
+
+kalian pasti tahu...
+
+### 5. DHCP Server pada hotspot_gratisan
+
+Yap, untuk itu kita perlu mengkonfig DHCP Server pada wlan2 dengan menjalankan wizard "DHCP Setup"
+
+![](/images/screenshot-from-2020-08-20-20-49-36.png)
+
+Sampai bagian ini klien sudah bisa terhubung dan mendapatkan IP address secara dinamik, tapi saat membuka browser client belum bisa internetan :(
+
+Apa yang terjadi.....
+
+### 6. Agar client dapat terkoneksi ke internet, setel NAT dan Firewall
+
+Hal tersebut karena belum ada jalur untuk client mendapatkan sebuah IP publik,  hal ini dilakukan dengan mengkonfig NAT "srcnat" dan firewall "masquarade".
+
+Dengan men-**NAT (srcnat)** kan mikrotik, akan menstranslasikan IP address local menjadi IP address publik sehingga akan membuka akses kepada client ke internet.
+
+Pada menu **IP>Firewall**, pilih Chain: `srcnat`
+
+![](/images/screenshot-from-2020-08-20-20-48-23.png)
+
+Lalu, setel Firewall sebagai `masquarade` di yang berada di tab **Action**
+
+![](/images/screenshot-from-2020-08-20-20-48-55.png)
+
+Hasilnya client sudah bisa menikmati internetan :)
 
 ## Referensi
 
