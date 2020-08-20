@@ -37,8 +37,6 @@ Untuk area-area publik atau disebut outdoor tentunya dibutuhkan jangkauan wirele
 
 Selain menjangkau area yang cukup luas kita juga butuh mengcover banyaknya client yang terhubung kedalam hotspot itu. Solusi untuk ini sebetulnya bisa dengan menyetel hanya ada satu hotspot server dalam jaringan tersebut.
 
-### Skema
-
 ![](/images/untitled-document.jpg)
 
 Perhatikan pada Koneksi dari **Access Point ke MikroTik**, disana untuk terhubung mereka menggunakan koneksi wireless.
@@ -171,7 +169,9 @@ Lalu, setel Firewall sebagai `masquarade` di yang berada di tab **Action**
 
 ![](/images/screenshot-from-2020-08-20-20-48-55.png)
 
-Hasilnya client sudah bisa menikmati internetan :)
+Setelah itu, hasilnya client sudah bisa menikmati internetan :)
+
+Baca juga untuk topologi [Contoh yang ke-2](https://8log.js.org/2020/08/19/network/mikrotik-sebagai-repeater-dengan-setelan-roaming/) (repeater dengan access point mikrotik)
 
 ## Referensi
 
