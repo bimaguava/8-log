@@ -72,35 +72,39 @@ Langkah-langkahnya seperti berikiut.
 
   ![](/images/screenshot-from-2020-08-20-17-06-20.png)
 
-#### Menyetel mikrotik menjadi DHCP client
+### 2. Menyetel DHCP Client
 
-### Menyetel mikrotik 
+**Pada bagian ini kita menginginkan agar mikrotik bisa membroadcast DHCP agar klien bisa mendapatkan koneksi dynamic dari hotspot Access point**
 
-Setelah menjadikan mikrotik ini menjadi sebuah repeater dari hotspot TP Link, sekarang tinggal menjadikannya sebagai DHCP client supaya bisa membroadcast DHCP dari si AP TP Link
+Setelah menjadikan mikrotik ini menjadi sebuah repeater dari hotspot TP Link, sekarang tinggal menjadikannya sebagai DHCP client supaya bisa membroadcast DHCP dari access point
 
-Masuk ke menu **IP**>**DHCP Client>Tambah**
+Masuk ke menu **IP**>**DHCP Client**, lalu tambah baru "New DHCP Client"
 
-![](/images/screenshot-from-2020-08-20-17-32-13.png)
+![](/images/screenshot-from-2020-08-20-17-32-13.png)interfacenya dipilih interface` wlan 1`, interface yang terhubung langsung ke access point secara wireless
 
-interfacenya dipilih wlan 1, karena kita ingin meneruskan DHCP service ke client.
+### 3. Menyetel Gateway, DNS untuk terhubung ke internet
 
-#### Menyetel DNS untuk terhubung ke internet
+**Pada bagian ini kita ingin mendapatkan koneksi internet pada router mikrotik**
 
-Kita bisa mengarahkan DNS ke gateway, buka menu **IP>Routes** untuk melihat gateway
+Menyetel gateway tinggal buka menu **IP>Routes** dan tambahkan IP gateway dalam hal ini adalah `192.168.43.1`
+
+Dan juga Dst. Address yang mengarah ke luar (internet) dengan IP `0.0.0.0/0`
 
 ![](/images/screenshot-from-2020-08-20-17-40-33.png)
 
-Dan gatewaynya dalam contoh ini `192.168.43.1`
+Kalau sudah, pastikan statusnya sudah reachable.
 
-dan buka menu **IP>DNS**
+Setelah gatewaynya sudah ada, maka kita perlu menyetel DNS Server dulu, bisa menggunakan opendns (8.8.8.8) atau bisa mengarahkan DNS ke gateway alias Access Point.
+
+Untuk DNSnya tinggal buka saja menu **IP>DNS**
 
 ![](/images/screenshot-from-2020-08-20-17-38-16.png)
 
-**Dynamic Servers**: isi IP gateway
+**Dynamic Servers** diisikan: `192.168.43.1` (IP gateway)
 
-**Centang Allow Remote Requests** untuk mengarahkan DNSnya ke IP gateway
+Sampai sini kita mendapatkan router mikrotik sudah bisa terhubung ke internet.
 
-Sampai sini kita mendapatkan hasil, yaitu router mikrotik sudah bisa terhubung ke internet.
+![](/images/screenshot-from-2020-08-20-20-18-46.png)
 
 #### Menyetel AP Bridge:
 
