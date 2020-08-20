@@ -12,21 +12,19 @@ tags:
 keywords: []
 
 ---
-## Contoh kasus
+# Contoh kasus
 
 ![](/images/screenshot-from-2020-08-20-15-09-51.png)
 
 Pada contoh ini kita akan melihat bagaimana mikrotik disetel sebagai repeater. Atau dikenal juga dengan istilah **range extender** yang berfungsi untuk memperluas area sinyal.
 
-## Requirement Software MikroTik
+# Requirement Software MikroTik
 
 Untuk dapat menggunakan fitur `wireless repeater` di mikrotik ini musti ada package wireless atau setidaknya router dengan versi 6.37.
 
 ## Guidelines
 
-## Menghubungkan AP dan Repeater
-
-Dalam contoh ini misal kita mempunyai 2 router mikrotik yang ingin dihubungkan secara wireless guna untuk memperluas area sinyal WiFi.
+Dalam contoh ini misal kita mempunyai 1 router mikrotik yang ingin dihubungkan secara wireless ke Access Point WiFi guna untuk memperluas area sinyal WiFi.
 
 Maka kita butuh:
 
@@ -35,7 +33,7 @@ Maka kita butuh:
 
 ## Contoh Implementasi
 
-### Memperluas signal publik pada area hotspot
+### Contoh 1
 
 Untuk area-area publik atau disebut outdoor tentunya dibutuhkan jangkauan wireless yang dapat menjangkau area yang cukup luas.
 
@@ -45,24 +43,30 @@ Selain menjangkau area yang cukup luas kita juga butuh mengcover banyaknya clien
 
 ![](/images/untitled-document.jpg)
 
-Perhatikan pada Koneksi dari **Access Point ke MikroTik**, disana menggunakan m
+Perhatikan pada Koneksi dari **Access Point ke MikroTik**, disana untuk terhubung mereka menggunakan koneksi wireless. 
 
-#### Menyetel Station: Router RP sebagai repeater
+Lalu nanti mikrotik akan membroadcast DHCP ke client supaya client bisa internetan dengan hotspot dari Access Point.
 
-* Masuk ke menu **Wireless Tables>interface**
+Dalam hal ini yang bertindak menjadi hotspot server yakni si Access Point. Mikrotik hanya sebagai range extender saja.
+
+#### Menyetel Station: Router mikrotik sebagai repeater
+
+Dalam contoh ini mikrotik yang digunakan hanya mempunyai 1 interface wireless. 
+
+Dan kita akan menghubungkannya ke AP melalui interface wlan1 tersebut dengan mode station.
+
+* Masuk ke menu **Wireless Tables,** lalu pilih **tab interface**
 
   ![](/images/screenshot-from-2020-08-20-17-03-13.png)
-* Klik interface **wlan1>tab Wireless**
+* Sekarang masuk ke **interface wlan1**, lalu kita akan memulai setting pada interface ini
 
   ![](/images/screenshot-from-2020-08-20-17-23-16.png)
 
-  Sekarang kita ingin router bisa terhubung dengan AP TP Link maka kita dapat menyetek
+  kita ingin router bisa terhubung dengan AP, maka kita dapat menyetel...
 
-  **Mode**: station
+  **Mode**nya menjadi: `station`
 
-  **SSID**: (scan dan pilih hotspot punya TP Link)
-
-  caranya tinggal klik scan dan nanti akan muncul SSID dari hotspot TP Link, setelah itu tinggal pilih
+  **SSID**nya di set ke WiFi hotspot milik AP. Caranya tinggal menjalankan `Scan` dan pilih WiFi dari AP seperti berikut.
 
   ![](/images/screenshot-from-2020-08-20-17-06-20.png)
 
