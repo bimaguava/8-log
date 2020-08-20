@@ -31,15 +31,13 @@ Maka kita butuh:
 * router AP dengan mode **AP-Bridge** alias berfungsi sebagai access point
 * router RP dengan mode **Station** alias berfungsi sebagai wireless client
 
-## Contoh Implementasi
-
-### Contoh 1
+## Contoh 1
 
 Untuk area-area publik atau disebut outdoor tentunya dibutuhkan jangkauan wireless yang dapat menjangkau area yang cukup luas.
 
 Selain menjangkau area yang cukup luas kita juga butuh mengcover banyaknya client yang terhubung kedalam hotspot itu. Solusi untuk ini sebetulnya bisa dengan menyetel hanya ada satu hotspot server dalam jaringan tersebut.
 
-#### Skema
+### Skema
 
 ![](/images/untitled-document.jpg)
 
@@ -49,13 +47,17 @@ Lalu nanti mikrotik akan membroadcast DHCP ke client supaya client bisa internet
 
 Dalam hal ini yang bertindak menjadi hotspot server yakni si Access Point. Mikrotik hanya sebagai range extender saja.
 
-#### Menyetel Station: Router mikrotik sebagai repeater
+### 1. Menghubungkan mikrotik ke Hotspot AP
 
-Dalam contoh ini mikrotik yang digunakan hanya mempunyai 1 interface wireless. 
+Kita akan menghubungkannya ke AP melalui interface wlan1 tersebut dengan mode station. 
 
-Dan kita akan menghubungkannya ke AP melalui interface wlan1 tersebut dengan mode station.
+**Pada bagian ini kita ingin menghubungkan mikrotik ke AP melalui interface wlan1**
+
+Langkah-langkahnya seperti berikiut.
 
 * Masuk ke menu **Wireless Tables,** lalu pilih **tab interface**
+
+  Dalam contoh ini mikrotiknya yang digunakan hanya mempunyai 1 interface wireless. 
 
   ![](/images/screenshot-from-2020-08-20-17-03-13.png)
 * Sekarang masuk ke **interface wlan1**, lalu kita akan memulai setting pada interface ini
@@ -70,9 +72,11 @@ Dan kita akan menghubungkannya ke AP melalui interface wlan1 tersebut dengan mod
 
   ![](/images/screenshot-from-2020-08-20-17-06-20.png)
 
-#### Menyetel Router RP DHCP client
+#### Menyetel mikrotik menjadi DHCP client
 
-Setelah menjadikan Router RP ini menjadi sebuah repeater dari hotspot TP Link, sekarang tinggal menjadikannya sebagai DHCP client supaya bisa membroadcast DHCP dari si AP TP Link
+### Menyetel mikrotik 
+
+Setelah menjadikan mikrotik ini menjadi sebuah repeater dari hotspot TP Link, sekarang tinggal menjadikannya sebagai DHCP client supaya bisa membroadcast DHCP dari si AP TP Link
 
 Masuk ke menu **IP**>**DHCP Client>Tambah**
 
