@@ -36,4 +36,4 @@ Maka `Exterior Gateway Protocol` (EGP) layaknya sebuah RW yang mengorganisir beb
 
 Dan layaknya sebuah RT maka ia akan memiliki nomor. IGP juga sama, satu IGP hanya memiliki satu `AS number` sebagai identitas wilayahnya.
 
-Selanjutnya, pada beberapa AS number akan ada yang bertugas untuk menghubungkannya itu disebut Exterior Gateway Protocol (EGP).
+Selanjutnya, pada beberapa AS number atau beberapa RT pasti akan ada yang bertugas sebagai penghubung secara administratif maka  ialah disebut Exterior Gateway Protocol (EGP).
