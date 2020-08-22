@@ -18,15 +18,15 @@ OSPF ialah sebuah [_Dynamic Routing Protocol_](https://www.ccnablog.com/dynamic-
 
 Untuk lebih jelasnya silahkan baca dulu: [https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/](https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/ "https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/")
 
-# OSPF secara definisi
-
-OSPF ialah **Open Shortest Path First**,
-
 # Rangkaian kerja OSPF
 
 Dalam menemukan the best path-nya OSPF akan berurusan dengan:
 
-* 
+## LSP (Link State Packet)
+
+Ini adalah sebuah paket 
+
+## Hello Packet
 
 # OSPF dalam Interior Gateway Protocol
 
