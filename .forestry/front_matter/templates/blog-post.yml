@@ -35,6 +35,7 @@ fields:
   default: true
 pages:
 - source/_posts/network/cisco-etherchannel-configuration.md
+- source/_posts/network/cisco-ospf-intro.md
 - source/_posts/network/cisco-ospfv2-single-area-point-to-point.md
 - source/_posts/network/cisco-spanning-tree-protocol-stp.md
 - source/_posts/network/cisco-stp-looping-prevention.md
