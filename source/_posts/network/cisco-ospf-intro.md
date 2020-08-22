@@ -18,9 +18,21 @@ OSPF ialah sebuah [_Dynamic Routing Protocol_](https://www.ccnablog.com/dynamic-
 
 Untuk lebih jelasnya silahkan baca dulu: [https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/](https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/ "https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/")
 
+# OSPF secara definisi
+
+OSPF ialah **Open Shortest Path First**,
+
+# Rangkaian kerja OSPF
+
+Dalam menemukan the best path-nya OSPF akan berurusan dengan:
+
+* 
+
 # OSPF dalam Interior Gateway Protocol
 
-Untuk dapat paham posisi OSPF perhatikan bagian merah-merah dibawah
+Setelah selesai dengan definisi dan berbagai istilah dalam OSPF, kita musti tahu dimana posisi OSPF sebagai sebuah `routing protocol`.
+
+**Untuk dapat dapat memahami dimana posisi OSPF perhatikan bagian merah-merah dibawah**
 
 ![](/images/070214_1740_dynamicrout2.png)
 
@@ -30,10 +42,14 @@ Autonomous System (AS) ini memiliki nomor layaknya Rukun Tetangga atau RT :v
 
 ![](/images/ic196634.gif)
 
-Gambar itu bisa diasosiasikan seperti dalam suatu perkampungan dalam suatu RW wkwkwk. 
+Gambar itu bisa diasosiasikan seperti dalam suatu perkampungan dalam suatu RW wkwkwk.
 
 Maka `Exterior Gateway Protocol` (EGP) layaknya sebuah RW yang mengorganisir beberapa RT didalamnya. Dalam hal ini posisi RT dicontohkan sebagai IGP.
 
 Dan layaknya sebuah RT maka ia akan memiliki nomor. IGP juga sama, satu IGP hanya memiliki satu `AS number` sebagai identitas wilayahnya.
 
 Selanjutnya, pada beberapa AS number atau beberapa RT pasti akan ada yang bertugas sebagai penghubung secara administratif maka  ialah disebut Exterior Gateway Protocol (EGP).
+
+Oke..
+
+lanjut..
