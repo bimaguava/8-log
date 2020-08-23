@@ -131,13 +131,17 @@ Sedangkan pada gambar ini merupakan switch frame relay, kita tahu di switch fram
 
 # Tipe Area di OSPF
 
-* **Standard Area/Normal Area**
+## **Standard Area/Normal Area**
 
-  yang biasa (kirim summary, link update, dan external route)
-* **Backbone Area**
+area lain selain area 0
 
-  atau yang biasa disebut Area 0, semua area yang terhubung ke Area 0 akan bisa ping2an, Backbone juga salah satu standard area
+## **Backbone Area**
+
+biasa disebut Area 0, semua area yang terhubung ke Area 0 akan bisa saling ping, Backbone juga salah satu standard area
+
 * **Stub Area**
+
+  Normal area yang tidak ada “sambungan”nya lagi
 * **Totally Stubby Area**
 * **Not-So-Stubby-Area (NSSA)**
 * **Totally Stubby NSSA**
