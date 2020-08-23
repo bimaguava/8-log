@@ -48,9 +48,13 @@ Sedangkan,
 
 > yang menentukan berapa lama kita harus menunggu paket hello sebelum kita menyatakan tetangga mati ialah **Dead Interval**
 
-Kemudian sebagai penjelas karena tadi disinggung **Network Multi Access**, ia merupakan kebalikan dari `point-to-point` (setiap physical linknya hanya untuk single destination saja), yang mana physical link dalam Multi Access dapat berkomunikasi ke lebih dari satu destination, alias dalam 1 router bisa diakses dari beberapa router.
+Kemudian sebagai penjelas karena tadi disinggung **Network Multi Access** dan **NBMA**, maka akan dijelaskan juga di bagian
 
-Sedangkan, **Non-Broadcast Multiple-Access** ialah _network yang bisa multi akses,_ tapi physical link-nya tidak bisa melakukan broadcast karena pada physical link-nya tidak mendukung pengiriman paket yang sama ke lebih dari satu destination.
+ ia merupakan kebalikan dari `point-to-point` (setiap physical linknya hanya untuk single destination saja), yang mana physical link dalam Multi Access dapat berkomunikasi ke lebih dari satu destination, alias dalam 1 router bisa diakses dari beberapa router.
+
+Sedangkan, **Non-Broadcast Multiple-Access** ialah _network yang bisa multi akses,_ tapi physical link-nya tidak bisa melakukan broadcast karena pada physical link-nya tidak mendukung pengiriman paket yang sama ke lebih dari satu destination. Contoh simpelnya [Frame relay](https://mudji.net/press/?p=111)
+
+![](/images/screenshot_3.png)
 
 # Proses pemilihan DR & BDR pada OSPF
 
