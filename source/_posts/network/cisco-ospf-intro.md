@@ -129,6 +129,21 @@ Sedangkan pada gambar ini merupakan switch frame relay, kita tahu di switch fram
 
 # Tipe Area di OSPF
 
+* **Standard Area**
+
+  yang biasa (kirim summary, link update, dan external route)
+* **Backbone Area**
+
+  atau yang biasa disebut Area 0, semua area yang terhubung ke Area 0 akan bisa ping2an, Backbone juga salah satu standard area
+* **Stub Area**
+* **Totally Stubby Area**
+* **Not-So-Stubby-Area (NSSA)**
+* **Totally Stubby NSSA**
+
+# Terakhir, Masalah OSPF dalam multi network
+
+Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel. Sekarang kita akan membahas 
+
 # Referensi
 
 * [https://www.ccnablog.com/ospf-part-iv/](https://www.ccnablog.com/ospf-part-iv/ "https://www.ccnablog.com/ospf-part-iv/")
