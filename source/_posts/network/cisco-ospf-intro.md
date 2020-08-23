@@ -32,7 +32,7 @@ Dalam menemukan the best path-nya OSPF akan berurusan dengan sebuah paket-paket 
 * Link State Update (LSU) **tidak dibahas**
 * Link State Acknowledgement (LSAck) **tidak dibahas**
 
-Karena selain Hello packet, bentuknya sangat teorikal saya agak kurang suka, jadi cuma bahas yang menurut saya penting-penting saja.
+Karena selain Hello packet, bentuknya sangat teorikal saya pusing, jadi cuma bahas yang menurut saya penting-penting saja.
 
 oke.
 
