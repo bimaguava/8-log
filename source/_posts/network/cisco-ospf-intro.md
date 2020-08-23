@@ -24,9 +24,11 @@ Dalam menemukan the best path-nya OSPF akan berurusan dengan:
 
 ## LSP (Link State Packet)
 
-Ini adalah sebuah paket 
+Ini adalah sebuah paket
 
 ## Hello Packet
+
+# Proses pemilihan DR & BDR pada OSPF
 
 # OSPF dalam Interior Gateway Protocol
 
@@ -48,8 +50,10 @@ Maka `Exterior Gateway Protocol` (EGP) layaknya sebuah RW yang mengorganisir beb
 
 Dan layaknya sebuah RT maka ia akan memiliki nomor. IGP juga sama, satu IGP hanya memiliki satu `AS number` sebagai identitas wilayahnya.
 
-Selanjutnya, pada beberapa AS number atau beberapa RT pasti akan ada yang bertugas sebagai penghubung secara administratif maka  ialah disebut Exterior Gateway Protocol (EGP).
+Selanjutnya, pada beberapa AS number atau beberapa RT pasti akan ada yang bertugas sebagai penghubung antara AS-AS number secara administratif maka ia disebut Exterior Gateway Protocol (EGP).
 
 Oke..
 
 lanjut..
+
+# Tipe Area di OSPF
