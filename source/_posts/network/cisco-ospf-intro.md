@@ -22,7 +22,7 @@ Untuk lebih jelasnya silahkan baca dulu: [https://8log.js.org/2020/08/22/network
 
 Dalam menemukan the best path-nya OSPF akan berurusan dengan sebuah paket-paket data yang dikirimkannya kepada `ospf neighbor`.
 
-`LSP` Ini adalah sebuah paket konvergensi yang dikirimkan router yang menjalankan routing ospf. 
+`LSP` Ini adalah sebuah paket konvergensi yang dikirimkan router yang menjalankan routing ospf.
 
 **Dan isi dari sebuah paket LSP ini sebagai berikut.**
 
@@ -34,23 +34,23 @@ Sebuah paket yang digunakan untuk:
 * Dan juga meng-advertise router yang ingin dijadikan `ospf neighbor`
 * Selain itu Hello Pakcet ini juga akan memilih sebuah `Designated Router` (DR) alias router dengan spek tinggi dan `Backup Designated Router` (BDR) alias sebuah backup jika DR-nya down
 
-> DR dan BDR akan diperlukan **Hanya** pada` network Multi Access`, untuk` network Non-Broadcast` tidak perlu
+> DR dan BDR akan diperlukan **Hanya** pada`network Multi Access`, untuk`network Non-Broadcast` tidak perlu
 
 Kan Hello Packet ini yang akan menentukan 2 router yang nanti bisa menjadi tetangganya (neighbor adjacency) atau tidak, **maka harus memenuhi syarat** Hello packet terlebih dahulu, yaitu ...
 
 dengan memastikan dalam 10 detik (pada network multi access) atau 30 detik (pada `Non-Broadcast Multiple-Access`/NBMA) router tersebut musti menerima paket hello yang telah dikirim untuk bisa dianggap sebagai neighbor adjacency.
 
-_Penjelasan Tambahan:_
+_Dalam proses tersebut dikenal dengan istilah **Hello interval** dan **Dead interval**_
 
 > yang bertugas menentukan seberapa sering kita mengirim paket halo ialah **Hello Interval**
 
-dan juga
+Sedangkan,
 
 > yang menentukan berapa lama kita harus menunggu paket hello sebelum kita menyatakan tetangga mati ialah **Dead Interval**
 
-Dan tadi disinggung `Network Multi Access` ialah
+Kemudian sebagai penjelas karena tadi disinggung **Network Multi Access**, ia merupakan kebalikan dari `point-to-point` (setiap physical linknya hanya untuk single destination saja), yang mana physical link dalam Multi Access dapat berkomunikasi ke lebih dari satu destination, alias dalam 1 router bisa diakses dari beberapa router.
 
-Sedangkan `Non-Broadcast Multiple-Access` ialah
+Sedangkan, **Non-Broadcast Multiple-Access** ialah _network yang bisa multi akses,_ tapi physical link-nya tidak bisa melakukan broadcast karena pada physical link-nya tidak mendukung pengiriman paket yang sama ke lebih dari satu destination.
 
 # Proses pemilihan DR & BDR pada OSPF
 
@@ -80,4 +80,21 @@ Oke..
 
 lanjut..
 
-# Tipe Area di OSPF
+# Tipe Network di OSPF
+
+ialah
+
+* Point-to-point
+* Point-to-multipoint
+* Broadcast Multiaccess
+* Virtual links
+* Nonbroadcast Multiaccess (NBMA)
+
+Tapi untuk sekarang kita hanya perlu mengetahui `point-to-point` dan `broadcast-multiaccess` saja.
+
+# Referensi
+
+* [https://www.ccnablog.com/ospf-part-iv/](https://www.ccnablog.com/ospf-part-iv/ "https://www.ccnablog.com/ospf-part-iv/")
+* [https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/](https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/ "https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/")
+* [https://www.ccnablog.com/dynamic-routing-protocols/](https://www.ccnablog.com/dynamic-routing-protocols/ "https://www.ccnablog.com/dynamic-routing-protocols/")
+* [https://community.cisco.com/t5/other-network-architecture/nbma-what-is-it/td-p/232076](https://community.cisco.com/t5/other-network-architecture/nbma-what-is-it/td-p/232076 "https://community.cisco.com/t5/other-network-architecture/nbma-what-is-it/td-p/232076")
