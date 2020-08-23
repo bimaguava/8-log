@@ -47,9 +47,9 @@ Sebuah paket yang digunakan untuk:
 * Lalu, dalam Hello Packet juga mengirimkan `router ID` ini dikonfigurasi yang mana merupakan sebuah identitas dari sebuah router.
 
   > **jika router-id tidak dikonfigurasi**, maka router memilih alamat IP tertinggi dari salah satu interface loopback-nya alias interface bayangan
-* Selain itu Hello Pakcet ini juga akan memilih sebuah `Designated Router` (DR) alias router dengan spek tinggi dan `Backup Designated Router` (BDR) alias sebuah backup jika DR-nya down
+* Selain itu Hello Pakcet ini juga akan memilih sebuah `Designated Router` (DR) alias router dengan spek tinggi dan `Backup Designated Router` (BDR) alias sebuah backup jika DR-nya down. Prosesnya nanti akan dijelaskan.
 
-> DR dan BDR akan diperlukan **Hanya** pada`network Multi Access`, untuk`network Non-Broadcast` tidak perlu
+> Ingat, DR dan BDR akan diperlukan hanya pada `network Multi Access`, untuk `network Non-Broadcast` tidak perlu
 
 Kan Hello Packet ini yang akan menentukan 2 router yang nanti bisa menjadi tetangganya (neighbor adjacency) atau tidak, **maka harus memenuhi syarat** Hello packet terlebih dahulu, yaitu ...
 
@@ -125,11 +125,13 @@ Dan yang dimaksud **non-broadcast** adalah
 
 Sedangkan pada gambar ini merupakan switch frame relay, kita tahu di switch frame relay tidak ada fitur broadcast. Makanya di gambar tanda hijaunya cuma menuju satu router (R2)
 
-Tipe2 area yang koneksi OSPFnya melalui switch frame relay itu seperti Point-to-Multipoint, Broadcast Multiaccess, dan NBMA. 
+**Tipe2 network** yang koneksi OSPFnya melalui switch frame relay itu seperti Point-to-Multipoint, Broadcast Multiaccess, dan NBMA. 
+
+# Tipe Area di OSPF
 
 # Referensi
 
 * [https://www.ccnablog.com/ospf-part-iv/](https://www.ccnablog.com/ospf-part-iv/ "https://www.ccnablog.com/ospf-part-iv/")
 * [https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/](https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/ "https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/")
 * [https://www.ccnablog.com/dynamic-routing-protocols/](https://www.ccnablog.com/dynamic-routing-protocols/ "https://www.ccnablog.com/dynamic-routing-protocols/")
-* [https://community.cisco.com/t5/other-network-architecture/nbma-what-is-it/td-p/232076](https://community.cisco.com/t5/other-network-architecture/nbma-what-is-it/td-p/232076 "https://community.cisco.com/t5/other-network-architecture/nbma-what-is-it/td-p/232076")
+* [https://packetlife.net/blog/2008/jun/19/ospf-network-types/](https://packetlife.net/blog/2008/jun/19/ospf-network-types/ "https://packetlife.net/blog/2008/jun/19/ospf-network-types/")
