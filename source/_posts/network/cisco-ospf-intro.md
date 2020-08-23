@@ -44,7 +44,7 @@ _Penjelasan Tambahan:_
 
 > yang bertugas menentukan seberapa sering kita mengirim paket halo ialah **Hello Interval**
 
-dan
+dan juga
 
 > yang menentukan berapa lama kita harus menunggu paket hello sebelum kita menyatakan tetangga mati ialah **Dead Interval**
 
