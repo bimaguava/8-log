@@ -63,8 +63,6 @@ Sedangkan,
 
 > yang menentukan berapa lama kita harus menunggu paket hello sebelum kita menyatakan tetangga mati ialah **Dead Interval**
 
-Kemudian sebagai penjelas karena tadi disinggung **Network Multi Access** dan **NBMA**, maka akan dijelaskan juga di bagian [sini](https://8log.js.org/2020/08/22/network/cisco-ospf-intro/#Tipe-Network-di-OSPF)
-
 # OSPF dalam Interior Gateway Protocol
 
 Setelah selesai dengan definisi dan berbagai istilah dalam OSPF, kita musti tahu dimana posisi OSPF sebagai sebuah `routing protocol`.
