@@ -18,6 +18,8 @@ OSPF ialah sebuah [_Dynamic Routing Protocol_](https://www.ccnablog.com/dynamic-
 
 Untuk lebih jelasnya silahkan baca dulu: [https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/](https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/ "https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/")
 
+Sebagai protokol link state OSPF merupakan bentukan dari sebuah metode TCP/IP yang akan sangat bergantung pada IP, akibatnya apabila dalam implementasi ingin berganti versi IP, maka akan memakai OSPF yang baru.
+
 # Link State Packet (LSP): Paket yang dikirimkan OSPF
 
 Dalam menemukan the best path-nya OSPF akan berurusan dengan sebuah paket-paket data yang dikirimkannya kepada `ospf neighbor`.
@@ -123,13 +125,13 @@ Contoh **non-broadcast**
 
 ![](/images/non-broadcast.jpg)
 
-Sedangkan pada gambar ini merupakan switch frame relay, kita tahu di switch frame relay tidak ada fitur broadcast. Makanya di gambar tanda hijaunya cuma menuju satu router (R2)
+Sedangkan pada gambar ini merupakan switch frame relay, kita tahu di switch frame relay tidak ada fitur broadcast. Makanya di gambar tanda hijaunya (paket) cuma menuju satu router (R2)
 
 **Tipe2 network** yang koneksi OSPFnya melalui switch frame relay itu seperti Point-to-Multipoint, Broadcast Multiaccess, dan NBMA. 
 
 # Tipe Area di OSPF
 
-* **Standard Area**
+* **Standard Area/Normal Area**
 
   yang biasa (kirim summary, link update, dan external route)
 * **Backbone Area**
