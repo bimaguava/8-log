@@ -24,7 +24,15 @@ Dalam menemukan the best path-nya OSPF akan berurusan dengan sebuah paket-paket 
 
 `LSP` Ini adalah sebuah paket konvergensi yang dikirimkan router yang menjalankan routing ospf.
 
-**Dan isi dari sebuah paket LSP ini sebagai berikut.**
+**Dan isi dari sebuah paket LSP ini ada:**
+
+* Hello packet
+* Database Description (DBD) **Gak dibahas**
+* Link State Request (LSR) **Gak dibahas**
+* Link State Update (LSU) 
+* Link State Acknowledgement (LSAck) **Gak dibahas**
+
+Cuma saya hanya bahas yang menurut saya penting-penting saja.
 
 ## Hello packet
 
@@ -49,6 +57,8 @@ Sedangkan,
 > yang menentukan berapa lama kita harus menunggu paket hello sebelum kita menyatakan tetangga mati ialah **Dead Interval**
 
 Kemudian sebagai penjelas karena tadi disinggung **Network Multi Access** dan **NBMA**, maka akan dijelaskan juga di bagian [sini](https://8log.js.org/2020/08/22/network/cisco-ospf-intro/#Tipe-Network-di-OSPF)
+
+## DBD 
 
 # Proses pemilihan DR & BDR pada OSPF
 
