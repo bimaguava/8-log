@@ -113,13 +113,13 @@ Sedangkan physical link dalam topologi Multi Access dapat berkomunikasi ke lebih
 
 **Lalu, Apa yang dimaksud dengan broadcast dan non-broadcast?**
 
-Yang dimaksud **broadcast** adalah
+Contoh proses **broadcast**
 
 ![](/images/broadcast-1.jpg)
 
 Dikatakan broadcast karena di gambar fitur switch memang menyediakan fungsi broadcast yang menyebabkan semua router (R2,R3,R4) menerima paket yang dikirim dari R1.
 
-Dan yang dimaksud **non-broadcast** adalah
+Contoh **non-broadcast** 
 
 ![](/images/non-broadcast.jpg)
 
