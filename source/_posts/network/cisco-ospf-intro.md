@@ -40,6 +40,9 @@ Sebuah paket yang digunakan untuk:
 
 * Men-discover `ospf neighbor`
 * Dan juga meng-advertise router yang ingin dijadikan `ospf neighbor`
+* Lalu, dalam Hello Packet juga mengirimkan `router ID` ini dikonfigurasi yang mana merupakan sebuah identitas dari sebuah router.
+
+  > **jika router-id tidak dikonfigurasi**, maka router memilih alamat IP tertinggi dari salah satu interface loopback-nya alias interface bayangan
 * Selain itu Hello Pakcet ini juga akan memilih sebuah `Designated Router` (DR) alias router dengan spek tinggi dan `Backup Designated Router` (BDR) alias sebuah backup jika DR-nya down
 
 > DR dan BDR akan diperlukan **Hanya** pada`network Multi Access`, untuk`network Non-Broadcast` tidak perlu
