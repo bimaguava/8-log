@@ -18,19 +18,15 @@ OSPF ialah sebuah [_Dynamic Routing Protocol_](https://www.ccnablog.com/dynamic-
 
 Untuk lebih jelasnya silahkan baca dulu: [https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/](https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/ "https://8log.js.org/2020/08/22/network/cisco-link-state-protocol/")
 
-# Serangkaian Paket yang dikirimkan OSPF
+# Link State Packet (LSP): Paket yang dikirimkan OSPF
 
 Dalam menemukan the best path-nya OSPF akan berurusan dengan sebuah paket-paket data yang dikirimkannya kepada ospf neighbor.
 
-Apa saja? selengkapnya sebagai berikut.
+LSP Ini adalah sebuah paket konvergensi yang dikirimkan router yang menjalankan routing ospf. 
 
-## LSP (Link State Packet)
+**Dan isi dari sebuah paket LSP ini sebagai berikut.**
 
-Ini adalah sebuah paket konvergensi yang dikirimkan router yang menjalankan routing ospf. Dan isi dari sebuah paket LSP ini sebagai berikut.
-
-### 
-
-## Hello Packet
+### Hello Packet
 
 # Proses pemilihan DR & BDR pada OSPF
 
