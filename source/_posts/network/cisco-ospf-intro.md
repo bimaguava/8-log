@@ -50,12 +50,6 @@ Sedangkan,
 
 Kemudian sebagai penjelas karena tadi disinggung **Network Multi Access** dan **NBMA**, maka akan dijelaskan juga di bagian [sini](https://8log.js.org/2020/08/22/network/cisco-ospf-intro/#Tipe-Network-di-OSPF)
 
- ia merupakan kebalikan dari `point-to-point` (setiap physical linknya hanya untuk single destination saja), yang mana physical link dalam Multi Access dapat berkomunikasi ke lebih dari satu destination, alias dalam 1 router bisa diakses dari beberapa router.
-
-Sedangkan, **Non-Broadcast Multiple-Access** ialah _network yang bisa multi akses,_ tapi physical link-nya tidak bisa melakukan broadcast karena pada physical link-nya tidak mendukung pengiriman paket yang sama ke lebih dari satu destination. Contoh simpelnya [Frame relay](https://mudji.net/press/?p=111)
-
-![](/images/screenshot_3.png)
-
 # Proses pemilihan DR & BDR pada OSPF
 
 # OSPF dalam Interior Gateway Protocol
@@ -90,11 +84,21 @@ ialah
 
 * Point-to-point
 * Point-to-multipoint
-* Broadcast Multiaccess
+* Broadcast Multi Access
 * Virtual links
-* Nonbroadcast Multiaccess (NBMA)
+* Non-broadcast Multiaccess (NBMA)
 
 Tapi untuk sekarang kita hanya perlu mengetahui `point-to-point` dan `broadcast-multiaccess` saja.
+
+## Multi Access
+
+ia merupakan kebalikan dari `point-to-point` (setiap physical linknya hanya untuk single destination saja), yang mana physical link dalam Multi Access dapat berkomunikasi ke lebih dari satu destination, alias dalam 1 router bisa diakses dari beberapa router.
+
+## NBMA
+
+Sedangkan, **Non-Broadcast Multiple-Access** ialah _network yang bisa multi akses,_ tapi physical link-nya tidak bisa melakukan broadcast karena pada physical link-nya tidak mendukung pengiriman paket yang sama ke lebih dari satu destination. Contoh simpelnya [Frame relay](https://mudji.net/press/?p=111)
+
+![](/images/screenshot_3.png)
 
 # Referensi
 
