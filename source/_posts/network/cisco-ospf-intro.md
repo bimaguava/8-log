@@ -20,13 +20,37 @@ Untuk lebih jelasnya silahkan baca dulu: [https://8log.js.org/2020/08/22/network
 
 # Link State Packet (LSP): Paket yang dikirimkan OSPF
 
-Dalam menemukan the best path-nya OSPF akan berurusan dengan sebuah paket-paket data yang dikirimkannya kepada ospf neighbor.
+Dalam menemukan the best path-nya OSPF akan berurusan dengan sebuah paket-paket data yang dikirimkannya kepada `ospf neighbor`.
 
-LSP Ini adalah sebuah paket konvergensi yang dikirimkan router yang menjalankan routing ospf. 
+`LSP` Ini adalah sebuah paket konvergensi yang dikirimkan router yang menjalankan routing ospf. 
 
 **Dan isi dari sebuah paket LSP ini sebagai berikut.**
 
-### Hello Packet
+## Hello packet
+
+Sebuah paket yang digunakan untuk:
+
+* Men-discover `ospf neighbor`
+* Dan juga meng-advertise router yang ingin dijadikan `ospf neighbor`
+* Selain itu Hello Pakcet ini juga akan memilih sebuah `Designated Router` (DR) alias router dengan spek tinggi dan `Backup Designated Router` (BDR) alias sebuah backup jika DR-nya down
+
+> DR dan BDR akan diperlukan **Hanya** pada` network Multi Access`, untuk` network Non-Broadcast` tidak perlu
+
+Kan Hello Packet ini yang akan menentukan 2 router yang nanti bisa menjadi tetangganya (neighbor adjacency) atau tidak, **maka harus memenuhi syarat** Hello packet terlebih dahulu, yaitu ...
+
+dengan memastikan dalam 10 detik (pada network multi access) atau 30 detik (pada `Non-Broadcast Multiple-Access`/NBMA) router tersebut musti menerima paket hello yang telah dikirim untuk bisa dianggap sebagai neighbor adjacency.
+
+_Penjelasan Tambahan:_
+
+> yang bertugas menentukan seberapa sering kita mengirim paket halo ialah **Hello Interval**
+
+dan
+
+> yang menentukan berapa lama kita harus menunggu paket hello sebelum kita menyatakan tetangga mati ialah **Dead Interval**
+
+Dan tadi disinggung `Network Multi Access` ialah
+
+Sedangkan `Non-Broadcast Multiple-Access` ialah
 
 # Proses pemilihan DR & BDR pada OSPF
 
