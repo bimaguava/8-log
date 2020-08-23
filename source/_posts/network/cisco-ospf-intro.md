@@ -27,12 +27,16 @@ Dalam menemukan the best path-nya OSPF akan berurusan dengan sebuah paket-paket 
 **Dan isi dari sebuah paket LSP ini ada:**
 
 * Hello packet
-* Database Description (DBD) **Gak dibahas**
-* Link State Request (LSR) **Gak dibahas**
-* Link State Update (LSU) 
-* Link State Acknowledgement (LSAck) **Gak dibahas**
+* Database Description (DBD) **tidak dibahas**
+* Link State Request (LSR) **tidak dibahas**
+* Link State Update (LSU) **tidak dibahas**
+* Link State Acknowledgement (LSAck) **tidak dibahas**
 
-Cuma saya hanya bahas yang menurut saya penting-penting saja.
+Karena selain Hello packet, bentuknya sangat teorikal saya agak kurang suka, jadi cuma bahas yang menurut saya penting-penting saja.
+
+oke.
+
+lanjut.
 
 ## Hello packet
 
@@ -60,10 +64,6 @@ Sedangkan,
 > yang menentukan berapa lama kita harus menunggu paket hello sebelum kita menyatakan tetangga mati ialah **Dead Interval**
 
 Kemudian sebagai penjelas karena tadi disinggung **Network Multi Access** dan **NBMA**, maka akan dijelaskan juga di bagian [sini](https://8log.js.org/2020/08/22/network/cisco-ospf-intro/#Tipe-Network-di-OSPF)
-
-## DBD 
-
-# Proses pemilihan DR & BDR pada OSPF
 
 # OSPF dalam Interior Gateway Protocol
 
@@ -93,25 +93,41 @@ lanjut..
 
 # Tipe Network di OSPF
 
-ialah
+Dalam OSPF ada 5 tipe network, yaitu
 
-* Point-to-point
-* Point-to-multipoint
-* Broadcast Multi Access
-* Virtual links
-* Non-broadcast Multiaccess (NBMA)
+* **Point-to-point**
+* **Point-to-multipoint**
+* **Broadcast Multi Access**
+* **Virtual links**
+* **Non-broadcast Multiaccess (NBMA)**
 
 Tapi untuk sekarang kita hanya perlu mengetahui `point-to-point` dan `broadcast-multiaccess` saja.
 
-## Multi Access
+Untuk yang belum tahu perbedaan point-to-point dan multi Access, berikut contoh simpelnya
 
-ia merupakan kebalikan dari `point-to-point` (setiap physical linknya hanya untuk single destination saja), yang mana physical link dalam Multi Access dapat berkomunikasi ke lebih dari satu destination, alias dalam 1 router bisa diakses dari beberapa router.
+![](/images/unnamed.png)
 
-## NBMA
+Dilihat dari gambar setiap physical dalam topologi point-to-point linknya hanya untuk single destination saja
 
-Sedangkan, **Non-Broadcast Multiple-Access** ialah _network yang bisa multi akses,_ tapi physical link-nya tidak bisa melakukan broadcast karena pada physical link-nya tidak mendukung pengiriman paket yang sama ke lebih dari satu destination. Contoh simpelnya [Frame relay](https://mudji.net/press/?p=111)
+![](/images/download.png)
 
-![](/images/screenshot_3.png)
+Sedangkan physical link dalam topologi Multi Access dapat berkomunikasi ke lebih dari satu destination, alias dalam 1 router bisa diakses dari beberapa router.
+
+**Lalu, Apa yang dimaksud dengan broadcast dan non-broadcast?**
+
+Yang dimaksud **broadcast** adalah
+
+![](/images/broadcast-1.jpg)
+
+Dikatakan broadcast karena di gambar fitur switch memang menyediakan fungsi broadcast
+
+Dan yang dimaksud **non-broadcast** adalah
+
+![](/images/non-broadcast.jpg)
+
+Sedangkan pada gambar ini merupakan switch frame relay, kita tahu di switch frame relay tidak ada fitur broadcast. Makanya di gambar tanda hijaunya cuma menuju satu router (R2)
+
+Tipe2 area yang koneksi OSPFnya melalui switch frame relay itu seperti Point-to-Multipoint, Broadcast Multiaccess, dan NBMA. 
 
 # Referensi
 
