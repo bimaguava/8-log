@@ -163,10 +163,14 @@ Sedangkan **ASBR**
 
 ## Stub Area
 
+![](/images/artboard-virtual-link1.png)
+
 "Stub" disini berarti sebuah area yang tidak ada sambungannya lagi.
 
 * tidak menerima `external route`, router hanya mengirim melalui default route (0.0.0.0)
 * tapi masih menerima `summary route`
+
+![](/images/artboard-virtual-link2.png)
 
 ## Totally Stubby Area
 
