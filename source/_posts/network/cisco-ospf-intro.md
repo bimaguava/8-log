@@ -182,7 +182,7 @@ Prinsipnya sama dengan **NSSA**, hanya saja cuma untuk default route saja.
 
 # Tipe LSA di OSPF
 
-Untuk dapat memahami lagi perbedaan area2 tersebut, ada sebuah paket bernama LSA untuk membuat sebuah database OSPF.
+Sebagai pelengkap untuk membahas tipe2 area kita akan membahas juga sebuah paket bernama LSA untuk membuat sebuah database OSPF.
 
 Misal ketika ada perubahan topologi maka router dalam jaringan OSPF akan mengirimkan LSU yang didalamnya terdapat informasi LSA yang mana LSA terdiri dari beberapa tipe:
 
@@ -228,18 +228,17 @@ Metode yang digunakan untuk melakukan redistribute nantinya ada 2 cara yaitu E1 
 
 > Eksternal Route ini merupakan informasi routing diluar jaringan AS OSPF, bisa BGP, RIP, OSPF, atau Satic route.
 
+## **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA)**
 
-  ## **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA)**
+Merupakan `Cisco Proprietary`, LSA ini berisi serangkaian paket agar setiap area mempunyai jalur sendiri untuk mengirim paket secara serentak (multicast)
 
-  Merupakan `Cisco Proprietary`, LSA ini berisi serangkaian paket agar setiap area mempunyai jalur sendiri untuk mengirim paket secara serentak (multicast)
+## **LSA Type 7 (NSSA-External LSA)**
 
-  ## **LSA Type 7 (NSSA-External LSA)**
+Tipe LSA ini digunakan oleh area OSPF yaitu NSSA (Not So Stubby Area) supaya ketika ada redistribute-route eksternal dan melewati area yang tidak support LSA Type 5 tetap dapat berjalan dengan baik.
 
-  Tipe LSA ini digunakan oleh area OSPF yaitu NSSA (Not So Stubby Area) supaya ketika ada redistribute-route eksternal dan melewati area yang tidak support LSA Type 5 tetap dapat berjalan dengan baik.
+![](/images/lsatype-7.png)
 
-  ![](/images/lsatype-7.png)
-
-  Misal, dibanyak kasus ketika ada redistribute-route eksternal dan melewati area STUB, dimana di area ini LSA type 5 tidak didukung, maka kita bisa menggantinya dengan area NSSA.
+Misal, dibanyak kasus ketika ada redistribute-route eksternal dan melewati area STUB, dimana di area ini LSA type 5 tidak didukung, maka kita bisa menggantinya dengan area NSSA.
 
 # Terakhir, Masalah OSPF dalam multi network
 
