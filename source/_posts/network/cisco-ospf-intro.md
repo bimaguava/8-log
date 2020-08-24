@@ -234,6 +234,13 @@ Sedangkan **E2**
 
 > E2 (Default) – bedanya dengan E1 adalam metricnya tetap…contoh, klo E2 metricnya 1120…di SEMUA router ospf akan bilang metricnya 1120…tapi klo E1 akan dikalkulasi lagi, tergantung dari berapa banyak link yang dilewati
 
+Lengkapnya untuk tipe route untuk OSPF ada 4 tipe
+
+* O – Rute OSPF biasa (intra area)
+* O IA – Rute OSPF yang didapat dari OSPF area lain
+* O E1 – Rute OSPF yang didapat dari different routing protocol
+* O E2 – Rute OSPF yang didapat dari different routing protocol
+
 ## **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA)**
 
 Merupakan `Cisco Proprietary`, LSA ini berisi serangkaian paket agar setiap area mempunyai jalur sendiri untuk mengirim paket secara serentak (multicast)
