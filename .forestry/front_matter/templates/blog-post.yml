@@ -34,6 +34,7 @@ fields:
   label: Table of Contents
   default: true
 pages:
+- source/_posts/network/cisco-determine-the-dr-and-bdr.md
 - source/_posts/network/cisco-etherchannel-configuration.md
 - source/_posts/network/cisco-link-state-protocol.md
 - source/_posts/network/cisco-ospf-intro.md
