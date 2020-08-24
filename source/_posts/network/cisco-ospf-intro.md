@@ -258,7 +258,15 @@ Tipe 4 khusus LSA ini die meng-inject kepada backbone yang mana berasal dari rou
 
 ![](/images/ospf_stub_area.jpg)
 
-Di gambar itu kita 
+Di gambar itu kita melihat R2 dan R3 berada pada Stub Area. Dan saat itu ABR (R2) meng-inject LSA tipe 3 yang berisi rute default ke area stub. 
+
+Pada area stub external route tidak akan bekerja, maka kita lihat ABR tidak meneruskan LSA tipe 4 ke area lain.
+
+Dalam mengkonfigurasi area stub, nanti semua router (di area stub) harus di setel stub, misal dengan perintah
+
+    Router (config-router) # area 10 stub
+
+Konfigurasi ini diperlukan karena router stub dan non-stub tidak akan saling membentuk adjacency.
 
 ### Totally Stubby Areas
 
