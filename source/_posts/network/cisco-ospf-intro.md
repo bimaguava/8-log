@@ -159,7 +159,7 @@ Sedangkan di gambar terdapat router2 yang berbatasan dengan area luar backbone, 
 
 Sedangkan **ASBR**
 
-> router yang berlokasi di perbatasan dengan selain OSPF, tapi ke external link (EIGRP, RIP, Static,dll)
+> router yang berlokasi di perbatasan dengan selain OSPF, tapi ke external route (EIGRP, RIP, Static,dll)
 
 ## Stub Area
 
