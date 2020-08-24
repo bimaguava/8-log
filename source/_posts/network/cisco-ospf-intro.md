@@ -180,6 +180,20 @@ Prinsipnya sama dengan **Stub Area**, tapi dibalik stub ada sambungannya lagi be
 
 Prinsipnya sama dengan **NSSA**, hanya saja cuma untuk default route saja.
 
+# Tipe LSA di OSPF
+
+Untuk dapat memahami lagi perbedaan area2 tersebut, ada sebuah paket bernama LSA untuk membuat sebuah database OSPF. 
+
+Misal ketika ada perubahan topologi maka router dalam jaringan OSPF akan mengirimkan LSU yang didalamnya terdapat informasi LSA yang mana LSA terdiri dari beberapa tipe:
+
+* **LSA Type 1** **(Router LSA):** berisi router ID dari router2 yang menjalankan OSPF
+* **LSA Type 2** **(Network LSA):** berisi network2 yang dibawa oleh router2 OSPF itu
+* **LSA Type 3 (Summary LSA):** berisi `summary route` yang biasanya ada pada router yang menghubungkan 2 area atau lebih (ABR)
+* **LSA Type 4 (Summary ASBR LSA):** berisi `summary route` external diluar OSPF yang biasanya ada pada ASBR (Router OSPF yang menghubungkan OSPF dengan Routing Protocol Lain)
+* **LSA Type 5 (Autonomous System/AS External LSA):** berisi rute2 external yang biasanya ada pada ASBR
+* **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA):** berisi 
+* **LSA Type 7 (NSSA-External LSA):** 
+
 # Terakhir, Masalah OSPF dalam multi network
 
 Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel. Sekarang kita akan membahas
