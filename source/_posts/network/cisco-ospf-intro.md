@@ -258,7 +258,9 @@ Tipe 4 khusus LSA ini die meng-inject kepada backbone yang mana berasal dari rou
 
 ![](/images/ospf_stub_area.jpg)
 
-Di gambar itu kita melihat R2 dan R3 berada pada Stub Area. Dan saat itu ABR (R2) meng-inject LSA tipe 3 yang berisi rute default ke area stub. 
+Di gambar itu kita melihat R2 dan R3 berada pada Stub Area. 
+
+Dan saat itu ABR (R2&R3) meng-inject LSA tipe 3 yang berisi rute default ke area stub. 
 
 Pada area stub external route tidak akan bekerja, maka kita lihat ABR tidak meneruskan LSA tipe 4 ke area lain.
 
@@ -268,9 +270,19 @@ Dalam mengkonfigurasi area stub, nanti semua router (di area stub) harus di sete
 
 Konfigurasi ini diperlukan karena router stub dan non-stub tidak akan saling membentuk adjacency.
 
+> Ide untuk mengganti satu rute default untuk banyak rute tertentu dapat diterapkan ke rute internal juga, yang merupakan kasus _area yang benar_ - _benar sempit_ .
+
 ### Totally Stubby Areas
 
 ![](/images/ospf_total_stub_area.jpg)
+
+Karena prinsipnya sama dengan area stub (yang juga) tidak menerima LSA tipe 4 dan 5 dari ABR mereka (dan juga LSA tipe 3), hanya saja semua routing yang keluar dari totally stubby ini bergantung pada rute default yang dimasukkan oleh ABR (R2&R3)
+
+Konfigurasi stub nya tinggal menambahkan parameter `no-summary`, perintah ini dilakukan pada semua ABRnya
+
+    Router (config-router) # area 10 stub no-summary
+
+> tidak ada tipe yang dapat berisi ASBR, karena tipe 4 dan 5 LSA tidak diizinkan di dalam area. Untuk mengatasi masalah ini, dan yang bisa dibilang merupakan keputusan penamaan terburuk yang pernah dibuat, Cisco memperkenalkan konsep area yang _tidak terlalu pendek (NSSA)_
 
 ### Not-so Stubby Areas (NSSA)
 
