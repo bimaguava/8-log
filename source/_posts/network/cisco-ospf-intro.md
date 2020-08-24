@@ -153,6 +153,14 @@ Jadi apabila ada Area 3 seperti gambar ini
 
 Maka, akan ada sebuah link tambahan, bernama **Virtual-Link** yang merupakan **fitur OSPF agar area selain area 0 seakan-akan terhubung langsung ke area 0/backbone area.**
 
+Sedangkan di gambar terdapat router2 yang berbatasan dengan area luar backbone, yaitu ada ASBR dan ABR
+
+> **ABR** ialah router yang berbatasan dengan area lain yang masih OSPF
+
+Sedangkan **ASBR**
+
+> router yang berlokasi di perbatasan dengan routing protocol lainnya (selain OSPF)
+
 * **Stub Area**
 
   Normal area yang tidak ada “sambungan”nya lagi
