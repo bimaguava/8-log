@@ -79,7 +79,7 @@ Autonomous System (AS) ini memiliki nomor layaknya Rukun Tetangga atau RT :v
 
 ![](/images/ic196634.gif)
 
-Gambar itu bisa diasosiasikan seperti dalam suatu perkampungan dalam suatu RW wkwkwk.
+Gambar itu bisa diasosiasikan seperti dalam suatu perkampungan dalam suatu RW (Rukun Warga)
 
 Maka `Exterior Gateway Protocol` (EGP) layaknya sebuah RW yang mengorganisir beberapa RT didalamnya. Dalam hal ini posisi RT dicontohkan sebagai IGP.
 
@@ -121,13 +121,13 @@ Contoh proses **broadcast**
 
 Dikatakan broadcast karena di gambar fitur switch memang menyediakan fungsi broadcast yang menyebabkan semua router (R2,R3,R4) menerima paket yang dikirim dari R1.
 
-Contoh **non-broadcast** 
+Contoh **non-broadcast**
 
 ![](/images/non-broadcast.jpg)
 
 Sedangkan pada gambar ini merupakan switch frame relay, kita tahu di switch frame relay tidak ada fitur broadcast. Makanya di gambar tanda hijaunya (paket) cuma menuju satu router (R2)
 
-**Tipe2 network** yang koneksi OSPFnya melalui switch frame relay itu seperti Point-to-Multipoint, Broadcast Multiaccess, dan NBMA. 
+**Tipe2 network** yang koneksi OSPFnya melalui switch frame relay itu seperti Point-to-Multipoint, Broadcast Multiaccess, dan NBMA.
 
 # Tipe Area di OSPF
 
@@ -148,7 +148,7 @@ biasa disebut Area 0, semua area yang terhubung ke Area 0 akan bisa saling ping,
 
 # Terakhir, Masalah OSPF dalam multi network
 
-Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel. Sekarang kita akan membahas 
+Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel. Sekarang kita akan membahas
 
 # Referensi
 
