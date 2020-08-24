@@ -304,6 +304,13 @@ Untuk memperluas NSSA agar berfungsi sebagai area yang benar-benar pendek, mengh
 
 > ABR dari NSSA yang benar-benar pendek (atau area yang tidak terlalu pendek, jika Anda lebih suka) memasukkan rute default tanpa konfigurasi lebih lanjut.
 
+### Ringkasan
+
+* **Area standar** dapat berisi LSA tipe 1, 2, 3, 4, dan 5, dan mungkin berisi ASBR. Tulang punggung dianggap sebagai area standar.
+* **Area rintisan** dapat berisi LSA tipe 1, 2, dan 3. Rute default diganti untuk rute eksternal.
+* **Area yang benar-benar pendek** hanya dapat berisi LSA tipe 1 dan 2, dan LSA tipe 3 tunggal. Tipe 3 LSA menjelaskan rute default, menggantikan semua rute eksternal dan antar-area.
+* **Area yang tidak terlalu pendek** menerapkan fungsionalitas bertopik atau benar-benar pendek namun berisi ASBR. Tipe 7 LSA yang dihasilkan oleh ASBR diubah menjadi tipe 5 oleh ABR untuk dibanjiri ke seluruh domain OSPF.
+
 # Terakhir, Masalah OSPF dalam multi network
 
 Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel. Sekarang kita akan membahas
