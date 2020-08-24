@@ -229,4 +229,4 @@ Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel
 * [https://www.ccnablog.com/ospf-part-iv/](https://www.ccnablog.com/ospf-part-iv/ "https://www.ccnablog.com/ospf-part-iv/")
 * [https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/](https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/ "https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/")
 * [https://www.ccnablog.com/dynamic-routing-protocols/](https://www.ccnablog.com/dynamic-routing-protocols/ "https://www.ccnablog.com/dynamic-routing-protocols/")
-* [https://packetlife.net/blog/2008/jun/19/ospf-network-types/](https://packetlife.net/blog/2008/jun/19/ospf-network-types/ "https://packetlife.net/blog/2008/jun/19/ospf-network-types/")
+* [Mikrotik ID](http://www.mikrotik.co.id/artikel_lihat.php?id=319#:\~:text=LSA%20Type%205%20(OSPF%20AS,%2C%20OSPF%2C%20atau%20Satic%20route.)
