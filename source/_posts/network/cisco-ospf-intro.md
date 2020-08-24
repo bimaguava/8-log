@@ -192,19 +192,33 @@ Misal ketika ada perubahan topologi maka router dalam jaringan OSPF akan mengiri
 * **LSA Type 2** **(Network LSA):** berisi network2 yang dibawa oleh router2 OSPF itu
 
   ![](/images/lsa-type-2.png)
-* **LSA Type 3 (Summary LSA):** berisi `summary route` yang biasanya ada pada router yang menghubungkan 2 area atau lebih (ABR)
+* **LSA Type 3 (Summary LSA):** berisi `Summary Route` yang biasanya ada pada router yang menghubungkan 2 area atau lebih (ABR)
 
   ![](/images/lsa-type-3.png)
-* **LSA Type 4 (Summary ASBR LSA):** berisi `summary route` external diluar OSPF yang biasanya ada pada ASBR (Router OSPF yang menghubungkan OSPF dengan Routing Protocol Lain)
+
+  Tidak seperti LSA Type 1 & 2 untuk LSA Type 3 ini akan di-advertise keluar area
+* **LSA Type 4 (Summary ASBR LSA):** berisi `Summary Route` external diluar OSPF yang biasanya ada pada ASBR
 
   ![](/images/lsatype-4.png)
+
+  LSA ini digunakan untuk mengirimkan informasi mengenai ASBR ke area yang lain yang mana ASBR ini nanti yang akan mengadvertise `Eksternal Route` (LSA Type 5).
+
+  > LSA Type 4 ini tidak di advertise langsung dan digunakan oleh ASBR dalam 'local' areanya, namun oleh ABR di setiap area dalam satu AS (Autonomous System) yang sama.
 * **LSA Type 5 (Autonomous System/AS External LSA):** berisi rute2 external yang biasanya ada pada ASBR
 
   ![](/images/lsatype-5.png)
-* **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA):** Merupakan `Cisco Proprietary`, LSA ini berisi
-* **LSA Type 7 (NSSA-External LSA): asdasd**
+
+  LSA tipe 5 ini merupakan paket yang di-generate oleh ASBR untuk mengirimkan Redistribute-Route Eksternal ke jaringan OSPF dalam suatu AS number.
+
+  Metode yang digunakan untuk melakukan redistribute nantinya ada 2 cara yaitu E1 (as-type 1) dan E2 (as-type2).
+
+  > Eksternal Route ini merupakan informasi routing diluar jaringan AS OSPF, bisa BGP, RIP, OSPF, atau Satic route.
+* **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA):** Merupakan `Cisco Proprietary`, LSA ini berisi serangkaian paket agar setiap area mempunyai jalur sendiri untuk mengirim paket secara serentak (multicast)
+* **LSA Type 7 (NSSA-External LSA):** Tipe LSA ini digunakan oleh area OSPF yaitu NSSA (Not So Stubby Area) supaya ketika ada redistribute-route eksternal dan melewati area yang tidak support LSA Type 5 tetap dapat berjalan dengan baik.
 
   ![](/images/lsatype-7.png)
+
+  Misal, dibanyak kasus ketika ada redistribute-route eksternal dan melewati area STUB, dimana di area ini LSA type 5 tidak didukung, maka kita bisa menggantinya dengan area NSSA.
 
 # Terakhir, Masalah OSPF dalam multi network
 
