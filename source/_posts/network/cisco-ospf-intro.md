@@ -137,6 +137,8 @@ area lain selain area 0
 
 ## **Backbone Area**
 
+![](/images/artboard-1.png)
+
 biasa disebut Area 0, semua area yang terhubung ke Area 0 akan bisa saling ping, Backbone juga salah satu standard area
 
 * **Stub Area**
