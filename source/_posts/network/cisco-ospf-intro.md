@@ -155,21 +155,30 @@ Maka, akan ada sebuah link tambahan, bernama **Virtual-Link** yang merupakan **f
 
 Sedangkan di gambar terdapat router2 yang berbatasan dengan area luar backbone, yaitu ada ASBR dan ABR
 
-> **ABR** ialah router yang berbatasan dengan area lain yang masih OSPF. Guna ada ABR ini untuk melakukan koneksi antara area backbone 0 dengan area lainnya.
+> **ABR** ialah router OSPF di area A yang berbatasan dengan area lain
 
 Sedangkan **ASBR**
 
-> router yang berlokasi di perbatasan dengan routing protocol lainnya (selain OSPF)
+> router yang berlokasi di perbatasan dengan selain OSPF, tapi ke external link (EIGRP, RIP, Static,dll)
 
 ## Stub Area
 
-"Stub" disini berarti 
+"Stub" disini berarti sebuah area yang tidak ada sambungannya lagi. 
+
+* tidak menerima `external route`, router hanya mengirim melalui default route (0.0.0.0)
+* tapi masih menerima `summary route`
 
 ## Totally Stubby Area
 
-**Not-So-Stubby-Area (NSSA)**
+Sedangkan Totally Stubby Area, sebuah area yang hanya ada pada perangkat cisco saja yang mana tidak menerima `external route` dan `summary route` 
 
-**Totally Stubby NSSA**
+## **Not-So-Stubby-Area (NSSA)**
+
+Prinsipnya sama dengan **Stub Area**, tapi dibalik stub ada sambungannya lagi berupa routing protocol lain.
+
+## **Totally Stubby NSSA**
+
+Prinsipnya sama dengan **NSSA**, hanya saja cuma untuk default route saja.
 
 # Terakhir, Masalah OSPF dalam multi network
 
