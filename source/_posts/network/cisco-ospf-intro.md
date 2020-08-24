@@ -182,7 +182,9 @@ Sedangkan Totally Stubby Area, sebuah area yang hanya ada pada perangkat cisco s
 
 ## Not-So-Stubby-Area (NSSA)
 
-Prinsipnya sama dengan **Stub Area**, tapi dibalik stub ada sambungannya lagi berupa routing protocol lain.
+![](/images/artboard-nssa.png)
+
+Prinsipnya sama dengan **Stub Area**, tapi dibalik stub ada sambungannya lagi berupa routing protocol lain, tapi area tersebut bukan OSPF. Maka dari itu namanya "tidak terlalu stub" karena masih ada external link lagi.
 
 ## Totally Stubby NSSA
 
