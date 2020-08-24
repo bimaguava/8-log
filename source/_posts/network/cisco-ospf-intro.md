@@ -163,58 +163,79 @@ Sedangkan **ASBR**
 
 ## Stub Area
 
-"Stub" disini berarti sebuah area yang tidak ada sambungannya lagi. 
+"Stub" disini berarti sebuah area yang tidak ada sambungannya lagi.
 
 * tidak menerima `external route`, router hanya mengirim melalui default route (0.0.0.0)
 * tapi masih menerima `summary route`
 
 ## Totally Stubby Area
 
-Sedangkan Totally Stubby Area, sebuah area yang hanya ada pada perangkat cisco saja yang mana tidak menerima `external route` dan `summary route` 
+Sedangkan Totally Stubby Area, sebuah area yang hanya ada pada perangkat cisco saja yang mana tidak menerima `external route` dan `summary route`
 
-## **Not-So-Stubby-Area (NSSA)**
+## Not-So-Stubby-Area (NSSA)
 
 Prinsipnya sama dengan **Stub Area**, tapi dibalik stub ada sambungannya lagi berupa routing protocol lain.
 
-## **Totally Stubby NSSA**
+## Totally Stubby NSSA
 
 Prinsipnya sama dengan **NSSA**, hanya saja cuma untuk default route saja.
 
 # Tipe LSA di OSPF
 
-Untuk dapat memahami lagi perbedaan area2 tersebut, ada sebuah paket bernama LSA untuk membuat sebuah database OSPF. 
+Untuk dapat memahami lagi perbedaan area2 tersebut, ada sebuah paket bernama LSA untuk membuat sebuah database OSPF.
 
 Misal ketika ada perubahan topologi maka router dalam jaringan OSPF akan mengirimkan LSU yang didalamnya terdapat informasi LSA yang mana LSA terdiri dari beberapa tipe:
 
-* **LSA Type 1** **(Router LSA):** berisi router ID dari router2 yang menjalankan OSPF
+## **LSA Type 1** **(Router LSA)**
 
-  ![](/images/lsa-type-1.png)
-* **LSA Type 2** **(Network LSA):** berisi network2 yang dibawa oleh router2 OSPF itu
+berisi router ID dari router2 yang menjalankan OSPF
 
-  ![](/images/lsa-type-2.png)
-* **LSA Type 3 (Summary LSA):** berisi `Summary Route` yang biasanya ada pada router yang menghubungkan 2 area atau lebih (ABR)
+![](/images/lsa-type-1.png)
 
-  ![](/images/lsa-type-3.png)
+## **LSA Type 2** **(Network LSA)**
 
-  Tidak seperti LSA Type 1 & 2 untuk LSA Type 3 ini akan di-advertise keluar area
-* **LSA Type 4 (Summary ASBR LSA):** berisi `Summary Route` external diluar OSPF yang biasanya ada pada ASBR
+berisi network2 yang dibawa oleh router2 OSPF itu
 
-  ![](/images/lsatype-4.png)
+![](/images/lsa-type-2.png)
 
-  LSA ini digunakan untuk mengirimkan informasi mengenai ASBR ke area yang lain yang mana ASBR ini nanti yang akan mengadvertise `Eksternal Route` (LSA Type 5).
+## **LSA Type 3 (Summary LSA)**
 
-  > LSA Type 4 ini tidak di advertise langsung dan digunakan oleh ASBR dalam 'local' areanya, namun oleh ABR di setiap area dalam satu AS (Autonomous System) yang sama.
-* **LSA Type 5 (Autonomous System/AS External LSA):** berisi rute2 external yang biasanya ada pada ASBR
+berisi `Summary Route` yang biasanya ada pada router yang menghubungkan 2 area atau lebih (ABR)
 
-  ![](/images/lsatype-5.png)
+![](/images/lsa-type-3.png)
 
-  LSA tipe 5 ini merupakan paket yang di-generate oleh ASBR untuk mengirimkan Redistribute-Route Eksternal ke jaringan OSPF dalam suatu AS number.
+Tidak seperti LSA Type 1 & 2 untuk LSA Type 3 ini akan di-advertise keluar area
 
-  Metode yang digunakan untuk melakukan redistribute nantinya ada 2 cara yaitu E1 (as-type 1) dan E2 (as-type2).
+## **LSA Type 4 (Summary ASBR LSA)**
 
-  > Eksternal Route ini merupakan informasi routing diluar jaringan AS OSPF, bisa BGP, RIP, OSPF, atau Satic route.
-* **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA):** Merupakan `Cisco Proprietary`, LSA ini berisi serangkaian paket agar setiap area mempunyai jalur sendiri untuk mengirim paket secara serentak (multicast)
-* **LSA Type 7 (NSSA-External LSA):** Tipe LSA ini digunakan oleh area OSPF yaitu NSSA (Not So Stubby Area) supaya ketika ada redistribute-route eksternal dan melewati area yang tidak support LSA Type 5 tetap dapat berjalan dengan baik.
+berisi `Summary Route` external diluar OSPF yang biasanya ada pada ASBR
+
+![](/images/lsatype-4.png)
+
+LSA ini digunakan untuk mengirimkan informasi mengenai ASBR ke area yang lain yang mana ASBR ini nanti yang akan mengadvertise `Eksternal Route` (LSA Type 5).
+
+> LSA Type 4 ini tidak di advertise langsung dan digunakan oleh ASBR dalam 'local' areanya, namun oleh ABR di setiap area dalam satu AS (Autonomous System) yang sama.
+
+## **LSA Type 5 (Autonomous System/AS External LSA):**
+
+berisi rute2 external yang biasanya ada pada ASBR
+
+![](/images/lsatype-5.png)
+
+LSA tipe 5 ini merupakan paket yang di-generate oleh ASBR untuk mengirimkan Redistribute-Route Eksternal ke jaringan OSPF dalam suatu AS number.
+
+Metode yang digunakan untuk melakukan redistribute nantinya ada 2 cara yaitu E1 (as-type 1) dan E2 (as-type2).
+
+> Eksternal Route ini merupakan informasi routing diluar jaringan AS OSPF, bisa BGP, RIP, OSPF, atau Satic route.
+
+
+  ## **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA)**
+
+  Merupakan `Cisco Proprietary`, LSA ini berisi serangkaian paket agar setiap area mempunyai jalur sendiri untuk mengirim paket secara serentak (multicast)
+
+  ## **LSA Type 7 (NSSA-External LSA)**
+
+  Tipe LSA ini digunakan oleh area OSPF yaitu NSSA (Not So Stubby Area) supaya ketika ada redistribute-route eksternal dan melewati area yang tidak support LSA Type 5 tetap dapat berjalan dengan baik.
 
   ![](/images/lsatype-7.png)
 
@@ -229,4 +250,4 @@ Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel
 * [https://www.ccnablog.com/ospf-part-iv/](https://www.ccnablog.com/ospf-part-iv/ "https://www.ccnablog.com/ospf-part-iv/")
 * [https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/](https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/ "https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/")
 * [https://www.ccnablog.com/dynamic-routing-protocols/](https://www.ccnablog.com/dynamic-routing-protocols/ "https://www.ccnablog.com/dynamic-routing-protocols/")
-* [Mikrotik ID](http://www.mikrotik.co.id/artikel_lihat.php?id=319#:\~:text=LSA%20Type%205%20(OSPF%20AS,%2C%20OSPF%2C%20atau%20Satic%20route.)
+* \[Mikrotik ID\](http://www.mikrotik.co.id/artikel_lihat.php?id=319#:\~:text=LSA%20Type%205%20(OSPF%20AS,%2C%20OSPF%2C%20atau%20Satic%20route.)
