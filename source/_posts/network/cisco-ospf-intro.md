@@ -139,7 +139,7 @@ area lain selain area 0
 
 ![](/images/artboard-1.png)
 
-Backbone Area(juga salah satu standard area) biasa disebut Area 0. 
+Backbone Area(juga salah satu standard area) biasa disebut Area 0.
 
 > Masing-masing biasanya maksimal berjumlah 50 router per-area mengingat memang OSPF mengkonsumsi CPU yang lumayan tinggi
 
@@ -155,18 +155,21 @@ Maka, akan ada sebuah link tambahan, bernama **Virtual-Link** yang merupakan **f
 
 Sedangkan di gambar terdapat router2 yang berbatasan dengan area luar backbone, yaitu ada ASBR dan ABR
 
-> **ABR** ialah router yang berbatasan dengan area lain yang masih OSPF
+> **ABR** ialah router yang berbatasan dengan area lain yang masih OSPF. Guna ada ABR ini untuk melakukan koneksi antara area backbone 0 dengan area lainnya.
 
 Sedangkan **ASBR**
 
 > router yang berlokasi di perbatasan dengan routing protocol lainnya (selain OSPF)
 
-* **Stub Area**
+## Stub Area
 
-  Normal area yang tidak ada “sambungan”nya lagi
-* **Totally Stubby Area**
-* **Not-So-Stubby-Area (NSSA)**
-* **Totally Stubby NSSA**
+"Stub" disini berarti 
+
+## Totally Stubby Area
+
+**Not-So-Stubby-Area (NSSA)**
+
+**Totally Stubby NSSA**
 
 # Terakhir, Masalah OSPF dalam multi network
 
