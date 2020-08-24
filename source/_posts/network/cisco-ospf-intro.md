@@ -242,15 +242,23 @@ Misal, dibanyak kasus ketika ada redistribute-route eksternal dan melewati area 
 
 ## Contoh LSA di Area OSPF
 
-Nah sekarang ada beberapa contoh 
+Nah sekarang ada beberapa contoh proses kerja LSA dalam beberapa Area OSPF, sekedar untuk contoh saja.
 
 ### Standard Areas
 
 ![](/images/ospf_standard_area.jpg)
 
+Di gambar kita lihat ada Area 0 (backbone) yang membawa LSA tipe 1 dan 2 yang sedang flooding antara router di area yang sama (di dalam areanya)
+
+Tipe 3 dan 5 menggambarkan proses peng-advertising LSA ke `internal route` (tipe 3) dan `external route` (tipe 5) yang sedang flooding di area backbone (Area 0) dan Standard Area.
+
+Tipe 4 khusus LSA ini die meng-inject kepada backbone yang mana berasal dari router ASBR (R3) yang berguna untuk memastikan semua router lain dapat menjangkau ASBR.
+
 ### Stub Areas
 
 ![](/images/ospf_stub_area.jpg)
+
+Di gambar  itu kita
 
 ### Totally Stubby Areas
 
