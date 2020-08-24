@@ -182,7 +182,7 @@ Prinsipnya sama dengan **NSSA**, hanya saja cuma untuk default route saja.
 
 # Tipe LSA di OSPF
 
-Sebagai pelengkap untuk membahas tipe2 area kita akan membahas juga sebuah paket bernama LSA untuk membuat sebuah database OSPF.
+Sebagai pelengkap untuk membahas tipe2 area pada OSPF tadi kita akan membahas juga sebuah paket bernama LSA untuk membuat sebuah database OSPF.
 
 Misal ketika ada perubahan topologi maka router dalam jaringan OSPF akan mengirimkan LSU yang didalamnya terdapat informasi LSA yang mana LSA terdiri dari beberapa tipe:
 
