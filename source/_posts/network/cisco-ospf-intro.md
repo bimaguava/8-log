@@ -240,6 +240,26 @@ Tipe LSA ini digunakan oleh area OSPF yaitu NSSA (Not So Stubby Area) supaya ket
 
 Misal, dibanyak kasus ketika ada redistribute-route eksternal dan melewati area STUB, dimana di area ini LSA type 5 tidak didukung, maka kita bisa menggantinya dengan area NSSA.
 
+## Contoh LSA di Area OSPF
+
+Nah sekarang ada beberapa contoh 
+
+### Standard Areas
+
+![](/images/ospf_standard_area.jpg)
+
+### Stub Areas
+
+![](/images/ospf_stub_area.jpg)
+
+### Totally Stubby Areas
+
+![](/images/ospf_total_stub_area.jpg)
+
+### Not-so Stubby Areas (NSSA)
+
+![](/images/ospf_nssa.jpg)
+
 # Terakhir, Masalah OSPF dalam multi network
 
 Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel. Sekarang kita akan membahas
