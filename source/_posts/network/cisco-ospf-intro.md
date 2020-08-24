@@ -187,12 +187,24 @@ Untuk dapat memahami lagi perbedaan area2 tersebut, ada sebuah paket bernama LSA
 Misal ketika ada perubahan topologi maka router dalam jaringan OSPF akan mengirimkan LSU yang didalamnya terdapat informasi LSA yang mana LSA terdiri dari beberapa tipe:
 
 * **LSA Type 1** **(Router LSA):** berisi router ID dari router2 yang menjalankan OSPF
+
+  ![](/images/lsa-type-1.png)
 * **LSA Type 2** **(Network LSA):** berisi network2 yang dibawa oleh router2 OSPF itu
+
+  ![](/images/lsa-type-2.png)
 * **LSA Type 3 (Summary LSA):** berisi `summary route` yang biasanya ada pada router yang menghubungkan 2 area atau lebih (ABR)
+
+  ![](/images/lsa-type-3.png)
 * **LSA Type 4 (Summary ASBR LSA):** berisi `summary route` external diluar OSPF yang biasanya ada pada ASBR (Router OSPF yang menghubungkan OSPF dengan Routing Protocol Lain)
+
+  ![](/images/lsatype-4.png)
 * **LSA Type 5 (Autonomous System/AS External LSA):** berisi rute2 external yang biasanya ada pada ASBR
-* **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA):** berisi 
-* **LSA Type 7 (NSSA-External LSA):** 
+
+  ![](/images/lsatype-5.png)
+* **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA):** Merupakan `Cisco Proprietary`, LSA ini berisi
+* **LSA Type 7 (NSSA-External LSA): asdasd**
+
+  ![](/images/lsatype-7.png)
 
 # Terakhir, Masalah OSPF dalam multi network
 
