@@ -311,10 +311,6 @@ Untuk memperluas NSSA agar berfungsi sebagai area yang benar-benar pendek, mengh
 * **Area yang benar-benar pendek** hanya dapat berisi LSA tipe 1 dan 2, dan LSA tipe 3 tunggal. Tipe 3 LSA menjelaskan rute default, menggantikan semua rute eksternal dan antar-area.
 * **Area yang tidak terlalu pendek** menerapkan fungsionalitas bertopik atau benar-benar pendek namun berisi ASBR. Tipe 7 LSA yang dihasilkan oleh ASBR diubah menjadi tipe 5 oleh ABR untuk dibanjiri ke seluruh domain OSPF.
 
-# Terakhir, Masalah OSPF dalam multi network
-
-Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel. Sekarang kita akan membahas
-
 # Referensi
 
 * [https://packetlife.net/blog/2008/jun/24/ospf-area-types/](https://packetlife.net/blog/2008/jun/24/ospf-area-types/ "https://packetlife.net/blog/2008/jun/24/ospf-area-types/")
