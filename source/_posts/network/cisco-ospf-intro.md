@@ -139,7 +139,19 @@ area lain selain area 0
 
 ![](/images/artboard-1.png)
 
-biasa disebut Area 0, semua area yang terhubung ke Area 0 akan bisa saling ping, Backbone juga salah satu standard area
+Backbone Area(juga salah satu standard area) biasa disebut Area 0. 
+
+> Masing-masing biasanya maksimal berjumlah 50 router per-area mengingat memang OSPF mengkonsumsi CPU yang lumayan tinggi
+
+Backbone/Area 0 bertindak sebagai penghubung bagi area lain agar bisa terkoneksi.
+
+Maka semua area yang terhubung ke Area 0 akan bisa saling ping. Dalam kata lain apabila Area 2 dan Area 1 ingin bisa terhubung maka harus melalui Area Backbone terlebih dahulu. Dan tidak boleh terhubung selain ke area selain area 0.
+
+Jadi apabila ada Area 3 seperti gambar ini
+
+![](/images/artboard-12.png)
+
+Maka, akan ada sebuah link tambahan, bernama **Virtual-Link** yang merupakan **fitur OSPF agar area selain area 0 seakan-akan terhubung langsung ke area 0/backbone area.**
 
 * **Stub Area**
 
