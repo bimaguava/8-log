@@ -222,11 +222,17 @@ berisi rute2 external yang biasanya ada pada ASBR
 
 ![](/images/lsatype-5.png)
 
-LSA tipe 5 ini merupakan paket yang di-generate oleh ASBR untuk mengirimkan Redistribute-Route Eksternal ke jaringan OSPF dalam suatu AS number.
-
-Metode yang digunakan untuk melakukan redistribute nantinya ada 2 cara yaitu E1 (as-type 1) dan E2 (as-type2).
+LSA tipe 5 ini merupakan paket yang di-generate oleh ASBR untuk mengirimkan **Redistribute-Route Eksternal** ke jaringan OSPF dalam suatu AS number.
 
 > Eksternal Route ini merupakan informasi routing diluar jaringan AS OSPF, bisa BGP, RIP, OSPF, atau Satic route.
+
+Metode yang digunakan untuk melakukan redistribute nantinya ada 2 cara yaitu **E1 (as-type 1)** dan **E2 (as-type2)**.
+
+> **E1** – biasanya digunakan untuk menghubungkan rute2 dari berbagai macam routing protocol didalam satu ISP, metricnya akan bertambah sendiri tergantung dari berapa besar cost (bandwidth) yang dilalui tiap titik.
+
+Sedangkan **E2**
+
+> E2 (Default) – bedanya dengan E1 adalam metricnya tetap…contoh, klo E2 metricnya 1120…di SEMUA router ospf akan bilang metricnya 1120…tapi klo E1 akan dikalkulasi lagi, tergantung dari berapa banyak link yang dilewati
 
 ## **LSA Type 6 (Multicast OSPF LSA/Group Membership LSA)**
 
@@ -258,9 +264,9 @@ Tipe 4 khusus LSA ini die meng-inject kepada backbone yang mana berasal dari rou
 
 ![](/images/ospf_stub_area.jpg)
 
-Di gambar itu kita melihat R2 dan R3 berada pada Stub Area. 
+Di gambar itu kita melihat R2 dan R3 berada pada Stub Area.
 
-Dan saat itu ABR (R2&R3) meng-inject LSA tipe 3 yang berisi rute default ke area stub. 
+Dan saat itu ABR (R2&R3) meng-inject LSA tipe 3 yang berisi rute default ke area stub.
 
 Pada area stub external route tidak akan bekerja, maka kita lihat ABR tidak meneruskan LSA tipe 4 ke area lain.
 
@@ -316,4 +322,4 @@ Untuk memperluas NSSA agar berfungsi sebagai area yang benar-benar pendek, mengh
 * [https://packetlife.net/blog/2008/jun/24/ospf-area-types/](https://packetlife.net/blog/2008/jun/24/ospf-area-types/ "https://packetlife.net/blog/2008/jun/24/ospf-area-types/")
 * [https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/](https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/ "https://belajarcomputernetwork.com/2012/06/05/ospf-open-shortest-path-first/")
 * [https://www.ccnablog.com/dynamic-routing-protocols/](https://www.ccnablog.com/dynamic-routing-protocols/ "https://www.ccnablog.com/dynamic-routing-protocols/")
-* \[Mikrotik ID\](http://www.mikrotik.co.id/artikel_lihat.php?id=319#:\~:text=LSA%20Type%205%20(OSPF%20AS,%2C%20OSPF%2C%20atau%20Satic%20route.)
+* [MikroTik ID](http://www.mikrotik.co.id/artikel_lihat.php?id=319#:\~:text=LSA%20Type%205%20(OSPF%20AS,%2C%20OSPF%2C%20atau%20Satic%20route)
