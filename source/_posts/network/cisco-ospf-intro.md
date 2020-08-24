@@ -288,6 +288,22 @@ Konfigurasi stub nya tinggal menambahkan parameter `no-summary`, perintah ini di
 
 ![](/images/ospf_nssa.jpg)
 
+NSSA menggunakan tipe 7 LSA, yang pada dasarnya adalah tipe 5 LSA yang menyamar. Hal ini memungkinkan ASBR untuk mengiklankan tautan eksternal ke ABR, yang mengubah tipe 7 LSA menjadi tipe 5 sebelum membanjiri mereka ke domain OSPF lainnya.
+
+NSSA dapat berfungsi sebagai area rintisan atau area yang benar-benar pendek. Untuk menetapkan NSSA (stub) normal, semua router di area tersebut harus dikonfigurasi:
+
+    Router (config-router) # area 10 nssa
+
+Tipe 3 LSA akan masuk dan keluar dari area tersebut. Tidak seperti area stub normal, ABR _tidak_ akan memasukkan rute default ke NSSA kecuali dikonfigurasi secara eksplisit untuk melakukannya. Karena lalu lintas tidak dapat dialihkan ke tujuan eksternal tanpa rute default, Anda mungkin ingin memasukkannya dengan menambahkan **`default-information-originate`**(terima kasih kepada Adam karena telah menunjukkan hal ini).
+
+    Router (config-router) # area 10 nssa default-informastion-originate
+
+Untuk memperluas NSSA agar berfungsi sebagai area yang benar-benar pendek, menghilangkan tipe 3 LSA, semua ABR-nya harus dikonfigurasi dengan **`no-summary`**parameter:
+
+    Router (config-router) # area 10 nssa no-summary
+
+> ABR dari NSSA yang benar-benar pendek (atau area yang tidak terlalu pendek, jika Anda lebih suka) memasukkan rute default tanpa konfigurasi lebih lanjut.
+
 # Terakhir, Masalah OSPF dalam multi network
 
 Nah jika sebelumnya sudah dibahas teori dengan sesingkat-singkatnya alias simpel. Sekarang kita akan membahas
