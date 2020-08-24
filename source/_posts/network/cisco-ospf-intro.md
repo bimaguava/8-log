@@ -165,12 +165,16 @@ Sedangkan **ASBR**
 
 ![](/images/artboard-virtual-link1.png)
 
-"Stub" disini berarti sebuah area yang tidak ada sambungannya lagi.
+"Stub" disini berarti sebuah area yang tidak ada sambungannya lagi. Area 11 adalah contoh stub, karena “dibelakang” area 11 tidak ada sambungan ke area lain.
 
 * tidak menerima `external route`, router hanya mengirim melalui default route (0.0.0.0)
 * tapi masih menerima `summary route`
 
+Contoh…area 2 konek ke area 1, tidak langsung ke area 0 (backbone)
+
 ![](/images/artboard-virtual-link2.png)
+
+Maka ada Virtual-link adalah teknologi semacam “tunneling” khusus OSPF
 
 ## Totally Stubby Area
 
