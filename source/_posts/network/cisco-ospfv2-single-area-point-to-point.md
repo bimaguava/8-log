@@ -3,7 +3,7 @@ draft: true
 comments: true
 toc: true
 title: 'Cisco: OSPFv2 Single Area Point to Point'
-date: 2020-08-16T23:49:00Z
+date: 2020-08-16T23:49:00.000+00:00
 updated: 
 category:
 - network
@@ -15,13 +15,21 @@ keywords: []
 ---
 ## Petunjuk
 
-Dalam aktivitas ini, Anda akan mengaktifkan perutean OSPF menggunakan pernyataan jaringan dan masker wildcard, mengonfigurasi perutean OSPF pada antarmuka, dan dengan menggunakan topeng quad-zero pernyataan jaringan. Selain itu, Anda akan mengonfigurasi ID router eksplisit dan antarmuka pasif.
+Pada materi ini kita akan mencoba belajar bagaimana untuk:
+
+* memberikan `Router-ID` 
+* mengkonfig network2 untuk routing OSPF
+* dan juga menyetel interface yang menuju ke LAN agar menjadi `Passive Interfaces`
 
 ## Lab
 
 Download: [https://drive.google.com/file/d/1TxsgFsZkkP6cOvu3XonxSSLUzu5K-6sX/view](https://drive.google.com/file/d/1TxsgFsZkkP6cOvu3XonxSSLUzu5K-6sX/view "https://drive.google.com/file/d/1TxsgFsZkkP6cOvu3XonxSSLUzu5K-6sX/view")
 
 ![](/images/screenshot_2020-08-17_19-07-45.png)
+
+Berikut adalah topologi point-to-point yang ditambah dengan frame relay yang memang juga bisa ditempatkan di antara LAN seperti itu. 
+
+Jadi topologi tersebut cukup sederhana dan tugas kita hanya perlu menghubungkan masing-masing network agar LAN 1 sampai 3 bisa berkomunikasi.
 
 ## Tabel Address
 
