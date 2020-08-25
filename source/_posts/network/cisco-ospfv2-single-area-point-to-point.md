@@ -83,8 +83,89 @@ dan hitung setiap nilai dari 1 oktet, maka dapat `255.255.255.0`
 
 **Bagaimana cara mengetahui wilcard masknya?**
 
-Caranya dengan mengurangi **255.255.255.255** dengan subnet mask kita tadi, `255.255.255.0` maka kita akan mendapatkan 0.0.0.255.
+Caranya dengan mengurangi **255.255.255.255** dengan subnet mask kita tadi, `255.255.255.0` maka kita akan mendapatkan `0.0.0.255`.
 
 > Pada Router OSPF networknya menggunakan /30 alias cuma dapat host 2 doang, kita juga harus menghitung subnet mask dan wilcard masknya juga, silahkan hitung ...
 
-## 2.B. Menyetel Network dengan Network Command dan Wilcard Mask
+## 2.B. Menyetel R1 dengan Network statements dan Wilcard Mask
+
+Commandnya akan seperti ini
+
+> Router(config-router)# **network** network-address wildcard-mask **area** area-id
+
+untuk **network-address** kita lihat yang directly connected ke R1 siapa saja, lihatnya di tabel routing
+
+    R1(config-router)# do show ip route
+
+![](/images/r1.png)
+
+yaitu 10.1.1.0, 10.1.1.4, dan 192.168.10.0
+
+Sekarang wilcardnya.
+
+* 10.1.1.0
+
+  kan dia /30, setelah dihitung wilcardnya 0.0.0.3
+* 10.1.1.4
+
+  kan dia /30, setelah dihitung wilcardnya 0.0.0.3
+* 192.168.10.0
+
+  kan dia /24, setelah dihitung wilcardnya 0.0.0.255
+
+Sekarang Areanya.
+
+Karena dalam topologi ini ingin membuat semua router dalam satu area, jadi kita kasih area 0 yang sering disebut backbone area.
+
+Masih dalam mode config router ospf tadi, konfignya jadi seperti berikut
+
+    R1(config-router)# network 10.1.1.0 0 0.0.0.3 area 0
+    R1(config-router)# network 10.1.1.4 0 0.0.0.3 area 0
+    R1(config-router)# network 192.168.10.2 0 0.0.0.255 area 0
+
+## 2.C. Menyetel R2 dengan IP Address interface dan quad-zero masks
+
+Pada R2 sekarang kita akan melakukan konfigurasi yang berbeda, padahal gampangnya ya tinggal pakai command ini sih 
+
+> Router(config-router)# **network** network-address wildcard-mask **area** area-id
+
+Tapi sepertinya ada yang baru, yaitu kita tidak menggunakan `network-statements` alias ip-ip yang directly connected dan juga `wilcard mask`. 
+
+Jadi kita akan gunakan `IP addresses dari interfaces routenya` dan sekarang menggunakan `quad-zero masks` alias 0.0.0.0
+
+Pertama-tama kita cek IP interfaces punya router
+
+    R2(config-router)# do show ip interface brief
+
+![](/images/r2.png)
+
+Sekarang tinggal masukkan tiap ip interface dengan quad zero mask seperti ini
+
+    R2(config-router)# network 192.168.20.1 0.0.0.0 area 0
+    R2(config-router)# network 10.1.1.2 0.0.0.0 area 0
+    R2(config-router)# network 10.1.1.9 0.0.0.0 area 0
+
+Berikut show runnya
+
+![](/images/r2-2.png)
+
+Dengan cara ini juga router akan mendeteksi router lain yang menjalankan OSPF untuk selanjutnya dipilih menjadi neighbor adjacencynyanya, selanjutnya ada cara lain.
+
+Lanjut.
+
+## 2.D. Menyetel R3 langsung di interfacenya
+
+R3 interfacenya yang bersangkutan ada  `G0/0/0`, `S0/1/0`, dan `S0/1/1`, kita lakukan satu-satu 
+
+    R3(config)# int g0/0/0
+    R3(config-if)# ip ospf 10 area 0
+    
+    R3(config)# int s0/1/0
+    R3(config-if)# ip ospf 10 area 0
+    
+    R3(config)# int s0/1/1
+    R3(config-if)# ip ospf 10 area 0
+
+# **Configure Passive Interfaces pada Network LAN**
+
+# **Verify Command**
