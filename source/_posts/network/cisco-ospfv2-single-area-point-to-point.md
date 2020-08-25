@@ -145,10 +145,6 @@ Sekarang tinggal masukkan tiap ip interface dengan quad zero mask seperti ini
     R2(config-router)# network 10.1.1.2 0.0.0.0 area 0
     R2(config-router)# network 10.1.1.9 0.0.0.0 area 0
 
-Berikut show runnya
-
-![](/images/r2-2.png)
-
 Dengan cara ini juga router akan mendeteksi router lain yang menjalankan OSPF untuk selanjutnya dipilih menjadi neighbor adjacencynyanya, selanjutnya ada cara lain.
 
 Lanjut.
@@ -165,6 +161,8 @@ R3 interfacenya yang bersangkutan ada  `G0/0/0`, `S0/1/0`, dan `S0/1/1`, kita la
     
     R3(config)# int s0/1/1
     R3(config-if)# ip ospf 10 area 0
+
+Sejauh ini 
 
 # **Configure Passive Interfaces pada Network LAN**
 
