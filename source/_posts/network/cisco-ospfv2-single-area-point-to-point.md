@@ -13,7 +13,7 @@ tags:
 keywords: []
 
 ---
-## Petunjuk
+# **Petunjuk**
 
 Pada materi ini kita akan mencoba belajar bagaimana untuk:
 
@@ -21,7 +21,7 @@ Pada materi ini kita akan mencoba belajar bagaimana untuk:
 * mengkonfig network2 untuk routing OSPF
 * dan juga menyetel interface yang menuju ke LAN agar menjadi `Passive Interfaces`
 
-## Lab
+# **Lab**
 
 Download: [https://drive.google.com/file/d/1TxsgFsZkkP6cOvu3XonxSSLUzu5K-6sX/view](https://drive.google.com/file/d/1TxsgFsZkkP6cOvu3XonxSSLUzu5K-6sX/view "https://drive.google.com/file/d/1TxsgFsZkkP6cOvu3XonxSSLUzu5K-6sX/view")
 
@@ -31,6 +31,8 @@ Berikut adalah topologi point-to-point yang ditambah dengan frame relay yang mem
 
 Jadi topologi tersebut cukup sederhana dan tugas kita hanya perlu menghubungkan masing-masing network agar LAN 1 sampai 3 bisa berkomunikasi.
 
-## Tabel Address
+# **Tabel Address**
 
 ![](/images/screenshot_2020-08-17_19-09-12.png)
+
+# **Configure Router ID**
