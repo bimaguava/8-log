@@ -162,8 +162,22 @@ R3 interfacenya yang bersangkutan ada  `G0/0/0`, `S0/1/0`, dan `S0/1/1`, kita la
     R3(config)# int s0/1/1
     R3(config-if)# ip ospf 10 area 0
 
-Sejauh ini 
+Sejauh ini dari ujung ke ujung seharusnya sudah bisa ping-pingan
 
 # **Configure Passive Interfaces pada Network LAN**
 
+OSPF will send its protocol traffic out of all interfaces that are participating in the OSPF process. On links that are not configured to other networks, such as LANs, this unnecessary traffic consumes resources. The passive-interface command will prevent the OSPF process from sending unnecessary routing protocol traffic out LAN interfaces.
+
+    R1(config-router)# passive interface g0/0/0
+    
+    R2(config-router)# passive interface g0/0/0
+    
+    R3(config-router)# passive interface g0/0/0
+
 # **Verify Command**
+
+![](/images/r1a.png)
+
+![](/images/r2a.png)
+
+![](/images/r3a.png)
