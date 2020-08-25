@@ -1,5 +1,5 @@
 ---
-title: Menghitung subnetting tanpa kalkulator
+title: Menghitung Jumlah IP (untuk Subnet /24 - /32)
 date: 2020-07-05
 draft: false
 categories: network
