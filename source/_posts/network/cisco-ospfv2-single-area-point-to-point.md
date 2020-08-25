@@ -81,12 +81,10 @@ Kalau udah berarti sisanya di kasih nol.
 
 dan hitung setiap nilai dari 1 oktet, maka dapat `255.255.255.0`
 
-> **Bagaimana cara mengetahui wilcard masknya?**
+**Bagaimana cara mengetahui wilcard masknya?**
 
 Caranya dengan mengurangi **255.255.255.255** dengan subnet mask kita tadi, `255.255.255.0` maka kita akan mendapatkan 0.0.0.255.
 
-Oke.
-
-Lanjut.
+> Pada Router OSPF networknya menggunakan /30 alias cuma dapat host 2 doang, kita juga harus menghitung subnet mask dan wilcard masknya juga, silahkan hitung ...
 
 ## 2.B. Menyetel Network dengan Network Command dan Wilcard Mask
