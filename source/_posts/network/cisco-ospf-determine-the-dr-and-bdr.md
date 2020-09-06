@@ -7,6 +7,7 @@ date: 2020-08-24T18:00:00.000+00:00
 updated: 
 category:
 - network
+- ensa
 tags:
 - cisco
 keywords: []
@@ -24,7 +25,11 @@ Yang mana kalau sudah membaca pada [OSPF intro](https://8log.js.org/2020/08/22/n
 
 Selain itu, juga kita sudah mengetahui bahwa untuk mengkonfigurasi OSPF ada 3 cara, yaitu:
 
-* nonton sinetron azab
+* dengan memasukkan network2 dan wilcard mask _e.g:_ `network 10.1.1.0 0 0.0.0.3 area 0`
+* dengan memasukkan IP address dari interfaces dan zero quad mask _e.g:_ `network 10.1.1.2 0.0.0.0 area 0`
+* atau dengan menyetel langsung di interfacesnya 
+
+Sekarang kita akan mengembangkan materi kita untuk lebih memahami untuk dapat bekerja dengan OSPF sebagai protokol routing yang termasuk di Interior Gateway Protokcol (IGP).
 
 # **Lab**
 
