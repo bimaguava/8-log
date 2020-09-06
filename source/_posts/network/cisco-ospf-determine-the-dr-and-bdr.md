@@ -34,3 +34,48 @@ Sekarang kita akan mengembangkan materi kita untuk lebih memahami untuk dapat be
 # **Lab**
 
 ![](/images/2020-06-09-min-21-44-36.png)
+
+Jadi skenarionya, kita akan belajar apa yang dilakukan dari DR dan BDR dan melihat perubahan apa yang terjadi dalam jaringan saat hal ini diimplementasikan. 
+
+Kemudian akan mengubah prioritas untuk mengontrol tugas dari sebuah DR dan mencoba untuk mengelek sebuah DR sesuai yang kita inginkan.
+
+Sehingga, pada akhirnya kita akan memverifikasi bahwa sebuah router yang kita pilih berhasil menjadi sebagai DR dan juga sebagai BDR.
+
+# **Tabel Address**
+
+![](/images/2020-07-09-sen-00-53-03.png)
+
+# **1. Examine DR and BDR Changing Roles**
+
+## 1.A Melihat status(state) OSPF Neighbor
+
+Disini kita mempunyai topologi yang sudah di setel dengan OSPF, sekarang kita ingin melihat status DR-BDR dari OSPF neighbor menggunakan perintah `show ip ospf neighbor` di setiap router.
+
+Jika router menampilkan **FULL/DROTHER**, artinya router tersebut bukan DR atau BDR.
+
+Pertama, **Router RA** dahulu
+
+    RA# show ip ospf neighbor
+    Neighbor ID Pri State Dead Time Address Interface
+    192.168.31.33 2 FULL/DR 00:00:35 192.168.1.3 GigabitEthernet0/0
+    192.168.31.22 1 FULL/BDR 00:00:35 192.168.1.2 GigabitEthernet0/0
+
+outpunya menampilkan 2 interface, yaitu **192.168.31.33 (Router RC)** dan **192.168.31.22 (Router RB)**.
+
+Seperti yang dibahas diawal, OSPF akan menyeleksi 3 hal, dan saat ini router memakai interface loopback yang telah disetel. Yang mana IP loopback tertinggi akan menjadi DR, sesuai output tersebut Router RC ialah sebuah Designated Router karena memiliki nilai Prioritas lebih tinggi. Sedangkan Router RB menjadi BDR.
+
+Kedua, **Router RB**
+
+    RB# show ip ospf neighbor
+    Neighbor ID Pri State Dead Time Address Interface
+    192.168.31.11 1 FULL/DROTHER 00:00:36 192.168.1.1 GigabitEthernet0/0
+    192.168.31.33 2 FULL/DR 00:00:36 192.168.1.3 GigabitEthernet0/0
+
+**..31.11** ialah **Router** **RA** dan 31.33 ialah **Router RC**.
+
+    RC# show ip ospf neighbor
+    Neighbor ID Pri State Dead Time Address Interface
+    192.168.31.11 1 FULL/DROTHER 00:00:39 192.168.1.1 GigabitEthernet0/0
+    192.168.31.22 1 FULL/BDR 00:00:38 192.168.1.2 GigabitEthernet0/0
+
+# **2. Modify OSPF Priority and Force Elections**
