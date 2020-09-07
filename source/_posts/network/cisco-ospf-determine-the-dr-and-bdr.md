@@ -27,7 +27,7 @@ Selain itu, juga kita sudah mengetahui bahwa untuk mengkonfigurasi OSPF ada 3 ca
 
 * dengan memasukkan network2 dan wilcard mask _e.g:_ `network 10.1.1.0 0 0.0.0.3 area 0`
 * dengan memasukkan IP address dari interfaces dan zero quad mask _e.g:_ `network 10.1.1.2 0.0.0.0 area 0`
-* atau dengan menyetel langsung di interfacesnya 
+* atau dengan menyetel langsung di interfacesnya
 
 Sekarang kita akan mengembangkan materi kita untuk lebih memahami untuk dapat bekerja dengan OSPF sebagai protokol routing yang termasuk di Interior Gateway Protokcol (IGP).
 
@@ -35,7 +35,7 @@ Sekarang kita akan mengembangkan materi kita untuk lebih memahami untuk dapat be
 
 ![](/images/2020-06-09-min-21-44-36.png)
 
-Jadi skenarionya, kita akan belajar apa yang dilakukan dari DR dan BDR dan melihat perubahan apa yang terjadi dalam jaringan saat hal ini diimplementasikan. 
+Jadi skenarionya, kita akan belajar apa yang dilakukan dari DR dan BDR dan melihat perubahan apa yang terjadi dalam jaringan saat hal ini diimplementasikan.
 
 Kemudian akan mengubah prioritas untuk mengontrol tugas dari sebuah DR dan mencoba untuk mengelek sebuah DR sesuai yang kita inginkan.
 
@@ -62,7 +62,9 @@ Pertama, **Router RA** dahulu
 
 outpunya menampilkan 2 interface, yaitu **192.168.31.33 (Router RC)** dan **192.168.31.22 (Router RB)**.
 
-Seperti yang dibahas diawal, OSPF akan menyeleksi 3 hal, dan saat ini router memakai interface loopback yang telah disetel. Yang mana IP loopback tertinggi akan menjadi DR, sesuai output tersebut Router RC ialah sebuah Designated Router karena memiliki nilai Prioritas lebih tinggi. Sedangkan Router RB menjadi BDR.
+Seperti yang dibahas diawal, OSPF akan menyeleksi 3 hal, dan saat ini router memakai interface loopback yang telah disetel. Yang mana IP loopback tertinggi akan menjadi DR.
+
+Sesuai output tersebut Router RC ialah sebuah Designated Router karena memiliki nilai Prioritas lebih tinggi. Sedangkan Router RB menjadi BDR.
 
 Kedua, **Router RB**
 
@@ -71,11 +73,73 @@ Kedua, **Router RB**
     192.168.31.11 1 FULL/DROTHER 00:00:36 192.168.1.1 GigabitEthernet0/0
     192.168.31.33 2 FULL/DR 00:00:36 192.168.1.3 GigabitEthernet0/0
 
-**..31.11** ialah **Router** **RA** dan 31.33 ialah **Router RC**.
+Kita melihat di sisi Router RB **..31.11** ialah **Router** **RA** dan **31.33** ialah **Router RC** yang statenya adalah sebagai **Designated Router**. Sedangkan Router RA merupakan hanya menjadi
+
+Kemudian, `show ip ospf neighbor` di Router RC
 
     RC# show ip ospf neighbor
     Neighbor ID Pri State Dead Time Address Interface
     192.168.31.11 1 FULL/DROTHER 00:00:39 192.168.1.1 GigabitEthernet0/0
     192.168.31.22 1 FULL/BDR 00:00:38 192.168.1.2 GigabitEthernet0/0
+
+Sehingga, kita tahu 
+
+* Router RC=**DR**
+* Router RB=**BDR**
+* Router RA=DROTHER (**Designated Router Other)** 
+
+## 1.B Mengaktifkan IP OSPF Adjacency debugging
+
+Dengan ini kita bisa memonitor proses election DR dan BDR dengan sebuah debug command. Kita akan mengaktifkannya di Router RA dan RB. Sedangkan Router RC alias DR yang nanti kita akan coba untuk dipadamkan.
+
+    RA# debug ip ospf adj
+    OSPF adjacency events debugging is on
+    
+    RB# debug ip ospf adj
+    OSPF adjacency events debugging is on
+
+lanjut.
+
+# 1.C Mendisable link diantara RC dan switch
+
+Kita akan belajar bagaimana sebuah proses election DR dan BDR, untuk mengetahui tersebut kita akan mencoba mendownkan si Designated Router
+
+    RC(config)# int gigabitEthernet 0/0
+    RC(config-if)# shutdown
+
+![](/images/2020-07-09-sen-13-34-12.png)
+
+Setelah sekitar 30 second (Setelah Dead timer expired), kita baru bisa melihat output debug, untuk mengetahui router mana yang dipilih sebagai DR dan router mana yang dipilih BDR setelah RC sebagai Designater Router dipadamkan
+
+Untuk itu, lihat output debugging dari Router RB yang sudah kita aktifkan debugnnya
+
+![](/images/2020-07-09-sen-13-48-18.png)
+
+Jadi, setelah Router RC padam, kini yang menjadi Designated Router yang memiliki IP loopback (dalam hal ini) tertinggi, yaitu Router RB yang mana tadinya ia sebagai sebagai Backup.
+
+Dan Router RA sebagai OSPF state sekarang berubah menjadi Backup Designated Router.
+
+![](/images/2020-06-09_min_21-44-36.png)
+
+Kurang lebih seperti itu proses sederhana yang terjadi apabila suatu link padam, maka router akan mengelek Router Backup (BDR) menjadi sebuah DR. 
+
+## 1.D Menyalahkan kembali link diantara RC dan switch
+
+Kalau tadi kita sudah mengetahui apa yang terjadi bila suatu link padam. Sekarang link tersebut kita akan restore kembali. Pastikan debugnya masih menyala, karena kita akan melihat prosesnya lagi.
+
+Sekarang kita coba restore link antara RC dan S1 alias gigabitEthernet 0/0
+
+    RC(config)# int gigabitEthernet 0/0
+    RC(config-if)# no shutdown
+
+jika link sudah menyala (tandanya warna hijau), mari kita liat pesan debugging di RB
+
+![](/images/2020-07-09_sen_14-50-47.png)
+
+Nah, sekarang yang terjadi adalah ada perubahan roles lagi saat Router RC di restore atau dinyalahkan kembali. Kenapa status DR dan BDR berubah lagi saat RC dinyalahkan?
+
+Hal itu terjadi dikarenakan OSPF tidak melakukan update DR BDR saat sudah ada yang aktif jika Designated Router ada dalam hal ini Router RA, maka OSPF process tidak akan mengganti Designated Routernya karena OSPF process tidak akan memilih sebuah DR yang baru lagi.
+
+Sama yang terjadi dengan BDR, OSPF process tidak akan memilih device yang baru untuk ini juga.
 
 # **2. Modify OSPF Priority and Force Elections**
