@@ -115,7 +115,7 @@ Untuk itu, lihat output debugging dari Router RB yang sudah kita aktifkan debugn
 
 ![](/images/2020-07-09-sen-13-48-18.png)
 
-Jadi, setelah Router RC padam, kini yang menjadi Designated Router yang memiliki IP loopback (dalam hal ini) tertinggi, yaitu Router RB yang mana tadinya ia sebagai sebagai Backup.
+Jadi, setelah Router RC padam, kini yang menjadi Designated Router yaitu Router RB yang mana tadinya ia sebagai sebagai Backup.
 
 Dan Router RA sebagai OSPF state sekarang berubah menjadi Backup Designated Router.
 
