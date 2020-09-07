@@ -235,3 +235,51 @@ Oke.
 Materi dilanjut ke Part 2.
 
 # **2. Modify OSPF Priority and Force Elections**
+
+Sekarang kita akan belajar bagaimana cara memilih paksa DR dan BDR berdasarkan nilai priority-nya, semakin besar nilainya makan akan diseleksi sebagai sebuah DR. Kurang lebih seperti itu.
+
+## 2.A Menyetel OSPF priority pada setiap router
+
+Caranya gunakan perintah `ip ospf priority <value>` untuk mengkonfigurasi port GigabitEthernet 0/0 pada setiap router dengan **OSPF priorities interfaces** berikut:
+
+* **RA**: 200
+
+
+* ·**RB**: 100
+
+
+* ·**RC**: 1 (default priority)
+
+Confignya akan seperti ini
+
+    RA(config)# interface g0/0
+    RA(config-if)# ip ospf priority 200
+
+    RB(config)# interface g0/0
+    RB(config-if)# ip ospf priority 100
+
+    RC(config)# interface g0/0
+    RC(config-if)# ip ospf priority 1
+
+## 2.B Memilih paksa (election process) dengan mereset OSPF process pada router
+
+Setelah menyetel priority pada masing-masing router, untuk apply changes dengan perintah `clear ip ospf process`
+
+    RA# clear ip ospf process
+    Reset All OSPF processess? [no] yes
+    
+    RB# clear ip ospf process
+    Reset All OSPF processess? [no] yes
+    
+    RC# clear ip ospf process
+    Reset All OSPF processess? [no] yes
+
+Setelah ini kita akan mendapatkan hasilnya dari force election ini, yakni 
+
+* **RA**: 200 menjadi **Designated Router**
+
+
+* ·**RB**: 100 menjadi **Backup Designated Router**
+
+
+* ·**RC**: 1 (default priority)
