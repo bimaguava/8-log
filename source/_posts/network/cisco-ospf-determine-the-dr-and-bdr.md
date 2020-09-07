@@ -117,7 +117,7 @@ Untuk itu, lihat output debugging dari Router RB yang sudah kita aktifkan debugn
 
 Jadi, setelah Router RC padam, kini yang menjadi Designated Router yaitu Router RB yang mana tadinya ia sebagai sebagai Backup.
 
-Dan Router RA sebagai OSPF state sekarang berubah menjadi Backup Designated Router.
+Dan Router RA sebagai OSPF state/DROTHER sekarang berubah menjadi Backup Designated Router.
 
 ![](/images/2020-06-09_min_21-44-36.png)
 
