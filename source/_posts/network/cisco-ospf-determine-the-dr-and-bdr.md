@@ -125,9 +125,17 @@ Kurang lebih seperti itu proses sederhana yang terjadi apabila suatu link padam,
 
 ## 1.D Menyalahkan kembali link diantara RC dan switch
 
-Kalau tadi kita sudah mengetahui apa yang terjadi bila suatu link padam. Sekarang link tersebut kita akan restore kembali. Pastikan debugnya masih menyala, karena kita akan melihat prosesnya lagi.
+Kalau tadi kita sudah mengetahui apa yang terjadi bila suatu link padam. Sekarang link tersebut kita akan restore kembali. 
 
-Sekarang kita coba restore link antara RC dan S1 alias gigabitEthernet 0/0
+> Kita akan mencoba mengaktifkan debuggingnya, karena ceritanya kita iseng ingin tahu proses debuggingnya lagi
+
+    RA# debug ip ospf adj
+    OSPF adjacency events debugging is on
+    
+    RB# debug ip ospf adj
+    OSPF adjacency events debugging is on
+
+Dengan keadaan Debugging di RA dan RB aktif, sekarang kita coba restore link antara RC dan S1 alias gigabitEthernet 0/0
 
     RC(config)# int gigabitEthernet 0/0
     RC(config-if)# no shutdown
@@ -136,10 +144,43 @@ jika link sudah menyala (tandanya warna hijau), mari kita liat pesan debugging d
 
 ![](/images/2020-07-09_sen_14-50-47.png)
 
-Nah, sekarang yang terjadi adalah ada perubahan roles lagi saat Router RC di restore atau dinyalahkan kembali. Kenapa status DR dan BDR berubah lagi saat RC dinyalahkan?
+Nah, sekarang yang terjadi adalah ada perubahan roles lagi saat Router RC di restore atau dinyalahkan kembali. 
 
-Hal itu terjadi dikarenakan OSPF tidak melakukan update DR BDR saat sudah ada yang aktif jika Designated Router ada dalam hal ini Router RA, maka OSPF process tidak akan mengganti Designated Routernya karena OSPF process tidak akan memilih sebuah DR yang baru lagi.
+Kenapa status DR dan BDR berubah lagi saat RC dinyalahkan?
 
-Sama yang terjadi dengan BDR, OSPF process tidak akan memilih device yang baru untuk ini juga.
+> Karena seharusnya adalah **tidak berubah**
+
+Alasan kenapa **tidak berubah?** hal ini semestinya terjadi dikarenakan OSPF tidak melakukan update DR BDR saat sudah ada yang aktif. Jika Designated Router sudah ada, maka OSPF process tidak perlu lagi mengganti Designated Routernya karena memang tidak perlu.
+
+Sama yang terjadi dengan BDR, OSPF process tidak akan memilih device yang baru untuk memilih BDR juga.
+
+> **Permasalahannya...** ialah karena kita tadi mengaktifkan debugging pada Router RA dan RB, sehingga menyebabkan OSPF process  menangkap perubahan update, hasilnya DR dan BDR pun berubah
+
+**Note**: Karena perintah OSPF tidak mengembalikan RB sebagai DR dan RA sebagai BDR, kita tinggal matikan debugging pada RA dan RB.
+
+Perintahnya `undebug all`. Nah, setelah itu coba lagi matikan link gigabitEthernet 0/0 dan nyalahkan lagi
+
+Betulkah seperti itu yang terjadi? Mari kita coba...
+
+1. Matikan debug di RA dan RB
+
+    RA# undebug all
+    All possible debugging has been turned off
+    
+    RB# undebug all
+    All possible debugging has been turned off
+
+2. Matikan link RC ke S1
+
+    RC(config)# int gigabitEthernet 0/0
+    RC(config-if)# shutdown
+
+3. Lalu, nyalahkan lagi (^_^)
+
+    RC(config-if)# no shutdown
+
+4. Tunggu sebentar sampai linknya ijo, kemudian jalankan
+
+    RC(config-if)# do show ip ospf neighbor
 
 # **2. Modify OSPF Priority and Force Elections**
