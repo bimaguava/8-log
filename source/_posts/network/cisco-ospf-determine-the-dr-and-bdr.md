@@ -82,11 +82,11 @@ Kemudian, `show ip ospf neighbor` di Router RC
     192.168.31.11 1 FULL/DROTHER 00:00:39 192.168.1.1 GigabitEthernet0/0
     192.168.31.22 1 FULL/BDR 00:00:38 192.168.1.2 GigabitEthernet0/0
 
-Sehingga, kita tahu 
+Sehingga, kita tahu
 
 * Router RC=**DR**
 * Router RB=**BDR**
-* Router RA=DROTHER (**Designated Router Other)** 
+* Router RA=DROTHER (**Designated Router Other)**
 
 ## 1.B Mengaktifkan IP OSPF Adjacency debugging
 
@@ -121,11 +121,11 @@ Dan Router RA sebagai OSPF state/DROTHER sekarang berubah menjadi Backup Designa
 
 ![](/images/2020-06-09_min_21-44-36.png)
 
-Kurang lebih seperti itu proses sederhana yang terjadi apabila suatu link padam, maka router akan mengelek Router Backup (BDR) menjadi sebuah DR. 
+Kurang lebih seperti itu proses sederhana yang terjadi apabila suatu link padam, maka router akan mengelek Router Backup (BDR) menjadi sebuah DR.
 
 ## 1.D Menyalahkan kembali link diantara RC dan switch
 
-Kalau tadi kita sudah mengetahui apa yang terjadi bila suatu link padam. Sekarang link tersebut kita akan restore kembali. 
+Kalau tadi kita sudah mengetahui apa yang terjadi bila suatu link padam. Sekarang link tersebut kita akan restore kembali.
 
 > Kita akan mencoba mengaktifkan debuggingnya, karena ceritanya kita iseng ingin tahu proses debuggingnya lagi
 
@@ -144,7 +144,7 @@ jika link sudah menyala (tandanya warna hijau), mari kita liat pesan debugging d
 
 ![](/images/2020-07-09_sen_14-50-47.png)
 
-Nah, sekarang yang terjadi adalah ada perubahan roles lagi saat Router RC di restore atau dinyalahkan kembali. 
+Nah, sekarang yang terjadi adalah ada perubahan roles lagi saat Router RC di restore atau dinyalahkan kembali.
 
 Kenapa status DR dan BDR berubah lagi saat RC dinyalahkan?
 
@@ -162,7 +162,7 @@ Perintahnya `undebug all`. Nah, setelah itu coba lagi matikan link gigabitEthern
 
 Betulkah seperti itu yang terjadi? Mari kita coba...
 
-1. Matikan debug di RA dan RB
+* Matikan debug di RA dan RB
 
     RA# undebug all
     All possible debugging has been turned off
@@ -170,16 +170,16 @@ Betulkah seperti itu yang terjadi? Mari kita coba...
     RB# undebug all
     All possible debugging has been turned off
 
-2. Matikan link RC ke S1
+* Matikan link RC ke S1
 
     RC(config)# int gigabitEthernet 0/0
     RC(config-if)# shutdown
 
-3. Lalu, nyalahkan lagi (^_^)
+* Lalu, nyalahkan lagi (^_^)
 
     RC(config-if)# no shutdown
 
-4. Tunggu sebentar sampai linknya ijo, kemudian jalankan
+* Tunggu sebentar sampai linknya ijo, kemudian jalankan
 
     RC(config-if)# do show ip ospf neighbor
 
