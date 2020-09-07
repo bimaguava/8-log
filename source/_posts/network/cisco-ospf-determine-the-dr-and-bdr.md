@@ -127,12 +127,16 @@ Kurang lebih seperti itu proses sederhana yang terjadi apabila suatu link padam,
 
 Kalau tadi kita sudah mengetahui apa yang terjadi bila suatu link padam. Sekarang link tersebut kita akan restore kembali.
 
-> Kita akan mencoba mengaktifkan debuggingnya, karena ceritanya kita iseng ingin tahu proses debuggingnya lagi
+> Kita akan mencoba mengaktifkan debuggingnya, karena ceritanya kita iseng ingin tahu proses debuggingnya lagi.
+
+Perintahnya `debug ip ospf events`
 
     RA# debug ip ospf adj
+    RA# debug ip ospf events
     OSPF adjacency events debugging is on
     
     RB# debug ip ospf adj
+    RB# debug ip ospf events
     OSPF adjacency events debugging is on
 
 Dengan keadaan Debugging di RA dan RB aktif, sekarang kita coba restore link antara RC dan S1 alias gigabitEthernet 0/0
@@ -182,5 +186,6 @@ Betulkah seperti itu yang terjadi? Mari kita coba...
 * Tunggu sebentar sampai linknya ijo, kemudian jalankan
 
     RC(config-if)# do show ip ospf neighbor
+    
 
 # **2. Modify OSPF Priority and Force Elections**
