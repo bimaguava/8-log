@@ -100,7 +100,7 @@ Dengan ini kita bisa memonitor proses election DR dan BDR dengan sebuah debug co
 
 lanjut.
 
-# 1.C Mendisable link diantara RC dan switch
+# 1.C Mendisable link G0/0 di RC
 
 Kita akan belajar bagaimana sebuah proses election DR dan BDR, untuk mengetahui tersebut kita akan mencoba mendownkan si Designated Router
 
@@ -123,23 +123,21 @@ Dan Router RA sebagai OSPF state/DROTHER sekarang berubah menjadi Backup Designa
 
 Kurang lebih seperti itu proses sederhana yang terjadi apabila suatu link padam, maka router akan mengelek Router Backup (BDR) menjadi sebuah DR.
 
-## 1.D Menyalahkan kembali link diantara RC dan switch
+## 1.D Menyalahkan kembali link G0/0 RC
 
 Kalau tadi kita sudah mengetahui apa yang terjadi bila suatu link padam. Sekarang link tersebut kita akan restore kembali.
 
-> Kita akan mencoba mengaktifkan debuggingnya, karena ceritanya kita iseng ingin tahu proses debuggingnya lagi.
+> Sebelum itu, kita akan mencoba mengaktifkan event debuggingnya, karena ceritanya kita iseng ingin tahu proses debuggingnya events untuk suatu keperluan 
 
 Perintahnya `debug ip ospf events`
 
-    RA# debug ip ospf adj
     RA# debug ip ospf events
     OSPF adjacency events debugging is on
     
-    RB# debug ip ospf adj
     RB# debug ip ospf events
     OSPF adjacency events debugging is on
 
-Dengan keadaan Debugging di RA dan RB aktif, sekarang kita coba restore link antara RC dan S1 alias gigabitEthernet 0/0
+Dengan keadaan Debugging events di RA dan RB aktif, sekarang kita coba restore link antara RC dan S1 alias gigabitEthernet 0/0
 
     RC(config)# int gigabitEthernet 0/0
     RC(config-if)# no shutdown
@@ -158,15 +156,15 @@ Alasan kenapa **tidak berubah?** hal ini semestinya terjadi dikarenakan OSPF tid
 
 Sama yang terjadi dengan BDR, OSPF process tidak akan memilih device yang baru untuk memilih BDR juga.
 
-> **Permasalahannya...** ialah karena kita tadi mengaktifkan debugging pada Router RA dan RB, sehingga menyebabkan OSPF process  menangkap perubahan update, hasilnya DR dan BDR pun berubah
+> **Permasalahannya...** ialah karena kita tadi mengaktifkan `events debugging` pada Router RA dan RB, sehingga menyebabkan OSPF process menangkap perubahan update, hasilnya DR dan BDR pun berubah (lihat lagi gambar screenshot! diatas OSPF mengelek DR dan BDR baru, dibagian `13:04:10 OSPF: Elect BDR blablabla..`)
 
 **Note**: Karena perintah OSPF tidak mengembalikan RB sebagai DR dan RA sebagai BDR, kita tinggal matikan debugging pada RA dan RB.
 
-Perintahnya `undebug all`. Nah, setelah itu coba lagi matikan link gigabitEthernet 0/0 dan nyalahkan lagi
+Perintahnya `undebug all` untuk mematikan event debugging yang sebelumnya kita aktifkan untuk iseng2. Nah, setelah itu coba lagi matikan link gigabitEthernet 0/0 dan nyalahkan lagi
 
 Betulkah seperti itu yang terjadi? Mari kita coba...
 
-* Matikan debug di RA dan RB
+**Pertama**, Matikan debug di RA dan RB
 
     RA# undebug all
     All possible debugging has been turned off
@@ -174,18 +172,66 @@ Betulkah seperti itu yang terjadi? Mari kita coba...
     RB# undebug all
     All possible debugging has been turned off
 
-* Matikan link RC ke S1
+**Kedua**, Matikan link RC ke S1
 
     RC(config)# int gigabitEthernet 0/0
     RC(config-if)# shutdown
 
-* Lalu, nyalahkan lagi (^_^)
+**Ketiga**, Lalu, nyalahkan lagi (^_^)
 
     RC(config-if)# no shutdown
 
-* Tunggu sebentar sampai linknya ijo, kemudian jalankan
+**Keempat**, Tunggu sebentar sampai linknya ijo, kemudian jalankan
 
     RC(config-if)# do show ip ospf neighbor
+
+![](/images/2020-07-09_sen_16-02-08.png)
+
+Dan berikut log debugnya
+
+![](/images/2020-07-09_sen_16-10-04.png)
+
+Kita lihat tidak ada proses pengelekan (election) DR BDR baru.
+
+Yang artinya **Router RB** tetap jadi **Designated Router** 
+
+dan **Router RA** tetap jadi **Backup Designated Router**
+
+Oke.
+
+Materi di lanjut.
+
+## 1.E Mendisable link G0/0 RB
+
+Percobaan pertama adalah mendisable link di Router RC, kita sekaran akan masuk ke percobaan kedua yaitu mendisable link di Router RB
+
+    RB(config)# int gigabitEthernet 0/0
+    RB(config-if)# shutdown
+
+![](/images/2020-07-09_sen_16-17-37.png)
+
+Selanjutnya, kita tinggal melihat apa yang terjadi pada output debugging yang berada di RA
+
+![](/images/2020-07-09_sen_16-24-20.png)
+
+Maka, **Router RA** yang awalnya merupakan BDR sekarang menjadi **Designated Router**
+
+dan **Router** **RC** yang tadinya sebuah OSPF state/DROTHER menjadi **Backup Designated Router**
+
+Kira-kira seperti itu simpelnya.
+
+Sebelum menuju Part 2, silahkan nyalahkan kembali link RC yang dimatikan tadi. Untuk hasilnya sudah pasti DR BDR-nya **tidak berubah.**
+
+Dan jangan lupa kalau sudah tidak ingin lihat debuggingnya dimatikan saja
+
+    RA# undebug all
+    All possible debugging has been turned off
     
+    RB# undebug all
+    All possible debugging has been turned off
+
+Oke.
+
+Materi dilanjut ke Part 2.
 
 # **2. Modify OSPF Priority and Force Elections**
