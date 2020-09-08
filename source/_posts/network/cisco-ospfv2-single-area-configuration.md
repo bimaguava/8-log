@@ -15,7 +15,7 @@ keywords: []
 ---
 # **Objectives**
 
-Kalau di materi [sebelumnya](https://8log.js.org/2020/08/16/network/cisco-ospfv2-single-area-point-to-point/), kita sudah mengimplementasikan OSPF single area dengan topologi point to point, sekarang kita akan mencoba menerapkannya ke jaringan `point to point` dan `broadcast multiaccess`.
+Kalau di materi [sebelumnya](https://8log.js.org/2020/08/16/network/cisco-ospfv2-single-area-point-to-point/), kita sudah mengimplementasikan OSPF single area dengan topologi point to point, sekarang kita akan mencoba menerapkannya ke jaringan `point to point and broadcast multiaccess`.
 
 # **Overview**
 
@@ -24,6 +24,10 @@ Sekarang kita akan mencoba untuk mengkonfigurasi Routing Dynamic OSPF, untuk yan
 # **Lab**
 
 ![](/images/2020-08-09_sel_07-21-22.png)
+
+Pada materi kali ini akan sangat berguna sekali untuk melatih kemampuan kita dalam mengkonfigurasi router dengan OSPF dengan beberapa ketentuan yang disediakan sebagai berikut.
+
+![](/images/2020-08-09_sel_20-08-28.png)
 
 # **Tabel Address**
 
