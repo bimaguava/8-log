@@ -19,6 +19,8 @@ Kalau di materi [sebelumnya](https://8log.js.org/2020/08/16/network/cisco-ospfv2
 
 # **Overview**
 
+Sekarang kita akan mencoba untuk mengkonfigurasi Routing Dynamic OSPF, untuk yang ingin tahu cara melihat dan menganalisis konfigurasi OSPF sebelumnya sudah dijelaskan di [sini](https://8log.js.org/2020/09/08/network/cisco-ospfv2-single-area-verify/).
+
 # **Lab**
 
 ![](/images/2020-08-09_sel_07-21-22.png)
