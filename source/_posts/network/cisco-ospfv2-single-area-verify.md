@@ -114,7 +114,7 @@ Yang mana merupakan rute menuju titik dimana sebuah destination, yaitu 0.0.0.0/0
 
 Lalu, dari code `[110/1]`, 110 menunjukkan **administrative distance** OSPF sedangkan 20 menunjukkan **nilai metric** yang digunakan R1 menuju network tersebut. 
 
-Tabel Administrative distance
+**Berikut tabel Administrative distance**
 
 | Route Source | Default Distance Value |
 | --- | --- |
@@ -133,7 +133,7 @@ Tabel Administrative distance
 | Internal BGP | 200 |
 | Unknown | 255 |
 
-Tabel nilai metric
+**Berikut tabel nilai metric**
 
 ![](/images/selection_078.png)
 
