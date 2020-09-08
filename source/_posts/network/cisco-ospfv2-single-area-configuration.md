@@ -3,7 +3,7 @@ draft: true
 comments: true
 toc: true
 title: 'Cisco: OSPFv2 Single Area Configuration (point to point and broadcast multiaccess)'
-date: 2020-09-08T00:16:00Z
+date: 2020-09-08T13:06:00Z
 updated: 
 category:
 - network
