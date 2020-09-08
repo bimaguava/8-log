@@ -31,7 +31,9 @@ Pada area berwarna hijau nanti disana kita menambahkan sebuah jaringan wireless 
 
 Cuma kita akan belajar memverifikasi saja bagaimana OSPF yang sudah diterapkan disitu, setelah itu nanti kita baru akan mencoba menyambungkan LAN baru ke **Branch Office.**
 
-Untuk menambahkan LAN baru ke **Branch Office**, kita disini hanya diberi akses untuk bekerja menggunakan R1 dan R2 saja, dengan username: **BranchAdmin**, dan password: **Branch1234**
+Untuk menambahkan LAN baru ke **Branch Office**, kita disini hanya diberi akses untuk bekerja menggunakan R1 dan R3 saja, dengan username: **BranchAdmin**, dan password: **Branch1234.**
+
+Sedangkan R2 kita tidak diberi izin show run. Cuma bisa beberapa perintah verifikasi saja.
 
 # **Tabel Address**
 
@@ -189,11 +191,97 @@ Dan kita lihat Neighbor ID alias _"Router ID nya Neighbor"_ yang biasanya didapa
     Reply from 64.100.54.5: bytes=32 time=1ms TTL=253
     Reply from 64.100.54.5: bytes=32 time=1ms TTL=253
 
-Apabila ping tidak berhasil pastikan mereset process ID OSPF karena mungkin saja sebelumnya Router ID baru diset dan belum menunjukkan perubahan. 
+Apabila ping tidak berhasil pastikan mereset process ID OSPF karena mungkin saja sebelumnya Router ID baru diset dan belum menunjukkan perubahan.
 
 Dalam kasus tersebut maka ID itu tidak akan berubah sampai OSPF Process direset ulang terlebih dahulu dengan perintah `clear ip ospf process [pid]` atau bisa dengan mereload router.
 
+## 2.A Verify OSPFv2 operation on R2
+
+### Mengetahui rute
+
+Pertama-tama login terlebih dahulu ke router. Lalu, kita akan melihat ip route untuk meneliti rute-rutenya
+
+    R2#show ip route
+    Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+           D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+           N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+           E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+           i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+           * - candidate default, U - per-user static route, o - ODR
+           P - periodic downloaded static route
+    
+    Gateway of last resort is 64.100.54.5 to network 0.0.0.0
+
+Output:
+
+         64.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+    C       64.100.54.4/30 is directly connected, GigabitEthernet0/1
+    L       64.100.54.6/32 is directly connected, GigabitEthernet0/1
+         172.16.0.0/16 is variably subnetted, 5 subnets, 3 masks
+    O       172.16.1.0/24 [110/65] via 172.16.3.1, 00:30:42, Serial0/0/0
+    C       172.16.2.0/24 is directly connected, GigabitEthernet0/0
+    L       172.16.2.1/32 is directly connected, GigabitEthernet0/0
+    C       172.16.3.0/30 is directly connected, Serial0/0/0
+    L       172.16.3.2/32 is directly connected, Serial0/0/0
+    O    192.168.1.0/24 [110/65] via 192.168.10.10, 00:30:42, Serial0/0/1
+         192.168.10.0/24 is variably subnetted, 3 subnets, 2 masks
+    O       192.168.10.4/30 [110/128] via 192.168.10.10, 00:30:42, Serial0/0/1
+                            [110/128] via 172.16.3.1, 00:30:42, Serial0/0/0
+    C       192.168.10.8/30 is directly connected, Serial0/0/1
+    L       192.168.10.9/32 is directly connected, Serial0/0/1
+    S*   0.0.0.0/0 [1/0] via 64.100.54.5
+
+Dan Router R2 ini mendapatkan default Route ke ISP dengan routing protocol `Static default Route` yang kodenya __S*__.
+
+Yang mana kita masih ingat tadi simbol __*__ ialah sebuah default route dan **S** merupakan sebuah protocol routing **Static**
+
+Tentang Static default route:
+
+* **Static default route** merupakan tipe routing static yang digunakan ketika destination network belum diketahui (internet).
+
+
+* **Static default route** ini menggunakan destination network address 0.0.0.0 dan subnet mask 0.0.0.0 pada saat melakukan routing
+* **Static default routing** ini juga dikenal sebagai `‘quad zero route’`
+
+
+* Proses routing untuk **static default route** ini adalah nantinya router melakukan proses pencarian gateway yang akan digunakan oleh router untuk mengirimkan semua paket IP untuk network destination yang tidak diketahui di routing table, sehingga akan diforward ke route 0.0.0.0/0.
+
+Sumber: [https://misskecupbung.wordpress.com/2018/12/08/cisco-static-default-route/](https://misskecupbung.wordpress.com/2018/12/08/cisco-static-default-route/ "https://misskecupbung.wordpress.com/2018/12/08/cisco-static-default-route/")
+
+### Mengetahui Network type OSPF
+
+Kita lihat bagian interface G0/0
+
+![](/images/2020-08-09_sel_17-11-42.png)
+
+coba lihat dengan perintah 
+
+    R2# show ip ospf interface g0/0
+    
+    GigabitEthernet0/0 is up, line protocol is up
+      Internet address is 172.16.2.1/24, Area 0
+      Process ID 10, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+      Transmit Delay is 1 sec, State DR, Priority 1
+      Designated Router (ID) 2.2.2.2, Interface address 172.16.2.1
+      No backup designated router on this network
+      Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+        No Hellos (Passive interface)
+      Index 1/1, flood queue length 0
+      Next 0x0(0)/0x0(0)
+      Last flood scan length is 1, maximum is 1
+      Last flood scan time is 0 msec, maximum is 0 msec
+      Neighbor Count is 0, Adjacent neighbor count is 0
+      Suppress hello for 0 neighbor(s)
+
+Dan dari pesan itu kita tahu informasi network typenya: **Process ID 10, Router ID 2.2.2.2, Network Type BROADCAST** 
+
+Dan dari pesan itu kita tahu bahwa tidak ada paket hello yang dikirimkan ke interface ini karena ini dikonfigurasi sebagai passive interface: **No Hellos (Passive interface)**
+
+Kenapa dia passive interface? alasannya mungkin karena memang interfaces ini mengarah ke LAN jadi link ini tidak perlu berpartisipasi dalam OSPF process.
+
+Maka dari itu untuk menghemat cost dari OSPF yang selalu mengirim paket ke semua interface. jadi interface yang ke LAN ini di passive-kan untuk mencegah proses OSPF mengirim paket trafik yang tidak perlu ke interface LAN. Cukup di OSPF neighbor adjacency saja.
+
 # **Referensi**
 
-* [http://www.mikrotik.co.id/artikel_lihat.php?id=321](http://www.mikrotik.co.id/artikel_lihat.php?id=321 "http://www.mikrotik.co.id/artikel_lihat.php?id=321")
+* [https://misskecupbung.wordpress.com/2018/12/08/cisco-static-default-route/](https://misskecupbung.wordpress.com/2018/12/08/cisco-static-default-route/ "https://misskecupbung.wordpress.com/2018/12/08/cisco-static-default-route/")
 * [https://flylib.com/books/en/3.73.1.41/1/](https://flylib.com/books/en/3.73.1.41/1/ "https://flylib.com/books/en/3.73.1.41/1/")
