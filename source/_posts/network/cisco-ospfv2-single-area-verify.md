@@ -197,7 +197,7 @@ Dalam kasus tersebut maka ID itu tidak akan berubah sampai OSPF Process direset 
 
 ## 2.A Verify OSPFv2 operation on R2
 
-### Mengetahui rute
+### Pertama, Mengetahui rute
 
 Pertama-tama login terlebih dahulu ke router. Lalu, kita akan melihat ip route untuk meneliti rute-rutenya
 
@@ -248,7 +248,7 @@ Tentang Static default route:
 
 Sumber: [https://misskecupbung.wordpress.com/2018/12/08/cisco-static-default-route/](https://misskecupbung.wordpress.com/2018/12/08/cisco-static-default-route/ "https://misskecupbung.wordpress.com/2018/12/08/cisco-static-default-route/")
 
-### Mengetahui Network type OSPF
+### Kedua, Mengetahui Network type OSPF
 
 Kita lihat bagian interface G0/0
 
@@ -275,11 +275,35 @@ coba lihat dengan perintah
 
 Dan dari pesan itu kita tahu informasi network typenya: **Process ID 10, Router ID 2.2.2.2, Network Type BROADCAST** 
 
+Kenapa Broadcast?
+
 Dan dari pesan itu kita tahu bahwa tidak ada paket hello yang dikirimkan ke interface ini karena ini dikonfigurasi sebagai passive interface: **No Hellos (Passive interface)**
 
 Kenapa dia passive interface? alasannya mungkin karena memang interfaces ini mengarah ke LAN jadi link ini tidak perlu berpartisipasi dalam OSPF process.
 
 Maka dari itu untuk menghemat cost dari OSPF yang selalu mengirim paket ke semua interface. jadi interface yang ke LAN ini di passive-kan untuk mencegah proses OSPF mengirim paket trafik yang tidak perlu ke interface LAN. Cukup di OSPF neighbor adjacency saja.
+
+### Ketiga, tes ping dari PC2 ke R3 S0/0/1
+
+    C:\>ping 192.168.10.10
+    
+    Pinging 192.168.10.10 with 32 bytes of data:
+    
+    Reply from 192.168.10.10: bytes=32 time=2ms TTL=254
+    Reply from 192.168.10.10: bytes=32 time=1ms TTL=254
+    Reply from 192.168.10.10: bytes=32 time=1ms TTL=254
+    Reply from 192.168.10.10: bytes=32 time=1ms TTL=254
+    
+    Ping statistics for 192.168.10.10:
+        Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 1ms, Maximum = 2ms, Average = 1ms
+
+dan terkoneksi dengan baik, cuma cek.
+
+## 3.C Verify OSPFv2 operation on R3
+
+### Pertama, Melihat IP protocol
 
 # **Referensi**
 
