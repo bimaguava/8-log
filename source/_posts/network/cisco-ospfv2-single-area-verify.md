@@ -189,7 +189,9 @@ Dan kita lihat Neighbor ID alias _"Router ID nya Neighbor"_ yang biasanya didapa
     Reply from 64.100.54.5: bytes=32 time=1ms TTL=253
     Reply from 64.100.54.5: bytes=32 time=1ms TTL=253
 
-Apabila ping tidak berhasil pastikan mereset process ID OSPF karena terkadang setelah ID Router dipilih, ID tersebut tidak akan diubah sampai OSPF Process direset ulang dengan perintah `clear ip ospf process` atau bisa dengan mereload router.
+Apabila ping tidak berhasil pastikan mereset process ID OSPF karena mungkin saja sebelumnya Router ID baru diset dan belum menunjukkan perubahan. 
+
+Dalam kasus tersebut maka ID itu tidak akan berubah sampai OSPF Process direset ulang terlebih dahulu dengan perintah `clear ip ospf process [pid]` atau bisa dengan mereload router.
 
 # **Referensi**
 
