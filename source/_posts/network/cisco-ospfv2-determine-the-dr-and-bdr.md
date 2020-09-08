@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: 'Cisco: OSPF Determine the DR and BDR'
+title: 'Cisco: OSPFv2 Determine the DR and BDR'
 date: 2020-08-24T18:00:00.000+00:00
 updated: 
 category:
