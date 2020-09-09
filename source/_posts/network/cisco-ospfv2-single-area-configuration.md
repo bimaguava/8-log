@@ -120,18 +120,12 @@ Simpelnya metrik ini membantu router memilih rute terbaik dimana nilai metrik se
 
 Untuk OSPF sendiri untuk nilai metric nya menggunakan bandwith atau dalam kata lain cost (hampir mirip)
 
-| --- | --- |
-| Bandwidth | OSPF Cost |
-| 100 Gbps | 1 |
-| 40 Gbps | 1 |
-| 10 Gbps | 1 |
-| 1 Gbps | 1 |
-| 100 Mbps | 1 |
-| 10 Mbps | 10 |
-| 1.544 Mbps | 64 |
-| 768 Kbps | 133 |
-| 384 Kbps | 266 |
-| 128 Kbps | 781 |
+| Interface Type | Bandwidth in bits/second | OSPF Interface Cost |
+| --- | --- | --- |
+| Ethernet | 100M | 10 |
+| Ethernet | 10M | 100 |
+| Modem | 2M | 500 |
+| Modem | 1M | 1000 |
 
 > Pada **Dynamic Routing Protocol lain** contoh seperti **RIP**, ia memakai `Hop` untuk metric dan **EIGRP** memakai `Bandwidth`, `Delay`, `Reliability`, dan `Load`
 
