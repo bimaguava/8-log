@@ -182,13 +182,13 @@ Pertanyaanya nilai `auto-cost reference-bandwith`nya berapa?
 
 Untuk itu kita akan merujuk pada referensi berikut.
 
-**Auto Cost Reference Bandwith 100**
+### **Menggunakan Auto Cost Reference Bandwith 100**
 
 ![](/images/2020-10-09_kam_00-15-47.png)
 
 Jumlah Cost dari Bandwith 100 dan 10, yaitu **0.1 dan 100**
 
-**Auto Cost Reference Bandwith 1000**
+### **Menggunakan Auto Cost Reference Bandwith 1000**
 
 ![](/images/2020-10-09_kam_00-03-17.png)
 
@@ -196,13 +196,15 @@ Sumber: [https://slideplayer.com/slide/14391963/](https://slideplayer.com/slide/
 
 Jumlah Cost dari Bandwith 100 dan 10, yaitu **10 dan 100**
 
-**Auto Cost Reference Bandwith 10000**
+### **Menggunakan Auto Cost Reference Bandwith 10000**
 
 ![](/images/2020-10-09_kam_00-18-53.png)
 
 Sumber: [https://slideplayer.com/slide/14391963/](https://slideplayer.com/slide/14391963/ "https://slideplayer.com/slide/14391963/")
 
 Jumlah Cost dari Bandwith 100 dan 10, yaitu **100 dan 1000**
+
+### Pilihan yang sesuai requirement?
 
 Sesuai keterangan itu yang paling cocok dengan permintaan dari requirement kita ini ialah menggunakan `auto-cost reference-bandwidth 1000`
 
