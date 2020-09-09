@@ -169,7 +169,7 @@ Namun, kita tidak perlu menghitungnya, silahkan lihat tabel berikut
 
 Menurut requirement diawal:
 
-> Configure the OSPF routers so that the Gigabit Ethernet interface cost will be 10 and the Fast Ethernet cost will be 100.
+> **_Configure the OSPF routers so that the Gigabit Ethernet interface cost will be 10 and the Fast Ethernet cost will be 100._**
 
 Yang berarti bandwith jika cost untuk GigabitEthernet 10, maka bandwithnya 10Mbps. Dan cost untuk FastEthernet 100, maka bandwithnya 1Mbps.
 
@@ -186,6 +186,13 @@ Sesuai keterangan itu kita akan menggunakan `auto-cost reference-bandwidth 1000`
     P2P-1(config-router)# auto-cost reference-bandwidth 1000
     % OSPF: Reference bandwidth is changed.
             Please ensure reference bandwidth is consistent across all routers.
+
+Dan sesuai requirement kita akan merubah nilai cost di serial0/1/1 menjadi 50
+
+> **_Configure the OSPF cost value of P2P-1 interface Serial0/1/1 to 50._**
+
+    P2P-1(config)#int serial 0/1/1
+    P2P-1(config-if)#ip ospf cost 50
 
 ## 1.D Mengatur cost value pada P2P-1 interface serial 0/1/1
 
