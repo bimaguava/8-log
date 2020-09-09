@@ -112,13 +112,28 @@ _"apa cost semacam ini hanya ada di OSPF saja?"_
 
 Oke, cara belajar kita adalah **_learning by doing_** sembari ngoprek, sembari belajar :)
 
-Sebelum itu kita harus tahu fungsi dari penerapan dari cost di OSPF ini yang tidak lain dan tidak bukan ialah untuk **metric** :) Yang merupakan suatu nilai yang digunakan untuk mencapai suatu jaringan. Semakin tinggi nilai metrik maka akan memiliki jalur terbaik
+Sebelum itu kita harus tahu fungsi dari penerapan dari cost di OSPF ini yang tidak lain dan tidak bukan ialah untuk **metric** :) Yang merupakan suatu nilai yang digunakan untuk menuju ke destination.
 
-![](/images/2020-09-09_rab_15-11-33.png)
+![](/images/2020-09-09_rab_15-17-27.png)
 
-Untuk OSPF sendiri untuk nilai metric nya menggunakan bandwith atau dalam kata lain cost.
+Simpelnya metrik ini membantu router memilih rute terbaik dimana nilai metrik setiap routing protokol berbeda-beda.
 
-> Pada **Dynamic Routing Protocol lain** contoh seperti **RIP**, ita memakai `Hop` untuk metric dan **EIGRP** memakai `Bandwidth`, `Delay`, `Reliability`, dan `Load`
+Untuk OSPF sendiri untuk nilai metric nya menggunakan bandwith atau dalam kata lain cost (hampir mirip)
+
+| --- | --- |
+| Bandwidth | OSPF Cost |
+| 100 Gbps | 1 |
+| 40 Gbps | 1 |
+| 10 Gbps | 1 |
+| 1 Gbps | 1 |
+| 100 Mbps | 1 |
+| 10 Mbps | 10 |
+| 1.544 Mbps | 64 |
+| 768 Kbps | 133 |
+| 384 Kbps | 266 |
+| 128 Kbps | 781 |
+
+> Pada **Dynamic Routing Protocol lain** contoh seperti **RIP**, ia memakai `Hop` untuk metric dan **EIGRP** memakai `Bandwidth`, `Delay`, `Reliability`, dan `Load`
 
 Sama seperti EIGRP, OSPF mendasarkan metriknya secara default pada `bandwidth link`, sehingga OSPF dinilai lebih baik daripada RIP mengandalkan metrik `hop-count`.
 
