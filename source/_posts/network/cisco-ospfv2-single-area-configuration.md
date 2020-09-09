@@ -34,3 +34,51 @@ Pada materi kali ini akan sangat berguna sekali untuk melatih kemampuan kita dal
 ![](/images/2020-08-09_sel_07-23-29.png)
 
 ![](/images/2020-08-09_sel_07-23-44.png)
+
+# **1. Mengemplementasikan OSPF di Router2 Headquarters**
+
+Pertama-tama kita akan mengerjakan network di **Headquarters** yang berupa point to point.
+
+Kita telah mengetahui di materi [kemarin]() bahwa di jaringan point to point tidak ada election DR/BDR, maka kita tidak perlu repot menyetel Router ID untuk router2 P2P ini.
+
+![](/images/2020-09-09_rab_12-55-44.png)
+
+Untuk itu mari kita langsung saja jalankan OSPF routing process di mulai pada router P2P-1 ini
+
+    P2P-1(config)#router ospf 10
+
+## 1.A. Mencari router yang directly connected dengan P2P-1
+
+Kita akan mencari router interface yang directly connected alias terhubung secara langsung dengan Router P2P ini, langsung saja jalankan `do show ip route connected`
+
+     C   10.0.0.0/30  is directly connected, Serial0/1/0
+     C   10.0.0.8/30  is directly connected, Serial0/1/1
+     C   10.0.0.12/30  is directly connected, Serial0/2/0
+
+Tampak yang IP yang muncul yaitu berupa network2 yang terkoneksi langsung ke router P2P-1
+
+Sedangkan kalau kita menggunakan command `do show ip route` saja
+
+    Gateway of last resort is not set
+    
+         10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+    C       10.0.0.0/30 is directly connected, Serial0/1/0
+    L       10.0.0.1/32 is directly connected, Serial0/1/0
+    C       10.0.0.8/30 is directly connected, Serial0/1/1
+    L       10.0.0.9/32 is directly connected, Serial0/1/1
+    C       10.0.0.12/30 is directly connected, Serial0/2/0
+    L       10.0.0.13/32 is directly connected, Serial0/2/0
+
+Maka akan menampilkan juga interface2 milik router P2P-1 itu sendiri yang ada pada baris entri kode **C**, itu sekedar informasi.
+
+Dari sini kita telah menemukan network2 yang directly connected, yaitu 10.0.0.0/30, 10.0.0.8/30, dan 10.0.0.12/30 yang juga ada keterangannnya di topologi awal, silahkan lihat topologinya.
+
+## 1.B. 
+
+# **2. Configure Network**
+
+## 2.A. Melihat directly connected router
+
+## 2.B. Menyetel R1 dengan Network statements dan inverse mask
+
+Kita telah melakukan cara ini pada materi [sebelumnya](https://8log.js.org/2020/08/16/network/cisco-ospfv2-single-area-point-to-point/#2-B-Menyetel-R1-dengan-Network-statements-dan-Wilcard-Mask).
