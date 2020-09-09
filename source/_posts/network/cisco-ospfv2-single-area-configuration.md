@@ -134,15 +134,6 @@ Contoh saat melintas Serial link yang bandwithnya ialah 56Kbps maka paket OSPF a
 
 Dan sekarang kita akan lihat bandwith dan cost ini **berbanding terbalik**, karena bandwith yang lebih tinggi seperti Ethernet link (100Mbps) akan mempunyai _cost yang lebih kecil_ dimana ini merupakan **rute terbaik**. Sedangkan bandwith yang lebih rendah seperti Serial link (56Kbps) akan memiliki _cost yang lebih tinggi_.
 
-Bagaimana OSPF dalam menghitung costnya?
-
-Yakni dengan formula atau rumus berikut ini
-
-> 1. **Cost = Reference bandwidth / Interface bandwidth in bps.**
-> 2. **Cost = 10^8/interface bandwidth in bps**
-
-Namun, kita tidak perlu menghitungnya karena ini bukan kelas matematika :), jadi silahkan lihat saja tabel berikut
-
 ### **Default cost of essential interfaces.**
 
 | Interface Type | bandwidth | Metric Calculation | Cost |
@@ -182,7 +173,7 @@ Kalau memilih reference bandwith 10000 Mbps
 
 ![](/images/2020-10-09_kam_00-06-57.png)
 
-Berarti kita akan menyeting kabel yang kapasitas bandwithnya sekitar 100 Mbps untuk FastEthernet dan 1 Gbps (1000Mbps) untuk GigabitEthernet 
+Berarti kita akan menyeting kabel yang kapasitas bandwithnya sekitar 100 Mbps untuk FastEthernet dan 1 Gbps (1000Mbps) untuk GigabitEthernet
 
 Namun, jika kita memilih reference bandwith 1000 Mbps  
 ![](/images/2020-10-09_kam_00-03-17.png)
@@ -199,22 +190,42 @@ Dan ada satu requirement lagi terkait OSPF cost ini, yaitu
 
 > **_Configure the OSPF cost value of P2P-1 interface Serial0/1/1 to 50._**
 
-Jadi selain mengubah `auto-cost reference-bandwith` yang mana OSPF akan mengkalkulasi sendiri kira-kira satu interface akan menggunakan bandwith berapa, kita juga akan menkonfigurasi berapa nilai cost yang akan digunakan OSPF untuk interface serial 0/1/1 pada router ini 
+Jadi selain mengubah `auto-cost reference-bandwith` yang mana OSPF akan mengkalkulasi sendiri kira-kira satu interface akan menggunakan bandwith berapa, kita juga akan menkonfigurasi berapa nilai cost yang akan digunakan OSPF untuk interface serial 0/1/1 pada router ini
 
     P2P-1(config)#int serial 0/1/1
     P2P-1(config-if)#ip ospf cost 50
 
-Nanti contoh command verifikasinya seperti berikut:
+Nah sampai sini sudah kelar masalah auto-cost reference-bandwith.
 
-Untuk melihat bandwith pakai perintah `show interfaces FastEthernet 0/0 | include BW`
+<!------- CONTOH-------------------------------------------------------------------------------------------------
+
+Selanjutnya apabila nanti ingin melihat cost dan bandwithnya kira-kira contohnya seperti ini.
+
+Untuk melihat bandwith pakai perintah `show interfaces FastEthernet 0/0 | include BW` 
 
     Router# show interfaces FastEthernet 0/0 | include BW
       MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec
 
-dan untuk melihat cost pakai perintah`show ip ospf interface FastEthernet 0/0 | include Cost`
+Dan muncullah `100000 Kbit/sec`
+
+Nanti dari sini OSPF akan menghitung costnya 
+
+> **Cost = Reference bandwidth (default 100 Mbps) / Interface bandwidth in bps.**
+>
+> atau **Cost = 10^8 / interface bandwidth in bps**
+
+Cost = `100.000 kbps reference bandwidth / 100.000 interface bandwidth = 1`
+
+Dan perintah verifikasi untuk menampilkan cost dengan `show ip ospf interface FastEthernet 0/0 | include Cost`
 
     Router# show ip ospf interface FastEthernet 0/0 | include Cost
       Process ID 1, Router ID 192.168.1.1, Network Type BROADCAST, Cost: 1
+
+Nah, itulah hasil costnya, yaitu 1.
+
+END CONTOH -------------------------------------------------------------------------------------------------->
+
+(^_^)
 
 ## 1.D. Mengatur Hello dan Dead timer values antara P2P-1 dan BC-1
 
