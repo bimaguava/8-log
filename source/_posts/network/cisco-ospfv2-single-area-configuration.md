@@ -231,6 +231,8 @@ END CONTOH ---------------------------------------------------------------------
 
 ## 1.D. Mengatur Hello dan Dead timer values antara P2P-1 dan BC-1
 
+Setelah itu lanjut ke 
+
 # **Referensi**
 
 * [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
