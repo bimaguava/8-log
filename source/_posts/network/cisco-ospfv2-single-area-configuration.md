@@ -132,7 +132,7 @@ Kalau seperti itu maka kita musti tahu berapa bandwith yang dipakai dahulu, kare
 
 Contoh saat melintas Serial link yang bandwithnya ialah 56Kbps maka paket OSPF akan lebih lama sampainya daripada melintasi Ethernet link yang bandwithnya 100Mbps.
 
-Dan sekarang kita akan lihat bandwith dan cost ini **berbanding terbalik**, karena bandwith yang lebih tinggi seperti Ethernet link (100Mbps) akan mempunyai cost yang lebih kecil. Sedangkan bandwith yang lebih rendah seperti Serial link (56Kbps) akan memiliki cost yang lebih tinggi. Seperti tertera pada tabel berikut.
+Dan sekarang kita akan lihat bandwith dan cost ini **berbanding terbalik**, karena bandwith yang lebih tinggi seperti Ethernet link (100Mbps) akan mempunyai _cost yang lebih kecil_ dimana ini merupakan **rute terbaik**. Sedangkan bandwith yang lebih rendah seperti Serial link (56Kbps) akan memiliki _cost yang lebih tinggi_. Seperti tertera pada tabel berikut.
 
 Bagaimana OSPF dalam menghitung costnya?
 
@@ -165,9 +165,25 @@ Namun, kita tidak perlu menghitungnya, silahkan lihat tabel berikut
 | 1 Gbps line | 1Gbps | 100000000/100000000 0= 0.1 | 1 |
 | 10 Gbps line | 10Gbps | 100000000/10000000000 = 0.01 | 1 |
 
-blablabla
+### Konfigurasi interface cost menggunakan Auto Cost Reference Bandwith
 
-    P2P-1(config-router)#auto-cost reference-bandwidth 1000
+Menurut requirement diawal:
+
+> Configure the OSPF routers so that the Gigabit Ethernet interface cost will be 10 and the Fast Ethernet cost will be 100.
+
+Yang berarti bandwith jika cost untuk GigabitEthernet 10, maka bandwithnya 10Mbps. Dan cost untuk FastEthernet 100, maka bandwithnya 1Mbps.
+
+Pertanyaanya auto-cost reference-bandwithnya dapat berapa?
+
+Untuk itu kita akan merujuk pada keterangan berikut.
+
+![](/images/2020-09-09_rab_17-33-18.png)
+
+Sumber: [https://slideplayer.com/slide/14391963/](https://slideplayer.com/slide/14391963/ "https://slideplayer.com/slide/14391963/")
+
+Sesuai keterangan itu kita akan menggunakan `auto-cost reference-bandwidth 1000`
+
+    P2P-1(config-router)# auto-cost reference-bandwidth 1000
     % OSPF: Reference bandwidth is changed.
             Please ensure reference bandwidth is consistent across all routers.
 
@@ -181,3 +197,4 @@ Selain `auto-cost reference-bandwith` kita juga akan menyetel cost yang digunaka
 # **Referensi**
 
 * [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
+* [https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html](https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html "https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html")
