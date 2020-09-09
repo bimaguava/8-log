@@ -182,7 +182,7 @@ Dan sebagai pembanding sekarang kita beralih ke tabel berikut
 | 1 Gbps line | 1Gbps | 100000000/100000000 0= 0.1 | 1 |
 | 10 Gbps line | 10Gbps | 100000000/10000000000 = 0.01 | 1 |
 
-Mungkin konsumsi bandwith untuk cost requirements tidak terlalu tinggi (FastEthernet 1 Mbps dan GigabitEthernet 10 Mbps), maka kita akan memilih `auto-cost bandwith-reference 1000`
+Mungkin konsumsi bandwith untuk cost requirements tidak terlalu tinggi (FastEthernet 1 Mbps dan GigabitEthernet 10 Mbps), maka kita akan memilih yang standar saja, yaitu `auto-cost bandwith-reference 1000`
 
     P2P-1(config-router)# auto-cost reference-bandwidth 1000
     % OSPF: Reference bandwidth is changed.
