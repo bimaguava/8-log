@@ -134,7 +134,7 @@ Contoh saat melintas Serial link yang bandwithnya ialah 56Kbps maka paket OSPF a
 
 Dan sekarang kita akan lihat bandwith dan cost ini **berbanding terbalik**, karena bandwith yang lebih tinggi seperti Ethernet link (100Mbps) akan mempunyai _cost yang lebih kecil_ dimana ini merupakan **rute terbaik**. Sedangkan bandwith yang lebih rendah seperti Serial link (56Kbps) akan memiliki _cost yang lebih tinggi_.
 
-Sekedar info berikut default nilai cost pada beberapa interface 
+Sekedar info berikut default nilai cost pada beberapa interface
 
 | Interface Type | bandwidth | Metric Calculation | Cost |
 | :---: | :---: | :---: | --- |
@@ -197,7 +197,7 @@ Jadi selain mengubah `auto-cost reference-bandwith` yang mana OSPF akan mengkalk
     P2P-1(config)#int serial 0/1/1
     P2P-1(config-if)#ip ospf cost 50
 
-Nah sampai sini sudah kelar masalah auto-cost reference-bandwith.
+Keknya panjang amat :)
 
 <!------- CONTOH-------------------------------------------------------------------------------------------------
 
