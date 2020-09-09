@@ -232,4 +232,4 @@ END CONTOH ---------------------------------------------------------------------
 # **Referensi**
 
 * [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
-* [https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html](https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html "https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html")
+* [h](https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html "https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html")[https://networklessons.com/ospf/ospf-reference-bandwidth](https://networklessons.com/ospf/ospf-reference-bandwidth "https://networklessons.com/ospf/ospf-reference-bandwidth")
