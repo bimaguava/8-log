@@ -191,14 +191,14 @@ Dan ada satu requirement lagi terkait OSPF cost ini, yaitu
 
 > **_Configure the OSPF cost value of P2P-1 interface Serial0/1/1 to 50._**
 
-Jadi selain `auto-cost reference-bandwith` kita juga akan menyetel cost yang digunakan OSPF untuk interface serial 0/1/1 pada router ini
+Jadi selain `auto-cost reference-bandwith` OSPF process kita juga akan menyetel cost yang digunakan OSPF untuk interface serial 0/1/1 pada router ini
 
     P2P-1(config)#int serial 0/1/1
     P2P-1(config-if)#ip ospf cost 50
 
 Apabila nanti kita ingin melihat cost value yang didapatkan di interface router ini bisa dengan command `show ip ospf interface brief`
 
-## 1.D. Mengatur Hello dan Dead timer values di interfaces P2P-1 dan BC-1 (to be twice the default values)
+## 1.D. Mengatur Hello dan Dead timer values antara P2P-1 dan BC-1
 
 # **Referensi**
 
