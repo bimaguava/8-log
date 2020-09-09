@@ -187,16 +187,11 @@ Sesuai keterangan itu kita akan menggunakan `auto-cost reference-bandwidth 1000`
     % OSPF: Reference bandwidth is changed.
             Please ensure reference bandwidth is consistent across all routers.
 
-Dan sesuai requirement kita akan merubah nilai cost di serial0/1/1 menjadi 50
+Dan ada satu requirement lagi terkait OSPF cost ini, yaitu
 
 > **_Configure the OSPF cost value of P2P-1 interface Serial0/1/1 to 50._**
 
-    P2P-1(config)#int serial 0/1/1
-    P2P-1(config-if)#ip ospf cost 50
-
-## 1.D Mengatur cost value pada P2P-1 interface serial 0/1/1
-
-Selain `auto-cost reference-bandwith` kita juga akan menyetel cost yang digunakan OSPF untuk interface serial 0/1/1 pada router ini
+Jadi selain `auto-cost reference-bandwith` kita juga akan menyetel cost yang digunakan OSPF untuk interface serial 0/1/1 pada router ini
 
     P2P-1(config)#int serial 0/1/1
     P2P-1(config-if)#ip ospf cost 50
