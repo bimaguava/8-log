@@ -118,18 +118,21 @@ Sebelum itu kita harus tahu fungsi dari penerapan dari cost di OSPF ini yang tid
 
 Simpelnya metrik ini membantu router memilih rute terbaik dimana nilai metrik setiap routing protokol berbeda-beda.
 
-Untuk OSPF sendiri untuk nilai metric nya menggunakan bandwith atau dalam kata lain cost (hampir mirip)
+Untuk OSPF sendiri untuk nilai metric nya menggunakan bandwith.
 
-| Interface Type | Bandwidth in bits/second | OSPF Interface Cost |
-| --- | --- | --- |
-| Ethernet | 100M | 10 |
-| Ethernet | 10M | 100 |
-| Modem | 2M | 500 |
-| Modem | 1M | 1000 |
+> Pada **Dynamic Routing Protocol lain** contoh seperti **RIP**, ia memakai `Hop` untuk metricnya dan **EIGRP** memakai `Bandwidth`, `Delay`, `Reliability`, dan `Load`
 
-> Pada **Dynamic Routing Protocol lain** contoh seperti **RIP**, ia memakai `Hop` untuk metric dan **EIGRP** memakai `Bandwidth`, `Delay`, `Reliability`, dan `Load`
+Sama seperti EIGRP, OSPF (juga) mendasarkan metriknya secara default pada `bandwidth link`, sehingga OSPF dinilai lebih baik dibanding RIP yang mengandalkan metrik `hop-count`.
 
-Sama seperti EIGRP, OSPF mendasarkan metriknya secara default pada `bandwidth link`, sehingga OSPF dinilai lebih baik daripada RIP mengandalkan metrik `hop-count`.
+Oke.
+
+Lanjut.
+
+Kalau seperti itu maka kita musti tahu berapa bandwith yang dipakai dahulu, karena logikanya sebuah paket akan lebih banyak overhead jika melewati medium yang kapasitas bandwithnya kecil.
+
+Contoh saat melintas serial link yang bandwithnya ialah 56Kbps maka paket OSPF akan lebih lama sampainya daripada melintasi Ethernet link yang bandwithnya 100Mbps.
+
+Dan sekarang kita akan lihat bandwith dan cost ini berbanding terbalik, 
 
     P2P-1(config-router)#auto-cost reference-bandwidth 1000
     % OSPF: Reference bandwidth is changed.
@@ -141,3 +144,7 @@ Selain `auto-cost reference-bandwith` kita juga akan menyetel cost yang digunaka
 
     P2P-1(config)#int serial 0/1/1
     P2P-1(config-if)#ip ospf cost 50
+
+# **Referensi**
+
+* [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
