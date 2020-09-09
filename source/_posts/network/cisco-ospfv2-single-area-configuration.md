@@ -132,36 +132,33 @@ Kalau seperti itu maka kita musti tahu berapa bandwith yang dipakai dahulu, kare
 
 Contoh saat melintas Serial link yang bandwithnya ialah 56Kbps maka paket OSPF akan lebih lama sampainya daripada melintasi Ethernet link yang bandwithnya 100Mbps.
 
-Dan sekarang kita akan lihat bandwith dan cost ini berbanding terbalik, karena bandwith yang lebih tinggi seperti Ethernet link (100Mbps) akan mempunyai cost yang lebih kecil. Sedangkan bandwith yang lebih rendah seperti Serial link (56Kbps) akan memiliki cost yang lebih tinggi. Seperti tertera pada tabel berikut.
+Dan sekarang kita akan lihat bandwith dan cost ini **berbanding terbalik**, karena bandwith yang lebih tinggi seperti Ethernet link (100Mbps) akan mempunyai cost yang lebih kecil. Sedangkan bandwith yang lebih rendah seperti Serial link (56Kbps) akan memiliki cost yang lebih tinggi. Seperti tertera pada tabel berikut.
 
 Bagaimana OSPF dalam menghitung costnya?
 
 Yakni dengan formula atau rumus berikut ini
 
-> **Cost = Reference bandwidth / Interface bandwidth in bps.**
->
-> atau
->
-> **Cost = 10^8/interface bandwidth in bps**
+> 1. **Cost = Reference bandwidth / Interface bandwidth in bps.**
+> 2. **Cost = 10^8/interface bandwidth in bps**
 
 Namun, kita tidak perlu menghitungnya, silahkan lihat tabel berikut
 
 ### **Default cost of essential interfaces.**
 
-| --- | --- | --- | --- |
 | Interface Type | bandwidth | Metric Calculation | Cost |
+| :---: | :---: | :---: | --- |
 | Ethernet Link | 10Mbps | 100000000/10000000 = 10 | 10 |
 | FastEthernet Link | 100Mbps | 100000000/100000000 = 1 | 1 |
 | Serial Link | 1544Kbps(default) | 100000000/1544000 = 64.76 | 64 |
 
 ### **Cost of common lines**
 
-| --- | --- | --- | --- |
-| Line | Bandwidth | Metric calculation | Cost |
+| Interface Type | bandwidth | Metric Calculation | Cost |
+| :---: | :---: | :---: | --- |
 | 56 Kbps line | 56Kbps | 100000000/56000 = 1785.71 | 1785 |
 | 64 Kbps line | 64Kbps | 100000000/64000 = 1562.5 | 1562 |
 | 128 Kbps line | 128Kbps | 100000000/128000 = 781.25 | 781 |
-| 512 Kbps line | 512 Kbps | 100000000/512000 = 195.31 | 195 |
+| 512 Kbps line | 512Kbps | 100000000/512000 = 195.31 | 195 |
 | 1 Mbps line | 1Mbps | 100000000/1000000 = 100 | 100 |
 | 10 Mbps line | 10Mbps | 100000000/10000000 = 10 | 10 |
 | 100 Mbps line | 100Mbps | 100000000/100000000 = 1 | 1 |
