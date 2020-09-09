@@ -198,6 +198,8 @@ Jadi selain `auto-cost reference-bandwith` kita juga akan menyetel cost yang dig
 
 Apabila nanti kita ingin melihat cost value yang didapatkan di interface router ini bisa dengan command `show ip ospf interface brief`
 
+## 1.D. Mengatur Hello dan Dead timer values di interfaces P2P-1 dan BC-1 (to be twice the default values)
+
 # **Referensi**
 
 * [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
