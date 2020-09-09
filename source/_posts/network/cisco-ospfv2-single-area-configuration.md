@@ -167,46 +167,29 @@ Namun, kita tidak perlu menghitungnya karena ini bukan kelas matematika :), jadi
 
 ### Konfigurasi interface cost menggunakan Auto Cost Reference Bandwith
 
-Menurut requirement diawal:
+Kalau mengikuti defaultnya, maka reference bandwith berjumlah 100 Mbps
+
+    BimaRR# show ip ospf | include Reference
+     Reference bandwidth unit is 100 mbps
+
+Terlihat terlalu kecil.
+
+Namun, menurut requirement diawal:
 
 > **_Configure the OSPF routers so that the Gigabit Ethernet interface cost will be 10 and the Fast Ethernet cost will be 100._**
 
-Yang berarti jawabannya ialah cost untuk GigabitEthernet 10, maka bandwithnya (lihat tabel **Cost of common lines) 10Mbps**. Dan cost untuk FastEthernet 100, maka bandwithnya **1Mbps**.
+Kalau memilih reference bandwith 10000 Mbps
 
-Oke.
+![](/images/2020-10-09_kam_00-06-57.png)
 
-* Cost value 10=10 Mbps
-* Cost value 100=1 Mbps
+Berarti kita akan menyeting kabel yang kapasitas bandwithnya sekitar 100 Mbps untuk FastEthernet dan 1 Gbps (1000Mbps) untuk GigabitEthernet 
 
-Pertanyaanya nilai `auto-cost reference-bandwith`nya berapa? 
-
-Untuk itu kita akan merujuk pada referensi berikut.
-
-### **Menggunakan Auto Cost Reference Bandwith 100**
-
-![](/images/2020-10-09_kam_00-15-47.png)
-
-Jumlah Cost dari Bandwith 100 dan 10, yaitu **0.1 dan 100**
-
-### **Menggunakan Auto Cost Reference Bandwith 1000**
-
+Namun, jika kita memilih reference bandwith 1000 Mbps  
 ![](/images/2020-10-09_kam_00-03-17.png)
 
-Sumber: [https://slideplayer.com/slide/14391963/](https://slideplayer.com/slide/14391963/ "https://slideplayer.com/slide/14391963/")
+cocok untuk interfaces berkapasitas 10 Mbps untuk FastEthernet dan 100 Mbps untuk GigabitEthernet.
 
-Jumlah Cost dari Bandwith 100 dan 10, yaitu **10 dan 100**
-
-### **Menggunakan Auto Cost Reference Bandwith 10000**
-
-![](/images/2020-10-09_kam_00-18-53.png)
-
-Sumber: [https://slideplayer.com/slide/14391963/](https://slideplayer.com/slide/14391963/ "https://slideplayer.com/slide/14391963/")
-
-Jumlah Cost dari Bandwith 100 dan 10, yaitu **100 dan 1000**
-
-### Pilihan yang kiranya cocok berapa?
-
-Sesuai keterangan itu yang paling cocok dengan permintaan dari requirement kita ini ialah menggunakan `auto-cost reference-bandwidth 1000`
+Dan melihat dari tabel [**Cost of common lines **](https://8log.js.org/2020/09/08/network/cisco-ospfv2-single-area-configuration/#Cost-of-common-lines)yang tadi, mungkin konsumsi bandwith untuk nilai cost sesuai requirement tidak terlalu tinggi, maka kita akan memilih `auto-cost bandwith-reference 1000`
 
     P2P-1(config-router)# auto-cost reference-bandwidth 1000
     % OSPF: Reference bandwidth is changed.
@@ -216,12 +199,22 @@ Dan ada satu requirement lagi terkait OSPF cost ini, yaitu
 
 > **_Configure the OSPF cost value of P2P-1 interface Serial0/1/1 to 50._**
 
-Jadi selain `auto-cost reference-bandwith` OSPF process kita juga akan menyetel cost yang digunakan OSPF untuk interface serial 0/1/1 pada router ini
+Jadi selain mengubah `auto-cost reference-bandwith` yang mana OSPF akan mengkalkulasi sendiri kira-kira satu interface akan menggunakan bandwith berapa, kita juga akan menkonfigurasi berapa nilai cost yang akan digunakan OSPF untuk interface serial 0/1/1 pada router ini 
 
     P2P-1(config)#int serial 0/1/1
     P2P-1(config-if)#ip ospf cost 50
 
-Apabila nanti kita ingin melihat cost value yang didapatkan di interface router ini bisa dengan command `show ip ospf interface brief`
+Nanti contoh command verifikasinya seperti berikut:
+
+Untuk melihat bandwith pakai perintah `show interfaces FastEthernet 0/0 | include BW`
+
+    Router# show interfaces FastEthernet 0/0 | include BW
+      MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec
+
+dan untuk melihat cost pakai perintah`show ip ospf interface FastEthernet 0/0 | include Cost`
+
+    Router# show ip ospf interface FastEthernet 0/0 | include Cost
+      Process ID 1, Router ID 192.168.1.1, Network Type BROADCAST, Cost: 1
 
 ## 1.D. Mengatur Hello dan Dead timer values antara P2P-1 dan BC-1
 
