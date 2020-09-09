@@ -159,14 +159,14 @@ Kalau memilih reference bandwith 10000 Mbps
 
 ![](/images/2020-10-09_kam_00-06-57.png)
 
-Berarti kita akan menyeting kabel yang kapasitas bandwithnya sekitar 100 Mbps untuk FastEthernet dan 1 Gbps (1000Mbps) untuk GigabitEthernet
+Berarti kita boleh mempunyai kabel dengan kapasitas bandwithnya sekitar 100 Mbps untuk FastEthernet dan 1 Gbps (1000Mbps) untuk GigabitEthernet
 
 Namun, jika kita memilih reference bandwith 1000 Mbps  
 ![](/images/2020-10-09_kam_00-03-17.png)
 
-cocok untuk interfaces berkapasitas 10 Mbps untuk FastEthernet dan 100 Mbps untuk GigabitEthernet.
+Sedangkan reference bandwith 1000 terlihat lebih standar untuk kebutuhan link berkapasitas 10 Mbps untuk FastEthernet dan 100 Mbps untuk GigabitEthernet.
 
-Dan melihat dari tabel berikut
+Dan sebagai pembanding sekarang kita beralih ke tabel berikut
 
 ### **Cost of common lines**
 
@@ -182,7 +182,7 @@ Dan melihat dari tabel berikut
 | 1 Gbps line | 1Gbps | 100000000/100000000 0= 0.1 | 1 |
 | 10 Gbps line | 10Gbps | 100000000/10000000000 = 0.01 | 1 |
 
-mungkin konsumsi bandwith untuk nilai cost sesuai requirement tidak terlalu tinggi (FastEthernet 1 Mbps dan GigabitEthernet 10 Mbps), maka kita akan memilih `auto-cost bandwith-reference 1000`
+Mungkin konsumsi bandwith untuk cost requirements tidak terlalu tinggi (FastEthernet 1 Mbps dan GigabitEthernet 10 Mbps), maka kita akan memilih `auto-cost bandwith-reference 1000`
 
     P2P-1(config-router)# auto-cost reference-bandwidth 1000
     % OSPF: Reference bandwidth is changed.
@@ -231,7 +231,7 @@ END CONTOH ---------------------------------------------------------------------
 
 ## 1.D. Mengatur Hello dan Dead timer values antara P2P-1 dan BC-1
 
-Setelah itu lanjut ke 
+Setelah itu lanjut ke
 
 # **Referensi**
 
