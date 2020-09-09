@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: 'Cisco: OSPFv2 Single Area Configuration (point to point and broadcast multiaccess)'
+title: 'Cisco: OSPFv2 Single. Area Configuration (point to point and broadcast multiaccess)'
 date: 2020-09-08T13:06:00Z
 updated: 
 category:
@@ -132,7 +132,7 @@ Kalau seperti itu maka kita musti tahu berapa bandwith yang dipakai dahulu, kare
 
 Contoh saat melintas Serial link yang bandwithnya ialah 56Kbps maka paket OSPF akan lebih lama sampainya daripada melintasi Ethernet link yang bandwithnya 100Mbps.
 
-Dan sekarang kita akan lihat bandwith dan cost ini **berbanding terbalik**, karena bandwith yang lebih tinggi seperti Ethernet link (100Mbps) akan mempunyai _cost yang lebih kecil_ dimana ini merupakan **rute terbaik**. Sedangkan bandwith yang lebih rendah seperti Serial link (56Kbps) akan memiliki _cost yang lebih tinggi_. Seperti tertera pada tabel berikut.
+Dan sekarang kita akan lihat bandwith dan cost ini **berbanding terbalik**, karena bandwith yang lebih tinggi seperti Ethernet link (100Mbps) akan mempunyai _cost yang lebih kecil_ dimana ini merupakan **rute terbaik**. Sedangkan bandwith yang lebih rendah seperti Serial link (56Kbps) akan memiliki _cost yang lebih tinggi_.
 
 Bagaimana OSPF dalam menghitung costnya?
 
@@ -141,7 +141,7 @@ Yakni dengan formula atau rumus berikut ini
 > 1. **Cost = Reference bandwidth / Interface bandwidth in bps.**
 > 2. **Cost = 10^8/interface bandwidth in bps**
 
-Namun, kita tidak perlu menghitungnya, silahkan lihat tabel berikut
+Namun, kita tidak perlu menghitungnya karena ini bukan kelas matematika :), jadi silahkan lihat saja tabel berikut
 
 ### **Default cost of essential interfaces.**
 
@@ -171,17 +171,40 @@ Menurut requirement diawal:
 
 > **_Configure the OSPF routers so that the Gigabit Ethernet interface cost will be 10 and the Fast Ethernet cost will be 100._**
 
-Yang berarti bandwith jika cost untuk GigabitEthernet 10, maka bandwithnya 10Mbps. Dan cost untuk FastEthernet 100, maka bandwithnya 1Mbps.
+Yang berarti jawabannya ialah cost untuk GigabitEthernet 10, maka bandwithnya (lihat tabel **Cost of common lines) 10Mbps**. Dan cost untuk FastEthernet 100, maka bandwithnya **1Mbps**.
 
-Pertanyaanya auto-cost reference-bandwithnya dapat berapa?
+Oke.
 
-Untuk itu kita akan merujuk pada keterangan berikut.
+* Cost value 10=10 Mbps
+* Cost value 100=1 Mbps
 
-![](/images/2020-09-09_rab_17-33-18.png)
+Pertanyaanya nilai `auto-cost reference-bandwith`nya berapa? 
+
+Untuk itu kita akan merujuk pada referensi berikut.
+
+**Auto Cost Reference Bandwith 100**
+
+![](/images/2020-10-09_kam_00-15-47.png)
+
+Jumlah Cost dari Bandwith 100 dan 10, yaitu **0.1 dan 100**
+
+**Auto Cost Reference Bandwith 1000**
+
+![](/images/2020-10-09_kam_00-03-17.png)
 
 Sumber: [https://slideplayer.com/slide/14391963/](https://slideplayer.com/slide/14391963/ "https://slideplayer.com/slide/14391963/")
 
-Sesuai keterangan itu kita akan menggunakan `auto-cost reference-bandwidth 1000`
+Jumlah Cost dari Bandwith 100 dan 10, yaitu **10 dan 100**
+
+**Auto Cost Reference Bandwith 10000**
+
+![](/images/2020-10-09_kam_00-18-53.png)
+
+Sumber: [https://slideplayer.com/slide/14391963/](https://slideplayer.com/slide/14391963/ "https://slideplayer.com/slide/14391963/")
+
+Jumlah Cost dari Bandwith 100 dan 10, yaitu **100 dan 1000**
+
+Sesuai keterangan itu yang paling cocok dengan permintaan dari requirement kita ini ialah menggunakan `auto-cost reference-bandwidth 1000`
 
     P2P-1(config-router)# auto-cost reference-bandwidth 1000
     % OSPF: Reference bandwidth is changed.
