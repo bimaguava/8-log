@@ -204,7 +204,7 @@ Sumber: [https://slideplayer.com/slide/14391963/](https://slideplayer.com/slide/
 
 Jumlah Cost dari Bandwith 100 dan 10, yaitu **100 dan 1000**
 
-### Pilihan yang sesuai requirement?
+### Pilihan yang kiranya cocok berapa?
 
 Sesuai keterangan itu yang paling cocok dengan permintaan dari requirement kita ini ialah menggunakan `auto-cost reference-bandwidth 1000`
 
