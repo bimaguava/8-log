@@ -196,6 +196,8 @@ Jadi selain `auto-cost reference-bandwith` kita juga akan menyetel cost yang dig
     P2P-1(config)#int serial 0/1/1
     P2P-1(config-if)#ip ospf cost 50
 
+Apabila nanti kita ingin melihat cost value yang didapatkan di interface router ini bisa dengan command `show ip ospf interface brief`
+
 # **Referensi**
 
 * [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
