@@ -134,27 +134,13 @@ Contoh saat melintas Serial link yang bandwithnya ialah 56Kbps maka paket OSPF a
 
 Dan sekarang kita akan lihat bandwith dan cost ini **berbanding terbalik**, karena bandwith yang lebih tinggi seperti Ethernet link (100Mbps) akan mempunyai _cost yang lebih kecil_ dimana ini merupakan **rute terbaik**. Sedangkan bandwith yang lebih rendah seperti Serial link (56Kbps) akan memiliki _cost yang lebih tinggi_.
 
-### **Default cost of essential interfaces.**
+Sekedar info berikut default nilai cost pada beberapa interface 
 
 | Interface Type | bandwidth | Metric Calculation | Cost |
 | :---: | :---: | :---: | --- |
 | Ethernet Link | 10Mbps | 100000000/10000000 = 10 | 10 |
 | FastEthernet Link | 100Mbps | 100000000/100000000 = 1 | 1 |
 | Serial Link | 1544Kbps(default) | 100000000/1544000 = 64.76 | 64 |
-
-### **Cost of common lines**
-
-| Interface Type | bandwidth | Metric Calculation | Cost |
-| :---: | :---: | :---: | --- |
-| 56 Kbps line | 56Kbps | 100000000/56000 = 1785.71 | 1785 |
-| 64 Kbps line | 64Kbps | 100000000/64000 = 1562.5 | 1562 |
-| 128 Kbps line | 128Kbps | 100000000/128000 = 781.25 | 781 |
-| 512 Kbps line | 512Kbps | 100000000/512000 = 195.31 | 195 |
-| 1 Mbps line | 1Mbps | 100000000/1000000 = 100 | 100 |
-| 10 Mbps line | 10Mbps | 100000000/10000000 = 10 | 10 |
-| 100 Mbps line | 100Mbps | 100000000/100000000 = 1 | 1 |
-| 1 Gbps line | 1Gbps | 100000000/100000000 0= 0.1 | 1 |
-| 10 Gbps line | 10Gbps | 100000000/10000000000 = 0.01 | 1 |
 
 ### Konfigurasi interface cost menggunakan Auto Cost Reference Bandwith
 
@@ -180,7 +166,23 @@ Namun, jika kita memilih reference bandwith 1000 Mbps
 
 cocok untuk interfaces berkapasitas 10 Mbps untuk FastEthernet dan 100 Mbps untuk GigabitEthernet.
 
-Dan melihat dari tabel [**Cost of common lines **](https://8log.js.org/2020/09/08/network/cisco-ospfv2-single-area-configuration/#Cost-of-common-lines)yang tadi, mungkin konsumsi bandwith untuk nilai cost sesuai requirement tidak terlalu tinggi, maka kita akan memilih `auto-cost bandwith-reference 1000`
+Dan melihat dari tabel berikut
+
+### **Cost of common lines**
+
+| Interface Type | bandwidth | Metric Calculation | Cost |
+| :---: | :---: | :---: | --- |
+| 56 Kbps line | 56Kbps | 100000000/56000 = 1785.71 | 1785 |
+| 64 Kbps line | 64Kbps | 100000000/64000 = 1562.5 | 1562 |
+| 128 Kbps line | 128Kbps | 100000000/128000 = 781.25 | 781 |
+| 512 Kbps line | 512Kbps | 100000000/512000 = 195.31 | 195 |
+| 1 Mbps line | 1Mbps | 100000000/1000000 = 100 | 100 |
+| 10 Mbps line | 10Mbps | 100000000/10000000 = 10 | 10 |
+| 100 Mbps line | 100Mbps | 100000000/100000000 = 1 | 1 |
+| 1 Gbps line | 1Gbps | 100000000/100000000 0= 0.1 | 1 |
+| 10 Gbps line | 10Gbps | 100000000/10000000000 = 0.01 | 1 |
+
+mungkin konsumsi bandwith untuk nilai cost sesuai requirement tidak terlalu tinggi (FastEthernet 1 Mbps dan GigabitEthernet 10 Mbps), maka kita akan memilih `auto-cost bandwith-reference 1000`
 
     P2P-1(config-router)# auto-cost reference-bandwidth 1000
     % OSPF: Reference bandwidth is changed.
@@ -201,14 +203,14 @@ Nah sampai sini sudah kelar masalah auto-cost reference-bandwith.
 
 Selanjutnya apabila nanti ingin melihat cost dan bandwithnya kira-kira contohnya seperti ini.
 
-Untuk melihat bandwith pakai perintah `show interfaces FastEthernet 0/0 | include BW` 
+Untuk melihat bandwith pakai perintah `show interfaces FastEthernet 0/0 | include BW`
 
     Router# show interfaces FastEthernet 0/0 | include BW
       MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec
 
 Dan muncullah `100000 Kbit/sec`
 
-Nanti dari sini OSPF akan menghitung costnya 
+Nanti dari sini OSPF akan menghitung costnya
 
 > **Cost = Reference bandwidth (default 100 Mbps) / Interface bandwidth in bps.**
 >
