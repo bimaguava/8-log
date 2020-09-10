@@ -363,6 +363,24 @@ sesuai requirement:
 
 ### Dimulai mengaktifkan process OSPF di BC-1
 
+    BC-1(config)#router ospf 10
+
+### Memberi Router ID di BC-1
+
+    BC-1(config-router)#router-id 6.6.6.6
+
+### Mempassivekan interface S0/1/1
+
+berdasarkan soal requirements:
+
+> **Configure OSPF so that routing updates are not sent into networks where they are not required.**
+
+dalam kasus ini interface yang kearah ISP cloud tentu tidak membutuhkan paket update dari OSPF, maka kita akan passivekan interface tersebut
+
+    BC-1(config-router)#passive-interface s0/1/1
+
+### defau
+
 ### Mengkonfigurasi Network2 di BC-1
 
 ### Mempassivekan interface G0/0/0 di BC-1
