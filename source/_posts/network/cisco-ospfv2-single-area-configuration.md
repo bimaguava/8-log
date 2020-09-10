@@ -447,6 +447,17 @@ Sebelumnya kita sedah mengkonfigurasi pada interface S0/2/0 P2P-1, sekarang saat
     BC-1(config-if)#ip ospf dead-interval 80
     15:05:11: %OSPF-5-ADJCHG: Process 10, Nbr 10.0.0.13 on Serial0/1/0 from LOADING to FULL, Loading Done
 
+### Default static route pada ISP Cloud
+
+Sesuai requiremts di soal:
+
+> Configure a default route to the ISP cloud using the exit interface command argument.
+
+berikut adalah default static route yang memungkinkan menjadikan interface S0/1/1 sebagai exit interface bagi network ISP Cloud
+
+    BC-1(config)#ip route 0.0.0.0 0.0.0.0 s0/1/1
+    %Default route without gateway, if not a point-to-point interface, may impact performance
+
 ## 2.B. Lakukan konfigurasi pada router BC-2
 
 ### Dimulai mengaktifkan process OSPF di BC-2
