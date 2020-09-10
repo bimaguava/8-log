@@ -19,11 +19,11 @@ keywords: []
 * Configure IPv6 Address pada router dan PC
 * Verifikasi kontektivitas IPv6
 
-# Skenario
-
 # **Lab**
 
 ![](https://res.cloudinary.com/bimagv/image/upload/v1599781824/2020-09/2020-11-09_Jum_06_50_10_ogano1.png)
+
+Berikut jaringan yang simpel dengan 4 LAN yang akan dikonfigurasi dengan menggunakan IPv6 Addressing pada router maupun pc.
 
 # **Tabel Address**
 
