@@ -255,9 +255,45 @@ Untuk dapat mengetahui niai Dead dan hello interval dengan menggunakan perintah 
     BimaRR #show ip ospf interface FastEthernet 0/0 | include intervals
       Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
 
-# 1.E. Lakukan konfigurasi pada router P2P-2
+## 1.E Lakukan konfigurasi pada router P2P-2
 
 Pada section 2.A sampai 2.D sembari mengkonfigurasi router P2P-1 sembari juga menjelaskan detailnya, karena cukup sayang kalau tidak dicatat :)
+
+Pada bagian ini, saya asumsikan kita telah mengetahui langkah dalam mengkonfigurasi router tersebut, sekarang kita tinggal implementasikan pembelajaran tadi ke router P2P-2
+
+### Dimulai mengaktifkan process OSPF di P2P-2
+
+    P2P-2(config)#router ospf 10
+
+### Mengkonfigurasi Network2 di P2P-2
+
+    P2P-2(config-router)#do show ip route connected
+     C   10.0.0.0/30  is directly connected, Serial0/1/0
+     C   10.0.0.4/30  is directly connected, Serial0/1/1
+     C   192.168.1.0/24  is directly connected, GigabitEthernet0/0/0
+     C   192.168.2.0/24  is directly connected, GigabitEthernet0/0/1
+    
+    P2P-2(config-router)#network 10.0.0.0 0.0.0.3 area 0
+    12:52:56: %OSPF-5-ADJCHG: Process 10, Nbr 10.0.0.13 on Serial0/1/0 from LOADING to FULL, Loading Done
+    .0
+    P2P-2(config-router)#network 10.0.0.4 0.0.0.3 area 0
+    P2P-2(config-router)#network 192.168.1.0 0.0.0.255 area 0
+    P2P-2(config-router)#network 192.168.2.0 0.0.0.255 area 0
+
+### Mempassivekan interface G0/0/0 dan G0/0/1 di P2P-2
+
+![](/images/2020-10-09_kam_14-13-03.png)
+
+    P2P-2(config-router)#passive-interface g0/0/0
+    P2P-2(config-router)#passive-interface g0/0/1
+
+### Mengubah auto cost reference bandwith di P2P-2
+
+    P2P-2(config-router)#auto-cost reference-bandwidth 1000
+    % OSPF: Reference bandwidth is changed.
+            Please ensure reference bandwidth is consistent across all routers.
+
+### 
 
 # **Referensi**
 
