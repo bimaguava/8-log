@@ -208,6 +208,8 @@ Mungkin konsumsi bandwith untuk cost requirements tidak terlalu tinggi (FastEthe
     % OSPF: Reference bandwidth is changed.
             Please ensure reference bandwidth is consistent across all routers.
 
+Lihat pesan tersebut, saat kita merubah reference bandwith pada satu router OSPF akan menyuruh kita untuk mengubahnya juga untuk setiap router juga. Untuk itu kita nanti akan mengkonfigurasinya kepada semua router.
+
 Dan ada satu requirement lagi terkait OSPF cost ini, yaitu
 
 > **_Configure the OSPF cost value of P2P-1 interface Serial0/1/1 to 50._**
@@ -387,11 +389,31 @@ Berdasarkan soal requirements:
 
 > **Automatically distribute the default route to all routers in the network.**
 
-### Mengkonfigurasi Network2 di BC-1
-
-### Mempassivekan interface G0/0/0 di BC-1
+    BC-1(config-router)#default-information originate
 
 ### Mengubah auto cost reference bandwith di BC-1
+
+    BC-1(config-router)#auto-cost reference-bandwidth 1000
+    % OSPF: Reference bandwidth is changed.
+            Please ensure reference bandwidth is consistent across all routers.
+
+### Mengkonfigurasi Network2 di BC-1
+
+Sesuai requirements pada soal:
+
+> **Activate OSPF by configuring the interfaces of the network devices in the Data Service network, where required.**
+
+Sekarang kita akan memakai cara yang berbeda untuk memasukkan network2 pada router BC-1 ini, yaitu dengan mengkonfig OSPF di interfacesnya.
+
+Untuk itu kita tampilkan dahulu interface2 di router BC-1
+
+    BC-1(config)#do show ip interface brief
+    Interface              IP-Address      OK? Method Status                Protocol 
+    GigabitEthernet0/0/0   10.0.1.1        YES NVRAM  up                    up 
+    GigabitEthernet0/0/1   unassigned      YES NVRAM  administratively down down 
+    Serial0/1/0            10.0.0.14       YES NVRAM  up                    up 
+    Serial0/1/1            64.0.100.2      YES NVRAM  up                    up 
+    Vlan1                  unassigned      YES unset  administratively down down
 
 ## 2.B. Lakukan konfigurasi pada router BC-2
 
