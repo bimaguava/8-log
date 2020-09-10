@@ -257,7 +257,7 @@ Untuk dapat mengetahui niai Dead dan hello interval dengan menggunakan perintah 
 
 ## 1.E Lakukan konfigurasi pada router P2P-2
 
-Pada section 2.A sampai 2.D sembari mengkonfigurasi router P2P-1 sembari juga menjelaskan detailnya, karena cukup sayang kalau tidak dicatat :)
+**_Pada section 1.A sampai 1.D_** sembari mengkonfigurasi router P2P-1 sembari juga menjelaskan detailnya, karena cukup sayang kalau tidak dicatat :)
 
 Pada bagian ini, saya asumsikan kita telah mengetahui langkah dalam mengkonfigurasi router tersebut, sekarang kita tinggal implementasikan pembelajaran tadi ke router P2P-2
 
@@ -276,6 +276,7 @@ Pada bagian ini, saya asumsikan kita telah mengetahui langkah dalam mengkonfigur
     P2P-2(config-router)#network 10.0.0.0 0.0.0.3 area 0
     12:52:56: %OSPF-5-ADJCHG: Process 10, Nbr 10.0.0.13 on Serial0/1/0 from LOADING to FULL, Loading Done
     .0
+    
     P2P-2(config-router)#network 10.0.0.4 0.0.0.3 area 0
     P2P-2(config-router)#network 192.168.1.0 0.0.0.255 area 0
     P2P-2(config-router)#network 192.168.2.0 0.0.0.255 area 0
@@ -293,7 +294,38 @@ Pada bagian ini, saya asumsikan kita telah mengetahui langkah dalam mengkonfigur
     % OSPF: Reference bandwidth is changed.
             Please ensure reference bandwidth is consistent across all routers.
 
-### 
+## 1.F Lakukan konfigurasi pada router P2P-3
+
+### Dimulai mengaktifkan process OSPF di P2P-3
+
+    P2P-3(config)#router ospf 10
+
+### Mengkonfigurasi Network2 di P2P-3
+
+    P2P-3(config-router)#do show ip route connected
+     C   10.0.0.4/30  is directly connected, Serial0/1/0
+     C   10.0.0.8/30  is directly connected, Serial0/1/1
+     C   192.168.3.0/28  is directly connected, GigabitEthernet0/0/0
+    
+    P2P-3(config-router)#network 10.0.0.4 0.0.0.3 area 0
+    13:04:28: %OSPF-5-ADJCHG: Process 10, Nbr 192.168.2.1 on Serial0/1/0 from LOADING to FULL, Loading Done
+    
+    P2P-3(config-router)#network 10.0.0.8 0.0.0.3 area 0
+    13:04:43: %OSPF-5-ADJCHG: Process 10, Nbr 10.0.0.13 on Serial0/1/1 from LOADING to FULL, Loading Done
+    
+    P2P-3(config-router)#network 192.168.3.0 0.0.0.15 area 0
+
+### Mempassivekan interface G0/0/0 di P2P-3
+
+    P2P-3(config-router)#passive-interface g0/0/0
+
+### Mengubah auto cost reference bandwith di P2P-3
+
+    P2P-3(config-router)#auto-cost reference-bandwidth 1000
+    % OSPF: Reference bandwidth is changed.
+            Please ensure reference bandwidth is consistent across all routers.
+
+# **2. Mengemplementasikan OSPF di Router2 Data Services**
 
 # **Referensi**
 
