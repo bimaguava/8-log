@@ -45,7 +45,7 @@ pages:
 - source/_posts/network/cisco-stp-looping-prevention.md
 - source/_posts/network/cisco-vlan-configuration.md
 - source/_posts/network/cisco-vlan-implementation.md
-- source/_posts/network/etherchannel.md
+- source/_posts/network/etherchannel_introduction.md
 - source/_posts/network/mikrotik-basic-command-line.md
 - source/_posts/network/mikrotik-membridgekan-beberapa-port.md
 - source/_posts/network/mikrotik-sebagai-repeater-dengan-setelan-roaming.md
