@@ -255,7 +255,9 @@ Nah, itulah hasil costnya, yaitu 1.
 
 Setelah itu lanjut ke paket OSPF Hello dan Dead interaval, OSPF menggunakan paket kedua paket ini untuk dapat memeriksa apakah router neighbornya masih hidup atau tidak.
 
-Sekarang kita akan menyetel nilai hello dan dead timer pada interface S0/2/0 atau antara P2P-1 dan BC-1
+![](/images/2020-10-09_kam_16-16-59.png)
+
+Sekarang kita akan menyetel nilai hello dan dead timer pada interface S0/2/0 atau antara P2P-1 dan BC-1 yang merupakan proses checkup antara network point to point dan network multi point.
 
 * **Hello interval** ini menentukan seberapa sering kita mengirim paket hello
 * Sedangkan **Dead interval** menentukan berapa lama router harus menunggu paket hello sebelum menyatakan router neighbor mati
@@ -361,7 +363,7 @@ sesuai requirement:
 
 ![](/images/2020-10-09_kam_14-29-50.png)
 
-Selain itu pada router2 ini kita akan melakukan konfigurasi network dengan `default static route` yang nantinya akan diredistribute ke semua router2 OSPF pada network point to point. 
+Selain itu kita lihat pada **ISP Cloud**, nanti disitu kita akan melakukan routing ke ISP Cloud dengan `default static route` yang nantinya akan `di-redistribute` oleh BC-1 ke semua router2 OSPF pada network point to point.
 
 ## 2.A. Lakukan konfigurasi pada router BC-1
 
@@ -403,7 +405,7 @@ Sesuai requirements pada soal:
 
 > **Activate OSPF by configuring the interfaces of the network devices in the Data Service network, where required.**
 
-Sekarang kita akan memakai cara yang berbeda untuk memasukkan network2 pada router BC-1 ini, yaitu dengan mengkonfig OSPF di interfacesnya.
+Sekarang kita akan memakai cara yang berbeda untuk memasukkan network2 pada router BC-1 ini, yaitu dengan mengkonfig OSPF dengan command `ip ospf 10 area 0` di interfacesnya.
 
 Untuk itu kita tampilkan dahulu interface2 di router BC-1
 
@@ -414,6 +416,36 @@ Untuk itu kita tampilkan dahulu interface2 di router BC-1
     Serial0/1/0            10.0.0.14       YES NVRAM  up                    up 
     Serial0/1/1            64.0.100.2      YES NVRAM  up                    up 
     Vlan1                  unassigned      YES unset  administratively down down
+
+dan interface router yang akan menjadi OSPF neighbor adjacency adalah `GigabitEthernet0/0/0` dan `Serial0/1/0`
+
+    BC-1(config)#int g0/0/0
+    BC-1(config-if)#ip ospf 10 area 0
+    
+    BC-1(config-if)#int s0/1/0
+    BC-1(config-if)#ip ospf 10 area 0
+
+### Mengubah OSPF interface priority pada BC-1 G0/0/0
+
+Sesuai requirements pada soal:
+
+> **Configure router BC-1 with the highest OSPF interface priority so that it will always be the designated router of the multiaccess network.**
+
+kita akan menjadikan interface neighbor adjacency (yang menuju ke multiaccess network) BC-1 yaitu G0/0/0 menjadi high priority 
+
+    BC-1(config-if)#int g0/0/0
+    BC-1(config-if)#ip ospf priority 255
+
+### Mengatur Hello dan Dead timer values antara BC-1 dan P2P-1
+
+![](/images/2020-10-09_kam_16-16-59.png)
+
+Sebelumnya kita sedah mengkonfigurasi pada interface S0/2/0 P2P-1, sekarang saatnya menyetel pada interface S0/1/0 BC-1 supaya nanti kedua router tersebut (tepatnya kedua network tersebut) bisa menjadi neighbor adjacency
+
+    BC-1(config)#int s0/1/0
+    BC-1(config-if)#ip ospf hello-interval 20
+    BC-1(config-if)#ip ospf dead-interval 80
+    15:05:11: %OSPF-5-ADJCHG: Process 10, Nbr 10.0.0.13 on Serial0/1/0 from LOADING to FULL, Loading Done
 
 ## 2.B. Lakukan konfigurasi pada router BC-2
 
