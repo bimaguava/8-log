@@ -2,7 +2,6 @@
 title: 'Cisco: Basic initial introduction'
 draft: true
 date: 2019-04-12
-categories: network
 tags: cisco
 category:
 - network
