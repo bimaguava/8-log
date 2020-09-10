@@ -327,6 +327,12 @@ Pada bagian ini, saya asumsikan kita telah mengetahui langkah dalam mengkonfigur
 
 # **2. Mengemplementasikan OSPF di Router2 Data Services**
 
+Sekarang kita akan mengkonfigurasi Router2 pada multiaccess network ini yang mana router2 pada network ini akan melakukan OSPF election DR/BDR, maka nanti kita akan menyetel sebuah Router ID pada setiap Router BC ini.
+
+![](/images/2020-10-09_kam_14-29-50.png)
+
+## 2.A. Lakukan konfigurasi pada router BC-1
+
 # **Referensi**
 
 * [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
