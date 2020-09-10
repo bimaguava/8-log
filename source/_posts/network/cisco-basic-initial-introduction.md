@@ -2,11 +2,11 @@
 title: 'Cisco: Basic initial introduction'
 draft: true
 date: 2019-04-12
-tags: cisco
 category:
 - network
 - itn
-
+tags:
+- cisco
 ---
 ## Router Mode
 
