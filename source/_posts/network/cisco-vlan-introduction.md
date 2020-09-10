@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: 'Cisco: VLAN'
+title: 'Cisco: VLAN introduction'
 date: 2020-07-26T17:00:00.000+00:00
 updated: 2020-07-26T17:00:00.000+00:00
 category:
