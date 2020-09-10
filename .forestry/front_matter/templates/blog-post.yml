@@ -35,6 +35,7 @@ fields:
   default: true
 pages:
 - source/_posts/network/cisco-etherchannel-configuration.md
+- source/_posts/network/cisco-implement-a-subnet-ipv6-addressing.md
 - source/_posts/network/cisco-link-state-protocol.md
 - source/_posts/network/cisco-ospf-introduction.md
 - source/_posts/network/cisco-ospfv2-determine-the-dr-and-bdr.md
