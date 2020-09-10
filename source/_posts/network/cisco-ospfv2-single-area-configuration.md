@@ -359,6 +359,8 @@ sesuai requirement:
 
 ![](/images/2020-10-09_kam_14-29-50.png)
 
+Selain itu pada router2 ini kita akan melakukan konfigurasi network dengan `default static route` yang nantinya akan diredistribute ke semua router2 OSPF pada network point to point. 
+
 ## 2.A. Lakukan konfigurasi pada router BC-1
 
 ### Dimulai mengaktifkan process OSPF di BC-1
@@ -371,7 +373,7 @@ sesuai requirement:
 
 ### Mempassivekan interface S0/1/1
 
-berdasarkan soal requirements:
+Berdasarkan soal requirements:
 
 > **Configure OSPF so that routing updates are not sent into networks where they are not required.**
 
@@ -379,7 +381,11 @@ dalam kasus ini interface yang kearah ISP cloud tentu tidak membutuhkan paket up
 
     BC-1(config-router)#passive-interface s0/1/1
 
-### defau
+### Meredistribute default static route ke router2 yang menjalankan OSPF
+
+Berdasarkan soal requirements:
+
+> **Automatically distribute the default route to all routers in the network.**
 
 ### Mengkonfigurasi Network2 di BC-1
 
