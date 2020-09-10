@@ -447,16 +447,29 @@ Sebelumnya kita sedah mengkonfigurasi pada interface S0/2/0 P2P-1, sekarang saat
     BC-1(config-if)#ip ospf dead-interval 80
     15:05:11: %OSPF-5-ADJCHG: Process 10, Nbr 10.0.0.13 on Serial0/1/0 from LOADING to FULL, Loading Done
 
-### Default static route pada ISP Cloud
+### Melakukan routing ke ISP Cloud router dengan Default static route
+
+Kalau pakai statements `Static default route` ini nanti kita menggunakan destination network address 0.0.0.0 dan subnet mask 0.0.0.0 pada saat melakukan routing seperti statements quad zero mask.
+
+> _Proses routing untuk static default route ini adalah nantinya router melakukan proses pencarian gateway yang akan digunakan oleh router untuk mengirimkan semua paket IP untuk network destination yang tidak diketahui di routing table, sehingga akan diforward ke route 0.0.0.0/0._
 
 Sesuai requiremts di soal:
 
 > Configure a default route to the ISP cloud using the exit interface command argument.
 
-berikut adalah default static route yang memungkinkan menjadikan interface S0/1/1 sebagai exit interface bagi network ISP Cloud
+berikut adalah default static route dengan perintah exit interface, yakni dengan melakukan route dengan memasukkan interfacenya langsung (S0/1/1) sebagai media bagi router ISP Cloud.
 
     BC-1(config)#ip route 0.0.0.0 0.0.0.0 s0/1/1
     %Default route without gateway, if not a point-to-point interface, may impact performance
+
+Sampai langkah ini Router ISP Cloud sudah bisa memping ke BC-1
+
+    ISP(config)#do ping 64.0.100.2
+    
+    Type escape sequence to abort.
+    Sending 5, 100-byte ICMP Echos to 64.0.100.2, timeout is 2 seconds:
+    !!!!!
+    Success rate is 100 percent (5/5), round-trip min/avg/max = 1/8/27 ms
 
 ## 2.B. Lakukan konfigurasi pada router BC-2
 
