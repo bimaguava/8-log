@@ -475,21 +475,73 @@ Sampai langkah ini Router ISP Cloud sudah bisa memping ke BC-1
 
 ### Dimulai mengaktifkan process OSPF di BC-2
 
-### Mengkonfigurasi Network2 di BC-2
+    BC-2(config)#router ospf 10
+
+### Memberi Router ID di BC-2
+
+    BC-2(config-router)#router-id 5.5.5.5
 
 ### Mempassivekan interface G0/0/0 di BC-2
 
+    BC-2(config-router)#passive-interface g0/0/0
+
 ### Mengubah auto cost reference bandwith di BC-2
+
+    BC-2(config-router)#auto-cost reference-bandwidth 1000
+    % OSPF: Reference bandwidth is changed.
+    Please ensure reference bandwidth is consistent across all routers.
+
+### Mengkonfigurasi Network2 di BC-2
+
+    BC-2(config-router)#do show ip int br
+    Interface              IP-Address      OK? Method Status                Protocol 
+    GigabitEthernet0/0/0   192.168.4.1     YES manual up                    up 
+    GigabitEthernet0/0/1   10.0.1.2        YES manual up                    up 
+    Serial0/1/0            unassigned      YES unset  administratively down down 
+    Serial0/1/1            unassigned      YES unset  administratively down down 
+    Vlan1                  unassigned      YES unset  administratively down down
+    
+    BC-2(config-router)#int g0/0/0
+    BC-2(config-if)#ip ospf 10 area 0
+    BC-2(config-if)#int g0/0/1
+    BC-2(config-if)#ip ospf 10 area 0
 
 ## 2.C. Lakukan konfigurasi pada router BC-3
 
 ### Dimulai mengaktifkan process OSPF di BC-3
 
-### Mengkonfigurasi Network2 di BC-3
+    BC-3(config)#router ospf 10
+
+### Memberi Router ID di BC-3
+
+    BC-3(config-router)#router-id 4.4.4.4
 
 ### Mempassivekan interface G0/0/0 di BC-3
 
+    BC-3(config-router)#passive-interface g0/0/0
+
 ### Mengubah auto cost reference bandwith di BC-3
+
+    BC-3(config-router)#auto-cost reference-bandwidth 1000
+    % OSPF: Reference bandwidth is changed.
+            Please ensure reference bandwidth is consistent across all routers.
+
+### Mengkonfigurasi Network2 di BC-3
+
+    BC-3(config-router)#do show ip int br
+    Interface              IP-Address      OK? Method Status                Protocol 
+    GigabitEthernet0/0/0   192.168.5.1     YES manual up                    up 
+    GigabitEthernet0/0/1   10.0.1.3        YES manual up                    up 
+    Serial0/1/0            unassigned      YES unset  administratively down down 
+    Serial0/1/1            unassigned      YES unset  administratively down down 
+    Vlan1                  unassigned      YES unset  administratively down down
+    
+    BC-3(config-router)#int g0/0/0
+    BC-3(config-if)#ip ospf 10 area 0
+    BC-3(config-if)#int g0/0/1
+    BC-3(config-if)#ip ospf 10 area 0
+
+# **3. Tes ping**
 
 # **Referensi**
 
