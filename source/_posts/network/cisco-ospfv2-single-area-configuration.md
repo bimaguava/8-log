@@ -329,6 +329,14 @@ Pada bagian ini, saya asumsikan kita telah mengetahui langkah dalam mengkonfigur
 
 Sekarang kita akan mengkonfigurasi Router2 pada multiaccess network ini yang mana router2 pada network ini akan melakukan OSPF election DR/BDR, maka nanti kita akan menyetel sebuah Router ID pada setiap Router BC ini.
 
+sesuai requirement:
+
+> Configure router IDs on the multiaccess network routers as follows:
+>
+> * BC-1: 6.6.6.6
+> * BC-2: 5.5.5.5
+> * BC-3: 4.4.4.4
+
 ![](/images/2020-10-09_kam_14-29-50.png)
 
 ## 2.A. Lakukan konfigurasi pada router BC-1
