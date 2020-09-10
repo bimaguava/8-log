@@ -2,11 +2,12 @@
 draft: true
 comments: true
 toc: true
-title: 'Cisco: OSPF intro'
-date: 2020-08-22T16:48:00Z
+title: 'Cisco: OSPF introduction'
+date: 2020-08-22T16:48:00.000+00:00
 updated: 
 category:
 - network
+- ensa
 tags:
 - cisco
 keywords: []

@@ -36,7 +36,7 @@ fields:
 pages:
 - source/_posts/network/cisco-etherchannel-configuration.md
 - source/_posts/network/cisco-link-state-protocol.md
-- source/_posts/network/cisco-ospf-intro.md
+- source/_posts/network/cisco-ospf-introduction.md
 - source/_posts/network/cisco-ospfv2-determine-the-dr-and-bdr.md
 - source/_posts/network/cisco-ospfv2-single-area-configuration.md
 - source/_posts/network/cisco-ospfv2-single-area-point-to-point.md
