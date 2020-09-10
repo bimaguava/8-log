@@ -248,7 +248,7 @@ Dua kali nilai default, nilai defaultnya ialah Hello 10 seconds dan Dead timerny
     P2P-1(config-if)#ip ospf hello-interval 20
     P2P-1(config-if)#ip ospf dead-interval 80
 
-## Contoh perintah verifikasi
+### Contoh perintah verifikasi
 
 Untuk dapat mengetahui niai Dead dan hello interval dengan menggunakan perintah `show ip ospf interface <interface> | include intervals`
 
