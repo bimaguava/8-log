@@ -541,7 +541,11 @@ Sampai langkah ini Router ISP Cloud sudah bisa memping ke BC-1
     BC-3(config-if)#int g0/0/1
     BC-3(config-if)#ip ospf 10 area 0
 
-# **3. Tes ping**
+Sampai sini konfigurasi antara network Head Quarters dan Data Services sudah terjalin, dan ping ke internal server sudah berhasil.
+
+Oke.
+
+Mantap.
 
 # **Referensi**
 
