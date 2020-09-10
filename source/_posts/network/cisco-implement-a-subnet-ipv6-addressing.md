@@ -21,6 +21,10 @@ keywords: []
 
 # Skenario
 
+# **Lab**
+
+![](https://res.cloudinary.com/bimagv/image/upload/v1599781824/2020-09/2020-11-09_Jum_06_50_10_ogano1.png)
+
 # **Tabel Address**
 
 ![](https://res.cloudinary.com/bimagv/image/upload/v1599780606/2020-09/2020-11-09_Jum_06_26_24_t6htyx.png)
