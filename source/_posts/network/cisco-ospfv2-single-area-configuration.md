@@ -236,7 +236,7 @@ Setelah itu lanjut ke paket OSPF Hello dan Dead interaval, OSPF menggunakan pake
 Sekarang kita akan menyetel nilai hello dan dead timer pada interface S0/2/0 atau antara P2P-1 dan BC-1
 
 * **Hello interval** ini menentukan seberapa sering kita mengirim paket hello
-* Sedangkan **Dead interval** menentukan berapa lama kita harus menunggu paket hello sebelum menyatakan router neighbor mati
+* Sedangkan **Dead interval** menentukan berapa lama router harus menunggu paket hello sebelum menyatakan router neighbor mati
 
 Requirementnya:
 
@@ -249,6 +249,8 @@ Dua kali nilai default, nilai defaultnya ialah Hello 10 seconds dan Dead timerny
     P2P-1(config-if)#ip ospf dead-interval 80
 
 ## Contoh perintah verifikasi
+
+Untuk dapat mengetahui niai Dead dan hello interval dengan menggunakan perintah `show ip ospf interface <interface> | include intervals`
 
     BimaRR #show ip ospf interface FastEthernet 0/0 | include intervals
       Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
