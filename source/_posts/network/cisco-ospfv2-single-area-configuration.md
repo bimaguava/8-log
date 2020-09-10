@@ -199,13 +199,15 @@ Jadi selain mengubah `auto-cost reference-bandwith` yang mana OSPF akan mengkalk
 
 Keknya panjang amat :)
 
-<!------- CONTOH-------------------------------------------------------------------------------------------------
+Biar tambah panjang, terakhir sekalian ...
 
-Selanjutnya apabila nanti ingin melihat cost dan bandwithnya kira-kira contohnya seperti ini.
+### Contoh perintah verifikasi
+
+Selanjutnya apabila nanti ingin melihat cost dan bandwithnya kira-kira contohnya seperti ini perintahnya.
 
 Untuk melihat bandwith pakai perintah `show interfaces FastEthernet 0/0 | include BW`
 
-    Router# show interfaces FastEthernet 0/0 | include BW
+    BimaRR# show interfaces FastEthernet 0/0 | include BW
       MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec
 
 Dan muncullah `100000 Kbit/sec`
@@ -220,20 +222,39 @@ Cost = `100.000 kbps reference bandwidth / 100.000 interface bandwidth = 1`
 
 Dan perintah verifikasi untuk menampilkan cost dengan `show ip ospf interface FastEthernet 0/0 | include Cost`
 
-    Router# show ip ospf interface FastEthernet 0/0 | include Cost
+    BimaRR# show ip ospf interface FastEthernet 0/0 | include Cost
       Process ID 1, Router ID 192.168.1.1, Network Type BROADCAST, Cost: 1
 
 Nah, itulah hasil costnya, yaitu 1.
-
-END CONTOH -------------------------------------------------------------------------------------------------->
 
 (^_^)
 
 ## 1.D. Mengatur Hello dan Dead timer values antara P2P-1 dan BC-1
 
-Setelah itu lanjut ke
+Setelah itu lanjut ke paket OSPF Hello dan Dead interaval, OSPF menggunakan paket kedua paket ini untuk dapat memeriksa apakah router neighbornya masih hidup atau tidak.
+
+Sekarang kita akan menyetel nilai hello dan dead timer pada interface S0/2/0 atau antara P2P-1 dan BC-1
+
+* **Hello interval** ini menentukan seberapa sering kita mengirim paket hello
+* Sedangkan **Dead interval** menentukan berapa lama kita harus menunggu paket hello sebelum menyatakan router neighbor mati
+
+Requirementnya:
+
+> Configure the hello and dead timer values on the interfaces that connect P2P-1 and BC-1 to be twice the default values.
+
+Dua kali nilai default, nilai defaultnya ialah Hello 10 seconds dan Dead timernya 40 second, maka dua kali nilai tersebut yakni 20 seconds dan 80 seconds.
+
+    P2P-1(config)#interface serial 0/2/0
+    P2P-1(config-if)#ip ospf hello-interval 20
+    P2P-1(config-if)#ip ospf dead-interval 80
+
+## Contoh perintah verifikasi
+
+    BimaRR #show ip ospf interface FastEthernet 0/0 | include intervals
+      Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
 
 # **Referensi**
 
 * [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
 * [h](https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html "https://www.cisco.com/c/m/en_us/techdoc/dc/reference/cli/nxos/commands/ospf/auto-cost-ospf.html")[https://networklessons.com/ospf/ospf-reference-bandwidth](https://networklessons.com/ospf/ospf-reference-bandwidth "https://networklessons.com/ospf/ospf-reference-bandwidth")
+* [https://networklessons.com/ospf/ospf-hello-and-dead-interval](https://networklessons.com/ospf/ospf-hello-and-dead-interval "https://networklessons.com/ospf/ospf-hello-and-dead-interval")
