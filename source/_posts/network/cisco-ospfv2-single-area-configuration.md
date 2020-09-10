@@ -255,6 +255,10 @@ Untuk dapat mengetahui niai Dead dan hello interval dengan menggunakan perintah 
     BimaRR #show ip ospf interface FastEthernet 0/0 | include intervals
       Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
 
+# 1.E. Lakukan konfigurasi pada router P2P-2
+
+Pada section 2.A sampai 2.D sembari mengkonfigurasi router P2P-1 sembari juga menjelaskan detailnya, karena cukup sayang kalau tidak dicatat :)
+
 # **Referensi**
 
 * [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
