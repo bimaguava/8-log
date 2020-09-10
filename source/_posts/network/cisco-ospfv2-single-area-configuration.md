@@ -361,6 +361,34 @@ sesuai requirement:
 
 ## 2.A. Lakukan konfigurasi pada router BC-1
 
+### Dimulai mengaktifkan process OSPF di BC-1
+
+### Mengkonfigurasi Network2 di BC-1
+
+### Mempassivekan interface G0/0/0 di BC-1
+
+### Mengubah auto cost reference bandwith di BC-1
+
+## 2.B. Lakukan konfigurasi pada router BC-2
+
+### Dimulai mengaktifkan process OSPF di BC-2
+
+### Mengkonfigurasi Network2 di BC-2
+
+### Mempassivekan interface G0/0/0 di BC-2
+
+### Mengubah auto cost reference bandwith di BC-2
+
+## 2.C. Lakukan konfigurasi pada router BC-3
+
+### Dimulai mengaktifkan process OSPF di BC-3
+
+### Mengkonfigurasi Network2 di BC-3
+
+### Mempassivekan interface G0/0/0 di BC-3
+
+### Mengubah auto cost reference bandwith di BC-3
+
 # **Referensi**
 
 * [https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html "https://www.computernetworkingnotes.com/ccna-study-guide/ospf-metric-cost-calculation-formula-explained.html")
