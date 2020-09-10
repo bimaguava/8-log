@@ -1,11 +1,11 @@
 ---
-title: "Cisco: Intro"
+title: 'Cisco: Intro'
 draft: true
-date : "2019-04-12"
-categories : network
-tags : cisco
----
+date: 2019-04-12
+categories: network
+tags: cisco
 
+---
 ## Router Mode
 
 |modes|function|
