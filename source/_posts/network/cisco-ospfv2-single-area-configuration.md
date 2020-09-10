@@ -35,11 +35,7 @@ Use process ID 10 for OSPF activation on all routers.
 * Activate OSPF by configuring the interfaces of the network devices in the Data Service network, where required.
 * Configure router IDs on the multiaccess network routers as follows:
   * BC-1: 6.6.6.6
-
-
   * BC-2: 5.5.5.5
-
-
   * BC-3: 4.4.4.4
 * Configure OSPF so that routing updates are not sent into networks where they are not required.
 * Configure router BC-1 with the highest OSPF interface priority so that it will always be the designated router of the multiaccess network.
@@ -391,6 +387,8 @@ Berdasarkan soal requirements:
 
 > **Automatically distribute the default route to all routers in the network.**
 
+Jadi, kita pada BC-1 ini nanti akan di konfigurasi default static route pada interface yang mengarah ke ISP Cloud, maka hal yang dilakukan untuk network point to point adalah meredistribute informasi tersebut dengan perintah
+
     BC-1(config-router)#default-information originate
 
 ### Mengubah auto cost reference bandwith di BC-1
@@ -431,7 +429,7 @@ Sesuai requirements pada soal:
 
 > **Configure router BC-1 with the highest OSPF interface priority so that it will always be the designated router of the multiaccess network.**
 
-kita akan menjadikan interface neighbor adjacency (yang menuju ke multiaccess network) BC-1 yaitu G0/0/0 menjadi high priority 
+kita akan menjadikan interface neighbor adjacency (yang menuju ke multiaccess network) BC-1 yaitu G0/0/0 menjadi high priority
 
     BC-1(config-if)#int g0/0/0
     BC-1(config-if)#ip ospf priority 255
