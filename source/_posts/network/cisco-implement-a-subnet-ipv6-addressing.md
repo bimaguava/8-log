@@ -28,3 +28,13 @@ Berikut jaringan yang simpel dengan 4 LAN yang akan dikonfigurasi dengan menggun
 # **Tabel Address**
 
 ![](https://res.cloudinary.com/bimagv/image/upload/v1599780606/2020-09/2020-11-09_Jum_06_26_24_t6htyx.png)
+
+# 1. Menentukan subnet IPv6
+
+Kita memiliki subnet untuk R1 G0/0/ LAN, yaitu `2001:db8:acad:00c8::/64`. Tugas kita ialah menentukan 4 subnet lagi untuk setiap network
+
+* R1 G0/0/ LAN: **`2001:db8:acad:00c8::/64`**
+* R1 G0/1 LAN: ...........................
+* R2 G0/0 LAN: ..............................
+* R2 G0/1 LAN: ....................................
+* R1 to R2 link network: ..................................
