@@ -12,3 +12,24 @@ tags:
 keywords: []
 
 ---
+# **Introduction**
+
+![](https://memegenerator.net/img/instances/34434443/prepare-yourself-ipv6-is-coming.jpg)
+
+Bagaimana kabarnya para omnifora? masih setia sama IP versi 4, yakin belum mau coba "aipivi6" yang padahal rumornya IPv4 diduga sudah habis sejak tahun 1990. and we must act.. stop IPv4 and start using IPv6 *fuarkk
+
+> Begitulah cuplikan kata2 media :)
+
+Mungkin iya, tapi yang merasakan dampak itu bukan kita sebagai end user, bagi pengguna internet tidak akan merasakan apapun.
+
+Hal itu karena penerimaan IPv6 sudah ada di sebagian besar perangkat, atau dapat diperoleh selama peningkatan perangkat berikutnya.
+
+Jadi, pihak yang sebetulnya merasakan hal ini semestinya ialah penyedia jasa internet alias provider ataupun lembaga-lembaga.
+
+Karena hal itu maka pemakaian IPv4 (Public IP) sehingga akan berganti-gantian seiring berjalannya kebutuhan akan IP yang prosesnya mendapatkannya akan seperti langganan sebuah domain.
+
+Tapi, walaupun keadaan Public IP IPv4 seperti lebih sedikit hal itu tidak menjadikannya barang yang mahal, karena kenyataanya harga sewa IPv6-lah yang lebih mahal :)
+
+# **What we talk about?**
+
+Sekarang kita ingin mengetahui 
