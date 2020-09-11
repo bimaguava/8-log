@@ -20,7 +20,7 @@ Bagaimana kabarnya para omnifora? masih setia sama IP versi 4, yakin belum mau c
 
 > Begitulah cuplikan kata2 media :)
 
-Mungkin iya, tapi yang merasakan dampak itu bukan kita sebagai end user, bagi pengguna internet tidak akan merasakan apapun.
+Mungkin iya, tapi yang merasakan dampak itu bukan kita sebagai end user, bagi pengguna internet kita tidak akan merasakan apapun.
 
 Hal itu karena penerimaan IPv6 sudah ada di sebagian besar perangkat, atau dapat diperoleh selama peningkatan perangkat berikutnya.
 
@@ -32,4 +32,6 @@ Tapi, walaupun keadaan Public IP IPv4 seperti lebih sedikit hal itu tidak menjad
 
 # **What we talk about?**
 
-Sekarang kita ingin mengetahui 
+Sekarang kita ingin mengetahui beberapa perbedaan yang mendasar antara IPv4 dan IPv6
+
+## Panjang prefix
