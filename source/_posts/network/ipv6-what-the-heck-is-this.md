@@ -2,12 +2,13 @@
 draft: true
 comments: true
 toc: true
-title: Memahami Subnet IPv6
+title: 'IPv6: what the heck it this?'
 date: 2020-09-11T12:57:00Z
 updated: 
 category:
 - network
-tags: []
+tags:
+- ipv6
 keywords: []
 
 ---
