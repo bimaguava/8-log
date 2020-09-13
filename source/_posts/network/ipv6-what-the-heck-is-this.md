@@ -44,4 +44,12 @@ Sedangkan pada IPv4 ialah 32 bit dan memiliki 4 kolom yang mana setiap 1 kolom b
 
 ![](https://res.cloudinary.com/bimagv/image/upload/v1599983691/2020-09/2_mtodbi.png)
 
-IPv6 ini memiliki 8 kolom yang setiap 1 kolomnya memiliki 16 bit yang merupakan bilangan hexadecimal contohnya **`2001:db8:acad:00c8::/64`**
+Tentang IPv4 silahkan lihat disini: [http://www.mikrotik.co.id/artikel_lihat.php?id=64](http://www.mikrotik.co.id/artikel_lihat.php?id=64 "http://www.mikrotik.co.id/artikel_lihat.php?id=64")
+
+IPv6 ini memiliki 8 kolom yang setiap 1 kolomnya memiliki 16 bit yang merupakan bilangan hexadecimal contohnya **`2001:db8:23fa:00c8::/64`**
+
+# **Konversi IPv6 ke desimal**
+
+Pertanyaannya apakah bisa kita mengubahnya ke bilangan biner.
+
+![](https://res.cloudinary.com/bimagv/image/upload/v1599984475/2020-09/3_mbl0uh.png)
