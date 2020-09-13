@@ -35,3 +35,13 @@ Tapi, walaupun keadaan Public IP IPv4 seperti lebih sedikit hal itu tidak menjad
 Sekarang kita ingin mengetahui beberapa perbedaan yang mendasar antara IPv4 dan IPv6
 
 ## Panjang prefix
+
+Dimulai dari bentuk dari IPv6 itu sendiri, panjang prefix IPv6 adalah 128 bit.
+
+![](https://res.cloudinary.com/bimagv/image/upload/v1599983691/2020-09/1_mambum.png)
+
+Sedangkan pada IPv4 ialah 32 bit dan memiliki 4 kolom yang mana setiap 1 kolom berisi 8 bit yang merupakan bilangan biner.
+
+![](https://res.cloudinary.com/bimagv/image/upload/v1599983691/2020-09/2_mtodbi.png)
+
+IPv6 ini memiliki 8 kolom yang setiap 1 kolomnya memiliki 16 bit yang merupakan bilangan hexadecimal.
