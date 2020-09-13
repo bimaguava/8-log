@@ -44,4 +44,4 @@ Sedangkan pada IPv4 ialah 32 bit dan memiliki 4 kolom yang mana setiap 1 kolom b
 
 ![](https://res.cloudinary.com/bimagv/image/upload/v1599983691/2020-09/2_mtodbi.png)
 
-IPv6 ini memiliki 8 kolom yang setiap 1 kolomnya memiliki 16 bit yang merupakan bilangan hexadecimal.
+IPv6 ini memiliki 8 kolom yang setiap 1 kolomnya memiliki 16 bit yang merupakan bilangan hexadecimal contohnya **`2001:db8:acad:00c8::/64`**
