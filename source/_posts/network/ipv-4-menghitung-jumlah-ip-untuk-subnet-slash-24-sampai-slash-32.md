@@ -1,11 +1,15 @@
 ---
-title: Menghitung Jumlah IP (untuk Subnet /24 - /32)
+title: 'IPv4: Menghitung Jumlah IP untuk Subnet /24 - /32'
 date: 2020-07-05
 draft: false
 categories: network
+category:
+- network
+tags:
+- ipv4
 
 ---
-## Menghafal jumlah ip dari prefix
+## Menghafal jumlah IPv4 dari prefix
 
 Dalam kelas-kelasnya prefix ada batasan sesuai kelas IPnya
 
