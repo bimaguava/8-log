@@ -1,8 +1,12 @@
 ---
 title: "Brutef Wordlist Combine"
 date: 2020-03-04
-categories : security
-tags : bruteforce
+categories : 
+- security_II
+
+tags : 
+- bruteforce
+- pentest-tools
 ---
 
 Seperti yang kita tahu menggunakan teknik tebakan adalah suatu cara yang sangat tradisional untuk mencoba masuk kedalam sistem. 

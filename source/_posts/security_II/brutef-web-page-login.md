@@ -1,8 +1,12 @@
 ---
 title: "Brutef Web Page Login"
 date: 2020-03-05
-categories : security
-tags : bruteforce
+categories : 
+- security_II
+
+tags : 
+- bruteforce
+- pentest-tools
 ---
 
 Serangan bruteforce akan lebih susah dilakukan pada situs web karena setiap situs memiliki rangkaian kode yang berbeda-beda. 

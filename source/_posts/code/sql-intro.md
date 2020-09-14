@@ -3,7 +3,7 @@ title: SQL intro
 toc: true
 date: 2020-04-12 11:11:57
 categories: 
-- caffeine
+- code
 tags: 
 - sql
 ---

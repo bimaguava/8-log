@@ -1,8 +1,12 @@
 ---
 title: "Brutef Weak Password"
 date: 2020-03-04
-categories : security
-tags : bruteforce
+categories : 
+- security_II
+
+tags : 
+- bruteforce
+- pentest-tools
 ---
 
 VK , μTorrent , dan ClixSense semua mengalami pelanggaran data besar di beberapa titik di masa lalu. Basis data kata sandi yang bocor dari situs tersebut dan situs daring lainnya dapat digunakan untuk lebih memahami bagaimana kata sandi manusia dibuat dan meningkatkan keberhasilan peretas saat melakukan serangan brute-force.

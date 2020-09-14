@@ -4,7 +4,7 @@ toc: true
 date: 2020-04-12 11:11:57
 tags: bash
 categories: 
-- caffeine
+- code
 ---
 
 Tidak semua skrip Bash memerlukan argumen. Mereka ditafsirkan oleh Bash dan bagaimana menggunakannya. Contoh ketika kita menjalankan perintah **ls -l /var/log**, baik -l dan /var/log adalah argumen untuk perintah ls itu sendiri

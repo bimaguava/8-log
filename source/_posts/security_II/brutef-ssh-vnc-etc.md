@@ -1,8 +1,12 @@
 ---
 title: "Brutef ssh, vnc, etc"
 date: 2020-03-05
-categories : security
-tags : bruteforce
+categories : 
+- security_II
+
+tags : 
+- bruteforce
+- pentest-tools
 ---
 
 Salah satu hal yang dilakukan saat mencoba mendapatkan akses dengan sistem layanan biasanya dengan melihat mereka dapat masuk ke salah satu layanan tersebut menggunakan kredensial default atau umum. 

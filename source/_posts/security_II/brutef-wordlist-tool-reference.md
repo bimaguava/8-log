@@ -1,8 +1,12 @@
 ---
 title: "Brutef Wordlist Tool Reference"
 date: 2020-03-04
-categories : security
-tags : bruteforce
+categories : 
+- security_II
+
+tags : 
+- bruteforce
+- pentest-tools
 ---
 
 Dalam membuat susunan kata sandi pada kamus atau wordlist tentu dilakukan dengan memperhatikan kebutuhannya. Diantaranya ada ya

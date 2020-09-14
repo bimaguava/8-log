@@ -7,7 +7,7 @@ date: 2020-04-16T09:05:00+07:00
 updated: 2020-04-16T09:05:00+07:00
 category:
 - dev
-- version control
+- vcs
 tags:
 - git
 - repair
