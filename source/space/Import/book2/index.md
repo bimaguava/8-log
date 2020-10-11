@@ -1,4 +1,2 @@
-
-+++
-layout: space/import/book2
-+++
+# Table of content
+[summary](summary)
