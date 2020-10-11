@@ -1,3 +1,8 @@
 [submodule "3-hexo-forked"]
 	path = themes/3-hexo-forked
 	url = https://github.com/bimagv/3-hexo-forked
+
+[submodule "book1"] 
+	path = source/space/Import/book1
+	url = https://github.com/bimscwit/gitbook ignore = dirty
+
