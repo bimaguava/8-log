@@ -2,3 +2,6 @@
 	path = themes/3-hexo-forked
 	url = https://github.com/bimagv/3-hexo-forked
 
+[submodule "book-centos"]
+        path = source/space/Import/centos
+        url = https://gitlab.com/bimaguava/book_centos
