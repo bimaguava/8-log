@@ -1,3 +1,6 @@
 [submodule "3-hexo-forked"]
 	path = themes/3-hexo-forked
 	url = https://github.com/bimscwit/3-hexo-forked
+[submodule "themes/hexo-theme-3-hexo"]
+	path = themes/hexo-theme-3-hexo
+	url = https://github.com/bimagv/hexo-theme-3-hexo
