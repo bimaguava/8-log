@@ -2,8 +2,8 @@
 	path = themes/3-hexo-forked
 	url = https://github.com/bimscwit/3-hexo-forked
 
-[submodule "centos_handbook"]
-	path = centos_handbook
+[submodule "source/space/Import/centos_handbook"]
+	path = source/space/Import/centos_handbook
 	url = git@gitlab.com:bimaguava/centos_handbook.git
 [submodule "source/space/Import/pengenalan_ffrouting"]
 	path = source/space/Import/pengenalan_ffrouting
