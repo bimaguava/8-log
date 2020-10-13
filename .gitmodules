@@ -5,3 +5,6 @@
 [submodule "centos_handbook"]
         path = source/space/Import/centos_handbook
         url = https://gitlab.com/bimaguava/centos_handbook
+[submodule "source/space/Import/use_gitbook_for_documentation"]
+	path = source/space/Import/use_gitbook_for_documentation
+	url = https://gitlab.com/bimaguava/use_gitbook_for_documentation.git
