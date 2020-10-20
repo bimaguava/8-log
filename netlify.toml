@@ -1,1 +1,4 @@
+[build]
+  command = "hexo clean && npm install --save && hexo generate"
+  publish = "/public"
 
