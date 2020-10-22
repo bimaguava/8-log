@@ -9,7 +9,7 @@ tags : cisco
 Just input entry route such as **network address** with **wilcard mask** and choose area. And then configure DR & BDR
 
 ## Topology
-![topology](https://gblobscdn.gitbook.com/assets%2F-M4i1FkyJ96YEscBnmfS%2F-M4icPZWcnOSs2jE7Vt9%2F-M4ieoxl1sQHB4Bwj25r%2Fospf-single.png?alt=media&token=f6d811fd-344a-4aa5-ac4b-8eef0696b0cc)
+![topology](https://res.cloudinary.com/bimagv/image/upload/v1603374758/2019-04/ospf-single_x8gvaq.png)
 
 ## Config
 

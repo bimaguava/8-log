@@ -18,7 +18,7 @@ I need install net-tools
 
 Then run **ifconfig** command (as user) and it still not working
 
-![ifconfig not work](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hze9NReB7VgoW2Vse%2Fhow-user-able-to-access-ifconfig-01.png?alt=media&token=bf611f34-8692-422c-9981-3054e8ac9910)
+![ifconfig not work](https://res.cloudinary.com/bimagv/image/upload/v1603375824/2018-10/17%20elementary%20os%20loki%20user%20cant%20access%20ifconfig/how-user-able-to-access-ifconfig-01_cdrq4c.png)
 
 But you can do with sudo su or root account. This tutorial will show how to run app located on **/sbin** like **ifconfig** as normal user
 

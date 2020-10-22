@@ -21,7 +21,7 @@ Setting penyelarasan hasil cetak yaitu berupa huruf yang kabur, terlalu tebal, d
 
 Pertama, cek dulu nozel. Keybindnya tekan dua tombol tersebut, dilanjut load button
 
-![Nozel dot matrix](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hwA-jZRGVXbrZgod7%2Fdot-matrix-pq-01.jpeg?alt=media&token=1776a734-2e7c-4bbd-808d-c0c3f33eb3c9)
+![Nozel dot matrix](https://res.cloudinary.com/bimagv/image/upload/v1603375623/2019-12/dot%20matrix/dot-matrix-pq-01_hmzagg.jpg)
 
 ## Proses alignment
 
@@ -33,11 +33,11 @@ Prosesnya:
 
 1. Kita memulainya dalam keadaan printer mati, kemudian masukkan kertas (sebaiknya dengan kertas continuos form) dan tekan tombol kombinasi berikut dan load print.
 
-![memulai proses](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hw_fMXh0PSNfG8xcS%2Fdot-matrix-pq-02.jpeg?alt=media&token=b1f00ab7-2d15-47e4-b1f6-08bb7f16f315)
+![memulai proses](https://res.cloudinary.com/bimagv/image/upload/v1603375623/2019-12/dot%20matrix/dot-matrix-pq-02_e7vqcl.jpg)
 
 2. Setelah dapat hasil pilih baris yang paling sempurna (biasanya ditengah) kemudian input nomor keberapa yang menunjukkan simbol untuk di setting ke printer misal mati, nyala, kedip. 
 
-![kertas alignment](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hx4kgIsdD0q0KMBIx%2Fdot-matrix-pq-03.jpeg?alt=media&token=39aa3126-b03a-4e9f-83a3-c253d64856eb)
+![kertas alignment](https://res.cloudinary.com/bimagv/image/upload/v1603375624/2019-12/dot%20matrix/dot-matrix-pq-03_idw7ja.jpg)
 
 3. Lalu, masukkan kertas lagi dan otomatis akan memprint. Lakukan setting garis sampai sempurna normalnya 3 kali sampai dapat hasil **lumayan** bagus secara keseluruhan
 
@@ -55,6 +55,6 @@ Prosesnya:
 4. **tuas**
     Ada dua tuas yang gunanya adalah mendekatkan jarak print head dengan reborn mask ataupun media cetak.
     
-    ![posisi 2 tuas(kanan kiri)](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hxCJfJHzuBxl13X0t%2Fdot-matrix-pq-04.jpeg?alt=media&token=3911f712-dccf-43dc-a03c-693ca69c6230)
+    ![posisi 2 tuas(kanan kiri)](https://res.cloudinary.com/bimagv/image/upload/v1603375623/2019-12/dot%20matrix/dot-matrix-pq-04_wmqcqw.jpg)
     
     semakin tuas ditarik ke atas, akan semakin dekat dengan print head. Begitupun sebaliknya. Hati-hati, jangan juga menyetetelnya terlalu dekat sampai memberikan gesekan yang besar terhadap medium.

@@ -24,7 +24,7 @@ kita bisa lakukan adalah dengan mengecek resistor dan dioda pada mainboard denga
 Tidak buzzer = good
 Bunyi buzzer = putus
 
-![Menyambung/jumper pada F1](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4i-D2eX2pG2Q9ZJwXG%2Flseries-problem-az-01.png?alt=media&token=88255869-a74d-4b6b-9a45-9bb984bf3c54)
+![Menyambung/jumper pada F1](https://res.cloudinary.com/bimagv/image/upload/v1603376601/2019-12/l%20series%20problem%20a-z/lseries-problem-az-01_zohmwi.png)
 
 Info lain: 
 
@@ -114,7 +114,7 @@ Cairan tidak boleh mengenai bagian sensitif print head. Jika salah melakukan hal
 
     Hasil pun cuma tinta amburadul yang keluar 
 
-![hasil print ph yang sort](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4i083eYYmZOR5RI1Od%2Flseries-problem-az-02.png?alt=media&token=4c017833-6e56-46a5-80dd-66d505b79b74)
+![hasil print ph yang sort](https://res.cloudinary.com/bimagv/image/upload/v1603376571/2019-12/l%20series%20problem%20a-z/lseries-problem-az-02_efsdde.png)
 
 Kalau itu merupakan indikasi head yang sort dan kemungkinan yang kedua adalah kabel head sudah rusak.
 
@@ -122,7 +122,7 @@ Kalau itu merupakan indikasi head yang sort dan kemungkinan yang kedua adalah ka
 
 **Q**: _"Print ADF bergaris?"_
 
-![bercak garis](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4i0Fz59nw9Nd6Z7Khb%2Flseries-problem-az-03.png?alt=media&token=2e3580f3-5278-4a10-adce-33f51b4ba234)
+![bercak garis](https://res.cloudinary.com/bimagv/image/upload/v1603376547/2019-12/l%20series%20problem%20a-z/lseries-problem-az-03_z27cqv.png)
 
 **A**: _"bersihkan tulang bagian \(abu-abu\) dalam scanner"_
 
@@ -209,11 +209,11 @@ Pada Paper Jam, bisa juga disebabkan oleh masalah yang berkaitan dengan sistem, 
 
 **A**: _"Dapat terjadi karena roller sudah mulai cekung, buka karet roller dan menambahkan beberapa lilitan double tip._
 
-![karet roller L1300](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4i0Mdh8joDpX3TJLKC%2Flseries-problem-az-04.png?alt=media&token=5471c19d-1090-4745-8e24-6eb3b2b8ba78)
+![karet roller L1300](https://res.cloudinary.com/bimagv/image/upload/v1603376553/2019-12/l%20series%20problem%20a-z/lseries-problem-az-04_bsg3oo.png)
 
 _Lalu, settingan roller besi terlalu renggang, bisa menurunkan posisi baut besi roller agar mendapatkan perputaran roller yang lebih presisi_
 
-![setelan baut L1300](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4i0Wk-nmnoZN-CkMYP%2Flseries-problem-az-05.png?alt=media&token=7201b342-5a5c-4b3b-97eb-fdb111667dea)
+![setelan baut L1300](https://res.cloudinary.com/bimagv/image/upload/v1603376381/2019-12/l%20series%20problem%20a-z/lseries-problem-az-05_ag80jt.png)
 
 _Atau secara sistem karena setelan kertas belum di setel ke kertas yang di load misal A3. Namun yang harus dicatat adalah problem PJ yang berhubungan dengan L1300 ada kalanya ASFnya diganti."_
 
@@ -224,7 +224,7 @@ Saat dimana perhitungan kadar tinta secara software atau secara sistem.
 
 ## 🧐 Tandanya?
 
-![tanda full counter](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4i0i5kx_wGWn4EFkdi%2Flseries-problem-az-06.png?alt=media&token=71ac3841-8a0d-486d-84b4-d3661d2d8f2e)
+![tanda full counter](https://res.cloudinary.com/bimagv/image/upload/v1603376373/2019-12/l%20series%20problem%20a-z/lseries-problem-az-06_jvmwcm.png)
 Lampu indikator dengan simbol segitiga merah menyala terus menerus (tanpa berkedip)
 
 ## Solusinya

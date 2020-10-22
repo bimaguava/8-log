@@ -14,6 +14,8 @@ tags:
 ## Overview
 I get error while signing commit to my Github repository
 
+![](https://res.cloudinary.com/bimagv/image/upload/v1603375939/2019-09/2019-09-24img1_xlyj6o.png)
+
 Let's check
 
 - my public & private gpg key
@@ -31,7 +33,7 @@ I using **gnupg** program
 
 ## How to?
 First, check with **gpg --list-key**
- 
+
   $ gpg --list-keys
   /home/bima/.gnupg/pubring.kbx
   -----------------------------
@@ -168,4 +170,4 @@ You can also importing other people's keys to your keyring.
 
 When use Archstrike repository, I have to import someone's public key.
 
-![import](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hzWbdamgteRxJXjQu%2Ffail-to-signing-commit-01.png?alt=media&token=33a8cb9d-3cb7-4674-92c5-2cd4183f1618)
+![import](https://res.cloudinary.com/bimagv/image/upload/v1603375936/2019-09/fail-to-signing-commit-01_ilyhuf.png)

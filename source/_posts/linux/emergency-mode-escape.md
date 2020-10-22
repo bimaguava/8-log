@@ -12,7 +12,7 @@ tags :
 ## Titik masalah
 Inti masalah ini, yaitu tidak bisa boot kembali ke hardisk karena itu tidak bisa masuk ke dalam sistem operasi seperti biasanya.
 
-![emergency screen](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hyHXzI-JcxCCPv6Na%2Femergency-mode-escape-01.jpg?alt=media&token=fcf1d853-6cf6-410a-a0d9-15c986bc5cca)
+![emergency screen](https://res.cloudinary.com/bimagv/image/upload/v1603375351/2018-10/03%20linux%20problem%20stuck%20in%20emergency%20mode/emergency-mode-escape-01_lhsykp.jpg)
 
 Sebab apa?
 
@@ -26,7 +26,7 @@ Gunakan command **blkid** untuk melihat UUID partisi yang sekarang
 
 Perhatikan pada code yang di highlight
 
-![blkid dan /etc/fstab](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hz0j9YhBYZSFlcRyw%2Femergency-mode-escape-02.png?alt=media&token=e0a2afb4-7605-4f0c-9056-1da85428602f)
+![blkid dan /etc/fstab](https://res.cloudinary.com/bimagv/image/upload/v1603375355/2018-10/03%20linux%20problem%20stuck%20in%20emergency%20mode/emergency-mode-escape-02_p0ffxa.png)
 
 
 ## Pemecahan Masalah
@@ -36,7 +36,7 @@ Nanti kita harus masuk ke dalam mode execution dan menjalankan **fsck** untuk me
 
 ### Masuk mode eksekusi
 
-![execution mode](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hz8KsK_b0jVmbEBwc%2Femergency-mode-escape-03.jpg?alt=media&token=4d550da6-b139-4a86-820b-91408d75d3d3)
+![execution mode](https://res.cloudinary.com/bimagv/image/upload/v1603375347/2018-10/03%20linux%20problem%20stuck%20in%20emergency%20mode/emergency-mode-escape-03_oiqqlv.jpg)
 
 Coba masukan perintahnya. supaya masuk ke dalam mode perintah atau eksekusi.
 
@@ -45,7 +45,7 @@ Tapi, dalam beberapa kasus inputan kita tidak ditanggapi sama sekali. Jadi mau t
 ### Repair
 Untuk menemukan lokasi partisi berada, bisa dengan **fdisk -l** seperti gambar dan karena berhubungan dengan file milik administrator (/etc) maka kita perlu menjalankannya dengan user root
 
-![fdisk -l](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4hzFKIQgcXlBcyUzkS%2Femergency-mode-escape-04.png?alt=media&token=dd5e0de0-0f47-4b2b-b248-792fe9b7b7c8)
+![fdisk -l](https://res.cloudinary.com/bimagv/image/upload/v1603375345/2018-10/03%20linux%20problem%20stuck%20in%20emergency%20mode/emergency-mode-escape-04_dfodc4.png)
 
 Setelah itu jalankan perintah fsck. Yang dibetulkan biasanya partisi root dan home. 
 

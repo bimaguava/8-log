@@ -9,7 +9,7 @@ tags : cisco
 Multi area on OSPF can help to pressing load of memory usage on router with minimum spec usually router nearby with computer client.
 
 ## Topology
-![topology](https://gblobscdn.gitbook.com/assets%2F-M4i1FkyJ96YEscBnmfS%2F-M4icPZWcnOSs2jE7Vt9%2F-M4iekmBsiZhubcXo9s4%2Fospf-multi.png?alt=media&token=4078756d-5df8-4856-97ee-380bb63464b1)
+![topology](https://res.cloudinary.com/bimagv/image/upload/v1603374760/2019-04/ospf-multi_bckwnr.png)
 
 ## Config
 

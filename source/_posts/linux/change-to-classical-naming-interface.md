@@ -12,7 +12,7 @@ tags:
 
 ## Overview
 My case is I'm not Familiar with this term on Ubuntu 16.04
-![ugly naming](https://gblobscdn.gitbook.com/assets%2F-M4hrSq2FgEwSBYhHwyl%2F-M4hsuqa5BQ4gBgwIn2d%2F-M4i0vuVdGvambPchX0c%2Fsetting-classical-naming-interface-01.png?alt=media&token=705ddf45-bf8f-4fdb-bfb2-b96ab4ebc990)
+![ugly naming](https://res.cloudinary.com/bimagv/image/upload/v1603376783/2018-10/01%20ubuntu%20change%20to%20classical%20naming%20interface/setting-classical-naming-interface-01_bxokmq.png)
 
 Formerly on Ubuntu 15.04
 * Wireless network= wlan0, wlan1, wlan2, ..
