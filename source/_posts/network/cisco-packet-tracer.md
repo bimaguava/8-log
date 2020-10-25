@@ -65,4 +65,4 @@ Kegiatan yang akan kita lakukan nanti masih seputar pengelanan cara menggunakan 
 
 # Penutup
 
-Cukup sekian
+Hanya ini saja yang bisa saya sampaikan di awal, masih belum menyentuh Cisco sebagai materi inti kita, pesan saya adalah jangan berhenti disini saja silahkan teman2 bereksplorasi di internet baik youtube, maupun blog2 yang bermanfaat contohnya seperti [https://belajarcomputernetwork.com/computer-network-theory/](https://belajarcomputernetwork.com/computer-network-theory/ "https://belajarcomputernetwork.com/computer-network-theory/")
