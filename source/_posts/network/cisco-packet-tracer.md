@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: 'Cisco: Pengenalan'
+title: 'Cisco: Packet Tracer'
 date: 2020-10-25T12:52:00.000+00:00
 updated: 
 category:
@@ -61,10 +61,8 @@ Setelah itu tinggal lanjutkan instalasi sempai selesai.
 
 ![](/images/screen_2020-10-25_23-18-49.png)
 
-Kegiatan yang akan kita lakukan nanti masih seputar pengelanan cara menggunakan packet tracer di materi yang akan datang.
-
-Mulai dari menyambungkan console kabel, lalu memulai konfigurasi router, memberi IP Address sampai memberi keamanan pada router tersebut.
+Kegiatan yang akan kita lakukan nanti masih seputar pengelanan cara menggunakan packet tracer di materi yang akan datang mulai dari menyambungkan console kabel, lalu memulai konfigurasi router, memberi IP Address sampai memberi keamanan pada router tersebut.
 
 # Penutup
 
-Sekian dan terima kasih
+Cukup sekian
