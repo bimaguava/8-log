@@ -13,4 +13,8 @@ tags:
 keywords: []
 
 ---
-s
+# Preface
+
+# Lab
+
+Dalam aktivitas ini, Anda akan melakukan tugas konfigurasi router dasar. Anda akan mengamankan akses ke CLI dan port konsol menggunakan sandi teks biasa dan terenkripsi. Anda juga akan mengonfigurasi pesan untuk pengguna yang masuk ke router. Spanduk ini memperingatkan pengguna yang tidak sah bahwa akses dilarang. Terakhir, Anda akan memverifikasi dan menyimpan konfigurasi yang sedang berjalan.2
