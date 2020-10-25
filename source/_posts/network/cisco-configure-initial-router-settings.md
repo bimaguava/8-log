@@ -2,7 +2,7 @@
 draft: true
 comments: true
 toc: true
-title: 'Cisco: Configure Initial Router Settings'
+title: 'Cisco: Pengenalan'
 date: 2020-10-25T12:52:00.000+00:00
 updated: 
 category:
@@ -29,7 +29,7 @@ Dalam diksi yang lain:
 
 Jika teman2 menginginkan _graphical interface_ yang bagus, proses belajar kamu mungkin akan cenderung ke arah hasil.
 
-Dan kamu mungkin tidak akan main lebih jauh... (^_^) yang akan banyak melewatkan saat2 dimana kamu bisa mengotomatisasi proram/perintah2 kamu sehingga pekerjaan yang biasa diselesaikan 30 menit menjadi hanya 10 menit, dan lainnya akan tau sendiri kalau sudah menikmati hihi.
+Dan kamu mungkin tidak akan main lebih jauh... (^_^) yang akan banyak melewatkan saat2 dimana kamu bisa mengotomatisasi proram/perintah2 kamu sehingga pekerjaan yang biasa diselesaikan 30 menit menjadi hanya 10 menit, dan lainnya akan tau sendiri kalau sudah menikmatinya sendiri.
 
 ![](https://i.imgflip.com/4js79y.jpg)
 
@@ -37,11 +37,34 @@ Belum sekarang SEMPAK wkwkwk
 
 # Tugas hari ini
 
-Sebelum dilanjut, berikut alat tempur yang harus disiapkan:
+Sebelum dilanjut, berikut alat yang harus disiapkan:
 
 * Laptop Windows 7/8/10 atau Linux
-* Windows 7
 
-melakukan serangkaian akan melakukan tugas konfigurasi router dasar. Anda akan mengamankan akses ke CLI dan port konsol menggunakan sandi teks biasa dan terenkripsi. Anda juga akan mengonfigurasi pesan untuk pengguna yang masuk ke router. Spanduk ini memperingatkan pengguna yang tidak sah bahwa akses dilarang. Terakhir, Anda akan memverifikasi dan menyimpan konfigurasi yang sedang berjalan.2
+Perangkat yang digunakan boleh menggunakan OS apa saja tidak masalah
 
-# Lab
+* Software Packet Tracer 7.3.0
+
+Untuk aplikasi simulais jaringan kita akan menggunakan Packet Tracer versi terbaru. Kalian bisa mengunduhnya di [netacad.com](netacad.com), Disana kalian bisa melakukan _sign-up._
+
+Nanti setelah daftar dan kemudian login, buka menu **Resource** dan pilih **"Download Packet Tracer"** 
+
+![](/images/screen_2020-10-25_23-35-22x.png)
+
+Setelah itu tinggal scroll kebawah dan unduh Packet Tracer sesuai dengan tipe perangkat atau mesin yang kalian gunakan
+
+![](/images/screen_2020-10-25_23-36-29.png)
+
+Setelah itu tinggal lanjutkan instalasi sempai selesai.
+
+# What's Next?
+
+![](/images/screen_2020-10-25_23-18-49.png)
+
+Kegiatan yang akan kita lakukan nanti masih seputar pengelanan cara menggunakan packet tracer di materi yang akan datang.
+
+Mulai dari menyambungkan console kabel, lalu memulai konfigurasi router, memberi IP Address sampai memberi keamanan pada router tersebut.
+
+# Penutup
+
+Sekian dan terima kasih
