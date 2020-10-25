@@ -3,10 +3,13 @@ draft: true
 comments: true
 toc: true
 title: 'Cisco: Perintah-perintah basic Router Cisco'
-date: 
+date: 2020-10-25T04:02:00Z
 updated: 
-category: []
-tags: []
+category:
+- network
+- itn
+tags:
+- cisco
 keywords: []
 
 ---
