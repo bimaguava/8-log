@@ -57,7 +57,7 @@ Setelah itu tinggal scroll kebawah dan unduh Packet Tracer sesuai dengan tipe pe
 
 Setelah itu tinggal lanjutkan instalasi sempai selesai.
 
-# What's Next?
+# Apa selanjutnya?
 
 ![](/images/screen_2020-10-25_23-18-49.png)
 
