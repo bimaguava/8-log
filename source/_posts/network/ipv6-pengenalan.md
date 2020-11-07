@@ -20,13 +20,21 @@ Pada artikel atau post ini kita akan belajar untuk mengenal IPv6. Namun sebagai 
 
 Beliau adalah bapak Internet Protokol, Vint Cerf. Beliau salah satu orang yang pertama sekali membuat internet dengan menyambungkan komputer ke sebuah address yang pertama kali beliau melakukannya berkat coba-coba (sekitar tahun 1977).
 
- Setelah dengan penelitian dan perjuangan oleh para senior/ pakar IT di Indonesia akhirnya dapat IP Address pertamanya yang berlokasi di UI, 24 Juni 1988.
+IP Address yang berkembang mulai awal-awal tahun itu terus diperbaharui dan dilegalisir oleh IETF (organisasi pengembang open standar protokol TCP/IP)
+
+IETF menerbitkan IP versi 1 sampai 3 antara tahun 1977 sampai 1979 yang merupakan masa-masa pencarian yang luar biasa sampai dimana keluar memorandum (1981), yaitu RFC11666 yang berkaitan dengan metode dan perilaku IPv4.
+
+Selang 7 tahun setelah dengan penelitian dan perjuangan oleh para senior/ pakar IT di Indonesia akhirnya dapat IP Address pertamanya yang berlokasi di UI, 24 Juni 1988.
 
 ![](/images/screen_2020-11-08_00-01-43x.png)
 
+Lantas bagaimana IPv4 dengan format 32 bit bisa melayani kebutuhan seluruh dunia dengan 7K miliar lebih (^_^)
+
+Mungkin kita tidak tahu pembagian IP tersebut seperti apa yang jelas kita sampai 2020 masih bisa menikmati IP versi 4 ini. 
+
 Mungkinkah kalimatnya "habis" seperti itu?
 
-Kurasa tidak juga. Mungkin "habis" disini ialah yang merasakan dampak itu bukan kita sebagai user. Bagi pengguna internet kita tidak akan merasakan apapun. Bahkan rekan Network Admin mungkin juga tidak (^_^)
+Saya rasa tidak juga. Mungkin "habis" disini ialah yang merasakan dampak itu bukan kita sebagai user. Bagi pengguna internet kita tidak akan merasakan apapun. Bahkan rekan Network Admin mungkin juga tidak (^_^)
 
 Hal itu karena penerimaan IPv6 sudah ada di sebagian besar perangkat, atau dapat diperoleh selama peningkatan perangkat berikutnya.
 
