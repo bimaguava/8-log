@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 comments: true
 toc: true
 title: 'IPv6: what the heck it this?'
@@ -48,8 +48,4 @@ Tentang IPv4 silahkan lihat disini: [http://www.mikrotik.co.id/artikel_lihat.php
 
 IPv6 ini memiliki 8 kolom yang setiap 1 kolomnya memiliki 16 bit yang merupakan bilangan hexadecimal contohnya **`2001:db8:23fa:00c8::/64`**
 
-# **Konversi IPv6 ke desimal**
-
-Pertanyaannya apakah bisa kita mengubahnya ke bilangan biner.
-
-![](https://res.cloudinary.com/bimagv/image/upload/v1599984475/2020-09/3_mbl0uh.png)
+jadi, kalau kita nanti mau menghitung subnet atau prefix alias /-nya maka musti menjadikannya bilangan biner terlebih dahulu.
