@@ -2,7 +2,7 @@
 draft: false
 comments: true
 toc: true
-title: 'IPv6: what the heck it this?'
+title: IPv6 Pengenalan
 date: 2020-09-11T12:57:00Z
 updated: 
 category:
@@ -12,15 +12,21 @@ tags:
 keywords: []
 
 ---
-# **Introduction**
+# **Prakata**
 
-![](https://memegenerator.net/img/instances/34434443/prepare-yourself-ipv6-is-coming.jpg)
+Pada artikel atau post ini kita akan belajar untuk mengenal IPv6. Namun sebagai pembuka mari kita renungi gambar ini.
 
-Bagaimana kabarnya para omnifora? masih setia sama IP versi 4, yakin belum mau coba "aipivi6" yang padahal rumornya IPv4 diduga sudah habis sejak tahun 1990. and we must act.. stop IPv4 and start using IPv6 *fuarkk
+![https://techno.okezone.com/read/2011/01/21/55/416625/alamat-ip-habis-penemu-ipv4-merasa-bersalah#:\~:text=SYDNEY%20%2D%20Vint%20Cerf%2C%20salah%20satu,ia%20buat%20pada%20tahun%201977.](/images/screen_2020-11-07_23-40-25x.png "https://techno.okezone.com/read/2011/01/21/55/416625/alamat-ip-habis-penemu-ipv4-merasa-bersalah#:~:text=SYDNEY%20%2D%20Vint%20Cerf%2C%20salah%20satu,ia%20buat%20pada%20tahun%201977.")
 
-> Begitulah cuplikan kata2 media :)
+Beliau adalah bapak Internet Protokol, Vint Cerf. Beliau salah satu orang yang pertama sekali membuat internet dengan menyambungkan komputer ke sebuah address yang pertama kali beliau melakukannya berkat coba-coba (sekitar tahun 1977).
 
-Mungkin iya, tapi yang merasakan dampak itu bukan kita sebagai end user, bagi pengguna internet kita tidak akan merasakan apapun.
+ Setelah dengan penelitian dan perjuangan oleh para senior/ pakar IT di Indonesia akhirnya dapat IP Address pertamanya yang berlokasi di UI, 24 Juni 1988.
+
+![](/images/screen_2020-11-08_00-01-43x.png)
+
+Mungkinkah kalimatnya "habis" seperti itu?
+
+Kurasa tidak juga. Mungkin "habis" disini ialah yang merasakan dampak itu bukan kita sebagai user. Bagi pengguna internet kita tidak akan merasakan apapun. Bahkan rekan Network Admin mungkin juga tidak (^_^)
 
 Hal itu karena penerimaan IPv6 sudah ada di sebagian besar perangkat, atau dapat diperoleh selama peningkatan perangkat berikutnya.
 
@@ -30,7 +36,7 @@ Karena hal itu maka pemakaian IPv4 (Public IP) sehingga akan berganti-gantian se
 
 Tapi, walaupun keadaan Public IP IPv4 seperti lebih sedikit hal itu tidak menjadikannya barang yang mahal, karena kenyataanya harga sewa IPv6-lah yang lebih mahal :)
 
-# **What we talk about?**
+# **Pembahasan**
 
 Sekarang kita ingin mengetahui beberapa perbedaan yang mendasar antara IPv4 dan IPv6
 
