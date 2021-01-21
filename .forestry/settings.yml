@@ -53,7 +53,7 @@ upload_dir: 2021-02
 public_path: https://res.cloudinary.com/bimagv/image/upload/v1611208052/2021-01/8
 front_matter_path: ''
 use_front_matter_path: 
-file_template: ":filename:"
+file_template: ":year:, :month:, :day:, :filename:"
 build:
   preview_output_directory: public
   install_dependencies_command: npm install
