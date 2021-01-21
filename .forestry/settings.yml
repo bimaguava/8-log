@@ -49,10 +49,10 @@ sections:
   match: "*.md"
   templates:
   - blog-post
-upload_dir: 2021-01/8
+upload_dir: 2021-02
 public_path: https://res.cloudinary.com/bimagv/image/upload/v1611208052/2021-01/8
-front_matter_path: "/images"
-use_front_matter_path: true
+front_matter_path: ''
+use_front_matter_path: 
 file_template: ":filename:"
 build:
   preview_output_directory: public
